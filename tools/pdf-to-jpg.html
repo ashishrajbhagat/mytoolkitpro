@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>PDF to JPG Converter Online – Free & Fast | ToolHub</title>
+
+  <meta name="description"
+    content="Convert PDF pages into JPG images online for free. Fast, secure and easy to use PDF to JPG converter.">
+  <meta name="robots" content="index, follow">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#B11226",
+            bgsoft: "#F8F9FA",
+            darktext: "#1F2937",
+            borderclr: "#E5E7EB",
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+        #spinner {
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-bgsoft text-darktext">
+
+  <!-- NAVBAR (Same as Homepage) -->
+  <header class="bg-white border-b border-borderclr">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-bold text-primary">ToolHub</a>
+      <nav class="space-x-6 text-gray-600">
+        <a href="index.html" class="hover:text-primary">Home</a>
+        <a href="tools.html" class="hover:text-primary">Tools</a>
+        <a href="about.html" class="hover:text-primary">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- BREADCRUMB -->
+  <section class="bg-gray-50 py-4 px-6 border-b border-borderclr">
+    <div class="max-w-7xl mx-auto">
+      <nav class="text-sm text-gray-500 flex items-center gap-2">
+        <a href="index.html" class="hover:text-primary transition">Home</a>
+        <span>›</span>
+        <a href="tools.html" class="hover:text-primary transition">Tools</a>
+        <span>›</span>
+        <span class="text-gray-900 font-medium">PDF to JPG</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- MAIN TOOL SECTION -->
+  <section class="bg-gray-100 py-20 px-4">
+
+    <div class="max-w-2xl mx-auto">
+
+      <div class="bg-white rounded-2xl shadow-xl p-10 text-center">
+
+        <h1 class="text-3xl font-bold text-gray-800 mb-3">
+          PDF to JPG Converter
+        </h1>
+
+        <div class="mb-6">
+          <p class="text-gray-500">
+            Convert your PDF pages into high-quality JPG images instantly.
+          </p>
+          <span class="text-green-600 font-medium">100% Secure.</span>
+        </div>
+
+        <div
+          class="border-2 border-dashed border-gray-300 rounded-xl p-10 mb-6 hover:border-red-600 transition cursor-pointer">
+          <p class="text-gray-600 mb-4 font-medium">
+            Drag & Drop your PDF here
+          </p>
+
+          <input type="file" id="pdfFile" accept="application/pdf" class="hidden">
+
+          <button onclick="document.getElementById('pdfFile').click()"
+            class="bg-red-700 text-white px-6 py-3 rounded-xl font-semibold hover:bg-red-800 transition shadow-md">
+            Select PDF File
+          </button>
+        </div>
+
+        <p id="uploadMessage" class="text-green-600 font-medium hidden mb-4">
+          ✅ PDF uploaded successfully!
+        </p>
+
+        <button id="convertBtn"
+          class="hidden w-full bg-red-700 text-white py-3 rounded-xl font-semibold hover:bg-red-800 transition shadow-md mb-4">
+          <span id="btnText">Convert to JPG</span>
+          <div id="spinner"
+            class="hidden w-8 h-8 border-4 border-t-4 border-t-white border-gray-300 rounded-full mx-auto">
+          </div>
+        </button>
+
+        <p id="progressText" class="hidden mb-4 text-green-600 font-medium"></p>
+
+        <button id="downloadSingle"
+          class="hidden w-full bg-gray-800 text-white py-3 rounded-xl font-semibold hover:bg-gray-900 transition shadow-md mb-3">
+          Download JPG
+        </button>
+
+        <button id="downloadZip"
+          class="hidden w-full bg-gray-800 text-white py-3 rounded-xl font-semibold hover:bg-gray-900 transition shadow-md">
+          Download All as ZIP
+        </button>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="bg-white border-t border-borderclr py-16">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-6">How It Works</h2>
+
+      <div class="grid md:grid-cols-3 gap-8 mt-10">
+
+        <div class="p-6">
+          <div class="text-primary text-3xl font-bold mb-3">1</div>
+          <h3 class="font-semibold mb-2">Upload PDF</h3>
+          <p class="text-gray-600">Select your PDF file from your device.</p>
+        </div>
+
+        <div class="p-6">
+          <div class="text-primary text-3xl font-bold mb-3">2</div>
+          <h3 class="font-semibold mb-2">Auto Convert</h3>
+          <p class="text-gray-600">Each page is converted into JPG format instantly.</p>
+        </div>
+
+        <div class="p-6">
+          <div class="text-primary text-3xl font-bold mb-3">3</div>
+          <h3 class="font-semibold mb-2">Download</h3>
+          <p class="text-gray-600">Download JPG images individually.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SEO CONTENT FOR BETTER RANKING -->
+  <section class="py-24 px-4 bg-gray-50">
+    <div class="max-w-5xl mx-auto">
+
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">
+          Free PDF to JPG Converter – Convert PDF to Image Online
+        </h2>
+        <p class="text-gray-500 max-w-2xl mx-auto">
+          Convert PDF files into high-quality JPG images instantly.
+          Fast, secure, and completely free.
+        </p>
+      </div>
+
+      <div class="bg-white p-10 rounded-3xl shadow-xl space-y-6 leading-relaxed text-gray-600">
+
+        <p>
+          Our PDF to JPG converter allows you to quickly convert PDF files into
+          high-resolution JPG images directly in your browser. No installation,
+          no sign-up, and no watermark.
+        </p>
+
+        <p>
+          Unlike many online tools, your files are processed locally on your device.
+          This ensures maximum privacy and faster performance.
+        </p>
+
+        <div class="bg-red-50 border-l-4 border-red-700 p-5 rounded-xl">
+          <p class="text-gray-700 font-medium">
+            🔐 100% secure browser-based processing — your files never leave your device.
+          </p>
+        </div>
+
+        <h3 class="text-2xl font-semibold text-gray-900 pt-6">
+          Why Convert PDF to JPG?
+        </h3>
+
+        <ul class="space-y-2 list-disc pl-6">
+          <li>Share PDF pages as images easily</li>
+          <li>Use images in presentations or social media</li>
+          <li>Avoid compatibility issues</li>
+          <li>Extract individual pages instantly</li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold text-gray-900 pt-6">
+          Key Features
+        </h3>
+
+        <div class="grid md:grid-cols-2 gap-6 mt-4">
+
+          <div class="bg-gray-50 p-5 rounded-xl">
+            <h4 class="font-semibold text-gray-800 mb-2">⚡ Fast Conversion</h4>
+            <p class="text-sm">Optimized rendering for instant JPG output.</p>
+          </div>
+
+          <div class="bg-gray-50 p-5 rounded-xl">
+            <h4 class="font-semibold text-gray-800 mb-2">🆓 No Watermark</h4>
+            <p class="text-sm">Download clean images without branding.</p>
+          </div>
+
+          <div class="bg-gray-50 p-5 rounded-xl">
+            <h4 class="font-semibold text-gray-800 mb-2">🔒 Secure</h4>
+            <p class="text-sm">Processed locally in your browser.</p>
+          </div>
+
+          <div class="bg-gray-50 p-5 rounded-xl">
+            <h4 class="font-semibold text-gray-800 mb-2">📦 ZIP Download</h4>
+            <p class="text-sm">Download multiple pages in one ZIP file.</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ SECTION (SEO BOOST) -->
+  <section class="py-20 px-4 bg-white">
+    <div class="max-w-4xl mx-auto">
+
+      <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">
+        Frequently Asked Questions
+      </h2>
+
+      <div class="space-y-4">
+
+        <div class="bg-white rounded-xl shadow-md">
+          <button class="faq-toggle w-full text-left p-5 font-semibold text-gray-800 flex justify-between items-center">
+            Is this PDF to JPG converter free?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-content hidden px-5 pb-5 text-gray-600 text-sm">
+            Yes, our PDF to JPG converter is completely free to use.
+            There are no hidden charges and no watermark on your images.
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md">
+          <button class="faq-toggle w-full text-left p-5 font-semibold text-gray-800 flex justify-between items-center">
+            Are my files secure?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-content hidden px-5 pb-5 text-gray-600 text-sm">
+            Yes. Your files are processed locally in your browser.
+            We do not upload or store your documents on any server.
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md">
+          <button class="faq-toggle w-full text-left p-5 font-semibold text-gray-800 flex justify-between items-center">
+            Do I need to install any software?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-content hidden px-5 pb-5 text-gray-600 text-sm">
+            No installation is required. This is a fully online PDF to JPG tool
+            that works directly in your web browser.
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md">
+          <button class="faq-toggle w-full text-left p-5 font-semibold text-gray-800 flex justify-between items-center">
+            Can I convert multiple PDF pages?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-content hidden px-5 pb-5 text-gray-600 text-sm">
+            Yes. If your PDF has multiple pages, you can download all images
+            together as a ZIP file.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-300 pt-16 pb-10 px-6">
+    <div class="max-w-6xl mx-auto">
+
+      <div class="grid md:grid-cols-3 gap-12 mb-12">
+
+        <div>
+          <h3 class="text-white text-xl font-semibold mb-4">ToolHub</h3>
+          <p class="text-sm leading-relaxed text-gray-400">
+            ToolHub provides free, secure, and fast online tools for PDF and image conversion.
+            All tools work directly in your browser without installation.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="text-white font-semibold mb-4">Company</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+            <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+            <li><a href="privacy.html" class="hover:text-white transition">Privacy Policy</a></li>
+            <li><a href="terms.html" class="hover:text-white transition">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-semibold mb-4">Why ToolHub?</h4>
+          <ul class="space-y-2 text-sm text-gray-400">
+            <li>🔒 100% Secure Processing</li>
+            <li>⚡ Fast Browser-Based Tool</li>
+            <li>🆓 Free & No Sign-Up</li>
+            <li>🌍 Available Worldwide</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="border-t border-gray-700 pt-6 text-center text-sm text-gray-500">
+        <p>© 2026 ToolHub. All rights reserved.</p>
+        <p class="mt-2 text-gray-600 text-xs">
+          Built for simple and secure document conversion.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="assets/js/pdf-to-jpg.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+      const faqButtons = document.querySelectorAll(".faq-toggle");
+
+      faqButtons.forEach(button => {
+        button.addEventListener("click", function () {
+
+          const content = this.nextElementSibling;
+          const icon = this.querySelector(".faq-icon");
+
+          content.classList.toggle("hidden");
+
+          if (content.classList.contains("hidden")) {
+            icon.textContent = "+";
+          } else {
+            icon.textContent = "−";
+          }
+
+        });
+      });
+
+    });
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "toolhub",
+  "version": "1.0.0",
+  "description": "ToolHub is a set of free, fast, and secure online tools to convert PDFs and images directly in your browser. No installation, no sign-up, and no watermark.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.24",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.2.1"
+  }
+}
