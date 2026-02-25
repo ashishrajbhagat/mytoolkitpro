@@ -12,7 +12,7 @@
   <meta name="robots" content="index, follow">
 
   <link href="../assets/css/main.css" rel="stylesheet" />
-        <link href="../assets/css/custom.css" rel="stylesheet" />
+  <link href="../assets/css/custom.css" rel="stylesheet" />
 
 </head>
 
@@ -21,11 +21,11 @@
   <!-- NAVBAR -->
   <header class="bg-white border-b border-borderclr">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="/index.html" class="text-2xl font-bold text-primary">ToolHub</a>
+      <a href="../index.html" class="text-2xl font-bold text-primary">ToolHub</a>
       <nav class="space-x-6 text-lg text-gray-600">
-        <a href="/index.html" class="hover:text-primary">Home</a>
-        <a href="/tools.html" class="hover:text-primary">Tools</a>
-        <a href="/about.html" class="hover:text-primary">About</a>
+        <a href="../index.html" class="hover:text-primary">Home</a>
+        <a href="../tools.html" class="hover:text-primary">Tools</a>
+        <a href="../about.html" class="hover:text-primary">About</a>
       </nav>
     </div>
   </header>
@@ -34,9 +34,9 @@
   <section class="bg-gray-50 py-4 px-6 border-b border-borderclr">
     <div class="max-w-7xl mx-auto">
       <nav class="text-m text-gray-500 flex items-center gap-2">
-        <a href="/index.html" class="hover:text-primary transition">Home</a>
+        <a href="../index.html" class="hover:text-primary transition">Home</a>
         <span>›</span>
-        <a href="/tools.html" class="hover:text-primary transition">Tools</a>
+        <a href="../tools.html" class="hover:text-primary transition">Tools</a>
         <span>›</span>
         <span class="text-gray-900 font-medium">Merge PDF</span>
       </nav>
@@ -45,194 +45,203 @@
 
   <main>
     <!-- MAIN TOOL SECTION -->
-  <section class="bg-gray-100 py-20 px-4">
-    <div class="max-w-2xl mx-auto">
-      <div class="bg-white rounded-2xl shadow-xl p-10 text-center">
+    <section class="bg-gray-100 py-20 px-4">
+      <div class="max-w-2xl mx-auto">
+        <div class="bg-white rounded-2xl shadow-xl p-10 text-center">
 
-        <h1 class="text-3xl font-bold text-gray-800 mb-3">Merge PDF Files</h1>
-        <div class="mb-6">
-          <p class="text-gray-500">Combine multiple PDF files into a single PDF online instantly.</p>
-          <span class="text-green-600 font-medium">100% Secure.</span>
-        </div>
+          <h1 class="text-3xl font-bold text-gray-800 mb-3">Merge PDF Files</h1>
+          <div class="mb-6">
+            <p class="text-gray-500">Combine multiple PDF files into a single PDF online instantly.</p>
+            <span class="text-green-600 font-medium">100% Secure.</span>
+          </div>
 
-        <div class="border-2 border-dashed border-gray-300 rounded-xl p-10 mb-6 hover:border-red-600 transition cursor-pointer">
-          <p class="text-gray-600 mb-4 font-medium">Drag & Drop your PDF files here</p>
+          <div
+            class="border-2 border-dashed border-gray-300 rounded-xl p-10 mb-6 hover:border-red-600 transition cursor-pointer">
+            <p class="text-gray-600 mb-4 font-medium">Drag & Drop your PDF files here</p>
 
-          <input type="file" id="pdfFiles" accept="application/pdf" multiple class="hidden">
-          <button onclick="document.getElementById('pdfFiles').click()"
-            class="bg-red-700 text-white px-6 py-3 rounded-xl font-semibold hover:bg-red-800 transition shadow-md">
-            Select PDF Files
+            <input type="file" id="pdfFiles" accept="application/pdf" multiple class="hidden">
+            <button onclick="document.getElementById('pdfFiles').click()"
+              class="bg-red-700 text-white px-6 py-3 rounded-xl font-semibold hover:bg-red-800 transition shadow-md">
+              Select PDF Files
+            </button>
+          </div>
+
+          <p id="uploadMessage" class="text-green-600 font-medium hidden mb-4">✅ PDFs uploaded successfully!</p>
+
+          <button id="mergeBtn"
+            class="hidden w-full bg-red-700 text-white py-3 rounded-xl font-semibold hover:bg-red-800 transition shadow-md mb-4">
+            <span id="btnText">Merge PDFs</span>
+            <div id="spinner"
+              class="hidden w-8 h-8 border-4 border-t-4 border-t-white border-gray-300 rounded-full mx-auto"></div>
           </button>
-        </div>
 
-        <p id="uploadMessage" class="text-green-600 font-medium hidden mb-4">✅ PDFs uploaded successfully!</p>
+          <p id="progressText" class="hidden mb-4 text-green-600 font-medium"></p>
 
-        <button id="mergeBtn"
-          class="hidden w-full bg-red-700 text-white py-3 rounded-xl font-semibold hover:bg-red-800 transition shadow-md mb-4">
-          <span id="btnText">Merge PDFs</span>
-          <div id="spinner" class="hidden w-8 h-8 border-4 border-t-4 border-t-white border-gray-300 rounded-full mx-auto"></div>
-        </button>
-
-        <p id="progressText" class="hidden mb-4 text-green-600 font-medium"></p>
-
-        <button id="downloadPDF"
-          class="hidden w-full bg-gray-800 text-white py-3 rounded-xl font-semibold hover:bg-gray-900 transition shadow-md mb-3">
-          Download Merged PDF
-        </button>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- HOW IT WORKS -->
-  <section class="bg-white border-t border-borderclr py-24 px-6">
-    <div class="max-w-6xl mx-auto text-center">
-      <h2 class="text-4xl font-bold mb-16">How It Works</h2>
-      <div class="grid md:grid-cols-3 gap-8 mt-10">
-
-        <div class="p-6">
-          <div class="text-primary text-4xl font-bold mb-4">1</div>
-          <h3 class="text-xl font-semibold mb-2">Upload PDFs</h3>
-          <p class="text-gray-600 text-m">Select PDF files from your device.</p>
-        </div>
-
-        <div class="p-6">
-          <div class="text-primary text-4xl font-bold mb-4">2</div>
-          <h3 class="text-xl font-semibold mb-2">Merge Automatically</h3>
-          <p class="text-gray-600 text-m">All selected PDFs are combined instantly.</p>
-        </div>
-
-        <div class="p-6">
-          <div class="text-primary text-4xl font-bold mb-4">3</div>
-          <h3 class="text-xl font-semibold mb-2">Download</h3>
-          <p class="text-gray-600 text-m">Download the merged PDF with a single click.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- SEO CONTENT FOR BETTER RANKING -->
-<section class="py-24 px-4 bg-gray-50">
-  <div class="max-w-5xl mx-auto">
-
-    <div class="text-center mb-12">
-      <h2 class="text-4xl font-bold text-gray-900 mb-4">
-        Free PDF Merger - Merge PDF Files Online
-      </h2>
-      <p class="text-gray-500 max-w-2xl mx-auto">
-        Combine multiple PDF files into a single PDF quickly and securely. Our online PDF merger is fast, free, and easy to use.
-      </p>
-    </div>
-
-    <div class="bg-white p-10 rounded-3xl shadow-xl space-y-6 leading-relaxed text-gray-600">
-
-      <p>
-        Our PDF merger allows you to merge multiple PDF documents into one consolidated file directly in your browser. No software installation is required, and your files remain completely private.
-      </p>
-
-      <p>
-        Unlike other online tools, all files are processed locally on your device. This ensures maximum security, faster processing, and no uploads to any server.
-      </p>
-
-      <div class="bg-red-50 border-l-4 border-red-700 p-5 rounded-xl">
-        <p class="text-gray-700 font-medium">
-          🔐 100% secure and private — your PDF files never leave your browser.
-        </p>
-      </div>
-
-      <h3 class="text-2xl font-semibold text-gray-900 pt-6">
-        Why Merge PDF Files?
-      </h3>
-
-      <ul class="space-y-2 list-disc pl-6">
-        <li>Combine multiple PDFs into a single document</li>
-        <li>Easy sharing and storage</li>
-        <li>Maintain formatting and quality</li>
-        <li>Quick and effortless online processing</li>
-      </ul>
-
-      <h3 class="text-2xl font-semibold text-gray-900 pt-6">
-        Key Features
-      </h3>
-
-      <div class="grid md:grid-cols-2 gap-6 mt-4">
-
-        <div class="bg-gray-50 p-5 rounded-xl">
-          <h4 class="font-semibold text-gray-800 mb-2">⚡ Fast Merging</h4>
-          <p class="text-sm">Optimized for instant PDF merging directly in your browser.</p>
-        </div>
-
-        <div class="bg-gray-50 p-5 rounded-xl">
-          <h4 class="font-semibold text-gray-800 mb-2">🆓 Free & No Watermark</h4>
-          <p class="text-sm">Download your merged PDF without any branding or restrictions.</p>
-        </div>
-
-        <div class="bg-gray-50 p-5 rounded-xl">
-          <h4 class="font-semibold text-gray-800 mb-2">🔒 Secure</h4>
-          <p class="text-sm">All files are processed locally on your device, keeping your data private.</p>
-        </div>
-
-        <div class="bg-gray-50 p-5 rounded-xl">
-          <h4 class="font-semibold text-gray-800 mb-2">📦 Multi-File Support</h4>
-          <p class="text-sm">Merge multiple PDFs of any size into one single file.</p>
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-  <!-- FAQ -->
-  <section class="py-24 px-6 bg-white">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-4xl font-bold text-center text-gray-900 mb-14">Frequently Asked Questions</h2>
-
-      <div class="space-y-5">
-        <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition">
-          <button class="faq-toggle w-full text-left p-6 font-semibold text-gray-800 flex justify-between items-center">
-            Is this Merge PDF tool free?
-            <span class="faq-icon text-xl">+</span>
+          <button id="downloadPDF"
+            class="hidden w-full bg-gray-800 text-white py-3 rounded-xl font-semibold hover:bg-gray-900 transition shadow-md mb-3">
+            Download Merged PDF
           </button>
-          <div class="faq-content hidden px-6 pb-6 text-gray-600 text-base leading-relaxed">
-            Yes, merging PDFs with this tool is completely free. No watermark.
+
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="bg-white border-t border-borderclr py-24 px-6">
+      <div class="max-w-6xl mx-auto text-center">
+        <h2 class="text-4xl font-bold mb-16">How It Works</h2>
+        <div class="grid md:grid-cols-3 gap-8 mt-10">
+
+          <div class="p-6">
+            <div class="text-primary text-4xl font-bold mb-4">1</div>
+            <h3 class="text-xl font-semibold mb-2">Upload PDFs</h3>
+            <p class="text-gray-600 text-m">Select PDF files from your device.</p>
+          </div>
+
+          <div class="p-6">
+            <div class="text-primary text-4xl font-bold mb-4">2</div>
+            <h3 class="text-xl font-semibold mb-2">Merge Automatically</h3>
+            <p class="text-gray-600 text-m">All selected PDFs are combined instantly.</p>
+          </div>
+
+          <div class="p-6">
+            <div class="text-primary text-4xl font-bold mb-4">3</div>
+            <h3 class="text-xl font-semibold mb-2">Download</h3>
+            <p class="text-gray-600 text-m">Download the merged PDF with a single click.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SEO CONTENT FOR BETTER RANKING -->
+    <section class="py-24 px-4 bg-gray-50">
+      <div class="max-w-5xl mx-auto">
+
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">
+            Free PDF Merger - Merge PDF Files Online
+          </h2>
+          <p class="text-gray-500 max-w-2xl mx-auto">
+            Combine multiple PDF files into a single PDF quickly and securely. Our online PDF merger is fast, free, and
+            easy to use.
+          </p>
+        </div>
+
+        <div class="bg-white p-10 rounded-3xl shadow-xl space-y-6 leading-relaxed text-gray-600">
+
+          <p>
+            Our PDF merger allows you to merge multiple PDF documents into one consolidated file directly in your
+            browser. No software installation is required, and your files remain completely private.
+          </p>
+
+          <p>
+            Unlike other online tools, all files are processed locally on your device. This ensures maximum security,
+            faster processing, and no uploads to any server.
+          </p>
+
+          <div class="bg-red-50 border-l-4 border-red-700 p-5 rounded-xl">
+            <p class="text-gray-700 font-medium">
+              🔐 100% secure and private — your PDF files never leave your browser.
+            </p>
+          </div>
+
+          <h3 class="text-2xl font-semibold text-gray-900 pt-6">
+            Why Merge PDF Files?
+          </h3>
+
+          <ul class="space-y-2 list-disc pl-6">
+            <li>Combine multiple PDFs into a single document</li>
+            <li>Easy sharing and storage</li>
+            <li>Maintain formatting and quality</li>
+            <li>Quick and effortless online processing</li>
+          </ul>
+
+          <h3 class="text-2xl font-semibold text-gray-900 pt-6">
+            Key Features
+          </h3>
+
+          <div class="grid md:grid-cols-2 gap-6 mt-4">
+
+            <div class="bg-gray-50 p-5 rounded-xl">
+              <h4 class="font-semibold text-gray-800 mb-2">⚡ Fast Merging</h4>
+              <p class="text-sm">Optimized for instant PDF merging directly in your browser.</p>
+            </div>
+
+            <div class="bg-gray-50 p-5 rounded-xl">
+              <h4 class="font-semibold text-gray-800 mb-2">🆓 Free & No Watermark</h4>
+              <p class="text-sm">Download your merged PDF without any branding or restrictions.</p>
+            </div>
+
+            <div class="bg-gray-50 p-5 rounded-xl">
+              <h4 class="font-semibold text-gray-800 mb-2">🔒 Secure</h4>
+              <p class="text-sm">All files are processed locally on your device, keeping your data private.</p>
+            </div>
+
+            <div class="bg-gray-50 p-5 rounded-xl">
+              <h4 class="font-semibold text-gray-800 mb-2">📦 Multi-File Support</h4>
+              <p class="text-sm">Merge multiple PDFs of any size into one single file.</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-24 px-6 bg-white">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-4xl font-bold text-center text-gray-900 mb-14">Frequently Asked Questions</h2>
+
+        <div class="space-y-5">
+          <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition">
+            <button
+              class="faq-toggle w-full text-left p-6 font-semibold text-gray-800 flex justify-between items-center">
+              Is this Merge PDF tool free?
+              <span class="faq-icon text-xl">+</span>
+            </button>
+            <div class="faq-content hidden px-6 pb-6 text-gray-600 text-base leading-relaxed">
+              Yes, merging PDFs with this tool is completely free. No watermark.
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition">
+            <button
+              class="faq-toggle w-full text-left p-6 font-semibold text-gray-800 flex justify-between items-center">
+              Are my files secure?
+              <span class="faq-icon text-xl">+</span>
+            </button>
+            <div class="faq-content hidden px-6 pb-6 text-gray-600 text-base leading-relaxed">
+              All processing happens locally in your browser. Files are never uploaded.
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition">
+            <button
+              class="faq-toggle w-full text-left p-6 font-semibold text-gray-800 flex justify-between items-center">
+              Can I merge multiple PDFs?
+              <span class="faq-icon text-xl">+</span>
+            </button>
+            <div class="faq-content hidden px-6 pb-6 text-gray-600 text-base leading-relaxed">
+              Yes, you can select multiple PDF files and merge them into one PDF.
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition">
+            <button
+              class="faq-toggle w-full text-left p-6 font-semibold text-gray-800 flex justify-between items-center">
+              Do I need to install software?
+              <span class="faq-icon text-xl">+</span>
+            </button>
+            <div class="faq-content hidden px-6 pb-6 text-gray-600 text-base leading-relaxed">
+              No installation is required. The tool works entirely in your browser.
+            </div>
           </div>
         </div>
-
-        <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition">
-          <button class="faq-toggle w-full text-left p-6 font-semibold text-gray-800 flex justify-between items-center">
-            Are my files secure?
-            <span class="faq-icon text-xl">+</span>
-          </button>
-          <div class="faq-content hidden px-6 pb-6 text-gray-600 text-base leading-relaxed">
-            All processing happens locally in your browser. Files are never uploaded.
-          </div>
-        </div>
-
-        <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition">
-          <button class="faq-toggle w-full text-left p-6 font-semibold text-gray-800 flex justify-between items-center">
-            Can I merge multiple PDFs?
-            <span class="faq-icon text-xl">+</span>
-          </button>
-          <div class="faq-content hidden px-6 pb-6 text-gray-600 text-base leading-relaxed">
-            Yes, you can select multiple PDF files and merge them into one PDF.
-          </div>
-        </div>
-
-        <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition">
-          <button class="faq-toggle w-full text-left p-6 font-semibold text-gray-800 flex justify-between items-center">
-            Do I need to install software?
-            <span class="faq-icon text-xl">+</span>
-          </button>
-          <div class="faq-content hidden px-6 pb-6 text-gray-600 text-base leading-relaxed">
-            No installation is required. The tool works entirely in your browser.
-          </div>
-        </div>
       </div>
-    </div>
-  </section>
+    </section>
   </main>
 
   <!-- FOOTER -->
@@ -250,10 +259,10 @@
         <div>
           <h4 class="text-white font-semibold mb-4">Company</h4>
           <ul class="space-y-2 text-sm">
-            <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
-            <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
-            <li><a href="privacy-policy.html" class="hover:text-white transition">Privacy Policy</a></li>
-            <li><a href="terms-of-service.html" class="hover:text-white transition">Terms of Service</a></li>
+            <li><a href="../about.html" class="hover:text-white transition">About Us</a></li>
+            <li><a href="../contact.html" class="hover:text-white transition">Contact</a></li>
+            <li><a href="../privacy-policy.html" class="hover:text-white transition">Privacy Policy</a></li>
+            <li><a href="../terms-of-service.html" class="hover:text-white transition">Terms of Service</a></li>
           </ul>
         </div>
 
@@ -278,8 +287,9 @@
     </div>
   </footer>
   <!-- Scripts -->
-  <script src="/assets/js/vendor/pdf-lib.min.js" defer></script>
+  <script src="../assets/js/vendor/pdf-lib.min.js" defer></script>
   <script src="../assets/js/merge-pdf.js" defer></script>
 
 </body>
+
 </html>

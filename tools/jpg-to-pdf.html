@@ -1,49 +1,48 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <title>JPG to PDF Converter Online - Free & Fast | ToolHub</title>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <meta
-            name="description"
-            content="Convert JPG images into PDF online for free. Fast, secure and easy to use JPG to PDF converter."
-        />
-        <meta name="robots" content="index, follow" />
+    <title>JPG to PDF Converter Online - Free & Fast | ToolHub</title>
 
-        <link href="../assets/css/main.css" rel="stylesheet" />
-        <link href="../assets/css/custom.css" rel="stylesheet" />
-    </head>
+    <meta name="description"
+        content="Convert JPG images into PDF online for free. Fast, secure and easy to use JPG to PDF converter." />
+    <meta name="robots" content="index, follow" />
 
-    <body class="bg-bgsoft text-darktext">
-        <!-- NAVBAR -->
-        <header class="bg-white border-b border-borderclr">
-            <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-                <a href="/index.html" class="text-2xl font-bold text-primary">ToolHub</a>
-                <nav class="space-x-6 text-lg text-gray-600">
-                    <a href="/index.html" class="hover:text-primary">Home</a>
-                    <a href="/tools.html" class="hover:text-primary">Tools</a>
-                    <a href="/about.html" class="hover:text-primary">About</a>
-                </nav>
-            </div>
-        </header>
+    <link href="../assets/css/main.css" rel="stylesheet" />
+    <link href="../assets/css/custom.css" rel="stylesheet" />
+</head>
 
-        <!-- BREADCRUMB -->
-        <section class="bg-gray-50 py-4 px-6 border-b border-borderclr">
-            <div class="max-w-7xl mx-auto">
-                <nav class="text-m text-gray-500 flex items-center gap-2">
-                    <a href="/index.html" class="hover:text-primary transition">Home</a>
-                    <span>›</span>
-                    <a href="/tools.html" class="hover:text-primary transition">Tools</a>
-                    <span>›</span>
-                    <span class="text-gray-900 font-medium">JPG to PDF</span>
-                </nav>
-            </div>
-        </section>
+<body class="bg-bgsoft text-darktext">
+    <!-- NAVBAR -->
+    <header class="bg-white border-b border-borderclr">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="../index.html" class="text-2xl font-bold text-primary">ToolHub</a>
+            <nav class="space-x-6 text-lg text-gray-600">
+                <a href="../index.html" class="hover:text-primary">Home</a>
+                <a href="../tools.html" class="hover:text-primary">Tools</a>
+                <a href="../about.html" class="hover:text-primary">About</a>
+            </nav>
+        </div>
+    </header>
 
-        <main>
-            <!-- MAIN TOOL SECTION -->
+    <!-- BREADCRUMB -->
+    <section class="bg-gray-50 py-4 px-6 border-b border-borderclr">
+        <div class="max-w-7xl mx-auto">
+            <nav class="text-m text-gray-500 flex items-center gap-2">
+                <a href="../index.html" class="hover:text-primary transition">Home</a>
+                <span>›</span>
+                <a href="../tools.html" class="hover:text-primary transition">Tools</a>
+                <span>›</span>
+                <span class="text-gray-900 font-medium">JPG to PDF</span>
+            </nav>
+        </div>
+    </section>
+
+    <main>
+        <!-- MAIN TOOL SECTION -->
         <section class="bg-gray-100 py-20 px-4">
             <div class="max-w-2xl mx-auto">
                 <div class="bg-white rounded-2xl shadow-xl p-10 text-center">
@@ -55,16 +54,13 @@
                     </div>
 
                     <div
-                        class="border-2 border-dashed border-gray-300 rounded-xl p-10 mb-6 hover:border-red-600 transition cursor-pointer"
-                    >
+                        class="border-2 border-dashed border-gray-300 rounded-xl p-10 mb-6 hover:border-red-600 transition cursor-pointer">
                         <p class="text-gray-600 mb-4 font-medium">Drag & Drop your JPG images here</p>
 
                         <input type="file" id="imageFiles" accept="image/jpeg, image/png" multiple class="hidden" />
 
-                        <button
-                            onclick="document.getElementById('imageFiles').click()"
-                            class="bg-red-700 text-white px-6 py-3 rounded-xl font-semibold hover:bg-red-800 transition shadow-md"
-                        >
+                        <button onclick="document.getElementById('imageFiles').click()"
+                            class="bg-red-700 text-white px-6 py-3 rounded-xl font-semibold hover:bg-red-800 transition shadow-md">
                             Select Images
                         </button>
                     </div>
@@ -73,23 +69,18 @@
                         ✅ Images uploaded successfully!
                     </p>
 
-                    <button
-                        id="convertBtn"
-                        class="hidden w-full bg-red-700 text-white py-3 rounded-xl font-semibold hover:bg-red-800 transition shadow-md mb-4"
-                    >
+                    <button id="convertBtn"
+                        class="hidden w-full bg-red-700 text-white py-3 rounded-xl font-semibold hover:bg-red-800 transition shadow-md mb-4">
                         <span id="btnText">Convert to PDF</span>
-                        <div
-                            id="spinner"
-                            class="hidden w-8 h-8 border-4 border-t-4 border-t-white border-gray-300 rounded-full mx-auto"
-                        ></div>
+                        <div id="spinner"
+                            class="hidden w-8 h-8 border-4 border-t-4 border-t-white border-gray-300 rounded-full mx-auto">
+                        </div>
                     </button>
 
                     <p id="progressText" class="hidden mb-4 text-green-600 font-medium"></p>
 
-                    <button
-                        id="downloadPDF"
-                        class="hidden w-full bg-gray-800 text-white py-3 rounded-xl font-semibold hover:bg-gray-900 transition shadow-md mb-3"
-                    >
+                    <button id="downloadPDF"
+                        class="hidden w-full bg-gray-800 text-white py-3 rounded-xl font-semibold hover:bg-gray-900 transition shadow-md mb-3">
                         Download PDF
                     </button>
                 </div>
@@ -192,8 +183,7 @@
                 <div class="space-y-5">
                     <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition">
                         <button
-                            class="faq-toggle w-full text-left p-6 font-semibold text-lg text-gray-800 flex justify-between items-center"
-                        >
+                            class="faq-toggle w-full text-left p-6 font-semibold text-lg text-gray-800 flex justify-between items-center">
                             Is this JPG to PDF converter free?
                             <span class="faq-icon text-xl">+</span>
                         </button>
@@ -204,8 +194,7 @@
 
                     <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition">
                         <button
-                            class="faq-toggle w-full text-left p-6 font-semibold text-lg text-gray-800 flex justify-between items-center"
-                        >
+                            class="faq-toggle w-full text-left p-6 font-semibold text-lg text-gray-800 flex justify-between items-center">
                             Are my files secure?
                             <span class="faq-icon text-xl">+</span>
                         </button>
@@ -216,8 +205,7 @@
 
                     <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition">
                         <button
-                            class="faq-toggle w-full text-left p-6 font-semibold text-lg text-gray-800 flex justify-between items-center"
-                        >
+                            class="faq-toggle w-full text-left p-6 font-semibold text-lg text-gray-800 flex justify-between items-center">
                             Can I convert multiple images at once?
                             <span class="faq-icon text-xl">+</span>
                         </button>
@@ -228,8 +216,7 @@
 
                     <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition">
                         <button
-                            class="faq-toggle w-full text-left p-6 font-semibold text-lg text-gray-800 flex justify-between items-center"
-                        >
+                            class="faq-toggle w-full text-left p-6 font-semibold text-lg text-gray-800 flex justify-between items-center">
                             Do I need to install software?
                             <span class="faq-icon text-xl">+</span>
                         </button>
@@ -240,50 +227,52 @@
                 </div>
             </div>
         </section>
-        </main>
+    </main>
 
-        <!-- FOOTER -->
-        <footer class="bg-gray-900 text-gray-300 pt-16 pb-10 px-6">
-            <div class="max-w-6xl mx-auto">
-                <div class="grid md:grid-cols-3 gap-12 mb-12">
-                    <div>
-                        <h3 class="text-white text-xl font-semibold mb-4">ToolHub</h3>
-                        <p class="text-sm leading-relaxed text-gray-400">
-                            ToolHub provides free, secure, and fast online tools for PDF and image conversion. All tools
-                            work directly in your browser without installation.
-                        </p>
-                    </div>
-
-                    <div>
-                        <h4 class="text-white font-semibold mb-4">Company</h4>
-                        <ul class="space-y-2 text-sm">
-                            <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
-                            <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
-                            <li><a href="privacy-policy.html" class="hover:text-white transition">Privacy Policy</a></li>
-                            <li><a href="terms-of-service.html" class="hover:text-white transition">Terms of Service</a></li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <h4 class="text-white font-semibold mb-4">Why ToolHub?</h4>
-                        <ul class="space-y-2 text-sm text-gray-400">
-                            <li>🔒 100% Secure Processing</li>
-                            <li>⚡ Fast Browser-Based Tool</li>
-                            <li>🆓 Free & No Sign-Up</li>
-                            <li>🌍 Available Worldwide</li>
-                        </ul>
-                    </div>
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-gray-300 pt-16 pb-10 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <h3 class="text-white text-xl font-semibold mb-4">ToolHub</h3>
+                    <p class="text-sm leading-relaxed text-gray-400">
+                        ToolHub provides free, secure, and fast online tools for PDF and image conversion. All tools
+                        work directly in your browser without installation.
+                    </p>
                 </div>
 
-                <div class="border-t border-gray-700 pt-6 text-center text-sm text-gray-500">
-                    <p>© 2026 ToolHub. All rights reserved.</p>
-                    <p class="mt-2 text-gray-600 text-sm">Built for simple and secure document conversion.</p>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="../about.html" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="../contact.html" class="hover:text-white transition">Contact</a></li>
+                        <li><a href="../privacy-policy.html" class="hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="../terms-of-service.html" class="hover:text-white transition">Terms of Service</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Why ToolHub?</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li>🔒 100% Secure Processing</li>
+                        <li>⚡ Fast Browser-Based Tool</li>
+                        <li>🆓 Free & No Sign-Up</li>
+                        <li>🌍 Available Worldwide</li>
+                    </ul>
                 </div>
             </div>
-        </footer>
 
-        <!-- Scripts -->
-         <script src="/assets/js/vendor/jspdf.umd.min.js" defer></script>
-        <script src="../assets/js/jpg-to-pdf.js" defer></script>
-    </body>
+            <div class="border-t border-gray-700 pt-6 text-center text-sm text-gray-500">
+                <p>© 2026 ToolHub. All rights reserved.</p>
+                <p class="mt-2 text-gray-600 text-sm">Built for simple and secure document conversion.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../assets/js/vendor/jspdf.umd.min.js" defer></script>
+    <script src="../assets/js/jpg-to-pdf.js" defer></script>
+</body>
+
 </html>
