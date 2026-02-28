@@ -54,13 +54,23 @@
         </script>
     </head>
     <body class="bg-bgsoft text-darktext">
-        <header class="bg-white border-b border-borderclr">
+        <header class="bg-white border-b border-borderclr relative z-50">
             <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
                 <a href="index.html" class="flex items-center gap-2">
                     <img src="assets/img/favicon.svg" alt="MyToolKitPro" width="40" height="40" />
                     <span class="text-2xl font-bold text-primary">MyToolKitPro</span>
                 </a>
-                <nav class="space-x-6 text-lg text-gray-600">
+                <nav class="hidden md:flex space-x-6 text-lg text-gray-600">
+                    <a href="index.html" class="hover:text-primary">Home</a>
+                    <a href="tools.html" class="text-primary font-semibold">Tools</a>
+                    <a href="about.html" class="hover:text-primary">About</a>
+                </nav>
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-600 hover:text-primary focus:outline-none" aria-label="Toggle mobile menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white border-b border-borderclr shadow-lg">
+                <nav class="flex flex-col p-4 space-y-4 text-lg text-gray-600">
                     <a href="index.html" class="hover:text-primary">Home</a>
                     <a href="tools.html" class="text-primary font-semibold">Tools</a>
                     <a href="about.html" class="hover:text-primary">About</a>
@@ -135,5 +145,12 @@
             </div>
         </footer>
         <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+        <script>
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if(mobileBtn && mobileMenu){
+                mobileBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+            }
+        </script>
     </body>
 </html>
