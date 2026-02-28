@@ -49,34 +49,21 @@ npm run build              # Build CSS and JS (one-time)
 npm run dev                # Watch both CSS and JS (development mode)
 ```
 
-### PWA Icons
+### PWA & Favicons
 
-PWA icons are committed as **static assets** in `assets/img/` (icon-72.png through icon-512.png). These are used by the manifest in `assets/manifest.json` for:
-- Home screen installation icons
-- App switcher thumbnails
-- Splash screens on mobile devices
+Icons and logos are committed as **static assets** in `assets/img/`. These are used by the manifest in `assets/manifest.json` and your HTML headers for:
+- Home screen installation icons (`icon-192.png`, `icon-512.png`)
+- Apple devices (`apple-touch-icon.png`)
+- Browser tabs and bookmarks (`favicon.ico`, `favicon.svg`, `favicon-16.png`, `favicon-32.png`)
+- Social media previews (`og-image.png`)
 
-**To customize icons for production:**
+### 2. Update the Project Structure Section
+Replace your current `## 📁 Project Structure` section with this incredibly detailed, accurate tree. This includes your specific image files, the correct CSS layout, and the new JS `src`/`dist` layout!
 
-1. Create your branded PNG images at these sizes:
-   - 72×72, 96×96, 128×128, 144×144, 152×152, 192×192, 384×384, 512×512
-
-2. Replace the files in `assets/img/icon-{size}.png`
-
-3. Commit and deploy:
-   ```bash
-   git add assets/img/icon-*.png
-   git commit -m "Update PWA icons with branded artwork"
-   ```
-
-**Icon generation tools** (if you need to generate from SVG):
-- **ImageMagick** (command line): `magick convert logo.svg -resize 512x512 icon-512.png`
-- **Online**: [AppIcon.co](https://appicon.co), [Icon Generator](https://www.icoconvert.com)
-- **Desktop**: Photoshop, GIMP, Affinity Photo
-
+```markdown
 ## 📁 Project Structure
 
-```
+```text
 MyToolKitPro/
 ├── index.html              # Home page
 ├── tools.html              # Tools directory page
@@ -87,24 +74,37 @@ MyToolKitPro/
 ├── 404.html                # 404 error page
 ├── 500.html                # 500 error page
 ├── package.json            # Project dependencies & npm scripts
-├── tailwind.config.js      # Tailwind CSS configuration
 ├── README.md               # This file
 ├── sitemap.xml             # SEO sitemap
 ├── robots.txt              # SEO robots.txt
 ├── assets/
 │   ├── css/
-│   │   ├── main.css        # Main stylesheet
-│   │   ├── custom.css      # Custom styles
-│   │   └── tailwind.css    # Tailwind output
-│   ├── img/                # Images and media
+│   │   ├── dist/
+│   │   │   └── output.css          # Main compiled stylesheet
+│   │   └── src/
+│   │       ├── custom.css          # Custom overrides
+│   │       └── input.css           # Tailwind input file
+│   ├── img/
+│   │   ├── apple-touch-icon.png    # iOS home screen icon
+│   │   ├── favicon-16.png          # Small browser tab icon
+│   │   ├── favicon-32.png          # Standard browser tab icon
+│   │   ├── favicon.ico             # Legacy browser icon
+│   │   ├── favicon.svg             # Modern vector tab icon
+│   │   ├── icon-192.png            # PWA manifest icon
+│   │   ├── icon-512.png            # PWA manifest large icon
+│   │   ├── logo-horizontal.svg     # Main site logo (Header)
+│   │   ├── logo.svg                # Square site logo
+│   │   └── og-image.png            # Social media sharing preview
 │   └── js/
-│       ├── src/
-│       │   ├── main.js     # Core application logic
-│       │   ├── about.js    # About page scripts
-│       │   ├── jpg-to-pdf.js
-│       │   ├── merge-pdf.js
-│       │   └── pdf-to-jpg.js
-│       └── vendor/         # Third-party libraries
+│       ├── dist/                   # Minified production scripts
+│       │   ├── main.min.js
+│       │   ├── pdf-to-jpg.min.js
+│       │   └── (other minified files...)
+│       ├── src/                    # Raw developer source code
+│       │   ├── main.js
+│       │   ├── pdf-to-jpg.js
+│       │   └── (other source files...)
+│       └── vendor/                 # Third-party libraries
 │           ├── jspdf.umd.min.js
 │           ├── jszip.min.js
 │           ├── pdf-lib.min.js
@@ -114,7 +114,6 @@ MyToolKitPro/
     ├── jpg-to-pdf.html
     ├── merge-pdf.html
     └── pdf-to-jpg.html
-```
 
 ## 🚀 Getting Started
 
@@ -141,9 +140,20 @@ MyToolKitPro/
    npm run build
    ```
 
-4. **Open in browser:**
-   - Simply open `index.html` in your web browser
-   - Or use a local server: `npx http-server` or `python -m http.server 8000`
+4. **Open in development server:**
+   Because this project uses Web Workers for client-side PDF processing, it **must** be served over HTTP/HTTPS. Opening the files directly via the `file://` protocol will cause browser security errors.
+
+   - **Option A (Recommended):** Use the **Live Server** extension in VS Code. Right-click `index.html` and select "Open with Live Server".
+   - **Option B (Command Line):** Run a quick local server in your project root:
+     ```bash
+     npx serve
+     # or
+     npx http-server
+     ```
+   - **Option C (Python):** If you have Python installed:
+     ```bash
+     python -m http.server 8000
+     ```
 
 ## 📦 Dependencies
 
@@ -169,8 +179,8 @@ MyToolKitPro/
 
 The project uses **Tailwind CSS v4** for styling with a modern, zero-config setup:
 - **Configuration:** Handled via the `@theme` directive directly in CSS.
-- **Input:** `assets/css/tailwind.css`
-- **Output:** `assets/css/dist/main.css`
+- **Input:** `assets/css/input.css`
+- **Output:** `assets/css/dist/output.css`
 - **Custom CSS:** `assets/css/src/custom.css`
 
 ### Building Styles
@@ -317,7 +327,7 @@ npm run build
 
 ### Styling issues
 - Ensure `npm run build:css` completed successfully
-- Check `assets/css/dist/main.css` exists and is referenced in HTML
+- Check `assets/css/dist/output.css` exists and is referenced in HTML
 - Clear browser cache (Ctrl+Shift+Delete)
 
 ## 📞 Support
