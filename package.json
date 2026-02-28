@@ -4,9 +4,11 @@
   "description": "MyToolKitPro is a set of free, fast, and secure online tools to convert PDFs and images directly in your browser. No installation, no sign-up, and no watermark.",
   "main": "index.js",
   "scripts": {
-    "build:css": "tailwind.exe -i assets/css/tailwind.css -o assets/css/main.css --minify",
+    "build:css": "tailwindcss -i assets/css/tailwind.css -o assets/css/main.css --minify",
+    "build:css:local": "tailwind.exe -i assets/css/tailwind.css -o assets/css/main.css --minify",
     "build:js": "node scripts/minify-js.js",
     "build": "npm run build:css && npm run build:js",
+    "build:local": "npm run build:css:local && npm run build:js",
     "watch:css": "tailwind.exe -i assets/css/tailwind.css -o assets/css/main.css --watch",
     "watch:js": "nodemon --watch assets/js/src --ext js --exec \"npm run build:js\"",
     "dev": "concurrently \"npm run watch:css\" \"npm run watch:js\"",
@@ -20,6 +22,7 @@
     "concurrently": "^8.2.2",
     "nodemon": "^3.1.0",
     "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.1",
     "terser": "^5.46.0"
   }
 }
