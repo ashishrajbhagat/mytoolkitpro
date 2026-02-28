@@ -167,11 +167,11 @@ MyToolKitPro/
 
 ## 🎨 Styling & Build System
 
-The project uses **Tailwind CSS** for styling with a custom configuration:
-- **Configuration File:** `tailwind.config.js`
+The project uses **Tailwind CSS v4** for styling with a modern, zero-config setup:
+- **Configuration:** Handled via the `@theme` directive directly in CSS.
 - **Input:** `assets/css/tailwind.css`
-- **Output:** `assets/css/main.css`
-- **Custom CSS:** `assets/css/custom.css`
+- **Output:** `assets/css/dist/main.css`
+- **Custom CSS:** `assets/css/src/custom.css`
 
 ### Building Styles
 
@@ -317,7 +317,7 @@ npm run build
 
 ### Styling issues
 - Ensure `npm run build:css` completed successfully
-- Check `assets/css/main.css` exists and is referenced in HTML
+- Check `assets/css/dist/main.css` exists and is referenced in HTML
 - Clear browser cache (Ctrl+Shift+Delete)
 
 ## 📞 Support
