@@ -141,6 +141,3 @@ pnpm-debug.log*
 .vscode/
 # Settings for IntelliJ/WebStorm
 .idea/
-
-# --- Deployment Helpers ---
-/deploy/*.ps1

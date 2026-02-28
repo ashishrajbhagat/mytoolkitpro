@@ -173,14 +173,14 @@ MyToolKitPro/
 
 - **No Data Collection** - We don't store or transmit your files to any servers
 - **Local Processing** - All conversions happen completely within your browser
-- **No Tracking** - No analytics or tracking cookies
+- **Privacy-Focused Analytics** - We use standard Google Analytics (GA4) solely to understand which tools are most popular and improve the site. All file processing still happens 100% locally on your device, and we never see, store, or transmit your actual documents
 - **Open Source** - Code transparency for security audits
 
 ## 🎨 Styling & Build System
 
 The project uses **Tailwind CSS v4** for styling with a modern, zero-config setup:
 - **Configuration:** Handled via the `@theme` directive directly in CSS.
-- **Input:** `assets/css/input.css`
+- **Input:** `assets/css/src/input.css`
 - **Output:** `assets/css/dist/output.css`
 - **Custom CSS:** `assets/css/src/custom.css`
 
@@ -242,17 +242,18 @@ The site is a **static HTML/CSS/JS** application deployable to any web host:
    # Push to gh-pages branch
    ```
 
-### Security Headers (Recommended)
-Add these headers via your hosting provider:
-```
-Strict-Transport-Security: max-age=31536000; includeSubDomains
-X-Content-Type-Options: nosniff
-X-Frame-Options: DENY
-Referrer-Policy: strict-origin-when-cross-origin
-Content-Security-Policy: default-src 'self'; script-src 'self'
-```
+### Security Headers (Netlify Configured)
+Security headers are automatically applied via the `_headers` file located at the root of the project.
 
-See `deploy/nginx-security.conf` and `deploy/apache-security.conf` for examples.
+The Content-Security-Policy (CSP) has been custom-tailored to protect the site while explicitly allowing local file processing (via Web Workers and Blob URLs) and Google Analytics 4 tracking:
+```
+/*
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' [https://www.googletagmanager.com](https://www.googletagmanager.com); connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com; img-src 'self' data: blob:; worker-src 'self' blob:;
+```
 
 ## 📊 Performance
 
