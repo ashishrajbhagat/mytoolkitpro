@@ -7,6 +7,9 @@ A comprehensive collection of **free, fast, and secure** online PDF and image co
 - **PDF to JPG Converter** - Convert PDF pages to high-quality JPG images
 - **JPG to PDF Converter** - Transform images into professional PDF documents
 - **Merge PDF Files** - Combine multiple PDF files into a single document
+- **Compress PDF Files** - Reduce the file size of your PDF documents
+- **Unlock PDF Files** - Remove passwords and restrictions from PDF documents
+- **Protect PDF Files** - Encrypt and password-protect PDF documents
 - **100% Browser-Based** - All processing happens locally on your device for maximum privacy
 - **No Signup Required** - Start converting immediately without creating an account
 - **Ad-Free & Watermark-Free** - Completely free to use with no hidden limitations
@@ -29,6 +32,21 @@ Create professional PDF documents from JPEG images. Great for scanning documents
 Combine multiple PDF files into a single, organized document.
 
 **Location:** `/tools/merge-pdf.html`
+
+### 4. Compress PDF
+Reduce the file size of your PDF documents.
+
+**Location:** `/tools/compress-pdf.html`
+
+### 5. Unlock PDF
+Remove passwords and restrictions from PDF documents.
+
+**Location:** `/tools/unlock-pdf.html`
+
+### 6. Protect PDF
+Encrypt and password-protect PDF documents.
+
+**Location:** `/tools/protect-pdf.html`
 
 ## �️ Build & Development
 
@@ -100,6 +118,9 @@ MyToolKitPro/
 │       ├── dist/                   # Minified production scripts
 │       │   ├── main.min.js
 │       │   ├── pdf-to-jpg.min.js
+│       │   ├── compress-pdf.min.js
+│       │   ├── unlock-pdf.min.js
+│       │   ├── protect-pdf.min.js
 │       │   └── (other minified files...)
 │       ├── src/                    # Raw developer source code
 │       │   ├── main.js
@@ -114,7 +135,10 @@ MyToolKitPro/
 └── tools/
     ├── jpg-to-pdf.html
     ├── merge-pdf.html
-    └── pdf-to-jpg.html
+    ├── pdf-to-jpg.html
+    ├── compress-pdf.html
+    └── unlock-pdf.html
+    └── protect-pdf.html
 
 ## 🚀 Getting Started
 

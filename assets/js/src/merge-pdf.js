@@ -322,35 +322,16 @@ document.addEventListener("DOMContentLoaded", () => {
     // --------------------------------------------------
     // FAQ Toggle Logic
     // --------------------------------------------------
-    try {
-        if (faqButtons && faqButtons.length > 0) {
-            faqButtons.forEach((button) => {
-                button.addEventListener("click", function () {
-                    try {
-                        const content = this.nextElementSibling;
-                        const icon = this.querySelector(".faq-icon");
-
-                        // Validate DOM elements exist
-                        if (!content || !icon) {
-                            console.error("FAQ content or icon element not found");
-                            return;
-                        }
-
-                        // Toggle visibility
-                        content.classList.toggle("hidden");
-
-                        // Update icon symbol
-                        icon.textContent = content.classList.contains("hidden") ? "+" : "-";
-                    } catch (toggleError) {
-                        console.error("Error toggling FAQ:", toggleError);
-                    }
-                });
-            });
-        } else {
-            console.warn("No FAQ toggle buttons found in merge-pdf page");
-        }
-    } catch (faqError) {
-        console.error("Error initializing FAQ functionality:", faqError);
-    }
+    faqButtons.forEach((button) => {
+        button.addEventListener("click", function () {
+            const content = this.nextElementSibling;
+            const isOpen = content.classList.toggle("hidden");
+            
+            this.setAttribute("aria-expanded", !isOpen);
+            
+            const icon = this.querySelector(".faq-icon");
+            icon.textContent = isOpen ? "+" : "-";
+        });
+    });
 
 });

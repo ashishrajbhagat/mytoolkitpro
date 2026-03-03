@@ -85,21 +85,35 @@
                         "name": "Is this PDF merger free?",
                         "acceptedAnswer": {
                             "@type": "Answer",
-                            "text": "Yes, our PDF merger is completely free to use. There are no hidden charges and no watermarks."
+                            "text": "Yes, our PDF merger is completely free to use. There are no hidden charges, no daily limits, and no watermarks."
                         }
                     },{
                         "@type": "Question",
-                        "name": "Are my files secure?",
+                        "name": "Are my files secure during the merge?",
                         "acceptedAnswer": {
                             "@type": "Answer",
-                            "text": "Yes. Your files are processed locally in your browser. We do not upload or store your documents on any server."
+                            "text": "Yes. All merging happens locally in your browser. Your documents are never uploaded to a server, ensuring total privacy."
                         }
                     },{
                         "@type": "Question",
-                        "name": "How many files can I merge?",
+                        "name": "Can I change the order of the files?",
                         "acceptedAnswer": {
                             "@type": "Answer",
-                            "text": "You can merge as many PDF files as your browser memory allows. We recommend keeping the total size under 150MB for best performance."
+                            "text": "Absolutely! You can drag and drop your files to reorder them before merging to ensure your final PDF is in the correct sequence."
+                        }
+                    },{
+                        "@type": "Question",
+                        "name": "How many files can I merge at once?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "You can merge as many PDF files as your browser memory allows. We recommend keeping total size under 150MB for best performance."
+                        }
+                    },{
+                        "@type": "Question",
+                        "name": "Does this work on mobile devices?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes, our tool is fully responsive and works perfectly on iPhone, iPad, and Android devices using any modern browser."
                         }
                     }]
                 }
@@ -275,23 +289,50 @@
                 <div class="max-w-4xl mx-auto">
                     <h2 class="text-4xl font-bold text-center text-gray-900 mb-14">Frequently Asked Questions</h2>
                     <div class="space-y-5">
-                        <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition">
-                            <button class="faq-toggle w-full text-left p-6 font-semibold text-lg text-gray-800 flex justify-between items-center cursor-pointer" aria-expanded="false" aria-controls="merge-pdf-faq-1">Is this PDF merger free?
-                                <span class="faq-icon text-xl">+</span>
+                        <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition border border-gray-100">
+                            <button class="faq-toggle w-full text-left p-6 font-semibold text-lg text-gray-800 flex justify-between items-center cursor-pointer" aria-expanded="false" aria-controls="merge-pdf-faq-1">
+                                Is this PDF merger free?
+                                <span class="faq-icon text-xl text-red-700">+</span>
                             </button>
-                            <div class="faq-content hidden px-6 pb-6 text-gray-600 text-base leading-relaxed" id="merge-pdf-faq-1">Yes, our PDF merger is completely free to use. There are no hidden charges and no watermarks.</div>
+                            <div class="faq-content hidden px-6 pb-6 text-gray-600 text-base leading-relaxed" id="merge-pdf-faq-1">
+                                Yes, our PDF merger is completely free to use. There are no hidden charges, no daily limits, and we never add watermarks to your documents.
+                            </div>
                         </div>
-                        <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition">
-                            <button class="faq-toggle w-full text-left p-6 font-semibold text-lg text-gray-800 flex justify-between items-center cursor-pointer" aria-expanded="false" aria-controls="merge-pdf-faq-2">Are my files secure?
-                                <span class="faq-icon text-xl">+</span>
+                        <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition border border-gray-100">
+                            <button class="faq-toggle w-full text-left p-6 font-semibold text-lg text-gray-800 flex justify-between items-center cursor-pointer" aria-expanded="false" aria-controls="merge-pdf-faq-2">
+                                Are my files secure during the merge?
+                                <span class="faq-icon text-xl text-red-700">+</span>
                             </button>
-                            <div class="faq-content hidden px-6 pb-6 text-gray-600 text-base leading-relaxed" id="merge-pdf-faq-2">Yes. Your files are processed locally in your browser. We do not upload or store your documents on any server.</div>
+                            <div class="faq-content hidden px-6 pb-6 text-gray-600 text-base leading-relaxed" id="merge-pdf-faq-2">
+                                Yes. All merging happens <strong>locally in your browser</strong>. Your documents are never uploaded to a server, ensuring that your private information stays on your device.
+                            </div>
                         </div>
-                        <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition">
-                            <button class="faq-toggle w-full text-left p-6 font-semibold text-lg text-gray-800 flex justify-between items-center cursor-pointer" aria-expanded="false" aria-controls="merge-pdf-faq-3">How many files can I merge?
-                                <span class="faq-icon text-xl">+</span>
+                        <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition border border-gray-100">
+                            <button class="faq-toggle w-full text-left p-6 font-semibold text-lg text-gray-800 flex justify-between items-center cursor-pointer" aria-expanded="false" aria-controls="merge-pdf-faq-3">
+                                Can I change the order of the files?
+                                <span class="faq-icon text-xl text-red-700">+</span>
                             </button>
-                            <div class="faq-content hidden px-6 pb-6 text-gray-600 text-base leading-relaxed" id="merge-pdf-faq-3">You can merge as many PDF files as your browser memory allows. We recommend keeping the total size under 150MB for best performance.</div>
+                            <div class="faq-content hidden px-6 pb-6 text-gray-600 text-base leading-relaxed" id="merge-pdf-faq-3">
+                                Absolutely! You can drag and drop your files to reorder them before merging to ensure your final PDF has the pages exactly where you want them.
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition border border-gray-100">
+                            <button class="faq-toggle w-full text-left p-6 font-semibold text-lg text-gray-800 flex justify-between items-center cursor-pointer" aria-expanded="false" aria-controls="merge-pdf-faq-4">
+                                How many files can I merge at once?
+                                <span class="faq-icon text-xl text-red-700">+</span>
+                            </button>
+                            <div class="faq-content hidden px-6 pb-6 text-gray-600 text-base leading-relaxed" id="merge-pdf-faq-4">
+                                You can merge as many PDF files as your browser memory allows. For a smooth experience, we recommend merging up to 20 files or a total of 150MB at a time.
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition border border-gray-100">
+                            <button class="faq-toggle w-full text-left p-6 font-semibold text-lg text-gray-800 flex justify-between items-center cursor-pointer" aria-expanded="false" aria-controls="merge-pdf-faq-5">
+                                Does this work on mobile devices?
+                                <span class="faq-icon text-xl text-red-700">+</span>
+                            </button>
+                            <div class="faq-content hidden px-6 pb-6 text-gray-600 text-base leading-relaxed" id="merge-pdf-faq-5">
+                                Yes, our tool is fully responsive and works perfectly on iPhone, iPad, and Android devices using any modern mobile browser.
+                            </div>
                         </div>
                     </div>
                 </div>

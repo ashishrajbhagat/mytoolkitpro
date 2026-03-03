@@ -388,17 +388,14 @@ document.addEventListener("DOMContentLoaded", () => {
     // FAQ Toggle Logic
     // --------------------------------------------------
     faqButtons.forEach((button) => {
-
         button.addEventListener("click", function () {
-
             const content = this.nextElementSibling;
+            const isOpen = content.classList.toggle("hidden");
+            
+            this.setAttribute("aria-expanded", !isOpen);
+            
             const icon = this.querySelector(".faq-icon");
-
-            // Toggle visibility
-            content.classList.toggle("hidden");
-
-            // Update icon symbol
-            icon.textContent = content.classList.contains("hidden") ? "+" : "-";
+            icon.textContent = isOpen ? "+" : "-";
         });
     });
 
