@@ -1,10 +1,40 @@
 @import "tailwindcss";
 
 @theme {
+  /* Branded Colors */
   --color-primary: #B11226;
+  --color-primary-dark: #8B0E1E;
+  --color-primary-light: #D92D41;
+  
+  /* Layout Colors */
   --color-bgsoft: #F4F6F8;
-  --color-darktext: #1F2937;
+  --color-darktext: #111827; /* Slightly darker for better contrast */
   --color-borderclr: #E5E7EB;
+
+  /* Custom Branded Gradients (Tailwind 4 Syntax) */
+  --background-image-brand-gradient: linear-gradient(to bottom right, var(--color-primary), var(--color-primary-dark));
+}
+
+@layer utilities {
+  /* Premium Glassmorphism Effect */
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-xl;
+  }
+
+  /* Branded Text Gradient */
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-brand-gradient;
+  }
+
+  /* Subtle Hero Animation */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }
 
 @import "./custom.css";

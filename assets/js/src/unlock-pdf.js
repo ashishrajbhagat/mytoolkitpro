@@ -64,6 +64,14 @@ document.addEventListener("DOMContentLoaded", () => {
         pdfInput.dispatchEvent(new Event('change'));
     }, false);
 
+    // Handle keyboard navigation for upload area
+    uploadArea.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            pdfInput.click();
+        }
+    });
+
     // --------------------------------------------------
     // Utility: Format bytes to readable format (MB/GB)
     // --------------------------------------------------
@@ -211,6 +219,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             processingState.classList.add("hidden");
             resultsArea.classList.remove("hidden");
+            resultsArea.scrollIntoView({ behavior: "smooth", block: "center" });
 
         } catch (error) {
             console.error("Unlock failed:", error);

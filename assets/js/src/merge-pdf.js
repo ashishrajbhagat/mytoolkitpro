@@ -66,6 +66,14 @@ document.addEventListener("DOMContentLoaded", () => {
         pdfInput.dispatchEvent(new Event('change'));
     }, false);
 
+    // Handle keyboard navigation for upload area
+    uploadArea.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            pdfInput.click();
+        }
+    });
+
     // --------------------------------------------------
     // Utility: Format bytes to readable format (MB/GB)
     // --------------------------------------------------

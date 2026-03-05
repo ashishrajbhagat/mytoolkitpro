@@ -9,7 +9,11 @@ A comprehensive collection of **free, fast, and secure** online PDF and image co
 - **Merge PDF Files** - Combine multiple PDF files into a single document
 - **Compress PDF Files** - Reduce the file size of your PDF documents
 - **Unlock PDF Files** - Remove passwords and restrictions from PDF documents
-- **Protect PDF Files** - Encrypt and password-protect PDF documents
+- **Split PDF Files** - Extract specific pages from PDF documents
+- **Add Page Numbers** - Insert page numbers into PDF documents
+- **Rotate PDF Files** - Rotate PDF pages permanently
+- **Delete PDF Pages** - Remove unwanted pages from PDF documents
+- **Organize PDF Files** - Rearrange and sort PDF pages
 - **100% Browser-Based** - All processing happens locally on your device for maximum privacy
 - **No Signup Required** - Start converting immediately without creating an account
 - **Ad-Free & Watermark-Free** - Completely free to use with no hidden limitations
@@ -43,10 +47,30 @@ Remove passwords and restrictions from PDF documents.
 
 **Location:** `/tools/unlock-pdf.html`
 
-### 6. Protect PDF
-Encrypt and password-protect PDF documents.
+### 6. Split PDF
+Extract specific pages from PDF documents.
 
-**Location:** `/tools/protect-pdf.html`
+**Location:** `/tools/split-pdf.html`
+
+### 7. Add Page Numbers
+Insert page numbers into PDF documents.
+
+**Location:** `/tools/pdf-page-numbering.html`
+
+### 8. Rotate PDF
+Rotate PDF pages permanently.
+
+**Location:** `/tools/rotate-pdf.html`
+
+### 9. Delete PDF Pages
+Remove unwanted pages from PDF documents.
+
+**Location:** `/tools/delete-pdf-pages.html`
+
+### 10. Organize PDF
+Rearrange and sort PDF pages.
+
+**Location:** `/tools/organize-pdf.html`
 
 ## �️ Build & Development
 
@@ -95,6 +119,7 @@ MyToolKitPro/
 ├── README.md               # This file
 ├── sitemap.xml             # SEO sitemap
 ├── robots.txt              # SEO robots.txt
+├── _headers                # Netlify security headers configuration
 ├── assets/
 │   ├── manifest.json       # PWA manifest file
 │   ├── css/
@@ -118,9 +143,6 @@ MyToolKitPro/
 │       ├── dist/                   # Minified production scripts
 │       │   ├── main.min.js
 │       │   ├── pdf-to-jpg.min.js
-│       │   ├── compress-pdf.min.js
-│       │   ├── unlock-pdf.min.js
-│       │   ├── protect-pdf.min.js
 │       │   └── (other minified files...)
 │       ├── src/                    # Raw developer source code
 │       │   ├── main.js
@@ -137,8 +159,12 @@ MyToolKitPro/
     ├── merge-pdf.html
     ├── pdf-to-jpg.html
     ├── compress-pdf.html
-    └── unlock-pdf.html
-    └── protect-pdf.html
+    ├── unlock-pdf.html
+    ├── split-pdf.html
+    ├── pdf-page-numbering.html
+    ├── rotate-pdf.html
+    ├── delete-pdf-pages.html
+    └── organize-pdf.html
 
 ## 🚀 Getting Started
 
@@ -244,27 +270,16 @@ All JS files in `assets/js/src/` are automatically minified to `assets/js/dist/`
 
 ## � Deployment
 
-The site is a **static HTML/CSS/JS** application deployable to any web host:
+This project is optimized for deployment on **Netlify**.
 
-### Deployment Options
+### Recommended Setup
 
-1. **Netlify** (recommended)
-   ```bash
-   npm run build
-   # Connect GitHub repo → auto-deploys
-   ```
-
-2. **Vercel**
-   - Connect GitHub → auto-deploys on push
-
-3. **Traditional Hosting** (Apache, Nginx, cPanel, etc.)
-   - Upload all files via FTP/SSH
-   - No build step required on server
-
-4. **GitHub Pages**
-   ```bash
-   # Push to gh-pages branch
-   ```
+1. Log in to [Netlify](https://www.netlify.com/).
+2. Click **"Add new site"** > **"Import an existing project"**.
+3. Connect your Git provider (GitHub, GitLab, etc.).
+4. Select this repository.
+5. **Build Command:** `npm run build`
+6. **Publish Directory:** `.` (Current directory)
 
 ### Security Headers (Netlify Configured)
 Security headers are automatically applied via the `_headers` file located at the root of the project.
