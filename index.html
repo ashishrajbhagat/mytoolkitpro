@@ -121,9 +121,9 @@
                 <nav class="hidden md:flex space-x-6 text-lg text-gray-600">
                     <a href="index.html" class="text-primary font-semibold">Home</a>
                     <a href="tools.html" class="hover:text-primary">Tools</a>
-                    <a href="about.html" class="hover:text-primary">About</a>
+                    <a href="articles.html" class="hover:text-primary">Articles</a>
                 </nav>
-                <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-600 hover:text-primary focus:outline-none" aria-label="Toggle mobile menu">
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-600 hover:text-primary focus:outline-none cursor-pointer" aria-label="Toggle mobile menu">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                 </button>
             </div>
@@ -131,12 +131,12 @@
                 <nav class="flex flex-col p-4 space-y-4 text-lg text-gray-600">
                     <a href="index.html" class="text-primary font-semibold">Home</a>
                     <a href="tools.html" class="hover:text-primary">Tools</a>
-                    <a href="about.html" class="hover:text-primary">About</a>
+                    <a href="articles.html" class="hover:text-primary">Articles</a>
                 </nav>
             </div>
         </header>
         <main>
-            <section class="relative overflow-hidden bg-linear-to-b from-white via-bgsoft to-white py-32 px-6">
+            <section class="relative overflow-hidden bg-linear-to-b from-white via-bgsoft to-white py-20 md:py-32 px-6">
                 <div class="absolute -top-24 -left-24 w-96 h-96 bg-primary opacity-10 rounded-full blur-3xl"></div>
                 <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-primary opacity-10 rounded-full blur-3xl"></div>
                 <div class="relative max-w-5xl mx-auto text-center">
@@ -146,7 +146,7 @@
                     <a href="tools.html" class="inline-block bg-primary text-white px-10 py-4 rounded-2xl font-semibold hover:scale-105 transform transition duration-300 shadow-lg">Explore All Tools</a>
                 </div>
             </section>
-            <section id="popular-tools" class="py-24 px-6 bg-white">
+            <section id="popular-tools" class="py-16 md:py-24 px-6 bg-white">
                 <div class="max-w-7xl mx-auto">
                     <div class="text-center mb-16">
                         <h2 class="text-4xl font-bold text-gray-900 mb-4">Most Popular PDF Tools</h2>
@@ -196,7 +196,7 @@
                     </div>
                 </div>
             </section>
-            <section class="py-24 px-6 bg-gray-900 text-white rounded-[3rem] mx-4 mb-24 overflow-hidden relative">
+            <section class="py-16 md:py-24 px-6 bg-gray-900 text-white rounded-[3rem] mx-4 mb-16 md:mb-24 overflow-hidden relative">
                 <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
                 <div class="max-w-6xl mx-auto relative z-10">
                     <div class="grid lg:grid-cols-2 gap-16 items-center">
@@ -263,44 +263,53 @@
                     </div>
                 </div>
             </section>
-            <section class="py-24 px-6">
+            <section class="py-16 md:py-24 px-6">
                 <div class="max-w-7xl mx-auto">
                     <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
                         <div class="max-w-xl">
                             <h2 class="text-4xl font-bold mb-4">Pro Tips for <span class="text-primary">PDF Mastery</span></h2>
                             <p class="text-gray-500">Maximize your productivity with our expert guides on document management.</p>
                         </div>
-                        <a href="#" class="text-primary font-bold hover:underline">View All Guides →</a>
+                        <a href="articles.html" class="text-primary font-bold hover:underline">View All Guides →</a>
                     </div>
-                    <div class="grid md:grid-cols-3 gap-8">
-                        <article class="group cursor-pointer">
-                            <div class="overflow-hidden rounded-3xl mb-6 bg-gray-100 aspect-video flex items-center justify-center text-4xl group-hover:bg-primary/5 transition-colors">
-                                📄✨
-                            </div>
-                            <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition">How to reduce PDF size without losing quality</h3>
-                            <p class="text-gray-500 text-sm mb-4">Learn the difference between downsampling and compression to keep your files crisp but small...</p>
-                            <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">5 Min Read</span>
-                        </article>
-                        <article class="group cursor-pointer">
-                            <div class="overflow-hidden rounded-3xl mb-6 bg-gray-100 aspect-video flex items-center justify-center text-4xl group-hover:bg-primary/5 transition-colors">
-                                🔐💼
-                            </div>
-                            <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition">Securing legal documents for email</h3>
-                            <p class="text-gray-500 text-sm mb-4">Why you should always use 'Owner Passwords' before sending contracts and sensitive invoices...</p>
-                            <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">4 Min Read</span>
-                        </article>
-                        <article class="group cursor-pointer">
-                            <div class="overflow-hidden rounded-3xl mb-6 bg-gray-100 aspect-video flex items-center justify-center text-4xl group-hover:bg-primary/5 transition-colors">
-                                🏗️📑
-                            </div>
-                            <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition">Organizing large project proposals</h3>
-                            <p class="text-gray-500 text-sm mb-4">Tips on using Split and Merge tools to build the perfect multi-document pitch deck...</p>
-                            <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">6 Min Read</span>
-                        </article>
+                    <div class="relative group/carousel">
+                        <div id="articles-carousel" class="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-6 md:grid md:grid-cols-3 md:gap-8 md:pb-0 -mx-6 px-6 md:mx-0 md:px-0 scroll-smooth [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']">
+                            <a href="articles/reduce-pdf-size.html" class="min-w-[85vw] sm:min-w-[60vw] md:min-w-0 snap-center group cursor-pointer block">
+                                <div class="overflow-hidden rounded-3xl mb-6 bg-gray-100 h-48 flex items-center justify-center text-4xl group-hover:bg-primary/5 transition-colors whitespace-nowrap">
+                                    📄✨
+                                </div>
+                                <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition">How to reduce PDF size without losing quality</h3>
+                                <p class="text-gray-500 text-sm mb-4">Learn the difference between downsampling and compression to keep your files crisp but small...</p>
+                                <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">5 Min Read</span>
+                            </a>
+                                <a href="articles/secure-legal-documents.html" class="min-w-[85vw] sm:min-w-[60vw] md:min-w-0 snap-center group cursor-pointer block">
+                                <div class="overflow-hidden rounded-3xl mb-6 bg-gray-100 h-48 flex items-center justify-center text-4xl group-hover:bg-primary/5 transition-colors whitespace-nowrap">
+                                    🔐💼
+                                </div>
+                                <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition">Securing legal documents for email</h3>
+                                <p class="text-gray-500 text-sm mb-4">Why you should always use 'Owner Passwords' before sending contracts and sensitive invoices...</p>
+                                <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">4 Min Read</span>
+                            </a>
+                                <a href="articles/organize-project-proposals.html" class="min-w-[85vw] sm:min-w-[60vw] md:min-w-0 snap-center group cursor-pointer block">
+                                <div class="overflow-hidden rounded-3xl mb-6 bg-gray-100 h-48 flex items-center justify-center text-4xl group-hover:bg-primary/5 transition-colors whitespace-nowrap">
+                                    🏗️📑
+                                </div>
+                                <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition">Organizing large project proposals</h3>
+                                <p class="text-gray-500 text-sm mb-4">Tips on using Split and Merge tools to build the perfect multi-document pitch deck...</p>
+                                <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">6 Min Read</span>
+                            </a>
+                        </div>
+                        <button id="carousel-prev" class="md:hidden absolute left-0 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full shadow-lg text-gray-800 z-10 opacity-0 pointer-events-none transition-opacity duration-300 cursor-pointer" aria-label="Previous">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                        </button>
+                        <button id="carousel-next" class="md:hidden absolute right-0 top-1/2 -translate-y-1/2 bg-white/90 p-2 rounded-full shadow-lg text-gray-800 z-10 transition-opacity duration-300 cursor-pointer" aria-label="Next">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </button>
                     </div>
+                    <div id="carousel-dots" class="md:hidden flex justify-center gap-2 mt-4"></div>
                 </div>
             </section>
-            <section class="bg-bgsoft py-32 px-6 relative overflow-hidden">
+            <section class="bg-bgsoft py-20 md:py-32 px-6 relative overflow-hidden">
                 <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-linear-to-r from-transparent via-borderclr to-transparent"></div>
                 <div class="max-w-7xl mx-auto">
                     <div class="text-center mb-20">
@@ -332,7 +341,7 @@
                     </div>
                 </div>
             </section>
-            <section class="bg-white py-32 px-6 relative overflow-hidden">
+            <section class="bg-white py-20 md:py-32 px-6 relative overflow-hidden">
                 <div class="max-w-6xl mx-auto">
                     <div class="text-center mb-20">
                         <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6 tracking-tight">Effortless <span class="text-primary">3-Step</span> Workflow</h2>
@@ -366,7 +375,7 @@
                     </div>
                 </div>
             </section>
-            <section class="py-24 px-6 bg-gray-50">
+            <section class="py-16 md:py-24 px-6 bg-gray-50">
                 <div class="max-w-4xl mx-auto">
                     <h2 class="text-4xl font-bold text-center text-gray-900 mb-14">Frequently Asked Questions</h2>
                     <div class="space-y-5">
@@ -408,7 +417,7 @@
                     </div>
                 </div>
             </section>
-            <section class="bg-primary text-white text-center py-20 px-6">
+            <section class="bg-primary text-white text-center py-16 md:py-20 px-6">
                 <h3 class="text-3xl font-bold mb-8">Start Using Free PDF Tools Today</h3>
                 <a href="tools.html" class="bg-white text-primary px-8 py-3 rounded-xl font-semibold hover:scale-105 transform transition duration-300 shadow-md">Explore All Tools</a>
             </section>
@@ -456,6 +465,62 @@
             if(mobileBtn && mobileMenu){
                 mobileBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
             }
+
+            // Carousel Logic
+            document.addEventListener('DOMContentLoaded', () => {
+                const carousel = document.getElementById('articles-carousel');
+                const prevBtn = document.getElementById('carousel-prev');
+                const nextBtn = document.getElementById('carousel-next');
+                const dotsContainer = document.getElementById('carousel-dots');
+                
+                if (!carousel || !prevBtn || !nextBtn) return;
+
+                const items = carousel.querySelectorAll('a');
+                
+                // Create dots
+                items.forEach((_, i) => {
+                    const dot = document.createElement('button');
+                    dot.className = `w-2 h-2 rounded-full transition-all duration-300 ${i === 0 ? 'bg-primary w-6' : 'bg-gray-300'}`;
+                    dot.ariaLabel = `Go to slide ${i + 1}`;
+                    dot.onclick = () => items[i].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                    dotsContainer.appendChild(dot);
+                });
+                
+                const dots = dotsContainer.children;
+
+                const updateState = () => {
+                    const scrollLeft = carousel.scrollLeft;
+                    const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+                    
+                    prevBtn.classList.toggle('opacity-0', scrollLeft <= 10);
+                    prevBtn.classList.toggle('pointer-events-none', scrollLeft <= 10);
+                    
+                    nextBtn.classList.toggle('opacity-0', scrollLeft >= maxScroll - 10);
+                    nextBtn.classList.toggle('pointer-events-none', scrollLeft >= maxScroll - 10);
+
+                    // Update dots
+                    const center = scrollLeft + (carousel.clientWidth / 2);
+                    let activeIndex = 0;
+                    let minDist = Infinity;
+                    
+                    items.forEach((item, i) => {
+                        const itemCenter = item.offsetLeft + (item.clientWidth / 2);
+                        const dist = Math.abs(center - itemCenter);
+                        if(dist < minDist) { minDist = dist; activeIndex = i; }
+                    });
+
+                    Array.from(dots).forEach((dot, i) => {
+                        dot.className = `w-2 h-2 rounded-full transition-all duration-300 ${i === activeIndex ? 'bg-primary w-6' : 'bg-gray-300'}`;
+                    });
+                };
+
+                carousel.addEventListener('scroll', updateState);
+                window.addEventListener('resize', updateState);
+                setTimeout(updateState, 100); // Initial check
+
+                prevBtn.onclick = () => carousel.scrollBy({ left: -carousel.clientWidth * 0.8, behavior: 'smooth' });
+                nextBtn.onclick = () => carousel.scrollBy({ left: carousel.clientWidth * 0.8, behavior: 'smooth' });
+            });
         </script>
     </body>
 </html>

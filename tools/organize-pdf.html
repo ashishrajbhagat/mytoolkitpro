@@ -82,38 +82,24 @@
                     "@type": "FAQPage",
                     "mainEntity": [{
                         "@type": "Question",
-                        "name": "Is this PDF organizer free to use?",
+                        "name": "Is this PDF organizer free?",
                         "acceptedAnswer": {
                             "@type": "Answer",
-                            "text": "Yes, organizing and rearranging your PDFs is 100% free on MyToolKitPro. There are no daily limits or watermarks."
+                            "text": "Yes, organizing PDF pages is completely free. No hidden charges or watermarks."
                         }
                     },{
                         "@type": "Question",
-                        "name": "Are my documents secure while being rearranged?",
+                        "name": "Are my files secure?",
                         "acceptedAnswer": {
                             "@type": "Answer",
-                            "text": "Yes. Your files are processed locally in your browser. Your documents are never uploaded to a server, ensuring complete privacy."
+                            "text": "Yes. Your files are processed locally in your browser. We do not upload or store your documents on any server."
                         }
                     },{
                         "@type": "Question",
-                        "name": "How do I move the pages around?",
+                        "name": "How do I reorder pages?",
                         "acceptedAnswer": {
                             "@type": "Answer",
-                            "text": "The tool uses a drag-and-drop interface. Click and hold a thumbnail, drag it to the new position, and release."
-                        }
-                    },{
-                        "@type": "Question",
-                        "name": "Will my PDF lose quality after being organized?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "No. The tool rearranges metadata without re-compressing content, so the original quality is preserved."
-                        }
-                    },{
-                        "@type": "Question",
-                        "name": "Is there a limit to how many pages I can reorder?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "You can organize PDFs of any size, though for visual performance we recommend documents stay under 200 pages."
+                            "text": "Simply drag and drop the page thumbnails to rearrange them into your desired order."
                         }
                     }]
                 }
@@ -131,9 +117,9 @@
                 <nav class="hidden md:flex space-x-6 text-lg text-gray-600">
                     <a href="../index.html" class="hover:text-primary">Home</a>
                     <a href="../tools.html" class="hover:text-primary">Tools</a>
-                    <a href="../about.html" class="hover:text-primary">About</a>
+                    <a href="../articles.html" class="hover:text-primary">Articles</a>
                 </nav>
-                <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-600 hover:text-primary focus:outline-none cursor-pointer" aria-label="Toggle mobile menu">
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-600 hover:text-primary focus:outline-none cursor-pointer" aria-label="Toggle mobile menu" aria-controls="mobile-menu" aria-expanded="false">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                 </button>
             </div>
@@ -141,7 +127,7 @@
                 <nav class="flex flex-col p-4 space-y-4 text-lg text-gray-600">
                     <a href="../index.html" class="hover:text-primary">Home</a>
                     <a href="../tools.html" class="hover:text-primary">Tools</a>
-                    <a href="../about.html" class="hover:text-primary">About</a>
+                    <a href="../articles.html" class="hover:text-primary">Articles</a>
                 </nav>
             </div>
         </header>
@@ -185,7 +171,7 @@
                                     <div class="text-center mb-2">
                                         <p class="text-gray-600 font-medium">Drag and drop pages to reorder them</p>
                                     </div>
-                                    <div id="pages-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-h-150 overflow-y-auto p-4 bg-gray-50 rounded-xl border border-gray-200 custom-scrollbar"></div>
+                                    <div id="pages-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 items-start max-h-150 overflow-y-auto p-4 md:p-6 bg-gray-100/80 rounded-2xl border border-gray-200/60 custom-scrollbar"></div>
                                     <div class="w-full flex flex-col gap-3 mt-4">
                                         <button id="process-action-btn" class="w-full bg-primary text-white px-6 py-3 rounded-xl font-bold hover:bg-red-700 transition shadow-lg cursor-pointer">Save Organized PDF</button>
                                         <button id="remove-file-btn" class="w-full text-gray-500 font-medium hover:text-red-600 transition text-m cursor-pointer">Remove & Upload Different File</button>
@@ -218,6 +204,47 @@
                     </div>
                 </div>
             </section>
+            <section class="bg-white py-24 px-6 border-t border-borderclr">
+                <div class="max-w-6xl mx-auto">
+                    <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Explore Other Tools</h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <a href="merge-pdf.html" class="group p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:shadow-md hover:border-primary/30 transition-all">
+                            <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-primary mb-4 shadow-sm group-hover:scale-110 transition-transform">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2"></path></svg>
+                            </div>
+                            <h3 class="font-semibold text-gray-900 mb-1 group-hover:text-primary transition-colors">Merge PDF</h3>
+                            <p class="text-sm text-gray-500">Combine multiple PDFs into one.</p>
+                        </a>
+                        <a href="compress-pdf.html" class="group p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:shadow-md hover:border-primary/30 transition-all">
+                            <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-primary mb-4 shadow-sm group-hover:scale-110 transition-transform">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
+                            </div>
+                            <h3 class="font-semibold text-gray-900 mb-1 group-hover:text-primary transition-colors">Compress PDF</h3>
+                            <p class="text-sm text-gray-500">Reduce file size while maintaining quality.</p>
+                        </a>
+                        <a href="jpg-to-pdf.html" class="group p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:shadow-md hover:border-primary/30 transition-all">
+                            <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-primary mb-4 shadow-sm group-hover:scale-110 transition-transform">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                            </div>
+                            <h3 class="font-semibold text-gray-900 mb-1 group-hover:text-primary transition-colors">JPG to PDF</h3>
+                            <p class="text-sm text-gray-500">Convert images to professional PDFs.</p>
+                        </a>
+                        <a href="pdf-to-jpg.html" class="group p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:shadow-md hover:border-primary/30 transition-all">
+                            <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-primary mb-4 shadow-sm group-hover:scale-110 transition-transform">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                            </div>
+                            <h3 class="font-semibold text-gray-900 mb-1 group-hover:text-primary transition-colors">PDF to JPG</h3>
+                            <p class="text-sm text-gray-500">Convert PDF pages to images.</p>
+                        </a>
+                    </div>
+                    <div class="text-center mt-10">
+                        <a href="../tools.html" class="inline-flex items-center gap-2 text-primary font-semibold hover:text-red-700 transition">
+                            View All Tools
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </section>
             <section class="bg-white border-t border-borderclr py-24 px-6">
                 <div class="max-w-6xl mx-auto text-center">
                     <h2 class="text-4xl font-bold mb-16">How It Works</h2>
@@ -244,56 +271,15 @@
                 <div class="max-w-5xl mx-auto">
                     <div class="text-center mb-12">
                         <h2 class="text-4xl font-bold text-gray-900 mb-4">Free PDF Organizer — Rearrange Pages Online</h2>
-                        <p class="text-gray-500 max-w-2xl mx-auto">Sort, reorder, and organize PDF pages with a simple drag-and-drop interface. Fast, secure, and completely free.</p>
+                        <p class="text-gray-500 max-w-2xl mx-auto">Sort and reorder PDF pages instantly. Fast, secure, and completely free.</p>
                     </div>
                     <div class="bg-white p-10 rounded-3xl shadow-xl space-y-6 leading-relaxed text-gray-600">
-                        <p>Our <b>Organize PDF</b> tool gives you full control over the structure of your documents. No more struggling with incorrectly scanned pages or poorly sequenced presentations. Simply upload your file, drag the pages into your preferred order, and download your perfectly organized PDF in seconds.</p>
+                        <p>Our <b>Organize PDF</b> tool allows you to easily rearrange the pages of any PDF document. Whether you need to fix the page order of a scanned document or reorganize a presentation, you can do it quickly and securely.</p>
                         <div class="bg-red-50 border-l-4 border-red-700 p-5 rounded-xl">
                             <p class="text-gray-700 font-medium">
-                                🔐 <strong>Privacy First:</strong> Your files never leave your device. Our browser-based processing ensures that your data is never uploaded to a server, providing 100% privacy and security.
+                                🔐 <strong>Privacy First:</strong> This tool uses client-side processing. Your files are never uploaded to a server, ensuring your sensitive data remains 100% private.
                             </p>
                         </div>
-                        <h3 class="text-2xl font-semibold text-gray-900 pt-6">Key Features</h3>
-                        <div class="grid md:grid-cols-2 gap-6 mt-4">
-                            <div class="bg-gray-50 p-5 rounded-xl border border-gray-100">
-                                <h4 class="font-semibold text-gray-800 mb-2">🖱️ Drag & Drop Interface</h4>
-                                <p class="text-sm">Visually rearrange your PDF pages just like moving icons on a desktop. It's intuitive, fast, and easy to use.</p>
-                            </div>
-                            <div class="bg-gray-50 p-5 rounded-xl border border-gray-100">
-                                <h4 class="font-semibold text-gray-800 mb-2">⚡ Real-Time Preview</h4>
-                                <p class="text-sm">See high-quality thumbnails of every page as you organize them, ensuring the sequence is exactly right.</p>
-                            </div>
-                            <div class="bg-gray-50 p-5 rounded-xl border border-gray-100">
-                                <h4 class="font-semibold text-gray-800 mb-2">🚀 No Server Lag</h4>
-                                <p class="text-sm">Because all processing happens in your browser, there's no waiting for uploads or downloads from a remote server.</p>
-                            </div>
-                            <div class="bg-gray-50 p-5 rounded-xl border border-gray-100">
-                                <h4 class="font-semibold text-gray-800 mb-2">💎 Professional Quality</h4>
-                                <p class="text-sm">We maintain the original resolution and formatting of your PDF. Your document stays crisp and professional.</p>
-                            </div>
-                        </div>
-                        <h3 class="text-2xl font-semibold text-gray-900 pt-6">Why Organize Your PDF?</h3>
-                        <ul class="space-y-3">
-                            <li class="flex items-start">
-                                <span class="text-red-700 mr-2">✔</span>
-                                <span><strong>Fix Scanned Orders:</strong> Easily correct documents where pages were fed into the scanner in the wrong sequence.</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-red-700 mr-2">✔</span>
-                                <span><strong>Storytelling & Flow:</strong> Reorder presentation slides or portfolio pages to better tell your story.</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-red-700 mr-2">✔</span>
-                                <span><strong>Merge Cleanup:</strong> After combining multiple PDFs, use this tool to ensure the final document flow is logical and polished.</span>
-                            </li>
-                        </ul>
-                        <h3 class="text-2xl font-semibold text-gray-900 pt-6">How to Rearrange PDF Pages</h3>
-                        <ol class="space-y-4 list-decimal pl-6 mt-4">
-                            <li><strong>Upload:</strong> Drag your PDF file into the upload box or select it from your folders.</li>
-                            <li><strong>Reorder:</strong> Click and drag the page thumbnails to move them into the desired position.</li>
-                            <li><strong>Save:</strong> Click "Organize PDF" to apply the new page sequence.</li>
-                            <li><strong>Download:</strong> Your reorganized, professional PDF is ready for immediate use.</li>
-                        </ol>
                     </div>
                 </div>
             </section>
@@ -302,49 +288,16 @@
                     <h2 class="text-4xl font-bold text-center text-gray-900 mb-14">Frequently Asked Questions</h2>
                     <div class="space-y-5">
                         <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition border border-gray-100">
-                            <button class="faq-toggle w-full text-left p-6 font-semibold text-lg text-gray-800 flex justify-between items-center cursor-pointer" aria-expanded="false" aria-controls="organize-pdf-faq-1">
-                                Is this PDF organizer free to use?
-                                <span class="faq-icon text-xl">+</span>
+                            <button class="faq-toggle w-full text-left p-6 font-semibold text-lg text-gray-800 flex justify-between items-center cursor-pointer" aria-expanded="false" aria-controls="faq-1">Is this tool free?
+                                <span class="faq-icon text-xl text-red-700">+</span>
                             </button>
-                            <div class="faq-content hidden px-6 pb-6 text-gray-600 text-base leading-relaxed" id="organize-pdf-faq-1">
-                                Yes, organizing and rearranging your PDFs is 100% free on MyToolKitPro. We don't have daily usage limits, and we never add watermarks to your files.
-                            </div>
+                            <div class="faq-content hidden px-6 pb-6 text-gray-600 text-base leading-relaxed" id="faq-1">Yes, organizing PDFs is completely free. No hidden charges or watermarks.</div>
                         </div>
                         <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition border border-gray-100">
-                            <button class="faq-toggle w-full text-left p-6 font-semibold text-lg text-gray-800 flex justify-between items-center cursor-pointer" aria-expanded="false" aria-controls="organize-pdf-faq-2">
-                                Are my documents secure while being rearranged?
-                                <span class="faq-icon text-xl">+</span>
+                            <button class="faq-toggle w-full text-left p-6 font-semibold text-lg text-gray-800 flex justify-between items-center cursor-pointer" aria-expanded="false" aria-controls="faq-2">Are my files secure?
+                                <span class="faq-icon text-xl text-red-700">+</span>
                             </button>
-                            <div class="faq-content hidden px-6 pb-6 text-gray-600 text-base leading-relaxed" id="organize-pdf-faq-2">
-                                Absolutely. Your files are processed **locally in your browser**. This means your sensitive documents are never uploaded to a server, ensuring 100% privacy and compliance for professional use.
-                            </div>
-                        </div>
-                        <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition border border-gray-100">
-                            <button class="faq-toggle w-full text-left p-6 font-semibold text-lg text-gray-800 flex justify-between items-center cursor-pointer" aria-expanded="false" aria-controls="organize-pdf-faq-3">
-                                How do I move the pages around?
-                                <span class="faq-icon text-xl">+</span>
-                            </button>
-                            <div class="faq-content hidden px-6 pb-6 text-gray-600 text-base leading-relaxed" id="organize-pdf-faq-3">
-                                Our tool features an intuitive drag-and-drop interface. Once your PDF is uploaded, simply click and hold a page thumbnail, drag it to its new position, and release.
-                            </div>
-                        </div>
-                        <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition border border-gray-100">
-                            <button class="faq-toggle w-full text-left p-6 font-semibold text-lg text-gray-800 flex justify-between items-center cursor-pointer" aria-expanded="false" aria-controls="organize-pdf-faq-4">
-                                Will my PDF lose quality after being organized?
-                                <span class="faq-icon text-xl">+</span>
-                            </button>
-                            <div class="faq-content hidden px-6 pb-6 text-gray-600 text-base leading-relaxed" id="organize-pdf-faq-4">
-                                No. The tool simply rearranges the page order in the file's metadata without re-compressing the content. Your text, images, and formatting will remain exactly as they were in the original.
-                            </div>
-                        </div>
-                        <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition border border-gray-100">
-                            <button class="faq-toggle w-full text-left p-6 font-semibold text-lg text-gray-800 flex justify-between items-center cursor-pointer" aria-expanded="false" aria-controls="organize-pdf-faq-5">
-                                Is there a limit to how many pages I can reorder?
-                                <span class="faq-icon text-xl">+</span>
-                            </button>
-                            <div class="faq-content hidden px-6 pb-6 text-gray-600 text-base leading-relaxed" id="organize-pdf-faq-5">
-                                You can organize PDFs of any size. However, for a smooth visual experience in your browser, we recommend documents with fewer than 200 pages.
-                            </div>
+                            <div class="faq-content hidden px-6 pb-6 text-gray-600 text-base leading-relaxed" id="faq-2">Yes. Your files are processed locally in your browser. We do not upload or store your documents on any server.</div>
                         </div>
                     </div>
                 </div>
@@ -388,13 +341,36 @@
         <script src="../assets/js/vendor/pdf.min.js" defer></script>
         <script src="../assets/js/vendor/pdf-lib.min.js" defer></script>
         <script src="../assets/js/dist/organize-pdf.min.js" defer></script>
-        <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
         <script>
-            const mobileBtn = document.getElementById('mobile-menu-btn');
-            const mobileMenu = document.getElementById('mobile-menu');
-            if(mobileBtn && mobileMenu){
-                mobileBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-            }
+            document.addEventListener('DOMContentLoaded', () => {
+                // Mobile Menu Toggle
+                const mobileBtn = document.getElementById('mobile-menu-btn');
+                const mobileMenu = document.getElementById('mobile-menu');
+                if (mobileBtn && mobileMenu) {
+                    mobileBtn.addEventListener('click', () => {
+                        const isHidden = mobileMenu.classList.toggle('hidden');
+                        mobileBtn.setAttribute('aria-expanded', !isHidden);
+                    });
+                }
+
+                // FAQ Toggle
+                const faqButtons = document.querySelectorAll('.faq-toggle');
+                faqButtons.forEach(btn => {
+                    btn.addEventListener('click', function() {
+                        const content = this.nextElementSibling;
+                        const icon = this.querySelector('.faq-icon');
+                        const isExpanded = this.getAttribute('aria-expanded') === 'true';
+
+                        this.setAttribute('aria-expanded', !isExpanded);
+                        content.classList.toggle('hidden');
+                        icon.textContent = isExpanded ? '+' : '-';
+                    });
+                });
+
+                // Set current year in footer
+                const yearSpan = document.getElementById('year');
+                if(yearSpan) { yearSpan.textContent = new Date().getFullYear(); }
+            });
         </script>
     </body>
 </html>

@@ -23,8 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const downloadPdfBtn = document.getElementById("download-pdf-btn");
     const resetBtn = document.getElementById("reset-btn");
 
-    const faqButtons = document.querySelectorAll(".faq-toggle");
-
     // --------------------------------------------------
     // State Variables
     // --------------------------------------------------
@@ -167,7 +165,11 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    rangeInput.addEventListener("input", () => rangeError.classList.add("hidden"));
+    rangeInput.addEventListener("input", () => {
+        rangeError.classList.add("hidden");
+        rangeInput.removeAttribute("aria-invalid");
+        rangeInput.removeAttribute("aria-describedby");
+    });
 
     // --------------------------------------------------
     // Split Execution
@@ -193,6 +195,8 @@ document.addEventListener("DOMContentLoaded", () => {
         } catch (error) {
             rangeError.innerText = error.message;
             rangeError.classList.remove("hidden");
+            rangeInput.setAttribute("aria-invalid", "true");
+            rangeInput.setAttribute("aria-describedby", "range-error");
             return;
         }
 
@@ -273,20 +277,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
     resetBtn.addEventListener("click", resetUI);
     removeFileBtn.addEventListener("click", resetUI);
-
-    // --------------------------------------------------
-    // FAQ Accordion
-    // --------------------------------------------------
-    faqButtons.forEach((button) => {
-        button.addEventListener("click", function () {
-            const content = this.nextElementSibling;
-            const icon = this.querySelector(".faq-icon");
-            const isOpen = !content.classList.contains("hidden");
-
-            // Toggle logic
-            content.classList.toggle("hidden");
-            icon.textContent = isOpen ? "+" : "-";
-            this.setAttribute("aria-expanded", !isOpen);
-        });
-    });
 });

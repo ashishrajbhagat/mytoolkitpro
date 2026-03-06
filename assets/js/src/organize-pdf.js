@@ -19,8 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const downloadPdfBtn = document.getElementById("download-pdf-btn");
     const resetBtn = document.getElementById("reset-btn");
 
-    const faqButtons = document.querySelectorAll(".faq-toggle");
-
     // State
     let pdfFile = null;
     let pdfArrayBuffer = null;
@@ -105,43 +103,55 @@ document.addEventListener("DOMContentLoaded", () => {
         const renderPromises = [];
 
         for (let i = 1; i <= totalPages; i++) {
-            renderPromises.push((async (pageIdx) => {
-                const page = await pdf.getPage(pageIdx);
-                const viewport = page.getViewport({ scale: 0.4 });
+            const pageIdx = i - 1;
 
-                const pageContainer = document.createElement("div");
-                pageContainer.className = "page-container relative flex flex-col items-center group cursor-move p-4 bg-white rounded-xl border border-gray-200 shadow-sm hover:border-primary hover:shadow-md transition-all";
-                pageContainer.draggable = true;
-                pageContainer.dataset.pageIndex = pageIdx - 1;
-                
-                const canvas = document.createElement("canvas");
+            // --- STEP 1: Get Viewport First ---
+            const page = await pdf.getPage(i);
+            const viewport = page.getViewport({ scale: 0.4 });
+            const ratio = window.devicePixelRatio || 1;
+
+            // --- STEP 2: Create Container ---
+            const pageContainer = document.createElement("div");
+            // Added h-fit and self-start to prevent stretching during reordering
+            pageContainer.className = "page-container relative flex flex-col group cursor-move bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-md hover:border-primary/50 transition-all duration-200 h-fit self-start overflow-hidden";
+            pageContainer.draggable = true;
+            pageContainer.dataset.pageIndex = pageIdx; // Store original index for processing
+            
+            // --- STEP 3: Create Canvas with Aspect Ratio ---
+            const canvas = document.createElement("canvas");
+            canvas.id = `page-canvas-${pageIdx}`;
+            
+            // Lock dimensions immediately
+            canvas.style.display = "block";
+            canvas.style.width = "100%";
+            canvas.style.height = "auto";
+            canvas.style.aspectRatio = `${viewport.width} / ${viewport.height}`;
+            canvas.className = "rounded border border-gray-100 pointer-events-none bg-white";
+
+            // --- STEP 4: Create Floating Badge ---
+            const pageLabel = document.createElement("span");
+            pageLabel.className = "absolute bottom-1.5 left-1/2 -translate-x-1/2 text-[10px] font-bold text-gray-500 bg-white/95 backdrop-blur-sm px-2 py-0.5 rounded-md border border-gray-100 shadow-sm pointer-events-none z-20 uppercase tracking-tighter";
+            pageLabel.innerText = `PAGE ${i}`;
+
+            pageContainer.appendChild(canvas);
+            pageContainer.appendChild(pageLabel);
+            pagesGrid.appendChild(pageContainer);
+
+            // Attach Reordering Events
+            pageContainer.addEventListener('dragstart', handleDragStart);
+            pageContainer.addEventListener('dragover', handleDragOver);
+            pageContainer.addEventListener('drop', handleDrop);
+            pageContainer.addEventListener('dragend', handleDragEnd);
+
+            // --- STEP 5: Queue High-Quality Render ---
+            renderPromises.push((async () => {
                 const context = canvas.getContext("2d");
-                
-                const ratio = window.devicePixelRatio || 1;
                 canvas.width = viewport.width * ratio;
                 canvas.height = viewport.height * ratio;
-                canvas.style.width = `${viewport.width}px`;
-                canvas.style.height = `${viewport.height}px`;
                 context.scale(ratio, ratio);
 
-                canvas.className = "shadow-sm rounded border border-gray-100 pointer-events-none";
-
-                const pageLabel = document.createElement("span");
-                pageLabel.className = "mt-3 text-xs text-gray-500 font-bold pointer-events-none";
-                pageLabel.innerText = `PAGE ${pageIdx}`;
-
-                pageContainer.appendChild(canvas);
-                pageContainer.appendChild(pageLabel);
-                pagesGrid.appendChild(pageContainer);
-
-                // Attach Reordering Events
-                pageContainer.addEventListener('dragstart', handleDragStart);
-                pageContainer.addEventListener('dragover', handleDragOver);
-                pageContainer.addEventListener('drop', handleDrop);
-                pageContainer.addEventListener('dragend', handleDragEnd);
-
                 await page.render({ canvasContext: context, viewport }).promise;
-            })(i));
+            })());
         }
         await Promise.all(renderPromises);
     };
@@ -247,15 +257,5 @@ document.addEventListener("DOMContentLoaded", () => {
         link.download = `${name}-organized-mytoolkitpro.pdf`;
         link.click();
         URL.revokeObjectURL(url);
-    });
-
-    // FAQ
-    faqButtons.forEach(btn => {
-        btn.addEventListener("click", function() {
-            const content = this.nextElementSibling;
-            const icon = this.querySelector(".faq-icon");
-            content.classList.toggle("hidden");
-            icon.textContent = content.classList.contains("hidden") ? "+" : "-";
-        });
     });
 });

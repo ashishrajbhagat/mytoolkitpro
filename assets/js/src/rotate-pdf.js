@@ -18,7 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const resultsArea = document.getElementById("results-area");
     const downloadPdfBtn = document.getElementById("download-pdf-btn");
     const resetBtn = document.getElementById("reset-btn");
-    const faqButtons = document.querySelectorAll(".faq-toggle");
 
     // State
     let pdfFile = null;
@@ -106,7 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const viewport = page.getViewport({ scale: 0.4 });
 
                 const pageContainer = document.createElement("div");
-                pageContainer.className = "relative flex flex-col items-center group bg-gray-50 p-4 rounded-xl border border-gray-100";
+                pageContainer.className = "relative flex flex-col items-center group bg-white p-2 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition-all duration-200 overflow-hidden h-fit self-start";
                 
                 const canvas = document.createElement("canvas");
                 const context = canvas.getContext("2d");
@@ -115,21 +114,23 @@ document.addEventListener("DOMContentLoaded", () => {
                 const ratio = window.devicePixelRatio || 1;
                 canvas.width = viewport.width * ratio;
                 canvas.height = viewport.height * ratio;
-                canvas.style.width = `${viewport.width}px`;
-                canvas.style.height = `${viewport.height}px`;
+                canvas.style.display = "block";
+                canvas.style.width = "100%";
+                canvas.style.height = "auto";
+                canvas.style.aspectRatio = `${viewport.width} / ${viewport.height}`;
                 context.scale(ratio, ratio);
 
-                canvas.className = "shadow-md rounded border border-gray-200 transition-transform duration-300 bg-white";
+                canvas.className = "block w-full h-auto rounded border border-gray-100 transition-transform duration-300 bg-white origin-center";
                 canvas.id = `page-canvas-${pageIdx - 1}`;
 
                 const rotateBtn = document.createElement("button");
-                rotateBtn.className = "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition shadow-xl hover:scale-110 cursor-pointer z-10";
+                rotateBtn.className = "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gray-900/80 backdrop-blur-sm text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-200 shadow-xl hover:scale-110 cursor-pointer z-10 hover:bg-primary";
                 rotateBtn.innerHTML = `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>`;
-                rotateBtn.title = "Rotate this page 90°";
+                rotateBtn.setAttribute("aria-label", "Rotate this page 90°");
                 rotateBtn.onclick = () => rotateSinglePage(pageIdx - 1);
 
                 const pageLabel = document.createElement("span");
-                pageLabel.className = "mt-3 text-xs text-gray-500 font-bold uppercase tracking-wider";
+                pageLabel.className = "mt-1 text-[10px] text-gray-500 font-semibold bg-gray-50/80 px-1.5 py-0.5 rounded-md z-20 relative";
                 pageLabel.innerText = `Page ${pageIdx}`;
 
                 pageContainer.append(canvas, rotateBtn, pageLabel);
@@ -231,15 +232,4 @@ document.addEventListener("DOMContentLoaded", () => {
         link.click();
         setTimeout(() => URL.revokeObjectURL(url), 100);
     };
-
-    // FAQ Toggle
-    faqButtons.forEach(btn => {
-        btn.onclick = function() {
-            const content = this.nextElementSibling;
-            const icon = this.querySelector(".faq-icon");
-            const isHidden = content.classList.toggle("hidden");
-            icon.textContent = isHidden ? "+" : "-";
-            this.setAttribute("aria-expanded", !isHidden);
-        };
-    });
 });

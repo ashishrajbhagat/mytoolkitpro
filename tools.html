@@ -52,6 +52,24 @@
             }
         }
         </script>
+        
+        <!-- Breadcrumb Schema -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://mytoolkitpro.com/"
+            },{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Tools"
+            }]
+        }
+        </script>
     </head>
     <body class="bg-bgsoft text-darktext">
         <header class="bg-white border-b border-borderclr relative z-50">
@@ -62,23 +80,23 @@
                 </a>
                 <nav class="hidden md:flex space-x-6 text-lg text-gray-600">
                     <a href="index.html" class="hover:text-primary">Home</a>
-                    <a href="tools.html" class="text-primary font-semibold">Tools</a>
-                    <a href="about.html" class="hover:text-primary">About</a>
+                    <a href="tools.html" class="text-primary font-semibold" aria-current="page">Tools</a>
+                    <a href="articles.html" class="hover:text-primary">Articles</a>
                 </nav>
-                <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-600 hover:text-primary focus:outline-none" aria-label="Toggle mobile menu">
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-600 hover:text-primary focus:outline-none cursor-pointer" aria-label="Toggle mobile menu" aria-controls="mobile-menu" aria-expanded="false">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                 </button>
             </div>
             <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white border-b border-borderclr shadow-lg">
                 <nav class="flex flex-col p-4 space-y-4 text-lg text-gray-600">
                     <a href="index.html" class="hover:text-primary">Home</a>
-                    <a href="tools.html" class="text-primary font-semibold">Tools</a>
-                    <a href="about.html" class="hover:text-primary">About</a>
+                    <a href="tools.html" class="text-primary font-semibold" aria-current="page">Tools</a>
+                    <a href="articles.html" class="hover:text-primary">Articles</a>
                 </nav>
             </div>
         </header>
         <main>
-            <section class="relative overflow-hidden bg-linear-to-b from-white via-bgsoft to-white py-28 px-6">
+            <section class="relative overflow-hidden bg-linear-to-b from-white via-bgsoft to-white py-20 md:py-28 px-6">
                 <div class="absolute -top-24 -left-24 w-96 h-96 bg-primary opacity-10 rounded-full blur-3xl"></div>
                 <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-primary opacity-10 rounded-full blur-3xl"></div>
                 <div class="relative max-w-5xl mx-auto text-center">
@@ -88,7 +106,7 @@
                     <a href="#all-tools" class="inline-block bg-primary text-white px-10 py-4 rounded-2xl font-semibold hover:scale-105 transform transition duration-300 shadow-lg">Browse Tools</a>
                 </div>
             </section>
-            <section id="all-tools" class="py-24 px-6">
+            <section id="all-tools" class="py-16 md:py-24 px-6">
                 <div class="max-w-7xl mx-auto grid sm:grid-cols-2 md:grid-cols-3 gap-10">
                     <a href="tools/pdf-to-jpg.html" class="bg-white p-8 rounded-3xl shadow-md hover:shadow-2xl hover:-translate-y-2 transform transition duration-300 border border-borderclr block">
                         <div class="text-4xl mb-4 text-primary" aria-hidden="true">📄</div>
@@ -179,13 +197,24 @@
                 </div>
             </div>
         </footer>
-        <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
         <script>
-            const mobileBtn = document.getElementById('mobile-menu-btn');
-            const mobileMenu = document.getElementById('mobile-menu');
-            if(mobileBtn && mobileMenu){
-                mobileBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-            }
+            document.addEventListener('DOMContentLoaded', () => {
+                // Mobile Menu Toggle
+                const mobileBtn = document.getElementById('mobile-menu-btn');
+                const mobileMenu = document.getElementById('mobile-menu');
+                if (mobileBtn && mobileMenu) {
+                    mobileBtn.addEventListener('click', () => {
+                        const isHidden = mobileMenu.classList.toggle('hidden');
+                        mobileBtn.setAttribute('aria-expanded', !isHidden);
+                    });
+                }
+
+                // Set current year in footer
+                const yearSpan = document.getElementById('year');
+                if(yearSpan) {
+                    yearSpan.textContent = new Date().getFullYear();
+                }
+            });
         </script>
     </body>
 </html>

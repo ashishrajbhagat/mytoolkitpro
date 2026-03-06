@@ -72,6 +72,17 @@ Rearrange and sort PDF pages.
 
 **Location:** `/tools/organize-pdf.html`
 
+## 📚 Articles
+
+### 1. How to reduce PDF size without losing quality
+**Location:** `/articles/reduce-pdf-size.html`
+
+### 2. Securing legal documents for email
+**Location:** `/articles/secure-legal-documents.html`
+
+### 3. Organizing large project proposals
+**Location:** `/articles/organize-project-proposals.html`
+
 ## �️ Build & Development
 
 ### Scripts
@@ -109,6 +120,7 @@ Replace your current `## 📁 Project Structure` section with this incredibly de
 MyToolKitPro/
 ├── index.html              # Home page
 ├── tools.html              # Tools directory page
+├── articles.html           # Articles hub page
 ├── about.html              # About page
 ├── contact.html            # Contact page
 ├── privacy-policy.html     # Privacy policy
@@ -120,6 +132,10 @@ MyToolKitPro/
 ├── sitemap.xml             # SEO sitemap
 ├── robots.txt              # SEO robots.txt
 ├── _headers                # Netlify security headers configuration
+├── articles/
+│   ├── reduce-pdf-size.html
+│   ├── secure-legal-documents.html
+│   └── organize-project-proposals.html
 ├── assets/
 │   ├── manifest.json       # PWA manifest file
 │   ├── css/
@@ -338,6 +354,7 @@ MyToolKitPro works offline and can be installed as an app:
 
 - **Home** (`index.html`) - Landing page with tool highlights
 - **Tools** (`tools.html`) - Complete list of available tools
+- **Articles** (`articles.html`) - Guides and tutorials
 - **About** (`about.html`) - Information about MyToolKitPro
 - **Contact** (`contact.html`) - Contact information
 - **Privacy Policy** (`privacy-policy.html`) - Data privacy information

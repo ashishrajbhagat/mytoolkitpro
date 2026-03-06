@@ -19,8 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const downloadPdfBtn = document.getElementById("download-pdf-btn");
     const resetBtn = document.getElementById("reset-btn");
 
-    const faqButtons = document.querySelectorAll(".faq-toggle");
-
     // State
     let pdfFile = null;
     let pdfArrayBuffer = null;
@@ -121,45 +119,83 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // --- Render Grid ---
     const renderPageGrid = async (pdf) => {
+        // Clear existing thumbnails and reset the grid
         pagesGrid.innerHTML = "";
         const renderPromises = [];
 
         for (let i = 1; i <= totalPages; i++) {
             const pageIdx = i - 1;
+
+            // --- STEP 1: Get Page Data Immediately ---
+            // We do this first so the browser knows the dimensions before creating the UI
+            const page = await pdf.getPage(i);
+            const viewport = page.getViewport({ scale: 0.4 });
+            const ratio = window.devicePixelRatio || 1;
+
+            // --- STEP 2: Create Branded Container ---
             const container = document.createElement("div");
-            container.className = "relative flex flex-col items-center group cursor-pointer p-2 rounded-xl border-2 border-transparent hover:bg-gray-100 transition focus:outline-none focus:ring-2 focus:ring-red-500";
+            // h-fit and self-start ensure the card doesn't stretch vertically
+            container.className = "relative flex flex-col group cursor-pointer bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-all duration-200 h-fit self-start overflow-hidden";
             container.setAttribute("role", "button");
             container.setAttribute("aria-pressed", "false");
             container.tabIndex = 0;
 
+            // --- STEP 3: Create Canvas with Instant Proportions ---
             const canvas = document.createElement("canvas");
-            canvas.className = "shadow-md rounded-lg border border-gray-200 transition-opacity";
             canvas.id = `page-canvas-${pageIdx}`;
+            
+            // Apply display styles immediately to lock the height
+            canvas.style.display = "block";
+            canvas.style.width = "100%";
+            canvas.style.height = "auto";
+            canvas.style.aspectRatio = `${viewport.width} / ${viewport.height}`;
+            canvas.className = "rounded border border-gray-100 bg-white";
 
+            // --- STEP 4: Create Selection Overlay ---
             const overlay = document.createElement("div");
-            overlay.className = "absolute inset-0 bg-red-500/20 rounded-lg hidden flex items-center justify-center";
-            overlay.innerHTML = `<div class="bg-red-600 text-white rounded-full p-2 shadow-lg"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></div>`;
+            // inset-0 ensures the red selection border perfectly matches the canvas edges
+            overlay.className = "absolute inset-0 bg-red-500/10 backdrop-blur-[1px] hidden flex items-center justify-center border-2 border-red-500 z-10";
+            overlay.innerHTML = `
+                <div class="bg-red-600 text-white rounded-full p-2 shadow-lg scale-90 group-hover:scale-100 transition-transform">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </div>`;
             overlay.id = `page-overlay-${pageIdx}`;
 
+            // --- STEP 5: Create Floating Page Badge ---
             const label = document.createElement("span");
-            label.className = "mt-2 text-sm text-gray-600 font-medium";
+            label.className = "absolute bottom-1.5 left-1/2 -translate-x-1/2 text-[10px] font-bold text-gray-500 bg-white/95 backdrop-blur-sm px-2 py-0.5 rounded-md border border-gray-100 shadow-sm pointer-events-none z-20 uppercase tracking-tighter";
             label.innerText = `Page ${i}`;
 
+            // Assemble and append to the grid
             container.append(canvas, overlay, label);
             pagesGrid.appendChild(container);
 
+            // --- STEP 6: Setup Event Listeners ---
             const toggleFunc = () => togglePageDeletion(pageIdx, container);
             container.onclick = toggleFunc;
             container.onkeydown = (e) => (e.key === 'Enter' || e.key === ' ') && (e.preventDefault(), toggleFunc());
 
+            // --- STEP 7: Queue the High-Quality Render ---
             renderPromises.push((async () => {
-                const page = await pdf.getPage(i);
-                const viewport = page.getViewport({ scale: 0.4 });
-                canvas.width = viewport.width;
-                canvas.height = viewport.height;
-                await page.render({ canvasContext: canvas.getContext("2d"), viewport }).promise;
+                const context = canvas.getContext("2d");
+                
+                // Set internal resolution based on device DPI for crisp thumbnails
+                canvas.width = viewport.width * ratio;
+                canvas.height = viewport.height * ratio;
+                
+                // Scale the drawing context so 1 unit = 1 pixel on high-DPI screens
+                context.scale(ratio, ratio);
+                
+                await page.render({ 
+                    canvasContext: context, 
+                    viewport: viewport 
+                }).promise;
             })());
         }
+
+        // Wait for all pages to finish rendering
         await Promise.all(renderPromises);
     };
 
@@ -172,12 +208,14 @@ document.addEventListener("DOMContentLoaded", () => {
             pagesToDelete.delete(index);
             overlay.classList.add("hidden");
             canvas.classList.remove("opacity-50");
-            container.classList.remove("border-red-500");
+            container.setAttribute("aria-pressed", "false");
+            container.classList.remove("border-red-500", "ring-2", "ring-red-100");
         } else {
             pagesToDelete.add(index);
             overlay.classList.remove("hidden");
             canvas.classList.add("opacity-50");
-            container.classList.add("border-red-500");
+            container.setAttribute("aria-pressed", "true");
+            container.classList.add("border-red-500", "ring-2", "ring-red-100");
         }
     };
 
@@ -249,15 +287,5 @@ document.addEventListener("DOMContentLoaded", () => {
         link.download = `${name}-edited-mytoolkitpro.pdf`;
         link.click();
         URL.revokeObjectURL(url);
-    });
-
-    // FAQ
-    faqButtons.forEach(btn => {
-        btn.addEventListener("click", function() {
-            const content = this.nextElementSibling;
-            const icon = this.querySelector(".faq-icon");
-            content.classList.toggle("hidden");
-            icon.textContent = content.classList.contains("hidden") ? "+" : "-";
-        });
     });
 });
