@@ -8,6 +8,8 @@
         
         <!-- SEO Meta Tags -->
         <title>Compress PDF Online - Free PDF Reducer | MyToolKitPro</title>
+        <meta name="application-name" content="MyToolKitPro">
+        <meta name="apple-mobile-web-app-title" content="MyToolKitPro">
         <meta name="description" content="Reduce the file size of your PDF files online for free. Fast, secure, and easy-to-use PDF compressor. No signup, no installation required." />
         <meta name="keywords" content="compress PDF, PDF compressor, reduce PDF size, PDF reducer, free PDF compressor" />
         <meta name="author" content="MyToolKitPro" />
@@ -26,10 +28,12 @@
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Compress PDF Files" />
         <meta name="twitter:description" content="Free online PDF compressor tool." />
+        <meta name="twitter:image" content="https://mytoolkitpro.com/assets/img/og-image.png" />
         
         <!-- Links -->
         <link rel="canonical" href="https://mytoolkitpro.com/tools/compress-pdf.html" />
         <link rel="stylesheet" href="../assets/css/dist/output.css" />
+        <link rel="icon" href="../assets/img/favicon.ico" sizes="any">
         <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
         <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon-16.png">
@@ -44,6 +48,7 @@
             "@graph": [
                 {
                     "@type": "SoftwareApplication",
+                    "@id": "https://mytoolkitpro.com/tools/compress-pdf.html#software",
                     "name": "Compress PDF",
                     "description": "Free online tool to reduce the file size of PDF documents",
                     "url": "https://mytoolkitpro.com/tools/compress-pdf.html",
@@ -55,9 +60,7 @@
                         "priceCurrency": "USD"
                     },
                     "publisher": {
-                        "@type": "Organization",
-                        "name": "MyToolKitPro",
-                        "url": "https://mytoolkitpro.com/"
+                        "@id": "https://mytoolkitpro.com/#organization"
                     }
                 },
                 {
@@ -75,7 +78,8 @@
                     },{
                         "@type": "ListItem",
                         "position": 3,
-                        "name": "Compress PDF"
+                        "name": "Compress PDF",
+                        "item": "https://mytoolkitpro.com/tools/compress-pdf.html"
                     }]
                 },
                 {
@@ -210,11 +214,11 @@
                                             <div id="compression-options" class="mb-6 text-left">
                                                 <h4 class="font-semibold text-gray-700 mb-3">Compression Level</h4>
                                                 <div class="space-y-2">
-                                                    <label class="flex items-center p-3 bg-white border border-gray-200 rounded-lg cursor-pointer hover:bg-red-50 hover:border-primary/50 transition has-[:checked]:border-primary has-[:checked]:ring-2 has-[:checked]:ring-primary/50">
+                                                    <label class="flex items-center p-3 bg-white border border-gray-200 rounded-lg cursor-pointer hover:bg-red-50 hover:border-primary/50 transition has-checked:border-primary has-checked:ring-2 has-checked:ring-primary/50">
                                                         <input type="radio" name="compressionLevel" value="recommended" class="w-4 h-4 text-primary focus:ring-primary/50" checked>
                                                         <span class="ml-3 text-sm font-medium text-gray-700">Recommended (Good balance)</span>
                                                     </label>
-                                                    <label class="flex items-center p-3 bg-white border border-gray-200 rounded-lg cursor-pointer hover:bg-red-50 hover:border-primary/50 transition has-[:checked]:border-primary has-[:checked]:ring-2 has-[:checked]:ring-primary/50">
+                                                    <label class="flex items-center p-3 bg-white border border-gray-200 rounded-lg cursor-pointer hover:bg-red-50 hover:border-primary/50 transition has-checked:border-primary has-checked:ring-2 has-checked:ring-primary/50">
                                                         <input type="radio" name="compressionLevel" value="high" class="w-4 h-4 text-primary focus:ring-primary/50">
                                                         <span class="ml-3 text-sm font-medium text-gray-700">High Compression (Smaller size)</span>
                                                     </label>

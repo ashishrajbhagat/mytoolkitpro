@@ -7,12 +7,14 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         
         <!-- SEO Meta Tags -->
-        <title>Free PDF Tools Online | Convert, Merge, Compress PDFs - MyToolKitPro</title>
+        <title>Convert, Merge & Compress PDFs Online Free | MyToolKitPro</title>
+        <meta name="application-name" content="MyToolKitPro">
+        <meta name="apple-mobile-web-app-title" content="MyToolKitPro">
         <meta name="description" content="Free online PDF tools to convert PDF to JPG, JPG to PDF, merge PDF files, convert images to PDF and more. Fast, secure, no login required. 100% browser-based." />
         <meta name="keywords" content="PDF to JPG converter, JPG to PDF converter, merge PDF, PDF tools online, free PDF converter, image to PDF" />
         <meta name="author" content="MyToolKitPro" />
         <meta name="copyright" content="MyToolKitPro" />
-        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <meta name="robots" content="index, follow, max-image-preview:large">
         <meta name="theme-color" content="#B11226" />
         <meta name="msapplication-TileColor" content="#B11226" />
 
@@ -32,12 +34,13 @@
         <meta name="twitter:title" content="Free PDF Tools Online - MyToolKitPro" />
         <meta name="twitter:description" content="Convert, merge and compress PDFs instantly. No signup required." />
         <meta name="twitter:image" content="https://mytoolkitpro.com/assets/img/og-image.png" />
-        <meta name="twitter:site" content="@MyToolKitPro" />
+        <!-- <meta name="twitter:site" content="@MyToolKitPro" /> -->
         
         <!-- Links -->
         <link rel="canonical" href="https://mytoolkitpro.com/" />
         <link rel="alternate" hreflang="en-US" href="https://mytoolkitpro.com/" />
         <link rel="stylesheet" href="assets/css/dist/output.css" />
+        <link rel="icon" href="assets/img/favicon.ico" sizes="any">
         <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
         <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16.png">
@@ -45,23 +48,23 @@
         <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
         <link rel="manifest" href="assets/manifest.json" />
         
-        <!-- Performance Optimizations -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="dns-prefetch" href="https://cdn.example.com" />
-        
-        <!-- Schema.org Structured Data -->
+        <!-- WebSite Schema -->
         <script type="application/ld+json">
         {
             "@context": "https://schema.org",
             "@type": "WebSite",
-            "name": "MyToolKitPro",
-            "alternateName": ["MyToolkitPro", "My Tool Kit Pro", "My Toolkit Pro"],
+            "@id": "https://mytoolkitpro.com/#website",
             "url": "https://mytoolkitpro.com/",
-            "description": "Free online PDF tools for converting, merging, and managing PDF files",
-            "sameAs": [
-                "https://www.facebook.com/MyToolKitPro",
-                "https://twitter.com/MyToolKitPro"
+            "name": "MyToolKitPro",
+            "alternateName": [
+                "MyToolkitPro",
+                "My Tool Kit Pro",
+                "My Toolkit Pro"
             ],
+            "description": "Free online PDF tools to convert, merge, compress and manage PDF files directly in your browser.",
+            "publisher": {
+                "@id": "https://mytoolkitpro.com/#organization"
+            },
             "potentialAction": {
                 "@type": "SearchAction",
                 "target": "https://mytoolkitpro.com/?q={search_term_string}",
@@ -69,22 +72,70 @@
             }
         }
         </script>
-        
+
         <!-- Organization Schema -->
         <script type="application/ld+json">
         {
             "@context": "https://schema.org",
             "@type": "Organization",
+            "@id": "https://mytoolkitpro.com/#organization",
             "name": "MyToolKitPro",
-            "alternateName": ["MyToolkitPro", "My Tool Kit Pro", "My Toolkit Pro"],
+            "alternateName": [
+                "MyToolkitPro",
+                "My Tool Kit Pro",
+                "My Toolkit Pro"
+            ],
             "url": "https://mytoolkitpro.com/",
-            "logo": "https://mytoolkitpro.com/assets/img/logo.png",
-            "description": "Free online PDF tools",
-            "contact": {
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://mytoolkitpro.com/assets/img/favicon-512.png",
+                "width": 512,
+                "height": 512
+            },
+            "description": "MyToolKitPro provides free online PDF tools for converting, merging, compressing and managing PDF files securely in your browser.",
+            "sameAs": [
+                "https://www.facebook.com/MyToolKitPro",
+                "https://twitter.com/MyToolKitPro"
+            ],
+            "contactPoint": {
                 "@type": "ContactPoint",
                 "contactType": "Customer Support",
-                "email": "mytoolkitpro@gmail.com"
+                "email": "mytoolkitpro@gmail.com",
+                "availableLanguage": "English"
             }
+        }
+        </script>
+
+        <!-- WebApp Schema -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "@id": "https://mytoolkitpro.com/#webapp",
+            "name": "MyToolKitPro PDF Tools",
+            "url": "https://mytoolkitpro.com/",
+            "applicationCategory": "UtilitiesApplication",
+            "operatingSystem": "All",
+            "browserRequirements": "Requires JavaScript",
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+            }
+        }
+        </script>
+
+        <!-- BreadcrumbList Schema -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://mytoolkitpro.com/"
+            }]
         }
         </script>
 
@@ -108,7 +159,6 @@
                 { "@type": "ListItem", "position": 10, "url": "https://mytoolkitpro.com/tools/unlock-pdf.html", "name": "Unlock PDF" }
             ]
         }
-        </script>
         </script>
     </head>
     <body class="bg-bgsoft text-darktext">
