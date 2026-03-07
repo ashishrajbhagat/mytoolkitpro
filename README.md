@@ -77,8 +77,8 @@ Rearrange and sort PDF pages.
 ### 1. How to reduce PDF size without losing quality
 **Location:** `/articles/reduce-pdf-size.html`
 
-### 2. Securing legal documents for email
-**Location:** `/articles/secure-legal-documents.html`
+### 2. Managing PDFs on iOS and Android
+**Location:** `/articles/managing-pdfs-mobile.html`
 
 ### 3. Organizing large project proposals
 **Location:** `/articles/organize-project-proposals.html`
@@ -134,7 +134,7 @@ MyToolKitPro/
 ├── _headers                # Netlify security headers configuration
 ├── articles/
 │   ├── reduce-pdf-size.html
-│   ├── secure-legal-documents.html
+│   ├── managing-pdfs-mobile.html
 │   └── organize-project-proposals.html
 ├── assets/
 │   ├── manifest.json       # PWA manifest file
