@@ -14,6 +14,7 @@ A comprehensive collection of **free, fast, and secure** online PDF and image co
 - **Rotate PDF Files** - Rotate PDF pages permanently
 - **Delete PDF Pages** - Remove unwanted pages from PDF documents
 - **Organize PDF Files** - Rearrange and sort PDF pages
+- **Add Watermark to PDF Files** - Stamp text over PDF pages
 - **100% Browser-Based** - All processing happens locally on your device for maximum privacy
 - **No Signup Required** - Start converting immediately without creating an account
 - **Ad-Free & Watermark-Free** - Completely free to use with no hidden limitations
@@ -71,6 +72,11 @@ Remove unwanted pages from PDF documents.
 Rearrange and sort PDF pages.
 
 **Location:** `/tools/organize-pdf.html`
+
+### 11. Add Watermark to PDF
+Stamp text over your PDF pages with custom transparency and rotation.
+
+**Location:** `/tools/add-watermark-to-pdf.html`
 
 ## 📚 Articles
 
@@ -180,7 +186,8 @@ MyToolKitPro/
     ├── pdf-page-numbering.html
     ├── rotate-pdf.html
     ├── delete-pdf-pages.html
-    └── organize-pdf.html
+    ├── organize-pdf.html
+    └── add-watermark-to-pdf.html
 
 ## 🚀 Getting Started
 
