@@ -17,6 +17,7 @@ A comprehensive collection of **free, fast, and secure** online PDF and image co
 - **Add Watermark to PDF Files** - Stamp text over PDF pages
 - **Duplicate PDF Pages** - Copy and repeat pages within a PDF
 - **Delete Blank PDF Pages** - Automatically find and remove empty pages
+- **Remove PDF Page Numbering** - Erase page numbering from headers or footers
 - **100% Browser-Based** - All processing happens locally on your device for maximum privacy
 - **No Signup Required** - Start converting immediately without creating an account
 - **Ad-Free & Watermark-Free** - Completely free to use with no hidden limitations
@@ -90,6 +91,11 @@ Automatically find and remove empty pages from your PDF documents.
 
 **Location:** `/tools/delete-blank-pages-from-pdf.html`
 
+### 14. Remove PDF Page Numbering
+Erase page numbering from your document's headers or footers.
+
+**Location:** `/tools/remove-pdf-page-numbering.html`
+
 ## 📚 Articles
 
 ### 1. How to reduce PDF size without losing quality
@@ -103,6 +109,12 @@ Automatically find and remove empty pages from your PDF documents.
 
 ### 4. A Guide to Digitizing Paper Records
 **Location:** `/articles/digitizing-paper-records-to-pdf.html`
+
+### 5. How to Add Page Numbers to a PDF
+**Location:** `/articles/how-to-add-page-numbers-to-pdf.html`
+
+### 6. How to Remove Page Numbers from a PDF
+**Location:** `/articles/how-to-remove-page-numbers-from-pdf.html`
 
 ## �️ Build & Development
 
@@ -156,8 +168,10 @@ MyToolKitPro/
 ├── articles/
 │   ├── reduce-pdf-size.html
 │   ├── managing-pdfs-mobile.html
-│   └── organize-project-proposals.html
-│   └── digitizing-paper-records-to-pdf.html
+│   ├── organize-project-proposals.html
+│   ├── digitizing-paper-records-to-pdf.html
+│   ├── how-to-add-page-numbers-to-pdf.html
+│   └── how-to-remove-page-numbers-from-pdf.html
 ├── assets/
 │   ├── manifest.json       # PWA manifest file
 │   ├── css/
@@ -205,7 +219,8 @@ MyToolKitPro/
     ├── organize-pdf.html
     ├── add-watermark-to-pdf.html
     ├── duplicate-pdf-pages.html
-    └── delete-blank-pages-from-pdf.html
+    ├── delete-blank-pages-from-pdf.html
+    └── remove-pdf-page-numbering.html
 
 ## 🚀 Getting Started
 
