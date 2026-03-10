@@ -16,6 +16,7 @@ A comprehensive collection of **free, fast, and secure** online PDF and image co
 - **Organize PDF Files** - Rearrange and sort PDF pages
 - **Add Watermark to PDF Files** - Stamp text over PDF pages
 - **Duplicate PDF Pages** - Copy and repeat pages within a PDF
+- **Delete Blank PDF Pages** - Automatically find and remove empty pages
 - **100% Browser-Based** - All processing happens locally on your device for maximum privacy
 - **No Signup Required** - Start converting immediately without creating an account
 - **Ad-Free & Watermark-Free** - Completely free to use with no hidden limitations
@@ -83,6 +84,11 @@ Stamp text over your PDF pages to protect documents or add branding.
 Copy and repeat specific pages within your PDF document.
 
 **Location:** `/tools/duplicate-pdf-pages.html`
+
+### 13. Delete Blank PDF Pages
+Automatically find and remove empty pages from your PDF documents.
+
+**Location:** `/tools/delete-blank-pages-from-pdf.html`
 
 ## 📚 Articles
 
@@ -198,7 +204,8 @@ MyToolKitPro/
     ├── delete-pdf-pages.html
     ├── organize-pdf.html
     ├── add-watermark-to-pdf.html
-    └── duplicate-pdf-pages.html
+    ├── duplicate-pdf-pages.html
+    └── delete-blank-pages-from-pdf.html
 
 ## 🚀 Getting Started
 
