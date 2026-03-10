@@ -4,13 +4,13 @@ A comprehensive collection of **free, fast, and secure** online PDF and image co
 
 ## 🌟 Features
 
-- **PDF to JPG Converter** - Convert PDF pages to high-quality JPG images
-- **JPG to PDF Converter** - Transform images into professional PDF documents
-- **Merge PDF Files** - Combine multiple PDF files into a single document
-- **Compress PDF Files** - Reduce the file size of your PDF documents
-- **Unlock PDF Files** - Remove passwords and restrictions from PDF documents
-- **Split PDF Files** - Extract specific pages from PDF documents
-- **Add Page Numbers** - Insert page numbers into PDF documents
+- **PDF to JPG Converter** - Convert PDF pages to high-quality JPG images.
+- **Image to PDF Converter** - Transform images (JPG, PNG, etc.) into professional PDF documents.
+- **Merge PDF Files** - Combine multiple PDF files into a single document online for free.
+- **Compress PDF Files** - Reduce the file size of your PDF documents for email.
+- **Unlock PDF Files** - Remove passwords and restrictions from PDF files online.
+- **Split PDF Files** - Extract specific pages from PDF documents online.
+- **Add Page Numbers to PDF** - Insert page numbers into PDF documents.
 - **Rotate PDF Files** - Rotate PDF pages permanently
 - **Delete PDF Pages** - Remove unwanted pages from PDF documents
 - **Organize PDF Files** - Rearrange and sort PDF pages
@@ -24,57 +24,57 @@ A comprehensive collection of **free, fast, and secure** online PDF and image co
 ## 🛠️ Available Tools
 
 ### 1. PDF to JPG
-Convert PDF documents into JPG images. Perfect for sharing, archiving, or creating previews.
+Convert PDF pages into high-quality JPG images. Also useful to extract images from a PDF.
 
 **Location:** `/tools/pdf-to-jpg.html`
 
-### 2. JPG to PDF
-Create professional PDF documents from JPEG images. Great for scanning documents or combining photos.
+### 2. Image to PDF
+Convert images like JPG, PNG, and more into a single PDF document. Perfect to scan images to PDF.
 
 **Location:** `/tools/jpg-to-pdf.html`
 
 ### 3. Merge PDF
-Combine multiple PDF files into a single, organized document.
+Combine multiple PDF files into one document with our free online merger.
 
 **Location:** `/tools/merge-pdf.html`
 
 ### 4. Compress PDF
-Reduce the file size of your PDF documents.
+Reduce the file size of your PDF documents to easily compress for email.
 
 **Location:** `/tools/compress-pdf.html`
 
 ### 5. Unlock PDF
-Remove passwords and restrictions from PDF documents.
+Remove passwords and restrictions from PDF files with our online unlocker.
 
 **Location:** `/tools/unlock-pdf.html`
 
 ### 6. Split PDF
-Extract specific pages from PDF documents.
+Extract specific pages from your PDF documents online.
 
 **Location:** `/tools/split-pdf.html`
 
 ### 7. Add Page Numbers
-Insert page numbers into PDF documents.
+Insert page numbers into your PDF documents with custom formatting.
 
 **Location:** `/tools/pdf-page-numbering.html`
 
 ### 8. Rotate PDF
-Rotate PDF pages permanently.
+Rotate PDF pages permanently to fix orientation issues.
 
 **Location:** `/tools/rotate-pdf.html`
 
 ### 9. Delete PDF Pages
-Remove unwanted pages from PDF documents.
+Remove unwanted pages from your PDF documents.
 
 **Location:** `/tools/delete-pdf-pages.html`
 
 ### 10. Organize PDF
-Rearrange and sort PDF pages.
+Rearrange and sort PDF pages. The easiest way to reorder PDF pages online.
 
 **Location:** `/tools/organize-pdf.html`
 
 ### 11. Add Watermark to PDF
-Stamp text over your PDF pages with custom transparency and rotation.
+Stamp text over your PDF pages to protect documents or add branding.
 
 **Location:** `/tools/add-watermark-to-pdf.html`
 
