@@ -66,6 +66,11 @@
         <priority>0.9</priority>
     </url>
     <url>
+        <loc>https://mytoolkitpro.com/tools/duplicate-pdf-pages.html</loc>
+        <lastmod>2026-03-10</lastmod>
+        <priority>0.9</priority>
+    </url>
+    <url>
         <loc>https://mytoolkitpro.com/articles.html</loc>
         <lastmod>2026-03-10</lastmod>
         <priority>0.8</priority>
@@ -82,6 +87,11 @@
     </url>
     <url>
         <loc>https://mytoolkitpro.com/articles/organize-project-proposals.html</loc>
+        <lastmod>2026-03-10</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://mytoolkitpro.com/articles/digitizing-paper-records-to-pdf.html</loc>
         <lastmod>2026-03-10</lastmod>
         <priority>0.7</priority>
     </url>

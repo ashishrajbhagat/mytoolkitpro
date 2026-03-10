@@ -15,6 +15,7 @@ A comprehensive collection of **free, fast, and secure** online PDF and image co
 - **Delete PDF Pages** - Remove unwanted pages from PDF documents
 - **Organize PDF Files** - Rearrange and sort PDF pages
 - **Add Watermark to PDF Files** - Stamp text over PDF pages
+- **Duplicate PDF Pages** - Copy and repeat pages within a PDF
 - **100% Browser-Based** - All processing happens locally on your device for maximum privacy
 - **No Signup Required** - Start converting immediately without creating an account
 - **Ad-Free & Watermark-Free** - Completely free to use with no hidden limitations
@@ -78,6 +79,11 @@ Stamp text over your PDF pages to protect documents or add branding.
 
 **Location:** `/tools/add-watermark-to-pdf.html`
 
+### 12. Duplicate PDF Pages
+Copy and repeat specific pages within your PDF document.
+
+**Location:** `/tools/duplicate-pdf-pages.html`
+
 ## 📚 Articles
 
 ### 1. How to reduce PDF size without losing quality
@@ -88,6 +94,9 @@ Stamp text over your PDF pages to protect documents or add branding.
 
 ### 3. Organizing large project proposals
 **Location:** `/articles/organize-project-proposals.html`
+
+### 4. A Guide to Digitizing Paper Records
+**Location:** `/articles/digitizing-paper-records-to-pdf.html`
 
 ## �️ Build & Development
 
@@ -142,6 +151,7 @@ MyToolKitPro/
 │   ├── reduce-pdf-size.html
 │   ├── managing-pdfs-mobile.html
 │   └── organize-project-proposals.html
+│   └── digitizing-paper-records-to-pdf.html
 ├── assets/
 │   ├── manifest.json       # PWA manifest file
 │   ├── css/
@@ -187,7 +197,8 @@ MyToolKitPro/
     ├── rotate-pdf.html
     ├── delete-pdf-pages.html
     ├── organize-pdf.html
-    └── add-watermark-to-pdf.html
+    ├── add-watermark-to-pdf.html
+    └── duplicate-pdf-pages.html
 
 ## 🚀 Getting Started
 
