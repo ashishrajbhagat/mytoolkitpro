@@ -195,6 +195,11 @@
                         <h3 class="text-xl font-semibold mb-3">Resize PDF Page Size</h3>
                         <p class="text-gray-600 text-sm">Adjust document dimensions to A4, Letter, or custom dimensions for free.</p>
                     </a>
+                    <a href="tools/add-margin-to-pdf.html" class="bg-white p-8 rounded-3xl shadow-md hover:shadow-2xl hover:-translate-y-2 transform transition duration-300 border border-borderclr block">
+                        <div class="text-4xl mb-4 text-primary" aria-hidden="true">↔️</div>
+                        <h3 class="text-xl font-semibold mb-3">Add Margin to PDF</h3>
+                        <p class="text-gray-600 text-sm">Add custom white space around your PDF pages for printing, binding, or notes.</p>
+                    </a>
                 </div>
             </section>
         </main>
@@ -230,13 +235,11 @@
                 </div>
                 <div class="border-t border-gray-700 pt-6 text-center text-sm text-gray-500">
                     <p>&copy; <span id="year"></span> MyToolKitPro. All rights reserved.</p>
-                    <p class="mt-2 text-gray-600 text-sm">Built for simple and secure document conversion.</p>
                 </div>
             </div>
         </footer>
         <script>
             document.addEventListener('DOMContentLoaded', () => {
-                // Mobile Menu Toggle
                 const mobileBtn = document.getElementById('mobile-menu-btn');
                 const mobileMenu = document.getElementById('mobile-menu');
                 if (mobileBtn && mobileMenu) {
@@ -246,7 +249,6 @@
                     });
                 }
 
-                // Set current year in footer
                 const yearSpan = document.getElementById('year');
                 if(yearSpan) {
                     yearSpan.textContent = new Date().getFullYear();

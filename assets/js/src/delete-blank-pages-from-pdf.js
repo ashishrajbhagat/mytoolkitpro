@@ -6,6 +6,7 @@
 // Configure PDF.js worker
 pdfjsLib.GlobalWorkerOptions.workerSrc = "../assets/js/vendor/pdf.worker.min.js";
 
+// Wait until DOM is fully loaded before executing script
 document.addEventListener("DOMContentLoaded", () => {
 
     // --------------------------------------------------

@@ -20,6 +20,7 @@ A comprehensive collection of **free, fast, and secure** online PDF and image co
 - **Remove PDF Page Numbering** - Erase page numbering from headers or footers
 - **PDF Thumbnail Generator** - Create high-quality previews of PDF pages
 - **Resize PDF Page Size** - Adjust PDF dimensions to standard or custom sizes
+- **Add Margin to PDF** - Add white space around PDF pages for printing or notes
 - **100% Browser-Based** - All processing happens locally on your device for maximum privacy
 - **No Signup Required** - Start converting immediately without creating an account
 - **Ad-Free & Watermark-Free** - Completely free to use with no hidden limitations
@@ -107,6 +108,11 @@ Generate high-quality image thumbnails and previews from your PDF pages.
 Adjust PDF dimensions to standard sizes like A4, Letter, or custom Dimensions.
 
 **Location:** `/tools/resize-pdf-page-size.html`
+
+### 17. Add Margin to PDF
+Add custom margins (Top, Bottom, Left, Right) to your PDF pages. Perfect for binding or annotations.
+
+**Location:** `/tools/add-margin-to-pdf.html`
 
 ## 📚 Articles
 
@@ -234,7 +240,8 @@ MyToolKitPro/
     ├── delete-blank-pages-from-pdf.html
     ├── remove-pdf-page-numbering.html
     ├── pdf-thumbnail-generator.html
-    └── resize-pdf-page-size.html
+    ├── resize-pdf-page-size.html
+    └── add-margin-to-pdf.html
 
 ## 🚀 Getting Started
 

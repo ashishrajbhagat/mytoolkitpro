@@ -3,6 +3,7 @@
  * Dependencies: pdf-lib
  */
 
+// Wait until DOM is fully loaded before executing script
 document.addEventListener("DOMContentLoaded", () => {
     // --------------------------------------------------
     // DOM Elements

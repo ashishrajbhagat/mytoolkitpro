@@ -270,22 +270,32 @@
             </section>
             <section class="bg-white border-t border-borderclr py-24 px-6">
                 <div class="max-w-6xl mx-auto text-center">
-                    <h2 class="text-4xl font-bold mb-16">How It Works</h2>
-                    <div class="grid md:grid-cols-3 gap-8 mt-10">
-                        <div class="p-6">
-                            <div class="text-primary text-4xl font-bold mb-4">1</div>
-                            <h3 class="text-xl font-semibold mb-2">Upload PDF Files</h3>
-                            <p class="text-gray-600 text-m">Drag and drop multiple PDF files or click to select them from your device.</p>
+                    <div class="text-center mb-20">
+                        <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6 tracking-tight">A Simple <span class="text-primary">3-Step</span> Process</h2>
+                        <p class="text-gray-500 text-lg max-w-2xl mx-auto leading-relaxed">Combine your PDFs into one file in seconds. No uploads, no waiting, just results.</p>
+                    </div>
+                    <div class="relative grid md:grid-cols-3 gap-12 lg:gap-16">
+                        <div class="hidden md:block absolute top-1/4 left-0 w-full h-0.5 bg-gray-100 -z-10"></div>
+                        <div class="text-center group">
+                            <div class="w-20 h-20 mx-auto mb-8 flex items-center justify-center rounded-3xl bg-white border-2 border-gray-100 text-primary shadow-sm group-hover:border-primary group-hover:shadow-xl group-hover:shadow-primary/10 transition-all duration-500 transform group-hover:-translate-y-2">
+                                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2"></path></svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4">1. Upload PDFs</h3>
+                            <p class="text-gray-500 leading-relaxed">Drop multiple PDF files into the browser. They stay local and secure on your device.</p>
                         </div>
-                        <div class="p-6">
-                            <div class="text-primary text-4xl font-bold mb-4">2</div>
-                            <h3 class="text-xl font-semibold mb-2">Merge PDFs</h3>
-                            <p class="text-gray-600 text-m">Review your selected files and click 'Merge' to combine them into a single document.</p>
+                        <div class="text-center group">
+                            <div class="w-20 h-20 mx-auto mb-8 flex items-center justify-center rounded-3xl bg-white border-2 border-gray-100 text-primary shadow-sm group-hover:border-primary group-hover:shadow-xl group-hover:shadow-primary/10 transition-all duration-500 transform group-hover:-translate-y-2">
+                                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4">2. Order & Merge</h3>
+                            <p class="text-gray-500 leading-relaxed">Drag and drop to reorder your files, then click 'Merge' to combine them instantly.</p>
                         </div>
-                        <div class="p-6">
-                            <div class="text-primary text-4xl font-bold mb-4">3</div>
-                            <h3 class="text-xl font-semibold mb-2">Download</h3>
-                            <p class="text-gray-600 text-m">Save your newly merged PDF document instantly to your device.</p>
+                        <div class="text-center group">
+                            <div class="w-20 h-20 mx-auto mb-8 flex items-center justify-center rounded-3xl bg-white border-2 border-gray-100 text-primary shadow-sm group-hover:border-primary group-hover:shadow-xl group-hover:shadow-primary/10 transition-all duration-500 transform group-hover:-translate-y-2">
+                                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4">3. Download</h3>
+                            <p class="text-gray-500 leading-relaxed">Download your single, merged PDF instantly, with no watermarks.</p>
                         </div>
                     </div>
                 </div>
@@ -416,7 +426,6 @@
                 </div>
                 <div class="border-t border-gray-700 pt-6 text-center text-sm text-gray-500">
                     <p>&copy; <span id="year"></span> MyToolKitPro. All rights reserved.</p>
-                    <p class="mt-2 text-gray-600 text-sm">Built for simple and secure document conversion.</p>
                 </div>
             </div>
         </footer>
@@ -424,7 +433,6 @@
         <script src="../assets/js/dist/merge-pdf.min.js" defer></script>
         <script>
             document.addEventListener('DOMContentLoaded', () => {
-                // Mobile Menu Toggle
                 const mobileBtn = document.getElementById('mobile-menu-btn');
                 const mobileMenu = document.getElementById('mobile-menu');
                 if (mobileBtn && mobileMenu) {
@@ -434,7 +442,6 @@
                     });
                 }
 
-                // FAQ Toggle
                 const faqButtons = document.querySelectorAll('.faq-toggle');
                 faqButtons.forEach(btn => {
                     btn.addEventListener('click', function() {
@@ -448,7 +455,6 @@
                     });
                 });
 
-                // Set current year in footer
                 const yearSpan = document.getElementById('year');
                 if(yearSpan) { yearSpan.textContent = new Date().getFullYear(); }
             });

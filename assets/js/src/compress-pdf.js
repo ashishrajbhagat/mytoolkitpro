@@ -1,3 +1,8 @@
+/**
+ * MyToolKitPro - Compress PDF Logic
+ * Dependencies: pdf.js, jspdf
+ */
+
 // Configure PDF.js worker
 pdfjsLib.GlobalWorkerOptions.workerSrc ="../assets/js/vendor/pdf.worker.min.js";
 

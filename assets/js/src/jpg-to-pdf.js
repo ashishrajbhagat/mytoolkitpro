@@ -1,3 +1,8 @@
+/**
+ * MyToolKitPro - JPG to PDF Conversion Logic
+ * Dependencies: jspdf
+ */
+
 // Wait until DOM is fully loaded before executing script
 document.addEventListener("DOMContentLoaded", () => {
 

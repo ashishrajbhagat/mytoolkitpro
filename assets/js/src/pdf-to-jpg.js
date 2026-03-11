@@ -1,3 +1,8 @@
+/**
+ * MyToolKitPro - PDF to JPG Conversion Logic
+ * Dependencies: pdf.js, jszip
+ */
+
 // Configure PDF.js worker
 pdfjsLib.GlobalWorkerOptions.workerSrc ="../assets/js/vendor/pdf.worker.min.js";
 

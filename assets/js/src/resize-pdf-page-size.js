@@ -3,6 +3,7 @@
  * Features: Smart Scaling, Auto-Centering, Orientation Toggle, and Range Support
  */
 
+// Wait until DOM is fully loaded before executing script
 document.addEventListener("DOMContentLoaded", () => {
     // DOM Elements
     const uploadArea = document.getElementById("upload-area");

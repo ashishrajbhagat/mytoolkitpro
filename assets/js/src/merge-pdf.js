@@ -1,3 +1,8 @@
+/**
+ * MyToolKitPro - Merge PDF Logic
+ * Dependencies: pdf-lib
+ */
+
 // Wait until the DOM is fully loaded before running the script
 document.addEventListener("DOMContentLoaded", () => {
 

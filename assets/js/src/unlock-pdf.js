@@ -1,3 +1,8 @@
+/**
+ * MyToolKitPro - Unlock PDF Logic
+ * Dependencies: pdf-lib, pdf.js
+ */
+
 // Configure PDF.js worker
 pdfjsLib.GlobalWorkerOptions.workerSrc ="../assets/js/vendor/pdf.worker.min.js";
 

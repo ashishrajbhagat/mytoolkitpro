@@ -5,6 +5,7 @@
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = "../assets/js/vendor/pdf.worker.min.js";
 
+// Wait until DOM is fully loaded before executing script
 document.addEventListener("DOMContentLoaded", () => {
     const uploadArea = document.getElementById("upload-area");
     const pdfInput = document.getElementById("pdfFile");

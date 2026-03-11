@@ -3,6 +3,7 @@
  * Features: Adaptive Masking, Page Range Support, and Memory Optimization
  */
 
+// Wait until DOM is fully loaded before executing script
 document.addEventListener("DOMContentLoaded", () => {
     // DOM Elements
     const uploadArea = document.getElementById("upload-area");

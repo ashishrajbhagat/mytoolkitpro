@@ -1,6 +1,12 @@
+/**
+ * MyToolKitPro - Organize PDF Pages Logic
+ * Dependencies: pdf-lib, pdf.js
+ */
+
 // Configure PDF.js worker
 pdfjsLib.GlobalWorkerOptions.workerSrc = "../assets/js/vendor/pdf.worker.min.js";
 
+// Wait until DOM is fully loaded before executing script
 document.addEventListener("DOMContentLoaded", () => {
 
     // DOM Elements

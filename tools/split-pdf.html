@@ -275,22 +275,32 @@
             </section>
             <section class="bg-white border-t border-borderclr py-24 px-6">
                 <div class="max-w-6xl mx-auto text-center">
-                    <h2 class="text-4xl font-bold mb-16">How It Works</h2>
-                    <div class="grid md:grid-cols-3 gap-8 mt-10">
-                        <div class="p-6">
-                            <div class="text-primary text-4xl font-bold mb-4">1</div>
-                            <h3 class="text-xl font-semibold mb-2">Upload PDF</h3>
-                            <p class="text-gray-600 text-m">Select the PDF file you want to split from your device.</p>
+                    <div class="text-center mb-20">
+                        <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6 tracking-tight">A Simple <span class="text-primary">3-Step</span> Process</h2>
+                        <p class="text-gray-500 text-lg max-w-2xl mx-auto leading-relaxed">Extract PDF pages in seconds. No uploads, no waiting, just results.</p>
+                    </div>
+                    <div class="relative grid md:grid-cols-3 gap-12 lg:gap-16">
+                        <div class="hidden md:block absolute top-1/4 left-0 w-full h-0.5 bg-gray-100 -z-10"></div>
+                        <div class="text-center group">
+                            <div class="w-20 h-20 mx-auto mb-8 flex items-center justify-center rounded-3xl bg-white border-2 border-gray-100 text-primary shadow-sm group-hover:border-primary group-hover:shadow-xl group-hover:shadow-primary/10 transition-all duration-500 transform group-hover:-translate-y-2">
+                                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4">1. Upload PDF</h3>
+                            <p class="text-gray-500 leading-relaxed">Drop your PDF into the browser. It stays local and secure on your device.</p>
                         </div>
-                        <div class="p-6">
-                            <div class="text-primary text-4xl font-bold mb-4">2</div>
-                            <h3 class="text-xl font-semibold mb-2">Select Pages</h3>
-                            <p class="text-gray-600 text-m">Enter the page numbers or ranges you want to extract.</p>
+                        <div class="text-center group">
+                            <div class="w-20 h-20 mx-auto mb-8 flex items-center justify-center rounded-3xl bg-white border-2 border-gray-100 text-primary shadow-sm group-hover:border-primary group-hover:shadow-xl group-hover:shadow-primary/10 transition-all duration-500 transform group-hover:-translate-y-2">
+                                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 7a2.5 2.5 0 105 0 2.5 2.5 0 00-5 0 M15 7a2.5 2.5 0 105 0 2.5 2.5 0 00-5 0 M16.5 9L7 22 M8.5 9L18 22"></path></svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4">2. Define Range & Split</h3>
+                            <p class="text-gray-500 leading-relaxed">Enter the pages or ranges to extract (e.g., 1-3, 5) and click 'Split PDF'.</p>
                         </div>
-                        <div class="p-6">
-                            <div class="text-primary text-4xl font-bold mb-4">3</div>
-                            <h3 class="text-xl font-semibold mb-2">Download</h3>
-                            <p class="text-gray-600 text-m">Save the new PDF containing only your selected pages.</p>
+                        <div class="text-center group">
+                            <div class="w-20 h-20 mx-auto mb-8 flex items-center justify-center rounded-3xl bg-white border-2 border-gray-100 text-primary shadow-sm group-hover:border-primary group-hover:shadow-xl group-hover:shadow-primary/10 transition-all duration-500 transform group-hover:-translate-y-2">
+                                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4">3. Download</h3>
+                            <p class="text-gray-500 leading-relaxed">Download your new PDF containing only the selected pages, with no watermarks.</p>
                         </div>
                     </div>
                 </div>
@@ -436,7 +446,6 @@
                 </div>
                 <div class="border-t border-gray-700 pt-6 text-center text-sm text-gray-500">
                     <p>&copy; <span id="year"></span> MyToolKitPro. All rights reserved.</p>
-                    <p class="mt-2 text-gray-600 text-sm">Built for simple and secure document conversion.</p>
                 </div>
             </div>
         </footer>
@@ -444,7 +453,6 @@
         <script src="../assets/js/dist/split-pdf.min.js" defer></script>
         <script>
             document.addEventListener('DOMContentLoaded', () => {
-                // Mobile Menu Toggle
                 const mobileBtn = document.getElementById('mobile-menu-btn');
                 const mobileMenu = document.getElementById('mobile-menu');
                 if (mobileBtn && mobileMenu) {
@@ -454,7 +462,6 @@
                     });
                 }
 
-                // FAQ Toggle
                 const faqButtons = document.querySelectorAll('.faq-toggle');
                 faqButtons.forEach(btn => {
                     btn.addEventListener('click', function() {
@@ -468,7 +475,6 @@
                     });
                 });
 
-                // Set current year in footer
                 const yearSpan = document.getElementById('year');
                 if(yearSpan) { yearSpan.textContent = new Date().getFullYear(); }
             });
