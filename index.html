@@ -179,7 +179,7 @@
                     <a href="tools.html" class="hover:text-primary">Tools</a>
                     <a href="articles.html" class="hover:text-primary">Articles</a>
                 </nav>
-                <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-600 hover:text-primary focus:outline-none cursor-pointer" aria-label="Toggle mobile menu">
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-600 hover:text-primary focus:outline-none cursor-pointer" aria-label="Toggle mobile menu" aria-controls="mobile-menu" aria-expanded="false">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                 </button>
             </div>
@@ -531,11 +531,16 @@
         <script src="assets/js/dist/main.min.js" defer></script>
         <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
         <script>
-            const mobileBtn = document.getElementById('mobile-menu-btn');
-            const mobileMenu = document.getElementById('mobile-menu');
-            if(mobileBtn && mobileMenu){
-                mobileBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-            }
+            document.addEventListener('DOMContentLoaded', () => {
+                const mobileBtn = document.getElementById('mobile-menu-btn');
+                const mobileMenu = document.getElementById('mobile-menu');
+                if (mobileBtn && mobileMenu) {
+                    mobileBtn.addEventListener('click', () => {
+                        const isHidden = mobileMenu.classList.toggle('hidden');
+                        mobileBtn.setAttribute('aria-expanded', !isHidden);
+                    });
+                }
+            });
 
             // Carousel Logic
             document.addEventListener('DOMContentLoaded', () => {

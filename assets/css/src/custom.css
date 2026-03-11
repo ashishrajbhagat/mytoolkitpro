@@ -20,7 +20,7 @@
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-    @apply bg-primary/30 rounded-full hover:bg-primary transition-colors;
+    @apply bg-primary/50 rounded-full hover:bg-primary transition-colors;
 }
 
 /* --- Accessibility: Screen Reader Only --- */

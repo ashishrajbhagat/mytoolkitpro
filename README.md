@@ -18,6 +18,8 @@ A comprehensive collection of **free, fast, and secure** online PDF and image co
 - **Duplicate PDF Pages** - Copy and repeat pages within a PDF
 - **Delete Blank PDF Pages** - Automatically find and remove empty pages
 - **Remove PDF Page Numbering** - Erase page numbering from headers or footers
+- **PDF Thumbnail Generator** - Create high-quality previews of PDF pages
+- **Resize PDF Page Size** - Adjust PDF dimensions to standard or custom sizes
 - **100% Browser-Based** - All processing happens locally on your device for maximum privacy
 - **No Signup Required** - Start converting immediately without creating an account
 - **Ad-Free & Watermark-Free** - Completely free to use with no hidden limitations
@@ -95,6 +97,16 @@ Automatically find and remove empty pages from your PDF documents.
 Erase page numbering from your document's headers or footers.
 
 **Location:** `/tools/remove-pdf-page-numbering.html`
+
+### 15. PDF Thumbnail Generator
+Generate high-quality image thumbnails and previews from your PDF pages.
+
+**Location:** `/tools/pdf-thumbnail-generator.html`
+
+### 16. Resize PDF Page Size
+Adjust PDF dimensions to standard sizes like A4, Letter, or custom Dimensions.
+
+**Location:** `/tools/resize-pdf-page-size.html`
 
 ## 📚 Articles
 
@@ -220,7 +232,9 @@ MyToolKitPro/
     ├── add-watermark-to-pdf.html
     ├── duplicate-pdf-pages.html
     ├── delete-blank-pages-from-pdf.html
-    └── remove-pdf-page-numbering.html
+    ├── remove-pdf-page-numbering.html
+    ├── pdf-thumbnail-generator.html
+    └── resize-pdf-page-size.html
 
 ## 🚀 Getting Started
 
