@@ -103,37 +103,56 @@
         </script>
     </head>
     <body class="bg-bgsoft text-darktext">
-        <header class="bg-white border-b border-borderclr relative z-50">
-            <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-                <a href="../index.html" class="flex items-center gap-2">
-                    <img src="../assets/img/favicon.svg" alt="MyToolKitPro" width="40" height="40" />
-                    <span class="text-2xl font-bold text-primary">MyToolKitPro</span>
+        <header class="w-full bg-white border-b border-gray-100 relative">
+            <div class="max-w-7xl mx-auto h-16 md:h-20 flex items-center justify-between px-4 md:px-8">
+                <a href="../index.html" class="flex items-center gap-2 shrink-0">
+                    <img src="../assets/img/favicon.svg" alt="MyToolKitPro" class="w-8 h-8 md:w-9 md:h-9" />
+                    <span class="text-lg md:text-xl font-bold tracking-tight text-gray-900">
+                        MyToolKit<span class="text-primary">Pro</span>
+                    </span>
                 </a>
-                <nav class="hidden md:flex space-x-6 text-lg text-gray-600">
-                    <a href="../index.html" class="hover:text-primary">Home</a>
-                    <a href="../tools.html" class="hover:text-primary">Tools</a>
-                    <a href="../articles.html" class="hover:text-primary">Articles</a>
+                <nav class="hidden md:flex items-center gap-1">
+                    <a href="../index.html" class="px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-50 rounded-full transition-all">Home</a>
+                    <a href="../tools.html" class="px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-50 rounded-full transition-all">Explore Tools</a>
+                    <a href="../articles.html" class="px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-50 rounded-full transition-all">Articles</a>
                 </nav>
-                <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-600 hover:text-primary focus:outline-none cursor-pointer" aria-label="Toggle mobile menu" aria-controls="mobile-menu" aria-expanded="false">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                </button>
+                <div class="flex items-center gap-1 md:gap-2">
+                    <button class="flex items-center gap-2 px-3 py-2 md:pl-4 md:pr-3 bg-gray-50 border border-gray-200 rounded-full text-gray-400 hover:border-primary/40 hover:bg-white hover:text-primary transition-all group">
+                        <span class="hidden md:block text-sm font-medium">Search tools...</span>
+                        <svg class="w-4 h-4 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </button>
+                    <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-600 active:bg-gray-50 rounded-lg">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" d="M4 8h16M8 16h12"></path></svg>
+                    </button>
+                </div>
             </div>
-            <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white border-b border-borderclr shadow-lg">
-                <nav class="flex flex-col p-4 space-y-4 text-lg text-gray-600">
-                    <a href="../index.html" class="hover:text-primary">Home</a>
-                    <a href="../tools.html" class="hover:text-primary">Tools</a>
-                    <a href="../articles.html" class="hover:text-primary">Articles</a>
+            <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white border-b border-gray-100 shadow-xl z-60 md:hidden">
+                <nav class="flex flex-col p-3">
+                    <a href="../index.html" class="text-sm font-medium text-gray-600 py-3 px-4 hover:bg-gray-50 rounded-lg">Home</a>
+                    <a href="../tools.html" class="text-sm font-medium text-gray-600 py-3 px-4 hover:bg-gray-50 rounded-lg">Explore Tools</a>
+                    <a href="../articles.html" class="text-sm font-medium text-gray-600 py-3 px-4 hover:bg-gray-50 rounded-lg">Articles</a>
                 </nav>
             </div>
         </header>
-        <section class="bg-gray-50 py-4 px-6 border-b border-borderclr">
+        <section class="bg-white py-4 px-6 md:px-8 border-b border-gray-50">
             <div class="max-w-7xl mx-auto">
-                <nav class="text-m text-gray-500 flex items-center gap-2">
-                    <a href="../index.html" class="hover:text-primary transition">Home</a>
-                    <span>></span>
-                    <a href="../tools.html" class="hover:text-primary transition">Tools</a>
-                    <span>></span>
-                    <span class="text-gray-900 font-medium">Resize PDF</span>
+                <nav class="flex items-center whitespace-nowrap overflow-x-auto no-scrollbar gap-2 md:gap-3 text-sm tracking-tight" aria-label="Breadcrumb">
+                    <a href="../index.html" class="flex items-center gap-2 text-gray-400 hover:text-primary transition-colors group shrink-0 py-2">
+                        <svg class="w-4 h-4 text-primary/70 group-hover:text-primary group-hover:scale-110 transition-all duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+                        </svg>
+                        <span class="font-medium hidden md:block">Home</span>
+                    </a>
+                    <svg class="w-3.5 h-3.5 text-gray-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                    </svg>
+                    <a href="../tools.html" class="text-gray-400 font-medium hover:text-primary transition-colors shrink-0 py-2">Tools</a>
+                    <svg class="w-3.5 h-3.5 text-gray-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                    </svg>
+                    <span class="text-gray-900 font-semibold tracking-tight truncate max-w-30 md:max-w-none" aria-current="page">Resize PDF Page Size</span>
                 </nav>
             </div>
         </section>
@@ -235,219 +254,361 @@
                     </div>
                 </div>
             </section>
-            <section class="bg-white py-24 px-6 border-t border-borderclr">
-                <div class="max-w-6xl mx-auto">
-                    <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Explore Other Tools</h2>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                        <a href="merge-pdf.html" target="_blank" rel="noopener noreferrer" class="group p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:shadow-md hover:border-primary/30 transition-all">
-                            <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-primary mb-4 shadow-sm group-hover:scale-110 transition-transform">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2"></path></svg>
+            <section class="py-24 px-6 bg-[#0B0F1A] text-white overflow-hidden">
+                <div class="max-w-7xl mx-auto">
+                    <div class="flex flex-col lg:flex-row items-end justify-between mb-20 gap-8">
+                        <div class="max-w-2xl px-4 md:px-0"> 
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="w-8 h-0.5 bg-primary"></span>
+                                <span class="text-primary font-bold tracking-widest uppercase text-sm">Dimensional Control Engine</span>
                             </div>
-                            <h3 class="font-semibold text-gray-900 mb-1 group-hover:text-primary transition-colors">Merge PDF</h3>
-                            <p class="text-sm text-gray-500">Combine multiple PDFs into one.</p>
-                        </a>
-                        <a href="compress-pdf.html" target="_blank" rel="noopener noreferrer" class="group p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:shadow-md hover:border-primary/30 transition-all">
-                            <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-primary mb-4 shadow-sm group-hover:scale-110 transition-transform">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
+                            <h2 class="text-4xl md:text-6xl font-black mb-6 tracking-tight"> Precise Scaling. <br/>
+                                <span class="text-transparent bg-clip-text bg-linear-to-r from-primary to-yellow-400">Global Standards.</span>
+                            </h2>
+                            <p class="text-gray-400 text-lg leading-relaxed">Fix inconsistent page sizes or adapt your document for international standards in seconds. MyToolKitPro allows you to scale content or expand canvas areas locally, ensuring your file's layout remains professional and print-perfect.</p>
+                        </div>
+                        <div class="hidden lg:block">
+                            <div class="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-sm">
+                                <div class="flex items-center gap-6">
+                                    <div class="text-center">
+                                        <div class="text-3xl font-bold text-white">±0.01</div>
+                                        <div class="text-xs text-gray-500 uppercase">PT Precision</div>
+                                    </div>
+                                    <div class="w-px h-10 bg-white/10"></div>
+                                    <div class="text-center">
+                                        <div class="text-3xl font-bold text-white">ISO</div>
+                                        <div class="text-xs text-gray-500 uppercase">Compliant</div>
+                                    </div>
+                                </div>
                             </div>
-                            <h3 class="font-semibold text-gray-900 mb-1 group-hover:text-primary transition-colors">Compress PDF</h3>
-                            <p class="text-sm text-gray-500">Reduce file size while maintaining quality.</p>
-                        </a>
-                        <a href="pdf-to-jpg.html" target="_blank" rel="noopener noreferrer" class="group p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:shadow-md hover:border-primary/30 transition-all">
-                            <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-primary mb-4 shadow-sm group-hover:scale-110 transition-transform">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                            </div>
-                            <h3 class="font-semibold text-gray-900 mb-1 group-hover:text-primary transition-colors">PDF to JPG</h3>
-                            <p class="text-sm text-gray-500">Convert PDF pages to image files.</p>
-                        </a>
-                        <a href="split-pdf.html" target="_blank" rel="noopener noreferrer" class="group p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:shadow-md hover:border-primary/30 transition-all">
-                            <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-primary mb-4 shadow-sm group-hover:scale-110 transition-transform">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 7a2.5 2.5 0 105 0 2.5 2.5 0 00-5 0 M15 7a2.5 2.5 0 105 0 2.5 2.5 0 00-5 0 M16.5 9L7 22 M8.5 9L18 22"></path></svg>
-                            </div>
-                            <h3 class="font-semibold text-gray-900 mb-1 group-hover:text-primary transition-colors">Split PDF</h3>
-                            <p class="text-sm text-gray-500">Extract pages from your PDF.</p>
-                        </a>
+                        </div>
                     </div>
-                    <div class="text-center mt-10">
-                        <a href="../tools.html" class="inline-flex items-center gap-2 text-primary font-semibold hover:text-red-700 transition">
-                            View All Tools
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                        </a>
+                    <div class="grid lg:grid-cols-12 gap-8">
+                        <div class="lg:col-span-5 space-y-8">
+                            <div class="bg-linear-to-br from-white/5 to-transparent p-8 rounded-3xl border border-white/10 relative group">
+                                <h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+                                    <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4L9 9m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"></path></svg>
+                                    Scaling Features
+                                </h3>
+                                <ul class="space-y-6">
+                                    <li class="flex items-start gap-4">
+                                        <div class="w-6 h-6 rounded-full bg-yellow-500/20 text-yellow-400 shrink-0 flex items-center justify-center text-xs">✔</div>
+                                        <div>
+                                            <h4 class="font-bold text-gray-200">Content Scaling vs. Canvas Padding</h4>
+                                            <p class="text-sm text-gray-500">Choose to stretch/shrink your content to fit, or keep it original size and just adjust the page boundary.</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start gap-4">
+                                        <div class="w-6 h-6 rounded-full bg-yellow-500/20 text-yellow-400 shrink-0 flex items-center justify-center text-xs">✔</div>
+                                        <div>
+                                            <h4 class="font-bold text-gray-200">International Preset Library</h4>
+                                            <p class="text-sm text-gray-500">Instantly switch between A-Series (A0-A10), North American (Letter, Legal), and ANSI architectural sizes.</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start gap-4">
+                                        <div class="w-6 h-6 rounded-full bg-yellow-500/20 text-yellow-400 shrink-0 flex items-center justify-center text-xs">✔</div>
+                                        <div>
+                                            <h4 class="font-bold text-gray-200">Bulk Normalization</h4>
+                                            <p class="text-sm text-gray-500">Automatically detect the largest page in a "mixed-size" document and force all other pages to match it for a uniform look.</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-white/5 p-8 rounded-3xl border border-white/5 hover:border-primary/50 transition-colors">
+                                <div class="w-12 h-12 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mb-6">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 12h12l3-12H3z"></path></svg>
+                                </div>
+                                <h4 class="text-lg font-bold mb-2 text-white">Custom Point Units</h4>
+                                <p class="text-sm text-gray-500 leading-relaxed">Enter your own dimensions in Millimeters, Inches, or Pixels for non-standard printing or web requirements.</p>
+                            </div>                            
+                            <div class="bg-white/5 p-8 rounded-3xl border border-white/5 hover:border-yellow-400/50 transition-colors">
+                                <div class="w-12 h-12 bg-yellow-400/10 text-yellow-400 rounded-2xl flex items-center justify-center mb-6">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                                </div>
+                                <h4 class="text-lg font-bold mb-2 text-white">Lossless Geometry</h4>
+                                <p class="text-sm text-gray-500 leading-relaxed">We modify the MediaBox and CropBox values directly, ensuring zero loss in text or image resolution.</p>
+                            </div>
+                            <div class="md:col-span-2 bg-linear-to-r from-primary to-yellow-600 p-8 rounded-3xl flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl shadow-primary/20">
+                                <div class="text-center md:text-left">
+                                    <h4 class="text-2xl font-black text-white mb-1">Secure Calibration</h4>
+                                    <p class="text-white/80 text-sm">Upload → Parse Geometry → Adjust Matrix → Save Locally</p>
+                                </div>
+                                <div class="px-6 py-3 bg-black/20 rounded-xl backdrop-blur-md border border-white/20 text-white font-bold text-sm uppercase tracking-widest">Zero Server Latency</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-20 pt-10 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-8">
+                        <div class="flex flex-col md:flex-row items-center gap-4 md:gap-6">
+                            <div class="flex items-center gap-2">
+                                <div class="w-2 h-2 rounded-full bg-yellow-500 animate-pulse"></div>
+                                <span class="text-xs font-bold uppercase tracking-widest text-gray-400">Geometry Engine Ready</span>
+                            </div>
+                            <div class="hidden md:block w-px h-4 bg-white/10"></div>
+                            <span class="text-sm text-gray-500">Auto-Center Logic</span>
+                            <div class="hidden md:block w-px h-4 bg-white/10"></div>
+                            <span class="text-sm text-gray-500">Bleed & Slug Support</span>
+                        </div>
+                        <p class="text-sm text-gray-600 font-medium text-center md:text-right border-t border-white/5 pt-6 md:border-none md:pt-0 w-full md:w-auto">
+                            Scale with precision. <span class="text-gray-500">Protected by your browser's security.</span>
+                        </p>
                     </div>
                 </div>
             </section>
             <section class="bg-white border-t border-borderclr py-24 px-6">
                 <div class="max-w-6xl mx-auto text-center">
                     <div class="text-center mb-20">
-                        <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6 tracking-tight">A Simple <span class="text-primary">3-Step</span> Process</h2>
-                        <p class="text-gray-500 text-lg max-w-2xl mx-auto leading-relaxed">Resize your PDF pages in seconds. No uploads, no waiting, just results.</p>
+                        <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6 tracking-tight">
+                            Resize Your PDF in <span class="text-primary">3 Simple Steps</span>
+                        </h2>
+                        <p class="text-gray-500 text-lg max-w-2xl mx-auto leading-relaxed">Change page dimensions or standardize your entire document instantly. Perfect for converting A4 to Letter, or creating custom layouts.</p>
                     </div>
                     <div class="relative grid md:grid-cols-3 gap-12 lg:gap-16">
                         <div class="hidden md:block absolute top-1/4 left-0 w-full h-0.5 bg-gray-100 -z-10"></div>
                         <div class="text-center group">
                             <div class="w-20 h-20 mx-auto mb-8 flex items-center justify-center rounded-3xl bg-white border-2 border-gray-100 text-primary shadow-sm group-hover:border-primary group-hover:shadow-xl group-hover:shadow-primary/10 transition-all duration-500 transform group-hover:-translate-y-2">
-                                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
+                                </svg>
                             </div>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-4">1. Upload PDF</h3>
-                            <p class="text-gray-500 leading-relaxed">Drop your PDF into the browser. It stays local and secure on your device.</p>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4">1. Import PDF</h3>
+                            <p class="text-gray-500 leading-relaxed">Select the PDF you want to resize. Your file is processed entirely in your browser, keeping your data private and local.</p>
                         </div>
                         <div class="text-center group">
                             <div class="w-20 h-20 mx-auto mb-8 flex items-center justify-center rounded-3xl bg-white border-2 border-gray-100 text-primary shadow-sm group-hover:border-primary group-hover:shadow-xl group-hover:shadow-primary/10 transition-all duration-500 transform group-hover:-translate-y-2">
-                                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5v-4m0 4h-4m4 0l-5-5"></path></svg>
+                                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"></path>
+                                </svg>
                             </div>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-4">2. Select Size & Resize</h3>
-                            <p class="text-gray-500 leading-relaxed">Choose a standard preset like A4/Letter or enter custom dimensions, then click 'Resize PDF'.</p>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4">2. Pick Dimensions</h3>
+                            <p class="text-gray-500 leading-relaxed">Choose from standard presets like A4, Letter, and Legal, or enter custom dimensions. Decide whether to scale content or add margins.</p>
                         </div>
                         <div class="text-center group">
                             <div class="w-20 h-20 mx-auto mb-8 flex items-center justify-center rounded-3xl bg-white border-2 border-gray-100 text-primary shadow-sm group-hover:border-primary group-hover:shadow-xl group-hover:shadow-primary/10 transition-all duration-500 transform group-hover:-translate-y-2">
-                                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
                             </div>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-4">3. Download</h3>
-                            <p class="text-gray-500 leading-relaxed">Download your perfectly resized PDF instantly, with no watermarks.</p>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4">3. Save & Export</h3>
+                            <p class="text-gray-500 leading-relaxed">Apply the changes and download your resized PDF instantly. Consistent page sizes, professional results, and no watermarks.</p>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="py-24 px-4 bg-gray-50">
-            <div class="max-w-5xl mx-auto">
-                <div class="text-center mb-12">
-                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Free PDF Resizer — Change Page Size Online</h2>
-                    <p class="text-gray-500 max-w-2xl mx-auto">Standardize your PDF dimensions or scale pages for specialized printing. Fast, secure, and completely free with MyToolKitPro.</p>
-                </div>
-                <div class="bg-white p-10 rounded-3xl shadow-xl space-y-6 leading-relaxed text-gray-600">
-                    <p>Our <b>Resize PDF Page Size</b> tool is the ultimate solution for precision document formatting. Whether you are prepping a manuscript for publication, standardizing mixed-size scans into a single A4 document, or resizing shipping labels to fit specific thermal printers, our tool handles the task with mathematical accuracy—all within your browser.</p>
-                    <div class="bg-red-50 border-l-4 border-red-700 p-5 rounded-xl">
-                        <p class="text-gray-700 font-medium">
-                            🔐 <strong>Privacy First:</strong> Your files never leave your device. By using client-side processing, we ensure your sensitive documents are resized without ever being uploaded to a server, guaranteeing 100% privacy.
-                        </p>
-                    </div>
-                    <h3 class="text-2xl font-semibold text-gray-900 pt-6">Key Features</h3>
-                    <div class="grid md:grid-cols-2 gap-6 mt-4">
-                        <div class="bg-gray-50 p-5 rounded-xl border border-gray-100">
-                            <h4 class="font-semibold text-gray-800 mb-2">📐 Universal Standard Presets</h4>
-                            <p class="text-sm">Instantly convert between international standards like A0-A4, US Letter, Legal, and Ledger with a single click.</p>
+            <section class="bg-[#0B0F1A] py-24 px-6 border-t border-white/5">
+                <div class="max-w-7xl mx-auto">
+                    <div class="flex flex-col md:flex-row items-end justify-between mb-16 gap-6">
+                        <div class="max-w-xl">
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="w-8 h-0.5 bg-primary"></span>
+                                <span class="text-primary font-bold tracking-widest uppercase text-sm">Toolkit Ecosystem</span>
+                            </div>
+                            <h2 class="text-4xl md:text-5xl font-black text-white mb-4 tracking-tight">Need something else?</h2>
+                            <p class="text-gray-400 text-lg">High-performance, browser-based PDF utilities. <br class="hidden md:block" /> No uploads, no limits, 100% private.</p>
                         </div>
-                        <div class="bg-gray-50 p-5 rounded-xl border border-gray-100">
-                            <h4 class="font-semibold text-gray-800 mb-2">🎯 Smart Content Scaling</h4>
-                            <p class="text-sm">Our tool doesn't just change the canvas; it intelligently scales your content to ensure your text and images fit perfectly in the new dimensions.</p>
-                        </div>
-                        <div class="bg-gray-50 p-5 rounded-xl border border-gray-100">
-                            <h4 class="font-semibold text-gray-800 mb-2">⚡ Zero Server Latency</h4>
-                            <p class="text-sm">Avoid the "upload-wait-download" loop. Files are processed locally using your browser's power for immediate results.</p>
-                        </div>
-                        <div class="bg-gray-50 p-5 rounded-xl border border-gray-100">
-                            <h4 class="font-semibold text-gray-800 mb-2">✨ Clean, Professional Output</h4>
-                            <p class="text-sm">Maintain original document quality without any added watermarks, branding, or degradation of vector elements.</p>
-                        </div>
-                    </div>
-                    <h3 class="text-2xl font-semibold text-gray-900 pt-6">Why Resize Your PDF?</h3>
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <span class="text-red-700 mr-2">✔</span>
-                            <span><strong>International Compatibility:</strong> Convert US Letter to A4 for European clients or vice versa to prevent printing "cutoff" issues.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-red-700 mr-2">✔</span>
-                            <span><strong>Standardize Scans:</strong> If you have a PDF with varying page sizes, use this tool to make every page uniform for a professional look.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-red-700 mr-2">✔</span>
-                            <span><strong>Print Preparation:</strong> Scale large architectural drawings down to manageable sizes or resize labels for specialized 4x6 thermal printing.</span>
-                        </li>
-                    </ul>
-                    <h3 class="text-2xl font-semibold text-gray-900 pt-6">How to Resize PDF Pages</h3>
-                    <ol class="space-y-4 list-decimal pl-6 mt-4">
-                        <li><strong>Upload:</strong> Drag and drop your PDF into the secure upload area above.</li>
-                        <li><strong>Select Size:</strong> Choose a standard preset (like A4 or Letter) or enter custom dimensions in points.</li>
-                        <li><strong>Process:</strong> Click "Resize PDF" to recalculate the page boundaries and scale content locally.</li>
-                        <li><strong>Download:</strong> Your perfectly resized document is ready for immediate download.</li>
-                    </ol>
-                </div>
-            </div>
-        </section>
-        <section class="py-24 px-6 bg-white">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-4xl font-bold text-center text-gray-900 mb-14">Frequently Asked Questions</h2>
-                <div class="space-y-5">
-                    <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition border border-gray-100">
-                        <button class="faq-toggle w-full text-left p-6 font-semibold text-lg text-gray-800 flex justify-between items-center cursor-pointer" aria-expanded="false" aria-controls="resize-faq-1">
-                            Is the PDF resizing tool free to use?
-                            <span class="faq-icon text-xl text-red-700">+</span>
-                        </button>
-                        <div class="faq-content hidden px-6 pb-6 text-gray-600 text-base leading-relaxed" id="resize-faq-1">
-                            Yes, resizing your PDF page dimensions is 100% free on MyToolKitPro. We do not add watermarks, and there are no hidden fees or daily limits.
-                        </div>
-                    </div>
-                    <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition border border-gray-100">
-                        <button class="faq-toggle w-full text-left p-6 font-semibold text-lg text-gray-800 flex justify-between items-center cursor-pointer" aria-expanded="false" aria-controls="resize-faq-2">
-                            Will my text be cut off when I resize the page?
-                            <span class="faq-icon text-xl text-red-700">+</span>
-                        </button>
-                        <div class="faq-content hidden px-6 pb-6 text-gray-600 text-base leading-relaxed" id="resize-faq-2">
-                            Our tool uses <strong>Smart Scaling</strong>. When you change the page size, the content is proportionally scaled to fit the new dimensions, ensuring that your text and images remain within the printable area.
-                        </div>
-                    </div>
-                    <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition border border-gray-100">
-                        <button class="faq-toggle w-full text-left p-6 font-semibold text-lg text-gray-800 flex justify-between items-center cursor-pointer" aria-expanded="false" aria-controls="resize-faq-3">
-                            Are my documents safe?
-                            <span class="faq-icon text-xl text-red-700">+</span>
-                        </button>
-                        <div class="faq-content hidden px-6 pb-6 text-gray-600 text-base leading-relaxed" id="resize-faq-3">
-                            Absolutely. All processing occurs <strong>locally in your browser</strong>. Your files are never uploaded to our servers, meaning your sensitive data remains entirely private on your device.
-                        </div>
-                    </div>
-                    <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition border border-gray-100">
-                        <button class="faq-toggle w-full text-left p-6 font-semibold text-lg text-gray-800 flex justify-between items-center cursor-pointer" aria-expanded="false" aria-controls="resize-faq-4">
-                            What are the most common PDF page sizes?
-                            <span class="faq-icon text-xl text-red-700">+</span>
-                        </button>
-                        <div class="faq-content hidden px-6 pb-6 text-gray-600 text-base leading-relaxed" id="resize-faq-4">
-                            The most common sizes are <strong>A4</strong> (used globally) and <strong>US Letter</strong> (used in North America). Other frequent sizes include Legal, A3 (for larger posters), and Ledger.
-                        </div>
-                    </div>
-                    <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition border border-gray-100">
-                        <button class="faq-toggle w-full text-left p-6 font-semibold text-lg text-gray-800 flex justify-between items-center cursor-pointer" aria-expanded="false" aria-controls="resize-faq-5">
-                            Can I set a custom page size?
-                            <span class="faq-icon text-xl text-red-700">+</span>
-                        </button>
-                        <div class="faq-content hidden px-6 pb-6 text-gray-600 text-base leading-relaxed" id="resize-faq-5">
-                            Yes! Besides our standard presets, you can enter custom width and height values in points to create specialized document sizes for any requirement.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        </main>
-        <footer class="bg-gray-900 text-gray-300 pt-16 pb-10 px-6">
-            <div class="max-w-6xl mx-auto">
-                <div class="grid md:grid-cols-3 gap-12 mb-12">
-                    <div>
-                        <a href="../index.html" class="flex items-center gap-2 mb-4">
-                            <img src="../assets/img/favicon.svg" alt="MyToolKitPro" width="28" height="28" class="opacity-90" />
-                            <h3 class="text-white text-xl font-semibold">MyToolKitPro</h3>
+                        <a href="../tools.html" class="group flex items-center gap-3 text-sm font-bold uppercase tracking-widest text-white/70 hover:text-primary transition-all">
+                            View All Tools
+                            <div class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:border-primary/50 group-hover:bg-primary/10 transition-all">
+                                <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </div>
                         </a>
-                        <p class="text-sm leading-relaxed text-gray-400">MyToolKitPro provides free, secure, and fast online tools for PDF and image conversion. All tools work directly in your browser without installation.</p>
                     </div>
-                    <div>
-                        <h4 class="text-white font-semibold mb-4">Company</h4>
-                        <ul class="space-y-2 text-sm">
-                            <li><a href="../about.html" class="hover:text-white transition">About Us</a></li>
-                            <li><a href="../contact.html" class="hover:text-white transition">Contact</a></li>
-                            <li><a href="../privacy-policy.html" class="hover:text-white transition">Privacy Policy</a></li>
-                            <li><a href="../terms-of-service.html" class="hover:text-white transition">Terms of Service</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 class="text-white font-semibold mb-4">Why MyToolKitPro?</h4>
-                        <ul class="space-y-2 text-sm text-gray-400">
-                            <li>🔒 100% Secure Processing</li>
-                            <li>⚡ Fast Browser-Based Tool</li>
-                            <li>🆓 Free & No Sign-Up</li>
-                        </ul>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <a href="add-margin-to-pdf.html" target="_blank" class="group p-8 bg-white/5 rounded-3xl border border-white/5 hover:border-blue-500/30 hover:bg-white/[0.07] hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-300 relative">
+                            <div class="w-12 h-12 bg-blue-500/10 text-blue-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-blue-500 group-hover:text-white transition-all duration-500">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">Add Margin</h3>
+                            <p class="text-sm text-gray-400 leading-relaxed mb-6">Create extra breathing room for binding gutters or printed notes.</p>
+                            <span class="text-xs font-bold uppercase tracking-widest text-blue-500 opacity-50 group-hover:opacity-100 transition-opacity">Launch Tool →</span>
+                        </a>
+                        <a href="rotate-pdf.html" target="_blank" class="group p-8 bg-white/5 rounded-3xl border border-white/5 hover:border-amber-500/30 hover:bg-white/[0.07] hover:shadow-2xl hover:shadow-amber-500/10 transition-all duration-300 relative">
+                            <div class="w-12 h-12 bg-amber-500/10 text-amber-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-amber-500 group-hover:text-white transition-all duration-500">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">Rotate PDF</h3>
+                            <p class="text-sm text-gray-400 leading-relaxed mb-6">Ensure all pages are upright before standardizing the paper dimensions.</p>
+                            <span class="text-xs font-bold uppercase tracking-widest text-amber-500 opacity-50 group-hover:opacity-100 transition-opacity">Launch Tool →</span>
+                        </a>
+                        <a href="merge-pdf.html" target="_blank" class="group p-8 bg-white/5 rounded-3xl border border-white/5 hover:border-primary/30 hover:bg-white/[0.07] hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300 relative">
+                            <div class="w-12 h-12 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-primary group-hover:text-white transition-all duration-500">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16a2 2 0 012-2h4a2 2 0 012 2v2m-6-12h4a2 2 0 012 2v2a2 2 0 01-2 2h-4a2 2 0 01-2-2V6a2 2 0 012-2z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">Merge PDF</h3>
+                            <p class="text-sm text-gray-400 leading-relaxed mb-6">Combine different documents into one perfectly sized final file.</p>
+                            <span class="text-xs font-bold uppercase tracking-widest text-primary opacity-50 group-hover:opacity-100 transition-opacity">Launch Tool →</span>
+                        </a>
+                        <a href="organize-pdf.html" target="_blank" class="group p-8 bg-white/5 rounded-3xl border border-white/5 hover:border-cyan-500/30 hover:bg-white/[0.07] hover:shadow-2xl hover:shadow-cyan-500/10 transition-all duration-300 relative">
+                            <div class="w-12 h-12 bg-cyan-500/10 text-cyan-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-cyan-500 group-hover:text-white transition-all duration-500">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">Organize PDF</h3>
+                            <p class="text-sm text-gray-400 leading-relaxed mb-6">Reorder and manage pages to ensure the correct flow before resizing.</p>
+                            <span class="text-xs font-bold uppercase tracking-widest text-cyan-500 opacity-50 group-hover:opacity-100 transition-opacity">Launch Tool →</span>
+                        </a>
                     </div>
                 </div>
-                <div class="border-t border-gray-700 pt-6 text-center text-sm text-gray-500">
-                    <p>&copy; <span id="year"></span> MyToolKitPro. All rights reserved.</p>
+            </section>
+            <section class="py-24 px-6 bg-white">
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-4 tracking-tight">Frequently Asked <span class="text-primary">Questions</span></h2>
+                        <p class="text-gray-500 text-lg">Everything you need to know about our local PDF resizing engine.</p>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="group border border-gray-100 rounded-2xl bg-white hover:border-primary/20 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
+                            <button class="faq-toggle w-full flex items-center justify-between p-6 cursor-pointer text-left group" aria-expanded="false" aria-controls="resize-faq-1">
+                                <span class="text-lg font-medium text-gray-800 group-hover:text-primary transition-colors">Is the PDF resizing tool free to use?</span>
+                                <div class="faq-icon-wrapper w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+                                    <svg class="w-4 h-4 text-gray-400 group-hover:text-primary transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </div>
+                            </button>
+                            <div class="faq-content hidden px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-50 pt-4" id="resize-faq-1">
+                                Yes, resizing your PDF page dimensions is 100% free on MyToolKitPro. We do not add watermarks, and there are no hidden fees or daily limits.
+                            </div>
+                        </div>
+                        <div class="group border border-gray-100 rounded-2xl bg-white hover:border-primary/20 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
+                            <button class="faq-toggle w-full flex items-center justify-between p-6 cursor-pointer text-left group" aria-expanded="false" aria-controls="resize-faq-2">
+                                <span class="text-lg font-medium text-gray-800 group-hover:text-primary transition-colors">Will my text be cut off when I resize the page?</span>
+                                <div class="faq-icon-wrapper w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+                                    <svg class="w-4 h-4 text-gray-400 group-hover:text-primary transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </div>
+                            </button>
+                            <div class="faq-content hidden px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-50 pt-4" id="resize-faq-2">
+                                Our tool uses <strong>Smart Scaling</strong>. When you change the page size, the content is proportionally scaled to fit the new dimensions, ensuring that your text and images remain within the printable area.
+                            </div>
+                        </div>
+                        <div class="group border border-gray-100 rounded-2xl bg-white hover:border-primary/20 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
+                            <button class="faq-toggle w-full flex items-center justify-between p-6 cursor-pointer text-left group" aria-expanded="false" aria-controls="resize-faq-3">
+                                <span class="text-lg font-medium text-gray-800 group-hover:text-primary transition-colors">Are my documents safe?</span>
+                                <div class="faq-icon-wrapper w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+                                    <svg class="w-4 h-4 text-gray-400 group-hover:text-primary transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </div>
+                            </button>
+                            <div class="faq-content hidden px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-50 pt-4" id="resize-faq-3">
+                                Absolutely. All processing occurs <strong>locally in your browser</strong>. Your files are never uploaded to our servers, meaning your sensitive data remains entirely private on your device.
+                            </div>
+                        </div>
+                        <div class="group border border-gray-100 rounded-2xl bg-white hover:border-primary/20 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
+                            <button class="faq-toggle w-full flex items-center justify-between p-6 cursor-pointer text-left group" aria-expanded="false" aria-controls="resize-faq-4">
+                                <span class="text-lg font-medium text-gray-800 group-hover:text-primary transition-colors">What are the most common PDF page sizes?</span>
+                                <div class="faq-icon-wrapper w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+                                    <svg class="w-4 h-4 text-gray-400 group-hover:text-primary transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </div>
+                            </button>
+                            <div class="faq-content hidden px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-50 pt-4" id="resize-faq-4">
+                                The most common sizes are <strong>A4</strong> (used globally) and <strong>US Letter</strong> (used in North America). Other frequent sizes include Legal, A3 (for larger posters), and Ledger.
+                            </div>
+                        </div>
+                        <div class="group border border-gray-100 rounded-2xl bg-white hover:border-primary/20 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
+                            <button class="faq-toggle w-full flex items-center justify-between p-6 cursor-pointer text-left group" aria-expanded="false" aria-controls="resize-faq-5">
+                                <span class="text-lg font-medium text-gray-800 group-hover:text-primary transition-colors">Can I set a custom page size?</span>
+                                <div class="faq-icon-wrapper w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+                                    <svg class="w-4 h-4 text-gray-400 group-hover:text-primary transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </div>
+                            </button>
+                            <div class="faq-content hidden px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-50 pt-4" id="resize-faq-5">
+                                Yes! Besides our standard presets, you can enter custom width and height values in points to create specialized document sizes for any requirement.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="bg-[#0b0f1a] text-gray-400 pt-20 pb-10 px-6 border-t border-gray-800/50">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+                    <div class="md:col-span-4">
+                        <a href="../index.html" class="flex items-center gap-2 mb-6 group">
+                            <img src="../assets/img/favicon.svg" alt="MyToolKitPro" width="32" height="32" class="opacity-90 transition-transform duration-300 group-hover:scale-110" />
+                            <h3 class="text-white text-2xl font-bold tracking-tight">MyToolKit<span class="text-primary">Pro</span></h3>
+                        </a>
+                        <p class="text-base leading-relaxed mb-6">A comprehensive suite of powerful online tools designed to simplify your digital workflow. Fast, secure, and accessible from any device.</p>
+                        <a href="mailto:mytoolkitpro@gmail.com" class="flex items-center gap-2 text-sm text-gray-500 hover:text-primary transition-colors group">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            mytoolkitpro@gmail.com
+                        </a>
+                    </div>
+                    <div class="md:col-span-3">
+                        <h4 class="text-white font-bold mb-6 uppercase text-xs tracking-[0.2em]">Tool Categories</h4>
+                        <ul class="space-y-4 text-sm">
+                            <li>
+                                <a href="/pdf-tools" class="hover:text-primary transition-colors flex justify-between items-center group">
+                                    PDF Tools <span class="text-[10px] bg-gray-800 px-1.5 py-0.5 rounded text-gray-500 group-hover:bg-primary/20 group-hover:text-primary transition-colors">16</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/image-tools" class="hover:text-primary transition-colors flex justify-between items-center group">
+                                    Image Converters <span class="text-[10px] bg-gray-800 px-1.5 py-0.5 rounded text-gray-500 group-hover:bg-primary/20 group-hover:text-primary transition-colors">1</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/dev-tools" class="hover:text-primary transition-colors flex justify-between items-center group">
+                                    Developer Tools <span class="text-[10px] bg-gray-800 px-1.5 py-0.5 rounded text-gray-500 group-hover:bg-primary/20 group-hover:text-primary transition-colors">0</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../tools.html" class="text-primary font-semibold hover:underline mt-2 inline-block">
+                                    View All 15+ Tools →
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="md:col-span-2">
+                        <h4 class="text-white font-bold mb-6 uppercase text-xs tracking-[0.2em]">Resources</h4>
+                        <ul class="space-y-4 text-sm">
+                            <li><a href="../about.html" class="hover:text-primary transition-colors">About Us</a></li>
+                            <li><a href="../contact.html" class="hover:text-primary transition-colors">Contact</a></li>
+                            <li><a href="../privacy.html" class="hover:text-primary transition-colors">Privacy</a></li>
+                            <li><a href="../terms.html" class="hover:text-primary transition-colors">Terms</a></li>
+                        </ul>
+                    </div>
+                    <div class="md:col-span-3">
+                        <h4 class="text-white font-bold mb-6 uppercase text-xs tracking-[0.2em]">Stay Connected</h4>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-800/50 flex items-center justify-center hover:bg-white hover:text-black transition-all duration-300" title="Follow on X">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-800/50 flex items-center justify-center hover:bg-[#0077b5] hover:text-white transition-all duration-300" title="Connect on LinkedIn">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-800/50 flex items-center justify-center hover:bg-[#1877F2] hover:text-white transition-all duration-300" title="Like us on Facebook">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-800/50 flex items-center justify-center hover:bg-linear-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] hover:text-white transition-all duration-300" title="Follow on Instagram">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.332 3.608 1.308.975.975 1.245 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.332 2.633-1.308 3.608-.975.975-2.242 1.245-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.332-3.608-1.308-.975-.975-1.245-2.242-1.308-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.332-2.633 1.308-3.608.975-.975 2.242-1.245 3.608-1.308 1.266-.058 1.646-.07 4.85-.07M12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.355 2.618 6.778 6.98 6.978 1.28.058 1.688.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.668-.072-4.948-.197-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-t border-gray-800/80 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+                    <p class="text-gray-500">
+                        &copy; <span id="year"></span> MyToolKitPro. All rights reserved.
+                    </p>
+                    <p class="text-gray-600">Built with 💙 for the web.</p>
                 </div>
             </div>
         </footer>
@@ -455,30 +616,42 @@
         <script src="../assets/js/dist/resize-pdf-page-size.min.js" defer></script>
         <script>
             document.addEventListener('DOMContentLoaded', () => {
-                const mobileBtn = document.getElementById('mobile-menu-btn');
-                const mobileMenu = document.getElementById('mobile-menu');
-                if (mobileBtn && mobileMenu) {
-                    mobileBtn.addEventListener('click', () => {
-                        const isHidden = mobileMenu.classList.toggle('hidden');
-                        mobileBtn.setAttribute('aria-expanded', !isHidden);
-                    });
-                }
-
-                const faqButtons = document.querySelectorAll('.faq-toggle');
-                faqButtons.forEach(btn => {
-                    btn.addEventListener('click', function() {
-                        const content = this.nextElementSibling;
-                        const icon = this.querySelector('.faq-icon');
-                        const isExpanded = this.getAttribute('aria-expanded') === 'true';
-
-                        this.setAttribute('aria-expanded', !isExpanded);
-                        content.classList.toggle('hidden');
-                        icon.textContent = isExpanded ? '+' : '-';
-                    });
+                const btn = document.getElementById('mobile-menu-btn');
+                const menu = document.getElementById('mobile-menu');
+                btn.addEventListener('click', () => {
+                    menu.classList.toggle('hidden');
                 });
 
-                const yearSpan = document.getElementById('year');
-                if(yearSpan) { yearSpan.textContent = new Date().getFullYear(); }
+                document.addEventListener('click', (e) => {
+                    const btn = e.target.closest('.faq-toggle');
+                    if (!btn) return;
+
+                    e.preventDefault();
+
+                    const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+                    const allBtns = document.querySelectorAll('.faq-toggle');
+
+                    allBtns.forEach(other => {
+                        if (other !== btn) {
+                            other.setAttribute('aria-expanded', 'false');
+                            const targetId = other.getAttribute('aria-controls');
+                            document.getElementById(targetId)?.classList.add('hidden');
+                            other.querySelector('svg')?.classList.remove('rotate-180');
+                        }
+                    });
+
+                    const newState = !isExpanded;
+                    btn.setAttribute('aria-expanded', newState);
+                    const currentTargetId = btn.getAttribute('aria-controls');
+                    const content = document.getElementById(currentTargetId);
+                    if (content) {
+                        content.classList.toggle('hidden', !newState);
+                    }
+                    
+                    btn.querySelector('svg')?.classList.toggle('rotate-180', newState);
+                });
+
+                document.getElementById('year').textContent = new Date().getFullYear();
             });
         </script>
     </body>

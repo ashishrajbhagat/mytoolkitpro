@@ -79,26 +79,36 @@
         </script>
     </head>
     <body class="bg-bgsoft text-darktext">
-        <header class="bg-white border-b border-borderclr relative z-50">
-            <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-                <a href="index.html" class="flex items-center gap-2">
-                    <img src="assets/img/favicon.svg" alt="MyToolKitPro" width="40" height="40" />
-                    <span class="text-2xl font-bold text-primary">MyToolKitPro</span>
+        <header class="w-full bg-white border-b border-gray-100 relative">
+            <div class="max-w-7xl mx-auto h-16 md:h-20 flex items-center justify-between px-4 md:px-8">
+                <a href="index.html" class="flex items-center gap-2 shrink-0">
+                    <img src="assets/img/favicon.svg" alt="MyToolKitPro" class="w-8 h-8 md:w-9 md:h-9" />
+                    <span class="text-lg md:text-xl font-bold tracking-tight text-gray-900">
+                        MyToolKit<span class="text-primary">Pro</span>
+                    </span>
                 </a>
-                <nav class="hidden md:flex space-x-6 text-lg text-gray-600">
-                    <a href="index.html" class="hover:text-primary">Home</a>
-                    <a href="tools.html" class="text-primary font-semibold" aria-current="page">Tools</a>
-                    <a href="articles.html" class="hover:text-primary">Articles</a>
+                <nav class="hidden md:flex items-center gap-1">
+                    <a href="index.html" class="px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-50 rounded-full transition-all">Home</a>
+                    <a href="tools.html" class="px-4 py-2 text-sm font-semibold text-primary bg-primary/5 rounded-full">Explore Tools</a>
+                    <a href="articles.html" class="px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-50 rounded-full transition-all">Articles</a>
                 </nav>
-                <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-600 hover:text-primary focus:outline-none cursor-pointer" aria-label="Toggle mobile menu" aria-controls="mobile-menu" aria-expanded="false">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                </button>
+                <div class="flex items-center gap-1 md:gap-2">
+                    <button class="flex items-center gap-2 px-3 py-2 md:pl-4 md:pr-3 bg-gray-50 border border-gray-200 rounded-full text-gray-400 hover:border-primary/40 hover:bg-white hover:text-primary transition-all group">
+                        <span class="hidden md:block text-sm font-medium">Search tools...</span>
+                        <svg class="w-4 h-4 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </button>
+                    <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-600 active:bg-gray-50 rounded-lg">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" d="M4 8h16M8 16h12"></path></svg>
+                    </button>
+                </div>
             </div>
-            <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white border-b border-borderclr shadow-lg">
-                <nav class="flex flex-col p-4 space-y-4 text-lg text-gray-600">
-                    <a href="index.html" class="hover:text-primary">Home</a>
-                    <a href="tools.html" class="text-primary font-semibold" aria-current="page">Tools</a>
-                    <a href="articles.html" class="hover:text-primary">Articles</a>
+            <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white border-b border-gray-100 shadow-xl z-60 md:hidden">
+                <nav class="flex flex-col p-3">
+                    <a href="index.html" class="text-sm font-medium text-gray-600 py-3 px-4 hover:bg-gray-50 rounded-lg">Home</a>
+                    <a href="tools.html" class="text-sm font-semibold text-primary py-3 px-4 bg-primary/5 rounded-lg">Explore Tools</a>
+                    <a href="articles.html" class="text-sm font-medium text-gray-600 py-3 px-4 hover:bg-gray-50 rounded-lg">Articles</a>
                 </nav>
             </div>
         </header>
@@ -134,6 +144,11 @@
                         <div class="text-4xl mb-4 text-primary" aria-hidden="true">🗜️</div>
                         <h3 class="text-xl font-semibold mb-3">Compress PDF for Email</h3>
                         <p class="text-gray-600 text-sm">Use our PDF page size reducer to make documents small enough for email attachments.</p>
+                    </a>
+                    <a href="tools/protect-pdf.html" class="bg-white p-8 rounded-3xl shadow-md hover:shadow-2xl hover:-translate-y-2 transform transition duration-300 border border-borderclr block">
+                        <div class="text-4xl mb-4 text-primary" aria-hidden="true">🔒</div>
+                        <h3 class="text-xl font-semibold mb-3">Protect PDF</h3>
+                        <p class="text-gray-600 text-sm">Add a password to your PDF to encrypt it and prevent unauthorized access.</p>
                     </a>
                     <a href="tools/unlock-pdf.html" class="bg-white p-8 rounded-3xl shadow-md hover:shadow-2xl hover:-translate-y-2 transform transition duration-300 border border-borderclr block">
                         <div class="text-4xl mb-4 text-primary" aria-hidden="true">🔓</div>
@@ -218,8 +233,8 @@
                         <ul class="space-y-2 text-sm">
                             <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
                             <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
-                            <li><a href="privacy-policy.html" class="hover:text-white transition">Privacy Policy</a></li>
-                            <li><a href="terms-of-service.html" class="hover:text-white transition">Terms of Service</a>
+                            <li><a href="privacy.html" class="hover:text-white transition">Privacy Policy</a></li>
+                            <li><a href="terms.html" class="hover:text-white transition">Terms of Service</a>
                             </li>
                         </ul>
                     </div>
@@ -240,14 +255,11 @@
         </footer>
         <script>
             document.addEventListener('DOMContentLoaded', () => {
-                const mobileBtn = document.getElementById('mobile-menu-btn');
-                const mobileMenu = document.getElementById('mobile-menu');
-                if (mobileBtn && mobileMenu) {
-                    mobileBtn.addEventListener('click', () => {
-                        const isHidden = mobileMenu.classList.toggle('hidden');
-                        mobileBtn.setAttribute('aria-expanded', !isHidden);
-                    });
-                }
+                const btn = document.getElementById('mobile-menu-btn');
+                const menu = document.getElementById('mobile-menu');
+                btn.addEventListener('click', () => {
+                    menu.classList.toggle('hidden');
+                });
 
                 const yearSpan = document.getElementById('year');
                 if(yearSpan) {

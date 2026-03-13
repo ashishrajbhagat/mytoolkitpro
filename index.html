@@ -168,26 +168,36 @@
         </script>
     </head>
     <body class="bg-bgsoft text-darktext">
-        <header class="bg-white border-b border-borderclr relative z-50">
-            <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-                <a href="index.html" class="flex items-center gap-2">
-                    <img src="assets/img/favicon.svg" alt="MyToolKitPro" width="40" height="40" />
-                    <span class="text-2xl font-bold text-primary">MyToolKitPro</span>
+        <header class="w-full bg-white border-b border-gray-100 relative">
+            <div class="max-w-7xl mx-auto h-16 md:h-20 flex items-center justify-between px-4 md:px-8">
+                <a href="index.html" class="flex items-center gap-2 shrink-0">
+                    <img src="assets/img/favicon.svg" alt="MyToolKitPro" class="w-8 h-8 md:w-9 md:h-9" />
+                    <span class="text-lg md:text-xl font-bold tracking-tight text-gray-900">
+                        MyToolKit<span class="text-primary">Pro</span>
+                    </span>
                 </a>
-                <nav class="hidden md:flex space-x-6 text-lg text-gray-600">
-                    <a href="index.html" class="text-primary font-semibold">Home</a>
-                    <a href="tools.html" class="hover:text-primary">Tools</a>
-                    <a href="articles.html" class="hover:text-primary">Articles</a>
+                <nav class="hidden md:flex items-center gap-1">
+                    <a href="index.html" class="px-4 py-2 text-sm font-semibold text-primary bg-primary/5 rounded-full">Home</a>
+                    <a href="tools.html" class="px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-50 rounded-full transition-all">Explore Tools</a>
+                    <a href="articles.html" class="px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-50 rounded-full transition-all">Articles</a>
                 </nav>
-                <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-600 hover:text-primary focus:outline-none cursor-pointer" aria-label="Toggle mobile menu" aria-controls="mobile-menu" aria-expanded="false">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                </button>
+                <div class="flex items-center gap-1 md:gap-2">
+                    <button class="flex items-center gap-2 px-3 py-2 md:pl-4 md:pr-3 bg-gray-50 border border-gray-200 rounded-full text-gray-400 hover:border-primary/40 hover:bg-white hover:text-primary transition-all group">
+                        <span class="hidden md:block text-sm font-medium">Search tools...</span>
+                        <svg class="w-4 h-4 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </button>
+                    <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-600 active:bg-gray-50 rounded-lg">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" d="M4 8h16M8 16h12"></path></svg>
+                    </button>
+                </div>
             </div>
-            <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white border-b border-borderclr shadow-lg">
-                <nav class="flex flex-col p-4 space-y-4 text-lg text-gray-600">
-                    <a href="index.html" class="text-primary font-semibold">Home</a>
-                    <a href="tools.html" class="hover:text-primary">Tools</a>
-                    <a href="articles.html" class="hover:text-primary">Articles</a>
+            <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white border-b border-gray-100 shadow-xl z-60 md:hidden">
+                <nav class="flex flex-col p-3">
+                    <a href="index.html" class="text-sm font-semibold text-primary py-3 px-4 bg-primary/5 rounded-lg">Home</a>
+                    <a href="tools.html" class="text-sm font-medium text-gray-600 py-3 px-4 hover:bg-gray-50 rounded-lg">Explore Tools</a>
+                    <a href="articles.html" class="text-sm font-medium text-gray-600 py-3 px-4 hover:bg-gray-50 rounded-lg">Articles</a>
                 </nav>
             </div>
         </header>
@@ -446,43 +456,63 @@
                     </div>
                 </div>
             </section>
-            <section class="py-16 md:py-24 px-6 bg-gray-50">
+            <section class="py-24 px-6 bg-white">
                 <div class="max-w-4xl mx-auto">
-                    <h2 class="text-4xl font-bold text-center text-gray-900 mb-14">Frequently Asked Questions</h2>
-                    <div class="space-y-5">
-                        <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition">
-                            <button class="faq-toggle w-full text-left p-6 font-semibold text-lg text-gray-800 flex justify-between items-center cursor-pointer" aria-expanded="false" aria-controls="faq-answer-1">
-                                Are MyToolKitPro tools free to use?
-                                <span class="faq-icon text-xl text-red-700">+</span>
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-4 tracking-tight">Frequently Asked <span class="text-primary">Questions</span></h2>
+                        <p class="text-gray-500 text-lg">Everything you need to know about the MyToolKitPro ecosystem.</p>
+                    </div>
+                    <div class="space-y-4">                        
+                        <div class="group border border-gray-100 rounded-2xl bg-white hover:border-primary/20 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
+                            <button class="faq-toggle w-full flex items-center justify-between p-6 cursor-pointer text-left group" aria-expanded="false" aria-controls="gen-faq-1">
+                                <span class="text-lg font-medium text-gray-800 group-hover:text-primary transition-colors">Are MyToolKitPro tools free to use?</span>
+                                <div class="faq-icon-wrapper w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+                                    <svg class="w-4 h-4 text-gray-400 group-hover:text-primary transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </div>
                             </button>
-                            <div class="faq-content hidden px-6 pb-6 text-gray-600 text-base leading-relaxed" id="faq-answer-1">
-                                Yes. All PDF tools on MyToolKitPro are completely free. There are no hidden charges,subscriptions, or watermarks.
+                            <div class="faq-content hidden px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-50 pt-4" id="gen-faq-1">
+                                Yes. All PDF and image tools on MyToolKitPro are 100% free. We do not have hidden subscriptions, credit systems, or watermarks on your output files.
                             </div>
                         </div>
-                        <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition">
-                            <button class="faq-toggle w-full text-left p-6 font-semibold text-lg text-gray-800 flex justify-between items-center cursor-pointer" aria-expanded="false" aria-controls="faq-answer-2">
-                                Are my files safe and private?
-                                <span class="faq-icon text-xl text-red-700">+</span></button>
-                            <div class="faq-content hidden px-6 pb-6 text-gray-600 text-base leading-relaxed" id="faq-answer-2">
-                                Absolutely. Files are processed directly in your browser. We do not upload, store, or access your documents.
+                        <div class="group border border-gray-100 rounded-2xl bg-white hover:border-primary/20 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
+                            <button class="faq-toggle w-full flex items-center justify-between p-6 cursor-pointer text-left group" aria-expanded="false" aria-controls="gen-faq-2">
+                                <span class="text-lg font-medium text-gray-800 group-hover:text-primary transition-colors">Are my files safe and private?</span>
+                                <div class="faq-icon-wrapper w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+                                    <svg class="w-4 h-4 text-gray-400 group-hover:text-primary transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </div>
+                            </button>
+                            <div class="faq-content hidden px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-50 pt-4" id="gen-faq-2">
+                                Absolutely. We use <strong>Client-Side Processing</strong>. This means your files are processed locally in your browser and never touch our servers. Your privacy is guaranteed by architecture.
                             </div>
                         </div>
-                        <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition">
-                            <button class="faq-toggle w-full text-left p-6 font-semibold text-lg text-gray-800 flex justify-between items-center cursor-pointer" aria-expanded="false" aria-controls="faq-answer-3">
-                                Do I need to create an account?
-                                <span class="faq-icon text-xl text-red-700">+</span>
+                        <div class="group border border-gray-100 rounded-2xl bg-white hover:border-primary/20 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
+                            <button class="faq-toggle w-full flex items-center justify-between p-6 cursor-pointer text-left group" aria-expanded="false" aria-controls="gen-faq-3">
+                                <span class="text-lg font-medium text-gray-800 group-hover:text-primary transition-colors">Do I need to create an account?</span>
+                                <div class="faq-icon-wrapper w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+                                    <svg class="w-4 h-4 text-gray-400 group-hover:text-primary transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </div>
                             </button>
-                            <div class="faq-content hidden px-6 pb-6 text-gray-600 text-base leading-relaxed" id="faq-answer-3">
-                                No account or login is required. You can start using any tool instantly.
+                            <div class="faq-content hidden px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-50 pt-4" id="gen-faq-3">
+                                No account, login, or email is required. We believe in providing instant utility without the friction of a sign-up process.
                             </div>
                         </div>
-                        <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition">
-                            <button class="faq-toggle w-full text-left p-6 font-semibold text-lg text-gray-800 flex justify-between items-center cursor-pointer" aria-expanded="false" aria-controls="faq-answer-4">
-                                What types of files are supported?
-                                <span class="faq-icon text-xl text-red-700">+</span>
+                        <div class="group border border-gray-100 rounded-2xl bg-white hover:border-primary/20 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
+                            <button class="faq-toggle w-full flex items-center justify-between p-6 cursor-pointer text-left group" aria-expanded="false" aria-controls="gen-faq-4">
+                                <span class="text-lg font-medium text-gray-800 group-hover:text-primary transition-colors">What file formats are supported?</span>
+                                <div class="faq-icon-wrapper w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+                                    <svg class="w-4 h-4 text-gray-400 group-hover:text-primary transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </div>
                             </button>
-                            <div class="faq-content hidden px-6 pb-6 text-gray-600 text-base leading-relaxed" id="faq-answer-4">
-                                MyToolKitPro supports PDF and common image formats depending on the tool. More formats are continuously being added.
+                            <div class="faq-content hidden px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-50 pt-4" id="gen-faq-4">
+                                Currently, we support all major image formats (JPG, PNG, WebP, BMP) and PDF files. We are constantly expanding our toolkit to include more document and media types.
                             </div>
                         </div>
                     </div>
@@ -493,109 +523,82 @@
                 <a href="tools.html" class="bg-white text-primary px-8 py-3 rounded-xl font-semibold hover:scale-105 transform transition duration-300 shadow-md">Explore All Tools</a>
             </section>
         </main>
-        <footer class="bg-gray-900 text-gray-300 pt-16 pb-10 px-6">
+        <footer class="bg-[#0b0f1a] text-gray-400 pt-20 pb-10 px-6 border-t border-gray-800/50">
             <div class="max-w-6xl mx-auto">
-                <div class="grid md:grid-cols-3 gap-12 mb-12">
-                    <div>
-                        <a href="index.html" class="flex items-center gap-2 mb-4">
-                            <img src="assets/img/favicon.svg" alt="MyToolKitPro" width="28" height="28" class="opacity-90" />
-                            <h3 class="text-white text-xl font-semibold">MyToolKitPro</h3>
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+                    <div class="md:col-span-4">
+                        <a href="index.html" class="flex items-center gap-2 mb-6 group">
+                            <img src="assets/img/favicon.svg" alt="MyToolKitPro" width="32" height="32" class="opacity-90 transition-transform duration-300 group-hover:scale-110" />
+                            <h3 class="text-white text-2xl font-bold tracking-tight">MyToolKit<span class="text-primary">Pro</span></h3>
                         </a>
-                        <p class="text-sm leading-relaxed text-gray-400">MyToolKitPro provides free, secure, and fast online tools for PDF and image conversion. All tools work directly in your browser without installation.</p>
+                        <p class="text-base leading-relaxed mb-6">A comprehensive suite of powerful online tools designed to simplify your digital workflow. Fast, secure, and accessible from any device.</p>
+                        <a href="mailto:mytoolkitpro@gmail.com" class="flex items-center gap-2 text-sm text-gray-500 hover:text-primary transition-colors group">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            mytoolkitpro@gmail.com
+                        </a>
                     </div>
-                    <div>
-                        <h4 class="text-white font-semibold mb-4">Company</h4>
-                        <ul class="space-y-2 text-sm">
-                            <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
-                            <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
-                            <li><a href="privacy-policy.html" class="hover:text-white transition">Privacy Policy</a></li>
-                            <li><a href="terms-of-service.html" class="hover:text-white transition">Terms of Service</a></li>
+                    <div class="md:col-span-3">
+                        <h4 class="text-white font-bold mb-6 uppercase text-xs tracking-[0.2em]">Tool Categories</h4>
+                        <ul class="space-y-4 text-sm">
+                            <li>
+                                <a href="/pdf-tools" class="hover:text-primary transition-colors flex justify-between items-center group">
+                                    PDF Tools <span class="text-[10px] bg-gray-800 px-1.5 py-0.5 rounded text-gray-500 group-hover:bg-primary/20 group-hover:text-primary transition-colors">16</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/image-tools" class="hover:text-primary transition-colors flex justify-between items-center group">
+                                    Image Converters <span class="text-[10px] bg-gray-800 px-1.5 py-0.5 rounded text-gray-500 group-hover:bg-primary/20 group-hover:text-primary transition-colors">1</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/dev-tools" class="hover:text-primary transition-colors flex justify-between items-center group">
+                                    Developer Tools <span class="text-[10px] bg-gray-800 px-1.5 py-0.5 rounded text-gray-500 group-hover:bg-primary/20 group-hover:text-primary transition-colors">0</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tools.html" class="text-primary font-semibold hover:underline mt-2 inline-block">
+                                    View All 15+ Tools →
+                                </a>
+                            </li>
                         </ul>
                     </div>
-                    <div>
-                        <h4 class="text-white font-semibold mb-4">Why MyToolKitPro?</h4>
-                        <ul class="space-y-2 text-sm text-gray-400">
-                            <li>🔒 100% Secure Processing</li>
-                            <li>⚡ Fast Browser-Based Tool</li>
-                            <li>🆓 Free & No Sign-Up</li>
-                            <li>🌍 Available Worldwide</li>
+                    <div class="md:col-span-2">
+                        <h4 class="text-white font-bold mb-6 uppercase text-xs tracking-[0.2em]">Resources</h4>
+                        <ul class="space-y-4 text-sm">
+                            <li><a href="about.html" class="hover:text-primary transition-colors">About Us</a></li>
+                            <li><a href="contact.html" class="hover:text-primary transition-colors">Contact</a></li>
+                            <li><a href="privacy.html" class="hover:text-primary transition-colors">Privacy</a></li>
+                            <li><a href="terms.html" class="hover:text-primary transition-colors">Terms</a></li>
                         </ul>
+                    </div>
+                    <div class="md:col-span-3">
+                        <h4 class="text-white font-bold mb-6 uppercase text-xs tracking-[0.2em]">Stay Connected</h4>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-800/50 flex items-center justify-center hover:bg-white hover:text-black transition-all duration-300" title="Follow on X">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-800/50 flex items-center justify-center hover:bg-[#0077b5] hover:text-white transition-all duration-300" title="Connect on LinkedIn">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-800/50 flex items-center justify-center hover:bg-[#1877F2] hover:text-white transition-all duration-300" title="Like us on Facebook">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-800/50 flex items-center justify-center hover:bg-linear-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] hover:text-white transition-all duration-300" title="Follow on Instagram">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.332 3.608 1.308.975.975 1.245 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.332 2.633-1.308 3.608-.975.975-2.242 1.245-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.332-3.608-1.308-.975-.975-1.245-2.242-1.308-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.332-2.633 1.308-3.608.975-.975 2.242-1.245 3.608-1.308 1.266-.058 1.646-.07 4.85-.07M12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.355 2.618 6.778 6.98 6.978 1.28.058 1.688.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.668-.072-4.948-.197-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="border-t border-gray-700 pt-6 text-center text-sm text-gray-500">
-                    <p>&copy; <span id="year"></span> MyToolKitPro. All rights reserved.</p>
+                <div class="border-t border-gray-800/80 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+                    <p class="text-gray-500">
+                        &copy; <span id="year"></span> MyToolKitPro. All rights reserved.
+                    </p>
+                    <p class="text-gray-600">Built with 💙 for the web.</p>
                 </div>
             </div>
         </footer>
         <script src="assets/js/dist/main.min.js" defer></script>
-        <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                const mobileBtn = document.getElementById('mobile-menu-btn');
-                const mobileMenu = document.getElementById('mobile-menu');
-                if (mobileBtn && mobileMenu) {
-                    mobileBtn.addEventListener('click', () => {
-                        const isHidden = mobileMenu.classList.toggle('hidden');
-                        mobileBtn.setAttribute('aria-expanded', !isHidden);
-                    });
-                }
-            });
-
-            // Carousel Logic
-            document.addEventListener('DOMContentLoaded', () => {
-                const carousel = document.getElementById('articles-carousel');
-                const prevBtn = document.getElementById('carousel-prev');
-                const nextBtn = document.getElementById('carousel-next');
-                const dotsContainer = document.getElementById('carousel-dots');
-                
-                if (!carousel || !prevBtn || !nextBtn) return;
-
-                const items = carousel.querySelectorAll('a');
-                
-                // Create dots
-                items.forEach((_, i) => {
-                    const dot = document.createElement('button');
-                    dot.className = `w-2 h-2 rounded-full transition-all duration-300 ${i === 0 ? 'bg-primary w-6' : 'bg-gray-300'}`;
-                    dot.ariaLabel = `Go to slide ${i + 1}`;
-                    dot.onclick = () => items[i].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-                    dotsContainer.appendChild(dot);
-                });
-                
-                const dots = dotsContainer.children;
-
-                const updateState = () => {
-                    const scrollLeft = carousel.scrollLeft;
-                    const maxScroll = carousel.scrollWidth - carousel.clientWidth;
-                    
-                    prevBtn.classList.toggle('opacity-0', scrollLeft <= 10);
-                    prevBtn.classList.toggle('pointer-events-none', scrollLeft <= 10);
-                    
-                    nextBtn.classList.toggle('opacity-0', scrollLeft >= maxScroll - 10);
-                    nextBtn.classList.toggle('pointer-events-none', scrollLeft >= maxScroll - 10);
-
-                    // Update dots
-                    const center = scrollLeft + (carousel.clientWidth / 2);
-                    let activeIndex = 0;
-                    let minDist = Infinity;
-                    
-                    items.forEach((item, i) => {
-                        const itemCenter = item.offsetLeft + (item.clientWidth / 2);
-                        const dist = Math.abs(center - itemCenter);
-                        if(dist < minDist) { minDist = dist; activeIndex = i; }
-                    });
-
-                    Array.from(dots).forEach((dot, i) => {
-                        dot.className = `w-2 h-2 rounded-full transition-all duration-300 ${i === activeIndex ? 'bg-primary w-6' : 'bg-gray-300'}`;
-                    });
-                };
-
-                carousel.addEventListener('scroll', updateState);
-                window.addEventListener('resize', updateState);
-                setTimeout(updateState, 100); // Initial check
-
-                prevBtn.onclick = () => carousel.scrollBy({ left: -carousel.clientWidth * 0.8, behavior: 'smooth' });
-                nextBtn.onclick = () => carousel.scrollBy({ left: carousel.clientWidth * 0.8, behavior: 'smooth' });
-            });
-        </script>
     </body>
 </html>

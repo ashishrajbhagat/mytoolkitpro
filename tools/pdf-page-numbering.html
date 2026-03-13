@@ -128,37 +128,56 @@
         </script>
     </head>
     <body class="bg-bgsoft text-darktext">
-        <header class="bg-white border-b border-borderclr relative z-50">
-            <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-                <a href="../index.html" class="flex items-center gap-2">
-                    <img src="../assets/img/favicon.svg" alt="MyToolKitPro" width="40" height="40" />
-                    <span class="text-2xl font-bold text-primary">MyToolKitPro</span>
+        <header class="w-full bg-white border-b border-gray-100 relative">
+            <div class="max-w-7xl mx-auto h-16 md:h-20 flex items-center justify-between px-4 md:px-8">
+                <a href="../index.html" class="flex items-center gap-2 shrink-0">
+                    <img src="../assets/img/favicon.svg" alt="MyToolKitPro" class="w-8 h-8 md:w-9 md:h-9" />
+                    <span class="text-lg md:text-xl font-bold tracking-tight text-gray-900">
+                        MyToolKit<span class="text-primary">Pro</span>
+                    </span>
                 </a>
-                <nav class="hidden md:flex space-x-6 text-lg text-gray-600">
-                    <a href="../index.html" class="hover:text-primary">Home</a>
-                    <a href="../tools.html" class="hover:text-primary">Tools</a>
-                    <a href="../articles.html" class="hover:text-primary">Articles</a>
+                <nav class="hidden md:flex items-center gap-1">
+                    <a href="../index.html" class="px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-50 rounded-full transition-all">Home</a>
+                    <a href="../tools.html" class="px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-50 rounded-full transition-all">Explore Tools</a>
+                    <a href="../articles.html" class="px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-50 rounded-full transition-all">Articles</a>
                 </nav>
-                <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-600 hover:text-primary focus:outline-none cursor-pointer" aria-label="Toggle mobile menu" aria-controls="mobile-menu" aria-expanded="false">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                </button>
+                <div class="flex items-center gap-1 md:gap-2">
+                    <button class="flex items-center gap-2 px-3 py-2 md:pl-4 md:pr-3 bg-gray-50 border border-gray-200 rounded-full text-gray-400 hover:border-primary/40 hover:bg-white hover:text-primary transition-all group">
+                        <span class="hidden md:block text-sm font-medium">Search tools...</span>
+                        <svg class="w-4 h-4 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </button>
+                    <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-600 active:bg-gray-50 rounded-lg">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" d="M4 8h16M8 16h12"></path></svg>
+                    </button>
+                </div>
             </div>
-            <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white border-b border-borderclr shadow-lg">
-                <nav class="flex flex-col p-4 space-y-4 text-lg text-gray-600">
-                    <a href="../index.html" class="hover:text-primary">Home</a>
-                    <a href="../tools.html" class="hover:text-primary">Tools</a>
-                    <a href="../articles.html" class="hover:text-primary">Articles</a>
+            <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white border-b border-gray-100 shadow-xl z-60 md:hidden">
+                <nav class="flex flex-col p-3">
+                    <a href="../index.html" class="text-sm font-medium text-gray-600 py-3 px-4 hover:bg-gray-50 rounded-lg">Home</a>
+                    <a href="../tools.html" class="text-sm font-medium text-gray-600 py-3 px-4 hover:bg-gray-50 rounded-lg">Explore Tools</a>
+                    <a href="../articles.html" class="text-sm font-medium text-gray-600 py-3 px-4 hover:bg-gray-50 rounded-lg">Articles</a>
                 </nav>
             </div>
         </header>
-        <section class="bg-gray-50 py-4 px-6 border-b border-borderclr">
+        <section class="bg-white py-4 px-6 md:px-8 border-b border-gray-50">
             <div class="max-w-7xl mx-auto">
-                <nav class="text-m text-gray-500 flex items-center gap-2">
-                    <a href="../index.html" class="hover:text-primary transition">Home</a>
-                    <span>></span>
-                    <a href="../tools.html" class="hover:text-primary transition">Tools</a>
-                    <span>></span>
-                    <span class="text-gray-900 font-medium">Add Page Numbers</span>
+                <nav class="flex items-center whitespace-nowrap overflow-x-auto no-scrollbar gap-2 md:gap-3 text-sm tracking-tight" aria-label="Breadcrumb">
+                    <a href="../index.html" class="flex items-center gap-2 text-gray-400 hover:text-primary transition-colors group shrink-0 py-2">
+                        <svg class="w-4 h-4 text-primary/70 group-hover:text-primary group-hover:scale-110 transition-all duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+                        </svg>
+                        <span class="font-medium hidden md:block">Home</span>
+                    </a>
+                    <svg class="w-3.5 h-3.5 text-gray-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                    </svg>
+                    <a href="../tools.html" class="text-gray-400 font-medium hover:text-primary transition-colors shrink-0 py-2">Tools</a>
+                    <svg class="w-3.5 h-3.5 text-gray-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                    </svg>
+                    <span class="text-gray-900 font-semibold tracking-tight truncate max-w-30 md:max-w-none" aria-current="page">Add Page Numbers to PDF</span>
                 </nav>
             </div>
         </section>
@@ -291,220 +310,361 @@
                     </div>
                 </div>
             </section>
-            <section class="bg-white py-24 px-6 border-t border-borderclr">
-                <div class="max-w-6xl mx-auto">
-                    <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Explore Other Tools</h2>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                        <a href="merge-pdf.html" target="_blank" rel="noopener noreferrer" class="group p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:shadow-md hover:border-primary/30 transition-all">
-                            <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-primary mb-4 shadow-sm group-hover:scale-110 transition-transform">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2"></path></svg>
+            <section class="py-24 px-6 bg-[#0B0F1A] text-white overflow-hidden">
+                <div class="max-w-7xl mx-auto">
+                    <div class="flex flex-col lg:flex-row items-end justify-between mb-20 gap-8">
+                        <div class="max-w-2xl px-4 md:px-0"> 
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="w-8 h-0.5 bg-primary"></span>
+                                <span class="text-primary font-bold tracking-widest uppercase text-sm">Document Architecture Lab</span>
                             </div>
-                            <h3 class="font-semibold text-gray-900 mb-1 group-hover:text-primary transition-colors">Merge PDF</h3>
-                            <p class="text-sm text-gray-500">Combine multiple PDFs into one.</p>
-                        </a>
-                        <a href="compress-pdf.html" target="_blank" rel="noopener noreferrer" class="group p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:shadow-md hover:border-primary/30 transition-all">
-                            <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-primary mb-4 shadow-sm group-hover:scale-110 transition-transform">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
+                            <h2 class="text-4xl md:text-6xl font-black mb-6 tracking-tight"> Complete Control. <br/>
+                                <span class="text-transparent bg-clip-text bg-linear-to-r from-primary to-fuchsia-400">Perfectly Organized.</span>
+                            </h2>
+                            <p class="text-gray-400 text-lg leading-relaxed">Reorder, rotate, and remove pages with a simple drag-and-drop interface. MyToolKitPro turns complex document restructuring into a sub-second task, keeping your sensitive data locked within your browser's secure environment.</p>
+                        </div>
+                        <div class="hidden lg:block">
+                            <div class="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-sm">
+                                <div class="flex items-center gap-6">
+                                    <div class="text-center">
+                                        <div class="text-3xl font-bold text-white">360°</div>
+                                        <div class="text-xs text-gray-500 uppercase">Rotation</div>
+                                    </div>
+                                    <div class="w-px h-10 bg-white/10"></div>
+                                    <div class="text-center">
+                                        <div class="text-3xl font-bold text-white">Live</div>
+                                        <div class="text-xs text-gray-500 uppercase">Previews</div>
+                                    </div>
+                                </div>
                             </div>
-                            <h3 class="font-semibold text-gray-900 mb-1 group-hover:text-primary transition-colors">Compress PDF</h3>
-                            <p class="text-sm text-gray-500">Reduce file size while maintaining quality.</p>
-                        </a>
-                        <a href="jpg-to-pdf.html" target="_blank" rel="noopener noreferrer" class="group p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:shadow-md hover:border-primary/30 transition-all">
-                            <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-primary mb-4 shadow-sm group-hover:scale-110 transition-transform">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                            </div>
-                            <h3 class="font-semibold text-gray-900 mb-1 group-hover:text-primary transition-colors">JPG to PDF</h3>
-                            <p class="text-sm text-gray-500">Convert images to professional PDFs.</p>
-                        </a>
-                        <a href="pdf-to-jpg.html" target="_blank" rel="noopener noreferrer" class="group p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:shadow-md hover:border-primary/30 transition-all">
-                            <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-primary mb-4 shadow-sm group-hover:scale-110 transition-transform">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                            </div>
-                            <h3 class="font-semibold text-gray-900 mb-1 group-hover:text-primary transition-colors">PDF to JPG</h3>
-                            <p class="text-sm text-gray-500">Convert PDF pages to images.</p>
-                        </a>
+                        </div>
                     </div>
-                    <div class="text-center mt-10">
-                        <a href="../tools.html" class="inline-flex items-center gap-2 text-primary font-semibold hover:text-red-700 transition">
-                            View All Tools
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                        </a>
+                    <div class="grid lg:grid-cols-12 gap-8">
+                        <div class="lg:col-span-5 space-y-8">
+                            <div class="bg-linear-to-br from-white/5 to-transparent p-8 rounded-3xl border border-white/10 relative group">
+                                <h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+                                    <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+                                    Workflow Features
+                                </h3>
+                                <ul class="space-y-6">
+                                    <li class="flex items-start gap-4">
+                                        <div class="w-6 h-6 rounded-full bg-fuchsia-500/20 text-fuchsia-400 shrink-0 flex items-center justify-center text-xs">✔</div>
+                                        <div>
+                                            <h4 class="font-bold text-gray-200">Drag-and-Drop Canvas</h4>
+                                            <p class="text-sm text-gray-500">A visual grid system that lets you move single pages or bulk selections to any position in the document instantly.</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start gap-4">
+                                        <div class="w-6 h-6 rounded-full bg-fuchsia-500/20 text-fuchsia-400 shrink-0 flex items-center justify-center text-xs">✔</div>
+                                        <div>
+                                            <h4 class="font-bold text-gray-200">One-Click Orientation</h4>
+                                            <p class="text-sm text-gray-500">Fix upside-down scans or landscape tables. Rotate specific pages or the entire document by 90, 180, or 270 degrees.</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start gap-4">
+                                        <div class="w-6 h-6 rounded-full bg-fuchsia-500/20 text-fuchsia-400 shrink-0 flex items-center justify-center text-xs">✔</div>
+                                        <div>
+                                            <h4 class="font-bold text-gray-200">Multi-File Staging</h4>
+                                            <p class="text-sm text-gray-500">Upload multiple PDFs and pick-and-choose which pages to keep from each to build your final master document.</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-white/5 p-8 rounded-3xl border border-white/5 hover:border-primary/50 transition-colors">
+                                <div class="w-12 h-12 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mb-6">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                                </div>
+                                <h4 class="text-lg font-bold mb-2 text-white">Smart Zoom Inspector</h4>
+                                <p class="text-sm text-gray-500 leading-relaxed">Quickly scan page content with our hover-to-zoom feature, ensuring every page is exactly where it belongs.</p>
+                            </div>                            
+                            <div class="bg-white/5 p-8 rounded-3xl border border-white/5 hover:border-fuchsia-400/50 transition-colors">
+                                <div class="w-12 h-12 bg-fuchsia-400/10 text-fuchsia-400 rounded-2xl flex items-center justify-center mb-6">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                </div>
+                                <h4 class="text-lg font-bold mb-2 text-white">Non-Destructive Editing</h4>
+                                <p class="text-sm text-gray-500 leading-relaxed">We modify the page tree without re-encoding, keeping your file's original text and image quality 100% intact.</p>
+                            </div>
+                            <div class="md:col-span-2 bg-linear-to-r from-primary to-fuchsia-600 p-8 rounded-3xl flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl shadow-primary/20">
+                                <div class="text-center md:text-left">
+                                    <h4 class="text-2xl font-black text-white mb-1">Architecture Privacy</h4>
+                                    <p class="text-white/80 text-sm">Load PDF → Client-Side Grid → Re-Index Pages → Instant Save</p>
+                                </div>
+                                <div class="px-6 py-3 bg-black/20 rounded-xl backdrop-blur-md border border-white/20 text-white font-bold text-sm uppercase tracking-widest">
+                                    Encrypted Workspace
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-20 pt-10 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-8">
+                        <div class="flex flex-col md:flex-row items-center gap-4 md:gap-6">
+                            <div class="flex items-center gap-2">
+                                <div class="w-2 h-2 rounded-full bg-fuchsia-500 animate-pulse"></div>
+                                <span class="text-xs font-bold uppercase tracking-widest text-gray-400">Organizer Engine Ready</span>
+                            </div>
+                            <div class="hidden md:block w-px h-4 bg-white/10"></div>
+                            <span class="text-sm text-gray-500">Unlimited Page Count</span>
+                            <div class="hidden md:block w-px h-4 bg-white/10"></div>
+                            <span class="text-sm text-gray-500">Supports Hybrid Rotation</span>
+                        </div>
+                        <p class="text-sm text-gray-600 font-medium text-center md:text-right border-t border-white/5 pt-6 md:border-none md:pt-0 w-full md:w-auto">Design your document. <span class="text-gray-500">Secured by Local-First technology.</span></p>
                     </div>
                 </div>
             </section>
             <section class="bg-white border-t border-borderclr py-24 px-6">
                 <div class="max-w-6xl mx-auto text-center">
                     <div class="text-center mb-20">
-                        <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6 tracking-tight">A Simple <span class="text-primary">3-Step</span> Process</h2>
-                        <p class="text-gray-500 text-lg max-w-2xl mx-auto leading-relaxed">Add page numbers to your PDF in seconds. No uploads, no waiting, just results.</p>
-                    </div>
+                        <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6 tracking-tight">
+                            Add Page Numbers in <span class="text-primary">3 Easy Steps</span>
+                        </h2>
+                        <p class="text-gray-500 text-lg max-w-2xl mx-auto leading-relaxed">Organize your documents with professional pagination. Choose your style, position, and font—all processed locally in your browser.</p>
+                    </div>                    
                     <div class="relative grid md:grid-cols-3 gap-12 lg:gap-16">
                         <div class="hidden md:block absolute top-1/4 left-0 w-full h-0.5 bg-gray-100 -z-10"></div>
                         <div class="text-center group">
                             <div class="w-20 h-20 mx-auto mb-8 flex items-center justify-center rounded-3xl bg-white border-2 border-gray-100 text-primary shadow-sm group-hover:border-primary group-hover:shadow-xl group-hover:shadow-primary/10 transition-all duration-500 transform group-hover:-translate-y-2">
-                                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                                </svg>
                             </div>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-4">1. Upload PDF</h3>
-                            <p class="text-gray-500 leading-relaxed">Drop your PDF into the browser. It stays local and secure on your device.</p>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4">1. Select PDF</h3>
+                            <p class="text-gray-500 leading-relaxed">Choose the PDF file you want to paginate. Since your file isn't uploaded to a server, your data remains 100% private.</p>
                         </div>
                         <div class="text-center group">
                             <div class="w-20 h-20 mx-auto mb-8 flex items-center justify-center rounded-3xl bg-white border-2 border-gray-100 text-primary shadow-sm group-hover:border-primary group-hover:shadow-xl group-hover:shadow-primary/10 transition-all duration-500 transform group-hover:-translate-y-2">
-                                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
+                                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 11h.01M7 15h.01M10 7h10M10 11h10M10 15h10"></path>
+                                </svg>
                             </div>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-4">2. Customize & Apply</h3>
-                            <p class="text-gray-500 leading-relaxed">Choose the position, format, and style, then click 'Add Page Numbers'.</p>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4">2. Pick Style & Position</h3>
+                            <p class="text-gray-500 leading-relaxed">Select where the numbers should appear (header or footer). Customize the font size, starting number, and formatting style.</p>
                         </div>
                         <div class="text-center group">
                             <div class="w-20 h-20 mx-auto mb-8 flex items-center justify-center rounded-3xl bg-white border-2 border-gray-100 text-primary shadow-sm group-hover:border-primary group-hover:shadow-xl group-hover:shadow-primary/10 transition-all duration-500 transform group-hover:-translate-y-2">
-                                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
                             </div>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-4">3. Download</h3>
-                            <p class="text-gray-500 leading-relaxed">Download your professionally paginated PDF instantly, with no watermarks.</p>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4">3. Save Numbered PDF</h3>
+                            <p class="text-gray-500 leading-relaxed">Download your perfectly numbered document instantly. No watermarks and no registration required.</p>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="py-24 px-4 bg-gray-50">
-                <div class="max-w-5xl mx-auto">
-                    <div class="text-center mb-12">
-                        <h2 class="text-4xl font-bold text-gray-900 mb-4">Free PDF Page Numberer — Add Pagination Online</h2>
-                        <p class="text-gray-500 max-w-2xl mx-auto">Add professional page numbers to your PDF documents instantly. Fast, secure, and completely free.</p>
+            <section class="bg-[#0B0F1A] py-24 px-6 border-t border-white/5">
+                <div class="max-w-7xl mx-auto">
+                    <div class="flex flex-col md:flex-row items-end justify-between mb-16 gap-6">
+                        <div class="max-w-xl">
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="w-8 h-0.5 bg-primary"></span>
+                                <span class="text-primary font-bold tracking-widest uppercase text-sm">Toolkit Ecosystem</span>
+                            </div>
+                            <h2 class="text-4xl md:text-5xl font-black text-white mb-4 tracking-tight">Need something else?</h2>
+                            <p class="text-gray-400 text-lg">High-performance, browser-based PDF utilities. <br class="hidden md:block" /> No uploads, no limits, 100% private.</p>
+                        </div>
+                        <a href="../tools.html" class="group flex items-center gap-3 text-sm font-bold uppercase tracking-widest text-white/70 hover:text-primary transition-all">
+                            View All Tools
+                            <div class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:border-primary/50 group-hover:bg-primary/10 transition-all">
+                                <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </div>
+                        </a>
                     </div>
-                    <div class="bg-white p-10 rounded-3xl shadow-xl space-y-6 leading-relaxed text-gray-600">
-                        <p>Our <b>Add Page Numbers</b> tool is the perfect solution for organizing your documents. Whether you are finalizing a thesis, a legal contract, or a business report, proper pagination ensures your readers can navigate your content with ease and professionalism.</p>
-                        <div class="bg-red-50 border-l-4 border-red-700 p-5 rounded-xl">
-                            <p class="text-gray-700 font-medium">
-                                🔐 <strong>Privacy First:</strong> Like all our tools, processing happens locally in your browser. Your sensitive documents never leave your device and are never uploaded to any server.
-                            </p>
-                        </div>
-                        <h3 class="text-2xl font-semibold text-gray-900 pt-6">Key Features</h3>
-                        <div class="grid md:grid-cols-2 gap-6 mt-4">
-                            <div class="bg-gray-50 p-5 rounded-xl border border-gray-100">
-                                <h4 class="font-semibold text-gray-800 mb-2">📍 Custom Placement</h4>
-                                <p class="text-sm">Choose exactly where you want your numbers to appear: top, bottom, left, right, or centered.</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <a href="add-watermark-to-pdf.html" target="_blank" class="group p-8 bg-white/5 rounded-3xl border border-white/5 hover:border-rose-500/30 hover:bg-white/[0.07] hover:shadow-2xl hover:shadow-rose-500/10 transition-all duration-300 relative">
+                            <div class="w-12 h-12 bg-rose-500/10 text-rose-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-rose-500 group-hover:text-white transition-all duration-500">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path>
+                                </svg>
                             </div>
-                            <div class="bg-gray-50 p-5 rounded-xl border border-gray-100">
-                                <h4 class="font-semibold text-gray-800 mb-2">🔢 Flexible Formatting</h4>
-                                <p class="text-sm">Start numbering from any page and choose your preferred font size and style for a clean look.</p>
+                            <h3 class="text-xl font-bold text-white mb-2">Watermark</h3>
+                            <p class="text-sm text-gray-400 leading-relaxed mb-6">Secure your numbered pages with a custom logo or "Draft" stamp.</p>
+                            <span class="text-xs font-bold uppercase tracking-widest text-rose-500 opacity-50 group-hover:opacity-100 transition-opacity">Launch Tool →</span>
+                        </a>
+                        <a href="add-margin-to-pdf.html" target="_blank" class="group p-8 bg-white/5 rounded-3xl border border-white/5 hover:border-blue-500/30 hover:bg-white/[0.07] hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-300 relative">
+                            <div class="w-12 h-12 bg-blue-500/10 text-blue-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-blue-500 group-hover:text-white transition-all duration-500">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"></path>
+                                </svg>
                             </div>
-                            <div class="bg-gray-50 p-5 rounded-xl border border-gray-100">
-                                <h4 class="font-semibold text-gray-800 mb-2">🚀 Instant Results</h4>
-                                <p class="text-sm">No server queues. Since the tool runs in your browser, your paginated PDF is ready for download immediately.</p>
+                            <h3 class="text-xl font-bold text-white mb-2">Add Margin</h3>
+                            <p class="text-sm text-gray-400 leading-relaxed mb-6">Create space for your page numbers or binding gutters instantly.</p>
+                            <span class="text-xs font-bold uppercase tracking-widest text-blue-500 opacity-50 group-hover:opacity-100 transition-opacity">Launch Tool →</span>
+                        </a>
+                        <a href="remove-pdf-page-numbering.html" target="_blank" class="group p-8 bg-white/5 rounded-3xl border border-white/5 hover:border-amber-500/30 hover:bg-white/[0.07] hover:shadow-2xl hover:shadow-amber-500/10 transition-all duration-300 relative">
+                            <div class="w-12 h-12 bg-amber-500/10 text-amber-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-amber-500 group-hover:text-white transition-all duration-500">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
+                                </svg>
                             </div>
-                            <div class="bg-gray-50 p-5 rounded-xl border border-gray-100">
-                                <h4 class="font-semibold text-gray-800 mb-2">✨ No Watermarks</h4>
-                                <p class="text-sm">Download your documents exactly as they should be—professional, numbered, and free of any branding.</p>
+                            <h3 class="text-xl font-bold text-white mb-2">Clear Numbers</h3>
+                            <p class="text-sm text-gray-400 leading-relaxed mb-6">Wipe existing page numbers or headers to start with a clean slate.</p>
+                            <span class="text-xs font-bold uppercase tracking-widest text-amber-500 opacity-50 group-hover:opacity-100 transition-opacity">Launch Tool →</span>
+                        </a>
+                        <a href="merge-pdf.html" target="_blank" class="group p-8 bg-white/5 rounded-3xl border border-white/5 hover:border-primary/30 hover:bg-white/[0.07] hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300 relative">
+                            <div class="w-12 h-12 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-primary group-hover:text-white transition-all duration-500">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16a2 2 0 012-2h4a2 2 0 012 2v2m-6-12h4a2 2 0 012 2v2a2 2 0 01-2 2h-4a2 2 0 01-2-2V6a2 2 0 012-2z"></path>
+                                </svg>
                             </div>
-                        </div>
-                        <h3 class="text-2xl font-semibold text-gray-900 pt-6">Why Add Page Numbers?</h3>
-                        <ul class="space-y-3">
-                            <li class="flex items-start">
-                                <span class="text-red-700 mr-2">✔</span>
-                                <span><strong>Academic Standards:</strong> Essential for theses, essays, and research papers requiring specific citations.</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-red-700 mr-2">✔</span>
-                                <span><strong>Legal Compliance:</strong> Crucial for legal filings and court documents where referencing page numbers is mandatory.</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-red-700 mr-2">✔</span>
-                                <span><strong>Better Navigation:</strong> Helps readers find information quickly, especially after merging several PDFs into one.</span>
-                            </li>
-                        </ul>
-                        <h3 class="text-2xl font-semibold text-gray-900 pt-6">How to Add Page Numbers</h3>
-                        <ol class="space-y-4 list-decimal pl-6 mt-4">
-                            <li><strong>Upload:</strong> Select the PDF file you wish to paginate.</li>
-                            <li><strong>Customize:</strong> Choose the position (Header/Footer), font size, and the starting page number.</li>
-                            <li><strong>Process:</strong> Click "Add Page Numbers" to apply the changes instantly.</li>
-                            <li><strong>Download:</strong> Save your newly numbered PDF to your device.</li>
-                        </ol>
+                            <h3 class="text-xl font-bold text-white mb-2">Merge PDF</h3>
+                            <p class="text-sm text-gray-400 leading-relaxed mb-6">Join multiple documents into one before adding sequential numbering.</p>
+                            <span class="text-xs font-bold uppercase tracking-widest text-primary opacity-50 group-hover:opacity-100 transition-opacity">Launch Tool →</span>
+                        </a>
                     </div>
                 </div>
             </section>
             <section class="py-24 px-6 bg-white">
                 <div class="max-w-4xl mx-auto">
-                    <h2 class="text-4xl font-bold text-center text-gray-900 mb-14">Frequently Asked Questions</h2>
-                    <div class="space-y-5">
-                        <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition border border-gray-100">
-                            <button class="faq-toggle w-full text-left p-6 font-semibold text-lg text-gray-800 flex justify-between items-center cursor-pointer" aria-expanded="false" aria-controls="page-number-faq-1">
-                                Is this tool free?
-                                <span class="faq-icon text-xl text-red-700">+</span>
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-4 tracking-tight">Frequently Asked <span class="text-primary">Questions</span></h2>
+                        <p class="text-gray-500 text-lg">Everything you need to know about our local PDF pagination engine.</p>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="group border border-gray-100 rounded-2xl bg-white hover:border-primary/20 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
+                            <button class="faq-toggle w-full flex items-center justify-between p-6 cursor-pointer text-left group" aria-expanded="false" aria-controls="page-number-faq-1">
+                                <span class="text-lg font-medium text-gray-800 group-hover:text-primary transition-colors">Is this tool free?</span>
+                                <div class="faq-icon-wrapper w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+                                    <svg class="w-4 h-4 text-gray-400 group-hover:text-primary transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </div>
                             </button>
-                            <div class="faq-content hidden px-6 pb-6 text-gray-600 text-base leading-relaxed" id="page-number-faq-1">
+                            <div class="faq-content hidden px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-50 pt-4" id="page-number-faq-1">
                                 Yes, adding page numbers to PDFs is completely free on MyToolKitPro. There are no daily limits, hidden charges, or watermarks added to your documents.
                             </div>
                         </div>
-                        <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition border border-gray-100">
-                            <button class="faq-toggle w-full text-left p-6 font-semibold text-lg text-gray-800 flex justify-between items-center cursor-pointer" aria-expanded="false" aria-controls="page-number-faq-2">
-                                Are my files secure?
-                                <span class="faq-icon text-xl text-red-700">+</span>
+                        <div class="group border border-gray-100 rounded-2xl bg-white hover:border-primary/20 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
+                            <button class="faq-toggle w-full flex items-center justify-between p-6 cursor-pointer text-left group" aria-expanded="false" aria-controls="page-number-faq-2">
+                                <span class="text-lg font-medium text-gray-800 group-hover:text-primary transition-colors">Are my files secure?</span>
+                                <div class="faq-icon-wrapper w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+                                    <svg class="w-4 h-4 text-gray-400 group-hover:text-primary transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </div>
                             </button>
-                            <div class="faq-content hidden px-6 pb-6 text-gray-600 text-base leading-relaxed" id="page-number-faq-2">
-                                Yes. All processing happens <strong>locally in your browser</strong>. Your sensitive documents never leave your device and are never uploaded to our servers, ensuring 100% privacy.
+                            <div class="faq-content hidden px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-50 pt-4" id="page-number-faq-2">
+                                Yes. All processing happens <strong>locally in your browser</strong>. Your sensitive documents never leave your device and are never uploaded to our servers, ensuring 100% privacy for your data.
                             </div>
                         </div>
-                        <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition border border-gray-100">
-                            <button class="faq-toggle w-full text-left p-6 font-semibold text-lg text-gray-800 flex justify-between items-center cursor-pointer" aria-expanded="false" aria-controls="page-number-faq-3">
-                                Can I choose the position of the page numbers?
-                                <span class="faq-icon text-xl text-red-700">+</span>
+                        <div class="group border border-gray-100 rounded-2xl bg-white hover:border-primary/20 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
+                            <button class="faq-toggle w-full flex items-center justify-between p-6 cursor-pointer text-left group" aria-expanded="false" aria-controls="page-number-faq-3">
+                                <span class="text-lg font-medium text-gray-800 group-hover:text-primary transition-colors">Can I choose the position of the page numbers?</span>
+                                <div class="faq-icon-wrapper w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+                                    <svg class="w-4 h-4 text-gray-400 group-hover:text-primary transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </div>
                             </button>
-                            <div class="faq-content hidden px-6 pb-6 text-gray-600 text-base leading-relaxed" id="page-number-faq-3">
-                                Absolutely. You can choose to place numbers in the header or footer, and align them to the left, center, or right of the page.
+                            <div class="faq-content hidden px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-50 pt-4" id="page-number-faq-3">
+                                Absolutely. You can choose to place numbers in the header or footer, and align them to the left, center, or right of the page for a perfectly professional look.
                             </div>
                         </div>
-                        <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition border border-gray-100">
-                            <button class="faq-toggle w-full text-left p-6 font-semibold text-lg text-gray-800 flex justify-between items-center cursor-pointer" aria-expanded="false" aria-controls="page-number-faq-4">
-                                Can I customize the font and size?
-                                <span class="faq-icon text-xl text-red-700">+</span>
+                        <div class="group border border-gray-100 rounded-2xl bg-white hover:border-primary/20 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
+                            <button class="faq-toggle w-full flex items-center justify-between p-6 cursor-pointer text-left group" aria-expanded="false" aria-controls="page-number-faq-4">
+                                <span class="text-lg font-medium text-gray-800 group-hover:text-primary transition-colors">Can I customize the font and size?</span>
+                                <div class="faq-icon-wrapper w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+                                    <svg class="w-4 h-4 text-gray-400 group-hover:text-primary transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </div>
                             </button>
-                            <div class="faq-content hidden px-6 pb-6 text-gray-600 text-base leading-relaxed" id="page-number-faq-4">
-                                Yes, our tool allows you to adjust the font size and color to ensure the page numbers blend perfectly with your document's existing layout.
+                            <div class="faq-content hidden px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-50 pt-4" id="page-number-faq-4">
+                                Yes, our tool allows you to adjust the font size and color to ensure the page numbers blend perfectly with your document's existing layout and visual style.
                             </div>
                         </div>
-                        <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition border border-gray-100">
-                            <button class="faq-toggle w-full text-left p-6 font-semibold text-lg text-gray-800 flex justify-between items-center cursor-pointer" aria-expanded="false" aria-controls="page-number-faq-5">
-                                Does it work on password-protected PDFs?
-                                <span class="faq-icon text-xl text-red-700">+</span>
+                        <div class="group border border-gray-100 rounded-2xl bg-white hover:border-primary/20 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
+                            <button class="faq-toggle w-full flex items-center justify-between p-6 cursor-pointer text-left group" aria-expanded="false" aria-controls="page-number-faq-5">
+                                <span class="text-lg font-medium text-gray-800 group-hover:text-primary transition-colors">Does it work on password-protected PDFs?</span>
+                                <div class="faq-icon-wrapper w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+                                    <svg class="w-4 h-4 text-gray-400 group-hover:text-primary transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </div>
                             </button>
-                            <div class="faq-content hidden px-6 pb-6 text-gray-600 text-base leading-relaxed" id="page-number-faq-5">
-                                To add page numbers, the PDF must be unlocked. If your file is protected, please use our <strong>PDF Password Remover</strong> tool first to decrypt the file.
+                            <div class="faq-content hidden px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-50 pt-4" id="page-number-faq-5">
+                                To add page numbers, the PDF must be unlocked. If your file is protected, please use our <a href="unlock-pdf.html" class="text-primary font-medium hover:underline transition-all">PDF Unlocker</a> tool first to decrypt the file before adding pagination.
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
         </main>
-        <footer class="bg-gray-900 text-gray-300 pt-16 pb-10 px-6">
+        <footer class="bg-[#0b0f1a] text-gray-400 pt-20 pb-10 px-6 border-t border-gray-800/50">
             <div class="max-w-6xl mx-auto">
-                <div class="grid md:grid-cols-3 gap-12 mb-12">
-                    <div>
-                        <a href="../index.html" class="flex items-center gap-2 mb-4">
-                            <img src="../assets/img/favicon.svg" alt="MyToolKitPro" width="28" height="28" class="opacity-90" />
-                            <h3 class="text-white text-xl font-semibold">MyToolKitPro</h3>
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+                    <div class="md:col-span-4">
+                        <a href="../index.html" class="flex items-center gap-2 mb-6 group">
+                            <img src="../assets/img/favicon.svg" alt="MyToolKitPro" width="32" height="32" class="opacity-90 transition-transform duration-300 group-hover:scale-110" />
+                            <h3 class="text-white text-2xl font-bold tracking-tight">MyToolKit<span class="text-primary">Pro</span></h3>
                         </a>
-                        <p class="text-sm leading-relaxed text-gray-400">MyToolKitPro provides free, secure, and fast online tools for PDF and image conversion. All tools work directly in your browser without installation.</p>
+                        <p class="text-base leading-relaxed mb-6">A comprehensive suite of powerful online tools designed to simplify your digital workflow. Fast, secure, and accessible from any device.</p>
+                        <a href="mailto:mytoolkitpro@gmail.com" class="flex items-center gap-2 text-sm text-gray-500 hover:text-primary transition-colors group">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            mytoolkitpro@gmail.com
+                        </a>
                     </div>
-                    <div>
-                        <h4 class="text-white font-semibold mb-4">Company</h4>
-                        <ul class="space-y-2 text-sm">
-                            <li><a href="../about.html" class="hover:text-white transition">About Us</a></li>
-                            <li><a href="../contact.html" class="hover:text-white transition">Contact</a></li>
-                            <li><a href="../privacy-policy.html" class="hover:text-white transition">Privacy Policy</a></li>
-                            <li><a href="../terms-of-service.html" class="hover:text-white transition">Terms of Service</a></li>
+                    <div class="md:col-span-3">
+                        <h4 class="text-white font-bold mb-6 uppercase text-xs tracking-[0.2em]">Tool Categories</h4>
+                        <ul class="space-y-4 text-sm">
+                            <li>
+                                <a href="/pdf-tools" class="hover:text-primary transition-colors flex justify-between items-center group">
+                                    PDF Tools <span class="text-[10px] bg-gray-800 px-1.5 py-0.5 rounded text-gray-500 group-hover:bg-primary/20 group-hover:text-primary transition-colors">16</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/image-tools" class="hover:text-primary transition-colors flex justify-between items-center group">
+                                    Image Converters <span class="text-[10px] bg-gray-800 px-1.5 py-0.5 rounded text-gray-500 group-hover:bg-primary/20 group-hover:text-primary transition-colors">1</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/dev-tools" class="hover:text-primary transition-colors flex justify-between items-center group">
+                                    Developer Tools <span class="text-[10px] bg-gray-800 px-1.5 py-0.5 rounded text-gray-500 group-hover:bg-primary/20 group-hover:text-primary transition-colors">0</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../tools.html" class="text-primary font-semibold hover:underline mt-2 inline-block">
+                                    View All 15+ Tools →
+                                </a>
+                            </li>
                         </ul>
                     </div>
-                    <div>
-                        <h4 class="text-white font-semibold mb-4">Why MyToolKitPro?</h4>
-                        <ul class="space-y-2 text-sm text-gray-400">
-                            <li>🔒 100% Secure Processing</li>
-                            <li>⚡ Fast Browser-Based Tool</li>
-                            <li>🆓 Free & No Sign-Up</li>
-                            <li>🌍 Available Worldwide</li>
+                    <div class="md:col-span-2">
+                        <h4 class="text-white font-bold mb-6 uppercase text-xs tracking-[0.2em]">Resources</h4>
+                        <ul class="space-y-4 text-sm">
+                            <li><a href="../about.html" class="hover:text-primary transition-colors">About Us</a></li>
+                            <li><a href="../contact.html" class="hover:text-primary transition-colors">Contact</a></li>
+                            <li><a href="../privacy.html" class="hover:text-primary transition-colors">Privacy</a></li>
+                            <li><a href="../terms.html" class="hover:text-primary transition-colors">Terms</a></li>
                         </ul>
+                    </div>
+                    <div class="md:col-span-3">
+                        <h4 class="text-white font-bold mb-6 uppercase text-xs tracking-[0.2em]">Stay Connected</h4>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-800/50 flex items-center justify-center hover:bg-white hover:text-black transition-all duration-300" title="Follow on X">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-800/50 flex items-center justify-center hover:bg-[#0077b5] hover:text-white transition-all duration-300" title="Connect on LinkedIn">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-800/50 flex items-center justify-center hover:bg-[#1877F2] hover:text-white transition-all duration-300" title="Like us on Facebook">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-800/50 flex items-center justify-center hover:bg-linear-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] hover:text-white transition-all duration-300" title="Follow on Instagram">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.332 3.608 1.308.975.975 1.245 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.332 2.633-1.308 3.608-.975.975-2.242 1.245-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.332-3.608-1.308-.975-.975-1.245-2.242-1.308-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.332-2.633 1.308-3.608.975-.975 2.242-1.245 3.608-1.308 1.266-.058 1.646-.07 4.85-.07M12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.355 2.618 6.778 6.98 6.978 1.28.058 1.688.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.668-.072-4.948-.197-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="border-t border-gray-700 pt-6 text-center text-sm text-gray-500">
-                    <p>&copy; <span id="year"></span> MyToolKitPro. All rights reserved.</p>
+                <div class="border-t border-gray-800/80 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+                    <p class="text-gray-500">
+                        &copy; <span id="year"></span> MyToolKitPro. All rights reserved.
+                    </p>
+                    <p class="text-gray-600">Built with 💙 for the web.</p>
                 </div>
             </div>
         </footer>
@@ -512,30 +672,42 @@
         <script src="../assets/js/dist/pdf-page-numbering.min.js" defer></script>
         <script>
             document.addEventListener('DOMContentLoaded', () => {
-                const mobileBtn = document.getElementById('mobile-menu-btn');
-                const mobileMenu = document.getElementById('mobile-menu');
-                if (mobileBtn && mobileMenu) {
-                    mobileBtn.addEventListener('click', () => {
-                        const isHidden = mobileMenu.classList.toggle('hidden');
-                        mobileBtn.setAttribute('aria-expanded', !isHidden);
-                    });
-                }
-
-                const faqButtons = document.querySelectorAll('.faq-toggle');
-                faqButtons.forEach(btn => {
-                    btn.addEventListener('click', function() {
-                        const content = this.nextElementSibling;
-                        const icon = this.querySelector('.faq-icon');
-                        const isExpanded = this.getAttribute('aria-expanded') === 'true';
-
-                        this.setAttribute('aria-expanded', !isExpanded);
-                        content.classList.toggle('hidden');
-                        icon.textContent = isExpanded ? '+' : '-';
-                    });
+                const btn = document.getElementById('mobile-menu-btn');
+                const menu = document.getElementById('mobile-menu');
+                btn.addEventListener('click', () => {
+                    menu.classList.toggle('hidden');
                 });
 
-                const yearSpan = document.getElementById('year');
-                if(yearSpan) { yearSpan.textContent = new Date().getFullYear(); }
+                document.addEventListener('click', (e) => {
+                    const btn = e.target.closest('.faq-toggle');
+                    if (!btn) return;
+
+                    e.preventDefault();
+
+                    const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+                    const allBtns = document.querySelectorAll('.faq-toggle');
+
+                    allBtns.forEach(other => {
+                        if (other !== btn) {
+                            other.setAttribute('aria-expanded', 'false');
+                            const targetId = other.getAttribute('aria-controls');
+                            document.getElementById(targetId)?.classList.add('hidden');
+                            other.querySelector('svg')?.classList.remove('rotate-180');
+                        }
+                    });
+
+                    const newState = !isExpanded;
+                    btn.setAttribute('aria-expanded', newState);
+                    const currentTargetId = btn.getAttribute('aria-controls');
+                    const content = document.getElementById(currentTargetId);
+                    if (content) {
+                        content.classList.toggle('hidden', !newState);
+                    }
+                    
+                    btn.querySelector('svg')?.classList.toggle('rotate-180', newState);
+                });
+
+                document.getElementById('year').textContent = new Date().getFullYear();
             });
         </script>
     </body>

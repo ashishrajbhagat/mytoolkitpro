@@ -8,6 +8,7 @@ A comprehensive collection of **free, fast, and secure** online PDF and image co
 - **Image to PDF Converter** - Transform images (JPG, PNG, etc.) into professional PDF documents.
 - **Merge PDF Files** - Combine multiple PDF files into a single document online for free.
 - **Compress PDF Files** - Reduce the file size of your PDF documents for email.
+- **Protect PDF** - Add a password to encrypt and secure your PDF documents.
 - **Unlock PDF Files** - Remove passwords and restrictions from PDF files online.
 - **Split PDF Files** - Extract specific pages from PDF documents online.
 - **Add Page Numbers to PDF** - Insert page numbers into PDF documents.
@@ -49,90 +50,113 @@ Reduce the file size of your PDF documents to easily compress for email.
 
 **Location:** `/tools/compress-pdf.html`
 
-### 5. Unlock PDF
+### 5. Protect PDF
+Add a password to your PDF to encrypt it and prevent unauthorized access.
+
+**Location:** `/tools/protect-pdf.html`
+
+### 6. Unlock PDF
 Remove passwords and restrictions from PDF files with our online unlocker.
 
 **Location:** `/tools/unlock-pdf.html`
 
-### 6. Split PDF
+### 7. Split PDF
 Extract specific pages from your PDF documents online.
 
 **Location:** `/tools/split-pdf.html`
 
-### 7. Add Page Numbers
+### 8. Add Page Numbers
 Insert page numbers into your PDF documents with custom formatting.
 
 **Location:** `/tools/pdf-page-numbering.html`
 
-### 8. Rotate PDF
+### 9. Rotate PDF
 Rotate PDF pages permanently to fix orientation issues.
 
 **Location:** `/tools/rotate-pdf.html`
 
-### 9. Delete PDF Pages
+### 10. Delete PDF Pages
 Remove unwanted pages from your PDF documents.
 
 **Location:** `/tools/delete-pdf-pages.html`
 
-### 10. Organize PDF
+### 11. Organize PDF
 Rearrange and sort PDF pages. The easiest way to reorder PDF pages online.
 
 **Location:** `/tools/organize-pdf.html`
 
-### 11. Add Watermark to PDF
+### 12. Add Watermark to PDF
 Stamp text over your PDF pages to protect documents or add branding.
 
 **Location:** `/tools/add-watermark-to-pdf.html`
 
-### 12. Duplicate PDF Pages
+### 13. Duplicate PDF Pages
 Copy and repeat specific pages within your PDF document.
 
 **Location:** `/tools/duplicate-pdf-pages.html`
 
-### 13. Delete Blank PDF Pages
+### 14. Delete Blank PDF Pages
 Automatically find and remove empty pages from your PDF documents.
 
 **Location:** `/tools/delete-blank-pages-from-pdf.html`
 
-### 14. Remove PDF Page Numbering
+### 15. Remove PDF Page Numbering
 Erase page numbering from your document's headers or footers.
 
 **Location:** `/tools/remove-pdf-page-numbering.html`
 
-### 15. PDF Thumbnail Generator
+### 16. PDF Thumbnail Generator
 Generate high-quality image thumbnails and previews from your PDF pages.
 
 **Location:** `/tools/pdf-thumbnail-generator.html`
 
-### 16. Resize PDF Page Size
+### 17. Resize PDF Page Size
 Adjust PDF dimensions to standard sizes like A4, Letter, or custom Dimensions.
 
 **Location:** `/tools/resize-pdf-page-size.html`
 
-### 17. Add Margin to PDF
+### 18. Add Margin to PDF
 Add custom margins (Top, Bottom, Left, Right) to your PDF pages. Perfect for binding or annotations.
 
 **Location:** `/tools/add-margin-to-pdf.html`
 
 ## 📚 Articles
 
-### 1. How to reduce PDF size without losing quality
-**Location:** `/articles/reduce-pdf-size.html`
+### 1. How to Use Online Tools Efficiently & Securely
+A guide to maximizing productivity and protecting your data when using online PDF and image tools.
 
-### 2. Managing PDFs on iOS and Android
-**Location:** `/articles/managing-pdfs-mobile.html`
+### 2. Best Free Online Tools for Daily Work
+A curated selection of high-utility, privacy-first tools to streamline your digital tasks without subscriptions or sign-ups.
 
-### 3. Organizing large project proposals
-**Location:** `/articles/organize-project-proposals.html`
+**Location:** `/articles/pdf-guides/best-free-online-tools-for-daily-work.html`
 
-### 4. A Guide to Digitizing Paper Records
-**Location:** `/articles/digitizing-paper-records-to-pdf.html`
+### 3. How to Compress Images Online
+A guide to reducing image file sizes for faster websites and easier sharing, while respecting your privacy.
 
-### 5. How to Add Page Numbers to a PDF
-**Location:** `/articles/how-to-add-page-numbers-to-pdf.html`
+**Location:** `/articles/image-guides/how-to-compress-images-online.html`
 
-### 6. How to Remove Page Numbers from a PDF
-**Location:** `/articles/how-to-remove-page-numbers-from-pdf.html`
+## 📚 Articles
+
+### 📄 PDF Guides
+
+**1. How to Use Online Tools Efficiently & Securely**
+A guide to maximizing productivity and protecting your data when using online PDF and image tools.
+
+**Location:** `/articles/pdf-guides/how-to-use-online-tools-efficiently.html`
+
+**2. Best Free Online Tools for Daily Work**
+A curated selection of high-utility, privacy-first tools to streamline your digital tasks without subscriptions or sign-ups.
+
+**Location:** `/articles/pdf-guides/best-free-online-tools-for-daily-work.html`
+
+---
+
+### 🖼️ Image Guides
+
+**1. How to Compress Images Online**
+A guide to reducing image file sizes for faster websites and easier sharing, while respecting your privacy.
+
+**Location:** `/articles/image-guides/how-to-compress-images-online.html`
 
 ## �️ Build & Development
 
@@ -174,8 +198,8 @@ MyToolKitPro/
 ├── articles.html           # Articles hub page
 ├── about.html              # About page
 ├── contact.html            # Contact page
-├── privacy-policy.html     # Privacy policy
-├── terms-of-service.html   # Terms of service
+├── privacy.html            # Privacy policy
+├── terms.html              # Terms of service
 ├── 404.html                # 404 error page
 ├── 500.html                # 500 error page
 ├── package.json            # Project dependencies & npm scripts
@@ -184,6 +208,11 @@ MyToolKitPro/
 ├── robots.txt              # SEO robots.txt
 ├── _headers                # Netlify security headers configuration
 ├── articles/
+├── ├── pdf-guides/
+│   │     ├── how-to-use-online-tools-efficiently.html
+│   │     └── best-free-online-tools-for-daily-work.html
+├── ├── image-guides/
+│   │     └── how-to-compress-images-online.html
 │   ├── reduce-pdf-size.html
 │   ├── managing-pdfs-mobile.html
 │   ├── organize-project-proposals.html
@@ -229,6 +258,7 @@ MyToolKitPro/
     ├── merge-pdf.html
     ├── pdf-to-jpg.html
     ├── compress-pdf.html
+    ├── protect-pdf.html
     ├── unlock-pdf.html
     ├── split-pdf.html
     ├── pdf-page-numbering.html
@@ -418,8 +448,8 @@ MyToolKitPro works offline and can be installed as an app:
 - **Articles** (`articles.html`) - Guides and tutorials
 - **About** (`about.html`) - Information about MyToolKitPro
 - **Contact** (`contact.html`) - Contact information
-- **Privacy Policy** (`privacy-policy.html`) - Data privacy information
-- **Terms of Service** (`terms-of-service.html`) - Usage terms
+- **Privacy Policy** (`privacy.html`) - Data privacy information
+- **Terms of Service** (`terms.html`) - Usage terms
 
 ## 🐛 Troubleshooting
 
