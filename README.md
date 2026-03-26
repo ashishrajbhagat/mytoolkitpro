@@ -1,279 +1,155 @@
-# MyToolKitPro
+# MyToolKitPro - Digital Sovereignty
 
-A comprehensive collection of **free, fast, and secure** online PDF and image conversion tools. All processing happens directly in your browser—no installation, no signup, and no watermarks.
+![License](https://img.shields.io/badge/license-ISC-green)
+![Version](https://img.shields.io/badge/version-1.0.0-blue)
+![PWA Ready](https://img.shields.io/badge/PWA-enabled-purple)
+![Privacy](https://img.shields.io/badge/privacy-100%25_local-success)
 
-## 🌟 Features
+A high-performance ecosystem of **browser-native** utility engines. MyToolKitPro provides professional-grade PDF and image manipulation without the cloud. No uploads, no latency, just pure client-side logic.
 
-- **PDF to JPG Converter** - Convert PDF pages to high-quality JPG images.
-- **Image to PDF Converter** - Transform images (JPG, PNG, etc.) into professional PDF documents.
-- **Merge PDF Files** - Combine multiple PDF files into a single document online for free.
-- **Compress PDF Files** - Reduce the file size of your PDF documents for email.
-- **Protect PDF** - Add a password to encrypt and secure your PDF documents.
-- **Unlock PDF Files** - Remove passwords and restrictions from PDF files online.
-- **Split PDF Files** - Extract specific pages from PDF documents online.
-- **Add Page Numbers to PDF** - Insert page numbers into PDF documents.
-- **Rotate PDF Files** - Rotate PDF pages permanently
-- **Delete PDF Pages** - Remove unwanted pages from PDF documents
-- **Organize PDF Files** - Rearrange and sort PDF pages
-- **Add Watermark to PDF Files** - Stamp text over PDF pages
-- **Duplicate PDF Pages** - Copy and repeat pages within a PDF
-- **Delete Blank PDF Pages** - Automatically find and remove empty pages
-- **Remove PDF Page Numbering** - Erase page numbering from headers or footers
-- **PDF Thumbnail Generator** - Create high-quality previews of PDF pages
-- **Resize PDF Page Size** - Adjust PDF dimensions to standard or custom sizes
-- **Add Margin to PDF** - Add white space around PDF pages for printing or notes
-- **100% Browser-Based** - All processing happens locally on your device for maximum privacy
-- **No Signup Required** - Start converting immediately without creating an account
-- **Ad-Free & Watermark-Free** - Completely free to use with no hidden limitations
-- **Mobile Responsive** - Works seamlessly on desktop, tablet, and mobile devices
-- **Fast Performance** - Optimized for quick conversions without lag
+## 🎬 Live Preview
 
-## 🛠️ Available Tools
+Experience the toolkit instantly:
 
-### 1. PDF to JPG
-Convert PDF pages into high-quality JPG images. Also useful to extract images from a PDF.
+**👉 https://mytoolkitpro.com**
 
-**Location:** `/tools/pdf-to-jpg.html`
+[**Initialize Toolkit**](https://mytoolkitpro.com/tools/) | [**Read the Logic**](https://mytoolkitpro.com/articles/)
 
-### 2. Image to PDF
-Convert images like JPG, PNG, and more into a single PDF document. Perfect to scan images to PDF.
+No signup. No upload. Fully local.
 
-**Location:** `/tools/jpg-to-pdf.html`
+## 🏗️ Technical Core
 
-### 3. Merge PDF
-Combine multiple PDF files into one document with our free online merger.
+- **Client-Side Processing:** All operations run directly in your browser. Files never leave your device.
+- **High Performance:** No upload/download delays. Processing speed depends on your device’s hardware.
+- **Quality Preservation:** Document and image operations are designed to maintain original fidelity without unnecessary degradation.
+- **No Access Barriers:** No login, no subscriptions, no usage caps.
+- **PWA Enabled:** Installable for offline and app-like usage.
+- **Responsive Design:** Optimized for desktop, tablet, and mobile environments.
 
-**Location:** `/tools/merge-pdf.html`
 
-### 4. Compress PDF
-Reduce the file size of your PDF documents to easily compress for email.
+## 💎 Core Value Props
 
-**Location:** `/tools/compress-pdf.html`
+### 🛡️ Data Privacy
+All processing happens locally within the browser environment. There is no server-side file handling, ensuring that your documents remain private and under your control.
 
-### 5. Protect PDF
-Add a password to your PDF to encrypt it and prevent unauthorized access.
+### ⚡ Performance Efficiency
+By using browser-native technologies like Web Workers, the toolkit performs operations in parallel, delivering fast and consistent results without network dependency.
 
-**Location:** `/tools/protect-pdf.html`
+### 🎯 Output Quality
+Built on reliable libraries such as PDF.js, pdf-lib, and jsPDF, the toolkit aims to preserve structure, layout, and visual clarity across transformations.
 
-### 6. Unlock PDF
-Remove passwords and restrictions from PDF files with our online unlocker.
+### 🔓 Open Access
+- No account required  
+- No subscription model  
+- No artificial usage limits (bounded only by device capability)
 
-**Location:** `/tools/unlock-pdf.html`
+## 🛠️ Utility Modules
 
-### 7. Split PDF
-Extract specific pages from your PDF documents online.
+An ecosystem of high-performance, browser-native engines. Select a module to initialize processing.
 
-**Location:** `/tools/split-pdf.html`
+### 📄 PDF Engines
+* **Add Margin** — Add custom white space for binding or annotations. `(/tools/pdf/add-margin-to-pdf.html)`
+* **Add Watermark** — Stamp text or branding over PDF pages. `(/tools/pdf/add-watermark-to-pdf.html)`
+* **Compress PDF** — Reduce file size while maintaining document integrity. `(/tools/pdf/compress-pdf.html)`
+* **Delete Blank Pages** — Automatically purge empty pages from documents. `(/tools/pdf/delete-blank-pages-from-pdf.html)`
+* **Delete Pages** — Precision removal of unwanted PDF pages. `(/tools/pdf/delete-pdf-pages.html)`
+* **Duplicate Pages** — Copy and repeat specific pages within a file. `(/tools/pdf/duplicate-pdf-pages.html)`
+* **Merge PDF** — Unified multi-document synthesis into a single file. `(/tools/pdf/merge-pdf.html)`
+* **Organize PDF** — Rearrange and reorder page architecture via drag-and-drop. `(/tools/pdf/organize-pdf.html)`
+* **Page Numbering** — Insert custom headers/footers with dynamic page counts. `(/tools/pdf/pdf-page-numbering.html)`
+* **PDF Thumbnailer** — Generate high-resolution previews and thumbnails. `(/tools/pdf/pdf-thumbnail-generator.html)`
+* **PDF to JPG** — Extract pages as high-quality image assets. `(/tools/pdf/pdf-to-jpg.html)`
+* **Remove Numbering** — Erase existing page numbers from headers/footers. `(/tools/pdf/remove-pdf-page-numbering.html)`
+* **Resize PDF** — Adjust dimensions to A4, Letter, or custom scales. `(/tools/pdf/resize-pdf-page-size.html)`
+* **Rotate PDF** — Permanent orientation correction for PDF pages. `(/tools/pdf/rotate-pdf.html)`
+* **Split PDF** — Extract specific page ranges into new documents. `(/tools/pdf/split-pdf.html)`
+* **Unlock PDF** — Remove restrictions and passwords from secured files. `(/tools/pdf/unlock-pdf.html)`
 
-### 8. Add Page Numbers
-Insert page numbers into your PDF documents with custom formatting.
+### 🖼️ Image Engines (Alphabetical)
+1.  **JPG to PDF** — Transform visual assets into professional documents. `(/tools/image/jpg-to-pdf.html)`
 
-**Location:** `/tools/pdf-page-numbering.html`
+## 📚 The Logic Archive
 
-### 9. Rotate PDF
-Rotate PDF pages permanently to fix orientation issues.
-
-**Location:** `/tools/rotate-pdf.html`
-
-### 10. Delete PDF Pages
-Remove unwanted pages from your PDF documents.
-
-**Location:** `/tools/delete-pdf-pages.html`
-
-### 11. Organize PDF
-Rearrange and sort PDF pages. The easiest way to reorder PDF pages online.
-
-**Location:** `/tools/organize-pdf.html`
-
-### 12. Add Watermark to PDF
-Stamp text over your PDF pages to protect documents or add branding.
-
-**Location:** `/tools/add-watermark-to-pdf.html`
-
-### 13. Duplicate PDF Pages
-Copy and repeat specific pages within your PDF document.
-
-**Location:** `/tools/duplicate-pdf-pages.html`
-
-### 14. Delete Blank PDF Pages
-Automatically find and remove empty pages from your PDF documents.
-
-**Location:** `/tools/delete-blank-pages-from-pdf.html`
-
-### 15. Remove PDF Page Numbering
-Erase page numbering from your document's headers or footers.
-
-**Location:** `/tools/remove-pdf-page-numbering.html`
-
-### 16. PDF Thumbnail Generator
-Generate high-quality image thumbnails and previews from your PDF pages.
-
-**Location:** `/tools/pdf-thumbnail-generator.html`
-
-### 17. Resize PDF Page Size
-Adjust PDF dimensions to standard sizes like A4, Letter, or custom Dimensions.
-
-**Location:** `/tools/resize-pdf-page-size.html`
-
-### 18. Add Margin to PDF
-Add custom margins (Top, Bottom, Left, Right) to your PDF pages. Perfect for binding or annotations.
-
-**Location:** `/tools/add-margin-to-pdf.html`
-
-## 📚 Articles
-
-### 1. How to Use Online Tools Efficiently & Securely
-A guide to maximizing productivity and protecting your data when using online PDF and image tools.
-
-### 2. Best Free Online Tools for Daily Work
-A curated selection of high-utility, privacy-first tools to streamline your digital tasks without subscriptions or sign-ups.
-
-**Location:** `/articles/pdf-guides/best-free-online-tools-for-daily-work.html`
-
-### 3. How to Compress Images Online
-A guide to reducing image file sizes for faster websites and easier sharing, while respecting your privacy.
-
-**Location:** `/articles/image-guides/how-to-compress-images-online.html`
-
-## 📚 Articles
+Deep dives into document architecture and visual optimization frameworks.
 
 ### 📄 PDF Guides
-
-**1. How to Use Online Tools Efficiently & Securely**
-A guide to maximizing productivity and protecting your data when using online PDF and image tools.
-
-**Location:** `/articles/pdf-guides/how-to-use-online-tools-efficiently.html`
-
-**2. Best Free Online Tools for Daily Work**
-A curated selection of high-utility, privacy-first tools to streamline your digital tasks without subscriptions or sign-ups.
-
-**Location:** `/articles/pdf-guides/best-free-online-tools-for-daily-work.html`
-
----
+* **Best Free Online Tools for Daily Work** — A curated selection of high-utility tools. `(/articles/pdf/best-free-online-tools-for-daily-work.html)`
+* **Efficient & Secure Tool Usage** — Maximizing productivity with client-side sovereignty. `(/articles/pdf/how-to-use-online-tools-efficiently.html)`
 
 ### 🖼️ Image Guides
+* **Advanced Image Compression** — Reducing file size while maintaining visual fidelity. `(/articles/image/how-to-compress-images-online.html)`
 
-**1. How to Compress Images Online**
-A guide to reducing image file sizes for faster websites and easier sharing, while respecting your privacy.
+## 📁 Project Architecture
 
-**Location:** `/articles/image-guides/how-to-compress-images-online.html`
-
-## �️ Build & Development
-
-### Scripts
-Run these commands from the project root:
-
-```bash
-# CSS build
-npm run build:css          # Build Tailwind CSS once
-npm run watch:css          # Watch CSS files and rebuild
-
-# JavaScript minify
-npm run build:js           # Minify all JS files in assets/js/src
-npm run watch:js           # Watch JS and auto-minify
-
-# Full build & development
-npm run build              # Build CSS and JS (one-time)
-npm run dev                # Watch both CSS and JS (development mode)
-```
-
-### PWA & Favicons
-
-Icons and logos are committed as **static assets** in `assets/img/`. These are used by the manifest in `assets/manifest.json` and your HTML headers for:
-- Home screen installation icons (`icon-192.png`, `icon-512.png`)
-- Apple devices (`apple-touch-icon.png`)
-- Browser tabs and bookmarks (`favicon.ico`, `favicon.svg`, `favicon-16.png`, `favicon-32.png`)
-- Social media previews (`og-image.png`)
-
-### 2. Update the Project Structure Section
-Replace your current `## 📁 Project Structure` section with this incredibly detailed, accurate tree. This includes your specific image files, the correct CSS layout, and the new JS `src`/`dist` layout!
-
-```markdown
-## 📁 Project Structure
+A strictly modular directory structure designed for scalability and "Pretty URL" routing.
 
 ```text
 MyToolKitPro/
-├── index.html              # Home page
-├── tools.html              # Tools directory page
-├── articles.html           # Articles hub page
-├── about.html              # About page
-├── contact.html            # Contact page
-├── privacy.html            # Privacy policy
-├── terms.html              # Terms of service
-├── 404.html                # 404 error page
-├── 500.html                # 500 error page
-├── package.json            # Project dependencies & npm scripts
-├── README.md               # This file
-├── sitemap.xml             # SEO sitemap
-├── robots.txt              # SEO robots.txt
-├── _headers                # Netlify security headers configuration
+├── index.html              # Home: The Ecosystem Gateway
+├── about.html              # Brand Narrative: Purpose & Vision
+├── contact.html            # Direct Logic Channel: Support & Inquiries
+├── privacy.html            # Data Sovereignty Policy: Privacy Standards
+├── terms.html              # Usage Protocols: Terms of Service
+├── 404.html                # Logic Error: Custom Brand Recovery
+├── 500.html                # System Halt: Connection Error Logic
+├── sitemap.xml             # SEO: Verified URL Architecture
+├── robots.txt              # SEO: Crawl Instructions
+├── _headers                # Netlify: Security & CSP Protocol
+├── package.json            # Protocol: Build Scripts & Dependency Manifest
+├── README.md               # Documentation: Project Architecture
 ├── articles/
-├── ├── pdf-guides/
-│   │     ├── how-to-use-online-tools-efficiently.html
-│   │     └── best-free-online-tools-for-daily-work.html
-├── ├── image-guides/
-│   │     └── how-to-compress-images-online.html
-│   ├── reduce-pdf-size.html
-│   ├── managing-pdfs-mobile.html
-│   ├── organize-project-proposals.html
-│   ├── digitizing-paper-records-to-pdf.html
-│   ├── how-to-add-page-numbers-to-pdf.html
-│   └── how-to-remove-page-numbers-from-pdf.html
+│   ├── index.html          # Logic Archive: Articles Hub
+│   ├── pdf/
+│   │   ├── how-to-use-online-tools-efficiently.html
+│   │   ├── best-free-online-tools-for-daily-work.html
+│   └── image/
+│       └── how-to-compress-images-online.html
+├── tools/
+│   ├── index.html          # Utility Hub: Global Engine Registry
+│   ├── pdf/
+│   │   ├── add-margin-to-pdf.html
+│   │   ├── add-watermark-to-pdf.html
+│   │   ├── compress-pdf.html
+│   │   ├── delete-blank-pages-from-pdf.html
+│   │   ├── delete-pdf-pages.html
+│   │   ├── duplicate-pdf-pages.html
+│   │   ├── merge-pdf.html
+│   │   ├── organize-pdf.html
+│   │   ├── pdf-page-numbering.html
+│   │   ├── pdf-thumbnail-generator.html
+│   │   ├── pdf-to-jpg.html
+│   │   ├── remove-pdf-page-numbering.html
+│   │   ├── resize-pdf-page-size.html
+│   │   ├── rotate-pdf.html
+│   │   ├── split-pdf.html
+│   │   └── unlock-pdf.html
+│   └── image/
+│       └── jpg-to-pdf.html
 ├── assets/
-│   ├── manifest.json       # PWA manifest file
+│   ├── manifest.json       # PWA: Application Manifest
 │   ├── css/
-│   │   ├── dist/
-│   │   │   └── output.css          # Main compiled stylesheet
-│   │   └── src/
-│   │       ├── custom.css          # Custom overrides
-│   │       └── input.css           # Tailwind input file
+│   │   ├── dist/           # Production: Compiled Tailwind Styles (output.css)
+│   │   └── src/            # Development: Tailwind Input & Custom Overrides
 │   ├── img/
-│   │   ├── apple-touch-icon.png    # iOS home screen icon
-│   │   ├── favicon-16.png          # Small browser tab icon
-│   │   ├── favicon-32.png          # Standard browser tab icon
-│   │   ├── favicon.ico             # Legacy browser icon
-│   │   ├── favicon.svg             # Modern vector tab icon
-│   │   ├── favicon-192.png         # PWA manifest icon
-│   │   ├── favicon-512.png         # PWA manifest large icon
-│   │   ├── logo-horizontal.svg     # Main site logo (Header)
-│   │   ├── logo.svg                # Square site logo
-│   │   └── og-image.png            # Social media sharing preview
+│   │   ├── apple-touch-icon.png    # iOS Home Screen Asset
+│   │   ├── favicon-16.png          # Browser Tab (Small)
+│   │   ├── favicon-32.png          # Browser Tab (Standard)
+│   │   ├── favicon-192.png         # PWA Android Asset
+│   │   ├── favicon-512.png         # PWA Large Asset
+│   │   ├── favicon.ico             # Legacy Browser Support
+│   │   ├── favicon.svg             # Modern Vector Branding
+│   │   ├── logo-horizontal.svg     # Primary Site Header
+│   │   ├── logo.svg                # Square Brand Mark
+│   │   └── og-image.png            # Social Preview: X/LinkedIn Cards
 │   └── js/
-│       ├── dist/                   # Minified production scripts
-│       │   ├── main.min.js
-│       │   ├── pdf-to-jpg.min.js
-│       │   └── (other minified files...)
-│       ├── src/                    # Raw developer source code
-│       │   ├── main.js
-│       │   ├── pdf-to-jpg.js
-│       │   └── (other source files...)
-│       └── vendor/                 # Third-party libraries
-│           ├── jspdf.umd.min.js
-│           ├── jszip.min.js
-│           ├── pdf-lib.min.js
-│           ├── pdf.min.js
-│           └── pdf.worker.min.js
-└── tools/
-    ├── jpg-to-pdf.html
-    ├── merge-pdf.html
-    ├── pdf-to-jpg.html
-    ├── compress-pdf.html
-    ├── protect-pdf.html
-    ├── unlock-pdf.html
-    ├── split-pdf.html
-    ├── pdf-page-numbering.html
-    ├── rotate-pdf.html
-    ├── delete-pdf-pages.html
-    ├── organize-pdf.html
-    ├── add-watermark-to-pdf.html
-    ├── duplicate-pdf-pages.html
-    ├── delete-blank-pages-from-pdf.html
-    ├── remove-pdf-page-numbering.html
-    ├── pdf-thumbnail-generator.html
-    ├── resize-pdf-page-size.html
-    └── add-margin-to-pdf.html
+│       ├── dist/           # Production: Minified Logic Engines (*.min.js)
+│       ├── src/            # Development: Raw Source Logic (*.js)
+│       └── vendor/         # Core: PDF.js, pdf-lib, jsPDF, JSZip
+```
 
 ## 🚀 Getting Started
+
+MyToolKitPro is engineered for local execution and browser-native performance. To maintain the integrity of the **Client-Side Engines**, follow these deployment and development protocols.
 
 ### Prerequisites
 
@@ -293,15 +169,20 @@ MyToolKitPro/
    npm install
    ```
 
-3. **Run build process (if needed):**
+3. **Integrated Development (Watch CSS & JS)**:
+   ```bash
+   npm run dev
+   ```
+
+4. **Production Build (One-time compile)**:
    ```bash
    npm run build
    ```
 
-4. **Open in development server:**
+5. **Open in development server:**
    Because this project uses Web Workers for client-side PDF processing, it **must** be served over HTTP/HTTPS. Opening the files directly via the `file://` protocol will cause browser security errors.
 
-   - **Option A (Recommended):** Use the **Live Server** extension in VS Code. Right-click `index.html` and select "Open with Live Server".
+   - **Option A (Recommended):** Use the **Live Server** extension in VS Code. Right-click `index.html` and select *Open with Live Server*.
    - **Option B (Command Line):** Run a quick local server in your project root:
      ```bash
      npx serve
@@ -333,7 +214,13 @@ MyToolKitPro/
 - **Privacy-Focused Analytics** - We use standard Google Analytics (GA4) solely to understand which tools are most popular and improve the site. All file processing still happens 100% locally on your device, and we never see, store, or transmit your actual documents
 - **Open Source** - Code transparency for security audits
 
+## 🔍 Transparency Note
+
+While we use Google Analytics (GA4) for usage insights, it does NOT interact with or access any files processed within the toolkit.
+
 ## 🎨 Styling & Build System
+
+### CSS
 
 The project uses **Tailwind CSS v4** for styling with a modern, zero-config setup:
 - **Configuration:** Handled via the `@theme` directive directly in CSS.
@@ -351,13 +238,28 @@ npm run build:css
 npm run watch:css
 ```
 
-### JavaScript Minification
+### JavaScript
 
 All JS files in `assets/js/src/` are automatically minified to `assets/js/dist/`:
 - **Entry:** `assets/js/src/*.js`
 - **Output:** `assets/js/dist/*.min.js`
 - **Tool:** Terser with source maps
-- **Build Command:** `npm run build:js`
+
+### Building JS
+
+```bash
+# One-time build
+npm run build:js
+
+# Watch mode (auto-rebuild on changes)
+npm run watch:js
+```
+
+## 🏗️ PWA & Asset Management
+The toolkit is engineered for installation and offline functionality via the `assets/manifest.json`.
+
+* **Icons**: High-density assets committed in `assets/img/` for Apple, Android, and Web Tab standards.
+* **Social Preview**: Branded `og-image.png` for unified appearance across X and LinkedIn.
 
 ## 📱 Browser Support
 
@@ -427,74 +329,81 @@ The Content-Security-Policy (CSP) has been custom-tailored to protect the site w
 - Color contrast meets WCAG AA standards
 - Form inputs properly labeled
 
-## 🔄 PWA (Progressive Web App)
+## ❓ FAQ
 
-MyToolKitPro works offline and can be installed as an app:
+### 1. Are my files uploaded to any server?
+No. All file processing happens entirely within your browser. Your files never leave your device.
 
-1. **Install on Desktop/Mobile:**
-   - Open site in Chrome/Edge
-   - Click "Install" or "Add to Home Screen"
+### 2. Is it safe to use for sensitive or confidential documents?
+Yes. Since there is no server interaction, your data remains private and under your control at all times.
 
-2. **Offline Access:**
-   - All tools work without internet (after first load)
-   - Files processed locally in browser
+### 3. Does this tool work offline?
+Yes. Once loaded (or installed as a PWA), most tools can function without an internet connection.
 
-3. **Icon & Splash Screen:**
-   - Auto-generated from `assets/img/icon-*.png`
-   - Appears on installation
+### 4. Are there any file size limits?
+There are no artificial limits imposed by the platform. However, processing capacity depends on your device’s memory and browser capabilities.
 
-- **Home** (`index.html`) - Landing page with tool highlights
-- **Tools** (`tools.html`) - Complete list of available tools
-- **Articles** (`articles.html`) - Guides and tutorials
-- **About** (`about.html`) - Information about MyToolKitPro
-- **Contact** (`contact.html`) - Contact information
-- **Privacy Policy** (`privacy.html`) - Data privacy information
-- **Terms of Service** (`terms.html`) - Usage terms
+### 5. Do I need to create an account?
+No. All tools are accessible instantly without registration or login.
 
-## 🐛 Troubleshooting
+### 6. Is MyToolKitPro really free?
+Yes. All core features are available without subscriptions, hidden charges, or watermarks.
 
-### Tools not working in browser
-- Clear browser cache and reload (Ctrl+Shift+Delete)
-- Try a different browser
-- Ensure JavaScript is enabled
-- Check browser console for errors (F12)
+### 7. Why is processing faster compared to other tools?
+Because there is no file upload or download. All operations run locally using your device’s CPU via browser technologies like Web Workers.
 
-### File size limits
-- Browser memory limitations may apply (typically 100-500MB)
-- Try working with smaller files if experiencing issues
-- Close other tabs to free up memory
+### 8. Which browsers are supported?
+Latest versions of Chrome, Firefox, Safari, and Edge are supported. Mobile browsers are also compatible.
 
-### Build issues
-```bash
-# Clear node_modules and reinstall
-rm -r node_modules
-npm install
+### 9. Why are some large files slow to process?
+Performance depends on your device hardware (RAM/CPU). Larger files may take more time, especially on lower-end devices.
 
-# Clean build
-npm run build
-```
+### 10. Do you track or analyze my files?
+No. We do not access, store, or analyze any files. Analytics (GA4) is used only for general usage insights and does not interact with file content.
 
-### Styling issues
-- Ensure `npm run build:css` completed successfully
-- Check `assets/css/dist/output.css` exists and is referenced in HTML
-- Clear browser cache (Ctrl+Shift+Delete)
+## 🛠️ Support & Maintenance
 
-## 📞 Support
+### 🐛 Troubleshooting Protocol
 
-For issues, suggestions, or feedback, please check the contact page or open an issue in the repository.
+**Logic Errors (Tools not executing)**
 
-## 📜 License
+* **Protocol:** Ensure you are not using the `file://` protocol. Browser-native engines require a local server (Live Server, `npx serve`, etc.) to initialize Web Workers and Blob URLs.
+* **Cache Invalidation:** If the UI appears broken after an update, perform a "Hard Reload" (`Ctrl+Shift+R` or `Cmd+Shift+R`) to clear the browser's script cache.
+* **Script Initialization:** Verify that JavaScript is enabled and that no aggressive "NoScript" extensions are blocking `blob:` sources.
 
-This project is licensed under the ISC License. See the LICENSE file for details.
+**Build Failures (Tailwind/JS)**
+
+* **Dependency Conflict:** If `npm run dev` fails, reset the environment:
+    ```bash
+    rm -rf node_modules package-lock.json && npm install
+    ```
+* **Output Missing:** Ensure the `/dist/` directories exist in `assets/css/` and `assets/js/`. The build scripts require these targets to write minified logic.
+
+### 📞 Support & Feedback
+
+For technical inquiries, feature requests, or logic refinements, use the following channels:
+
+* **X (Twitter):** [@mytoolkitpro](https://x.com/mytoolkitpro) — Direct updates and community logic.
+* **Direct Channel:** [mytoolkitpro@gmail.com](mailto:mytoolkitpro@gmail.com) — Architectural inquiries and support.
+* **GitHub Issues:** Open a ticket for bug reports or engine optimization proposals.
+
+## 📜 License & Intellectual Property
+Copyright (c) 2026 MyToolKitPro. All rights reserved.
+
+This repository and its source code are proprietary. Unauthorized copying, 
+distribution, or modification of any part of this project via any medium 
+is strictly prohibited. The tools provided are for end-user utility only.
 
 ## 👨‍💻 Author
+**MyToolKitPro** - Engineered by the Architect.
 
-**MyToolKitPro** - A free toolkit for PDF and image conversion
+Dedicated to digital sovereignty, privacy-first utility, and high-performance web logic.
 
 ---
 
-**Last Updated:** February 2026
-
+**Last Updated:** March 2026  
 **Version:** 1.0.0
 
-Made with ❤️ for productivity and simplicity.
+---
+
+*Made with ❤️ for productivity and simplicity.*
