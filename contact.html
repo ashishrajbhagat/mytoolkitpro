@@ -1,40 +1,23 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <!-- Essential Meta Tags -->
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="referrer" content="strict-origin-when-cross-origin" />
-        
-        <!-- SEO Meta Tags -->
-        <title>Contact Us | MyToolKitPro - Get Support for PDF Tools</title>
+        <meta name="theme-color" content="#B11226" />
+        <meta name="msapplication-TileColor" content="#B11226" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+        <title>Contact Us - Secure Support & Feature Requests | MyToolKitPro</title>
         <meta name="application-name" content="MyToolKitPro">
         <meta name="apple-mobile-web-app-title" content="MyToolKitPro">
-        <meta name="description" content="Contact MyToolKitPro for questions, suggestions, or support related to our free online PDF tools. We'd love to hear from you." />
-        <meta name="keywords" content="contact MyToolKitPro, PDF tools support, customer support, feedback" />
+        <meta name="description" content="Get in touch with MyToolKitPro. Our secure channel is open for technical support, feature requests, and bug reports. 24-hour response time guaranteed." />
+        <meta name="keywords" content="contact MyToolKitPro, PDF tools support, feature request, technical support, bug report" />
         <meta name="author" content="MyToolKitPro" />
         <meta name="robots" content="index, follow" />
-        <meta name="theme-color" content="#B11226" />
-        
-        <!-- Open Graph Tags -->
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Contact MyToolKitPro" />
-        <meta property="og:description" content="Get in touch with MyToolKitPro for support and feedback." />
-        <meta property="og:url" content="https://mytoolkitpro.com/contact.html" />
-        <meta property="og:site_name" content="MyToolKitPro" />
-        <meta property="og:image" content="https://mytoolkitpro.com/assets/img/og-image.png" />
-        <meta property="og:image:alt" content="MyToolKitPro" />
-        
-        <!-- Twitter Card Tags -->
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Contact MyToolKitPro" />
-        <meta name="twitter:description" content="Get in touch for support and feedback." />
-        <meta name="twitter:image" content="https://mytoolkitpro.com/assets/img/og-image.png" />
-        
-        <!-- Links -->
         <link rel="canonical" href="https://mytoolkitpro.com/contact.html" />
-        <link href="assets/css/dist/output.css" rel="stylesheet" />
+
         <link rel="icon" href="assets/img/favicon.ico" sizes="any">
         <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
         <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
@@ -42,78 +25,93 @@
         <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon-192.png">
         <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
         <link rel="manifest" href="assets/manifest.json" />
-        
-        <!-- Contact Page Schema -->
+
+        <link rel="preload" href="assets/css/dist/output.css" as="style">
+        <link rel="preconnect" href="https://www.googletagmanager.com">
+
+        <link rel="stylesheet" href="assets/css/dist/output.css" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Contact MyToolKitPro - Secure Communication Channel" />
+        <meta property="og:description" content="Reach out for technical support or feature requests. Secure SSL encrypted transmission." />
+        <meta property="og:url" content="https://mytoolkitpro.com/contact.html" />
+        <meta property="og:site_name" content="MyToolKitPro" />
+        <meta property="og:image" content="https://mytoolkitpro.com/assets/img/og-image.png" />
+        <meta property="og:image:alt" content="MyToolKitPro Contact Page" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@mytoolkitpro">
+        <meta name="twitter:title" content="Contact MyToolKitPro Support" />
+        <meta name="twitter:description" content="Direct and secure channel for toolkit support and feedback." />
+        <meta name="twitter:image" content="https://mytoolkitpro.com/assets/img/og-image.png" />
+
         <script type="application/ld+json">
-            [{
-                "@context": "https://schema.org",
-                "@type": "ContactPage",
-                "name": "Contact MyToolKitPro",
-                "description": "Get in touch with MyToolKitPro for technical support, feature requests, and secure communication regarding our local PDF tools.",
-                "url": "https://mytoolkitpro.com/contact.html",
-                "publisher": {
-                    "@type": "Organization",
-                    "name": "MyToolKitPro",
-                    "url": "https://mytoolkitpro.com/"
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "ContactPage",
+                    "@id": "https://mytoolkitpro.com/contact.html#webpage",
+                    "name": "Contact MyToolKitPro Support",
+                    "description": "Secure portal for technical support and product feedback.",
+                    "url": "https://mytoolkitpro.com/contact.html",
+                    "publisher": { "@id": "https://mytoolkitpro.com/#organization" },
+                    "mainEntity": {
+                        "@type": "ContactPoint",
+                        "contactType": "technical support",
+                        "email": "mytoolkitpro@gmail.com",
+                        "availableLanguage": "English"
+                    }
                 },
-                "mainEntity": {
-                    "@type": "ContactPoint",
-                    "contactType": "technical support",
-                    "email": "mytoolkitpro@gmail.com",
-                    "url": "https://mytoolkitpro.com/contact.html"
+                {
+                    "@type": "BreadcrumbList",
+                    "@id": "https://mytoolkitpro.com/contact.html#breadcrumb",
+                    "itemListElement": [
+                        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mytoolkitpro.com/" },
+                        { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://mytoolkitpro.com/contact.html" }
+                    ]
+                },
+                {
+                    "@context": "https://schema.org",
+                    "@type": "FAQPage",
+                    "@id": "https://mytoolkitpro.com/contact.html#faq",
+                    "mainEntity": [
+                        {
+                            "@type": "Question",
+                            "name": "How long does it take to get a response?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Our technical support team monitors all transmissions 24/7. Typically, you can expect a detailed response within 12 to 24 hours. Feature requests and partnership inquiries are reviewed weekly by our lead developers."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Is the contact form secure?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Absolutely. All data sent through this form is transmitted via SSL encryption through Netlify's secure tunnel. We never share your email or message details with third parties."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Should I send my PDF files for troubleshooting?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "No. To maintain your privacy, please do not send us your PDF files. A description of the issue, your browser version, and your operating system is usually enough for us to diagnose any technical bugs."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Do you accept tool suggestions?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Yes! Most of our tools are built based on user needs. If you have an idea for a new PDF or image utility, please select \"Feature Request\" in the subject line and tell us about your workflow."
+                            }
+                        }
+                    ]
                 }
-            },
-            {
-                "@context": "https://schema.org",
-                "@type": "BreadcrumbList",
-                "itemListElement": [
-                {
-                    "@type": "ListItem",
-                    "position": 1,
-                    "name": "Home",
-                    "item": "https://mytoolkitpro.com/"
-                },
-                {
-                    "@type": "ListItem",
-                    "position": 2,
-                    "name": "Contact",
-                    "item": "https://mytoolkitpro.com/contact.html"
-                }]
-            },
-            {
-                "@context": "https://schema.org",
-                "@type": "FAQPage",
-                "mainEntity": [
-                {
-                    "@type": "Question",
-                    "name": "How long does it take to get a response?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Our technical support team monitors all transmissions 24/7. Typically, you can expect a detailed response within 12 to 24 hours. Feature requests and partnership inquiries are reviewed weekly by our lead developers."
-                    }
-                },{
-                    "@type": "Question",
-                    "name": "Is the contact form secure?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Absolutely. All data sent through this form is transmitted via SSL encryption through Netlify’s secure tunnel. We never share your email or message details with third parties."
-                    }
-                },{
-                    "@type": "Question",
-                    "name": "Should I send my PDF files for troubleshooting?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "No. To maintain your privacy, please do not send us your PDF files. A description of the issue, your browser version, and your operating system is usually enough for us to diagnose any technical bugs."
-                    }
-                },{
-                    "@type": "Question",
-                    "name": "Do you accept tool suggestions?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Yes! Most of our tools are built based on user needs. If you have an idea for a new PDF or image utility, please select 'Feature Request' in the subject line and tell us about your workflow."
-                    }
-                }]
-            }]
+            ]
+        }
         </script>
     </head>
     <body class="bg-bgsoft text-darktext">
@@ -299,7 +297,7 @@
                                 </div>
                             </button>
                             <div class="faq-content hidden px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-50 pt-4" id="contact-faq-2">
-                                Absolutely. All data sent through this form is transmitted via <strong>SSL encryption</strong> through Netlify’s secure tunnel. We never share your email or message details with third parties.
+                                Absolutely. All data sent through this form is transmitted via <strong>SSL encryption</strong> through Netlify's secure tunnel. We never share your email or message details with third parties.
                             </div>
                         </div>
 

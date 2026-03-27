@@ -1,13 +1,14 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <!-- Essential Meta Tags -->
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="referrer" content="strict-origin-when-cross-origin" />
-        
-        <!-- SEO Meta Tags -->
+        <meta name="theme-color" content="#B11226" />
+        <meta name="msapplication-TileColor" content="#B11226" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
         <title>The Logic Archive - Technical Blueprints | MyToolKitPro</title>
         <meta name="application-name" content="MyToolKitPro">
         <meta name="apple-mobile-web-app-title" content="MyToolKitPro">
@@ -15,68 +16,95 @@
         <meta name="keywords" content="PDF guides, PDF tutorials, document management tips, PDF how-to, MyToolKitPro blog" />
         <meta name="author" content="MyToolKitPro" />
         <meta name="robots" content="index, follow" />
-        <meta name="theme-color" content="#B11226" />
-        
-        <!-- Open Graph Tags -->
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="The Logic Archive - Technical Blueprints | MyToolKitPro" />
-        <meta property="og:description" content="Master your documents with our expert PDF guides and tutorials." />
-        <meta property="og:url" content="https://mytoolkitpro.com/articles/index.html" />
-        <meta property="og:site_name" content="MyToolKitPro" />
-        <meta property="og:image" content="https://mytoolkitpro.com/assets/img/og-image.png" />
-        <meta property="og:image:alt" content="MyToolKitPro" />
-        
-        <!-- Twitter Card Tags -->
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@mytoolkitpro">
-        <meta name="twitter:creator" content="@mytoolkitpro">
-        <meta name="twitter:title" content="PDF Guides & Tutorials" />
-        <meta name="twitter:description" content="Master your documents with our expert PDF guides and tutorials." />
-        <meta name="twitter:image" content="https://mytoolkitpro.com/assets/img/og-image.png" />
-        
-        <!-- Links -->
-        <link rel="canonical" href="https://mytoolkitpro.com/articles/index.html" />
-        <link rel="stylesheet" href="../assets/css/dist/output.css" />
-        <link rel="icon" sizes="any" href="../assets/img/favicon.ico" />
-        <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg" />
+        <link rel="canonical" href="https://mytoolkitpro.com/articles/" />
+
+        <link rel="icon" href="../assets/img/favicon.ico" sizes="any">
+        <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
         <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon-16.png">
         <link rel="icon" type="image/png" sizes="192x192" href="../assets/img/favicon-192.png">
         <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png" />
         <link rel="manifest" href="../assets/manifest.json" />
-        
-        <!-- Schema -->
+
+        <link rel="preload" href="../assets/css/dist/output.css" as="style">
+        <link rel="preconnect" href="https://www.googletagmanager.com">
+        <link rel="preconnect" href="https://www.google-analytics.com">
+
+        <link rel="stylesheet" href="../assets/css/dist/output.css" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="The Logic Archive - Technical Blueprints | MyToolKitPro" />
+        <meta property="og:description" content="Master your documents with our expert PDF guides and tutorials." />
+        <meta property="og:url" content="https://mytoolkitpro.com/articles/" />
+        <meta property="og:site_name" content="MyToolKitPro" />
+        <meta property="og:image" content="https://mytoolkitpro.com/assets/img/og-image.png" />
+        <meta property="og:image:alt" content="MyToolKitPro Logic Archive" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@mytoolkitpro">
+        <meta name="twitter:creator" content="@mytoolkitpro">
+        <meta name="twitter:title" content="PDF Guides & Tutorials | MyToolKitPro" />
+        <meta name="twitter:description" content="Master your documents with our expert PDF guides and tutorials." />
+        <meta name="twitter:image" content="https://mytoolkitpro.com/assets/img/og-image.png" />
+
         <script type="application/ld+json">
         {
             "@context": "https://schema.org",
-            "@type": "CollectionPage",
-            "name": "PDF Guides & Tutorials",
-            "description": "Collection of expert guides for PDF management",
-            "url": "https://mytoolkitpro.com/articles/index.html",
-            "publisher": {
-                "@type": "Organization",
-                "name": "MyToolKitPro",
-                "url": "https://mytoolkitpro.com/"
-            }
-        }
-        </script>
-        
-        <!-- Breadcrumb Schema -->
-        <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [{
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://mytoolkitpro.com/"
-            },{
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Articles",
-                "item": "https://mytoolkitpro.com/articles/index.html"
-            }]
+            "@graph": [
+                {
+                    "@type": "CollectionPage",
+                    "@id": "https://mytoolkitpro.com/articles/#collection",
+                    "name": "The Logic Archive - Technical Blueprints",
+                    "description": "A comprehensive archive of expert guides for PDF management, image optimization, and developer documentation.",
+                    "url": "https://mytoolkitpro.com/articles/",
+                    "publisher": {
+                        "@type": "Organization",
+                        "@id": "https://mytoolkitpro.com/#organization",
+                        "name": "MyToolKitPro"
+                    }
+                },
+                {
+                    "@type": "ItemList",
+                    "@id": "https://mytoolkitpro.com/articles/#module-list",
+                    "name": "Technical Blueprint Modules",
+                    "numberOfItems": 3,
+                    "itemListElement": [
+                        {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "PDF Guides Module (02 Modules)",
+                            "url": "https://mytoolkitpro.com/articles/pdf/"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Image Guides Module (01 Module)",
+                            "url": "https://mytoolkitpro.com/articles/image/"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Developer Guide Module (Coming Soon)",
+                            "url": "https://mytoolkitpro.com/articles/#developer-guide"
+                        }
+                    ]
+                },
+                {
+                    "@type": "BreadcrumbList",
+                    "@id": "https://mytoolkitpro.com/articles/#breadcrumb",
+                    "itemListElement": [{
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://mytoolkitpro.com/"
+                    },{
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Articles",
+                        "item": "https://mytoolkitpro.com/articles/"
+                    }]
+                }
+            ]
         }
         </script>
     </head>

@@ -1,34 +1,23 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <!-- Essential Meta Tags -->
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="referrer" content="strict-origin-when-cross-origin" />
-        
-        <!-- SEO Meta Tags -->
-        <title>Privacy Policy | MyToolKitPro - Your Data Privacy Matters</title>
+        <meta name="theme-color" content="#B11226" />
+        <meta name="msapplication-TileColor" content="#B11226" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+        <title>Privacy Policy - Zero-Retention Local Processing | MyToolKitPro</title>
         <meta name="application-name" content="MyToolKitPro">
         <meta name="apple-mobile-web-app-title" content="MyToolKitPro">
-        <meta name="description" content="Read the Privacy Policy of MyToolKitPro. Learn how we protect your data, our use of basic analytics, and our guarantee of secure, browser-based file processing." />
-        <meta name="keywords" content="privacy policy, data protection, privacy, secure tools, browser-based" />
+        <meta name="description" content="Read the MyToolKitPro Privacy Policy. Our client-side architecture ensures your PDF and image files never leave your device. Zero-server execution, zero-logs, and 100% anonymity." />
+        <meta name="keywords" content="privacy policy, data protection, private PDF tools, local processing, GDPR compliant tools, zero-log policy" />
         <meta name="author" content="MyToolKitPro" />
         <meta name="robots" content="index, follow" />
-        <meta name="theme-color" content="#B11226" />
-        
-        <!-- Open Graph Tags -->
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Privacy Policy - MyToolKitPro" />
-        <meta property="og:description" content="Learn how we protect your data and ensure privacy." />
-        <meta property="og:url" content="https://mytoolkitpro.com/privacy.html" />
-        <meta property="og:site_name" content="MyToolKitPro" />
-        <meta property="og:image" content="https://mytoolkitpro.com/assets/img/og-image.png" />
-        <meta property="og:image:alt" content="MyToolKitPro" />
-        
-        <!-- Links -->
         <link rel="canonical" href="https://mytoolkitpro.com/privacy.html" />
-        <link href="assets/css/dist/output.css" rel="stylesheet" />
+
         <link rel="icon" href="assets/img/favicon.ico" sizes="any">
         <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
         <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
@@ -36,39 +25,58 @@
         <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon-192.png">
         <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
         <link rel="manifest" href="assets/manifest.json" />
-        
-        <!-- Legal Page Schema -->
+
+        <link rel="preload" href="assets/css/dist/output.css" as="style">
+        <link rel="preconnect" href="https://www.googletagmanager.com">
+
+        <link rel="stylesheet" href="assets/css/dist/output.css" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Privacy Policy - Data Sovereignty Guaranteed | MyToolKitPro" />
+        <meta property="og:description" content="Your documents never leave your device. Explore our 100% local processing architecture." />
+        <meta property="og:url" content="https://mytoolkitpro.com/privacy.html" />
+        <meta property="og:site_name" content="MyToolKitPro" />
+        <meta property="og:image" content="https://mytoolkitpro.com/assets/img/og-image.png" />
+        <meta property="og:image:alt" content="MyToolKitPro Privacy Policy" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@mytoolkitpro">
+        <meta name="twitter:title" content="Privacy Policy | MyToolKitPro" />
+        <meta name="twitter:description" content="Local-first processing means your data stays with you. No uploads, no logs." />
+        <meta name="twitter:image" content="https://mytoolkitpro.com/assets/img/og-image.png" />
+
         <script type="application/ld+json">
         {
             "@context": "https://schema.org",
-            "@type": "WebPage",
-            "name": "Privacy Policy",
-            "url": "https://mytoolkitpro.com/privacy.html",
-            "description": "Privacy policy for MyToolKitPro",
-            "publisher": {
-                "@type": "Organization",
-                "name": "MyToolKitPro",
-                "url": "https://mytoolkitpro.com/"
-            }
-        }
-        </script>
-        
-        <!-- Breadcrumb Schema -->
-        <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [{
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://mytoolkitpro.com/"
-            },{
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Privacy Policy",
-                "item": "https://mytoolkitpro.com/privacy.html"
-            }]
+            "@graph": [
+                {
+                    "@type": "WebPage",
+                    "@id": "https://mytoolkitpro.com/privacy.html#webpage",
+                    "name": "Privacy Policy & Data Sovereignty",
+                    "description": "Technical documentation of MyToolKitPro's zero-retention policy and client-side processing protocol.",
+                    "url": "https://mytoolkitpro.com/privacy.html",
+                    "publisher": {
+                        "@type": "Organization",
+                        "@id": "https://mytoolkitpro.com/#organization",
+                        "name": "MyToolKitPro"
+                    }
+                },
+                {
+                    "@type": "BreadcrumbList",
+                    "@id": "https://mytoolkitpro.com/privacy.html#breadcrumb",
+                    "itemListElement": [{
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://mytoolkitpro.com/"
+                    },{
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Privacy Policy",
+                        "item": "https://mytoolkitpro.com/privacy.html"
+                    }]
+                }
+            ]
         }
         </script>
     </head>

@@ -1,43 +1,23 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <!-- Essential Meta Tags -->
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="referrer" content="strict-origin-when-cross-origin" />
-        
-        <!-- SEO Meta Tags -->
-        <title>About MyToolKitPro - Free, Secure & Simple PDF Tools</title>
+        <meta name="theme-color" content="#B11226" />
+        <meta name="msapplication-TileColor" content="#B11226" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+        <title>Our Philosophy - Privacy-First Local Processing | MyToolKitPro</title>
         <meta name="application-name" content="MyToolKitPro">
         <meta name="apple-mobile-web-app-title" content="MyToolKitPro">
-        <meta name="description" content="Learn about MyToolKitPro - a free, secure and fast online PDF tools platform. Built with privacy and simplicity in mind. No signup, no tracking, 100% browser-based." />
-        <meta name="keywords" content="about MyToolKitPro, PDF tools platform, free PDF converter, online tools privacy" />
+        <meta name="description" content="Learn about the MyToolKitPro philosophy. Our browser-native architecture uses Wasm and volatile RAM to ensure your PDF and image data never leaves your device." />
+        <meta name="keywords" content="about MyToolKitPro, private PDF tools, local-first web tools, browser-native processing, zero-server execution" />
         <meta name="author" content="MyToolKitPro" />
         <meta name="robots" content="index, follow" />
-        <meta name="theme-color" content="#B11226" />
-        
-        <!-- Open Graph Tags -->
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="About MyToolKitPro - Free PDF Tools" />
-        <meta property="og:description" content="Learn about our mission to provide simple, secure, and free PDF tools for everyone." />
-        <meta property="og:url" content="https://mytoolkitpro.com/about.html" />
-        <meta property="og:site_name" content="MyToolKitPro" />
-        <meta property="og:image" content="https://mytoolkitpro.com/assets/img/og-image.png" />
-        <meta property="og:image:alt" content="MyToolKitPro" />
-        
-        <!-- Twitter Card Tags -->
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@mytoolkitpro">
-        <meta name="twitter:creator" content="@mytoolkitpro">
-        <meta name="twitter:title" content="About MyToolKitPro" />
-        <meta name="twitter:description" content="Learn about our mission to provide simple, secure PDF tools." />
-        <meta name="twitter:image" content="https://mytoolkitpro.com/assets/img/og-image.png" />
-        
-        <!-- Links -->
         <link rel="canonical" href="https://mytoolkitpro.com/about.html" />
-        <link rel="alternate" hreflang="en-US" href="https://mytoolkitpro.com/about.html" />
-        <link href="assets/css/dist/output.css" rel="stylesheet" />
+
         <link rel="icon" href="assets/img/favicon.ico" sizes="any">
         <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
         <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
@@ -45,39 +25,63 @@
         <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon-192.png">
         <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
         <link rel="manifest" href="assets/manifest.json" />
-        
-        <!-- Schema.org Structured Data -->
+
+        <link rel="preload" href="assets/css/dist/output.css" as="style">
+        <link rel="preconnect" href="https://www.googletagmanager.com">
+
+        <link rel="stylesheet" href="assets/css/dist/output.css" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Our Philosophy - Privacy Through Architecture | MyToolKitPro" />
+        <meta property="og:description" content="Discover how we provide professional-grade utility without compromising your data privacy." />
+        <meta property="og:url" content="https://mytoolkitpro.com/about.html" />
+        <meta property="og:site_name" content="MyToolKitPro" />
+        <meta property="og:image" content="https://mytoolkitpro.com/assets/img/og-image.png" />
+        <meta property="og:image:alt" content="MyToolKitPro Philosophy Page" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@mytoolkitpro">
+        <meta name="twitter:title" content="About MyToolKitPro - The Architecture of Privacy" />
+        <meta name="twitter:description" content="Professional utilities designed to keep your data local and secure." />
+        <meta name="twitter:image" content="https://mytoolkitpro.com/assets/img/og-image.png" />
+
         <script type="application/ld+json">
         {
             "@context": "https://schema.org",
-            "@type": "AboutPage",
-            "name": "About MyToolKitPro",
-            "description": "Information about MyToolKitPro and our mission",
-            "url": "https://mytoolkitpro.com/about.html",
-            "publisher": {
-                "@type": "Organization",
-                "name": "MyToolKitPro",
-                "url": "https://mytoolkitpro.com/"
-            }
-        }
-        </script>
-        
-        <!-- Breadcrumb Schema -->
-        <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [{
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://mytoolkitpro.com/"
-            },{
-                "@type": "ListItem",
-                "position": 2,
-                "name": "About",
-                "item": "https://mytoolkitpro.com/about.html"
-            }]
+            "@graph": [
+                {
+                    "@type": "AboutPage",
+                    "@id": "https://mytoolkitpro.com/about.html#webpage",
+                    "name": "Our Philosophy & Architecture",
+                    "description": "Information about MyToolKitPro's zero-server execution protocol and privacy-first mission.",
+                    "url": "https://mytoolkitpro.com/about.html",
+                    "publisher": {
+                        "@type": "Organization",
+                        "@id": "https://mytoolkitpro.com/#organization",
+                        "name": "MyToolKitPro"
+                    },
+                    "mainEntity": {
+                        "@type": "Organization",
+                        "name": "MyToolKitPro",
+                        "knowsAbout": ["Data Privacy", "PDF Technology", "WebAssembly", "Local-First Software"]
+                    }
+                },
+                {
+                    "@type": "BreadcrumbList",
+                    "@id": "https://mytoolkitpro.com/about.html#breadcrumb",
+                    "itemListElement": [{
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://mytoolkitpro.com/"
+                    },{
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "About",
+                        "item": "https://mytoolkitpro.com/about.html"
+                    }]
+                }
+            ]
         }
         </script>
     </head>
