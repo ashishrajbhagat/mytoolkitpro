@@ -1,0 +1,138 @@
+[
+  {
+    "name": "Add Margin to PDF",
+    "category": "PDF",
+    "url": "tools/pdf/add-margin-to-pdf.html",
+    "desc": "Add white space or borders to PDF pages",
+    "keywords": ["border", "padding", "white space", "layout", "trim"],
+    "icon": "📄"
+  },
+  {
+    "name": "Add Page Numbers",
+    "category": "PDF",
+    "url": "tools/pdf/add-page-numbers-to-pdf.html",
+    "desc": "Insert page numbering at the top or bottom",
+    "keywords": ["pagination", "footer", "header", "index", "numbers"],
+    "icon": "🔢"
+  },
+  {
+    "name": "Add Watermark to PDF",
+    "category": "PDF",
+    "url": "tools/pdf/add-watermark-to-pdf.html",
+    "desc": "Protect your documents with text or image watermarks",
+    "keywords": ["security", "logo", "stamp", "protect", "brand"],
+    "icon": "💧"
+  },
+  {
+    "name": "Compress PDF",
+    "category": "PDF",
+    "url": "tools/pdf/compress-pdf.html",
+    "desc": "Reduce file size while keeping high quality",
+    "keywords": ["shrink", "reduce", "small", "optimize", "mb to kb"],
+    "icon": "📉"
+  },
+  {
+    "name": "Delete Blank Pages",
+    "category": "PDF",
+    "url": "tools/pdf/delete-blank-pages-from-pdf.html",
+    "desc": "Automatically remove empty pages from your PDF",
+    "keywords": ["clean", "remove empty", "white pages", "cleanup"],
+    "icon": "🧹"
+  },
+  {
+    "name": "Duplicate PDF Pages",
+    "category": "PDF",
+    "url": "tools/pdf/duplicate-pdf-pages.html",
+    "desc": "Copy or clone pages within a PDF file",
+    "keywords": ["copy", "repeat", "clone", "double"],
+    "icon": "👥"
+  },
+  {
+    "name": "Merge PDF",
+    "category": "PDF",
+    "url": "tools/pdf/merge-pdf.html",
+    "desc": "Combine multiple PDFs into one single file",
+    "keywords": ["combine", "join", "attach", "concatenate", "plus"],
+    "icon": "🔗"
+  },
+  {
+    "name": "Organize PDF",
+    "category": "PDF",
+    "url": "tools/pdf/organize-pdf.html",
+    "desc": "Rearrange, sort, or move pages in your PDF",
+    "keywords": ["reorder", "sort", "move", "manage", "swap"],
+    "icon": "🗂️"
+  },
+  {
+    "name": "PDF Thumbnail Generator",
+    "category": "PDF",
+    "url": "tools/pdf/pdf-thumbnail-generator.html",
+    "desc": "Generate preview images of PDF pages",
+    "keywords": ["preview", "image", "snapshot", "cover", "thumb"],
+    "icon": "🖼️"
+  },
+  {
+    "name": "PDF to JPG",
+    "category": "PDF",
+    "url": "tools/pdf/pdf-to-jpg.html",
+    "desc": "Convert PDF pages into high-quality JPG images",
+    "keywords": ["convert", "image", "jpeg", "export", "picture"],
+    "icon": "📸"
+  },
+  {
+    "name": "Remove PDF Pages",
+    "category": "PDF",
+    "url": "tools/pdf/remove-pages-from-pdf.html",
+    "desc": "Delete specific pages from your document",
+    "keywords": ["delete", "cut", "extract", "remove"],
+    "icon": "✂️"
+  },
+  {
+    "name": "Remove Page Numbering",
+    "category": "PDF",
+    "url": "tools/pdf/remove-pdf-page-numbering.html",
+    "desc": "Strip existing page numbers from a PDF",
+    "keywords": ["clear pagination", "delete footer", "clean", "remove numbers"],
+    "icon": "🚫"
+  },
+  {
+    "name": "Resize PDF Page",
+    "category": "PDF",
+    "url": "tools/pdf/resize-pdf-page-size.html",
+    "desc": "Change page dimensions (A4, Letter, etc.)",
+    "keywords": ["dimensions", "scale", "format", "paper size", "a4"],
+    "icon": "📐"
+  },
+  {
+    "name": "Rotate PDF",
+    "category": "PDF",
+    "url": "tools/pdf/rotate-pdf.html",
+    "desc": "Rotate PDF pages clockwise or counter-clockwise",
+    "keywords": ["turn", "flip", "orientation", "landscape", "portrait", "sideways"],
+    "icon": "🔄"
+  },
+  {
+    "name": "Split PDF",
+    "category": "PDF",
+    "url": "tools/pdf/split-pdf.html",
+    "desc": "Separate one PDF into multiple smaller files",
+    "keywords": ["divide", "separate", "extract", "cut", "break"],
+    "icon": "🪓"
+  },
+  {
+    "name": "Unlock PDF",
+    "category": "PDF",
+    "url": "tools/pdf/unlock-pdf.html",
+    "desc": "Remove passwords and restrictions from PDFs",
+    "keywords": ["decrypt", "password", "security", "permissions", "break lock"],
+    "icon": "🔓"
+  },
+  {
+    "name": "JPG to PDF",
+    "category": "Image",
+    "url": "tools/image/jpg-to-pdf.html",
+    "desc": "Convert JPG images into a professional PDF",
+    "keywords": ["image to pdf", "convert", "jpeg", "picture", "photo"],
+    "icon": "📑"
+  }
+]

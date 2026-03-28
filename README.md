@@ -49,16 +49,16 @@ An ecosystem of high-performance, browser-native engines. Select a module to ini
 
 ### 📄 PDF Engines
 * **Add Margin** — Add custom white space for binding or annotations. `(/tools/pdf/add-margin-to-pdf.html)`
+* **Add Page Numbering** — Insert custom headers/footers with dynamic page counts. `(/tools/pdf/add-page-numbers-to-pdf.html)`
 * **Add Watermark** — Stamp text or branding over PDF pages. `(/tools/pdf/add-watermark-to-pdf.html)`
 * **Compress PDF** — Reduce file size while maintaining document integrity. `(/tools/pdf/compress-pdf.html)`
 * **Delete Blank Pages** — Automatically purge empty pages from documents. `(/tools/pdf/delete-blank-pages-from-pdf.html)`
-* **Remove Pages** — Precision removal of unwanted PDF pages. `(/tools/pdf/remove-pages-from-pdf.html)`
 * **Duplicate Pages** — Copy and repeat specific pages within a file. `(/tools/pdf/duplicate-pdf-pages.html)`
 * **Merge PDF** — Unified multi-document synthesis into a single file. `(/tools/pdf/merge-pdf.html)`
 * **Organize PDF** — Rearrange and reorder page architecture via drag-and-drop. `(/tools/pdf/organize-pdf.html)`
-* **Page Numbering** — Insert custom headers/footers with dynamic page counts. `(/tools/pdf/add-page-numbers-to-pdf.html)`
 * **PDF Thumbnailer** — Generate high-resolution previews and thumbnails. `(/tools/pdf/pdf-thumbnail-generator.html)`
 * **PDF to JPG** — Extract pages as high-quality image assets. `(/tools/pdf/pdf-to-jpg.html)`
+* **Remove Pages** — Precision removal of unwanted PDF pages. `(/tools/pdf/remove-pages-from-pdf.html)`
 * **Remove Numbering** — Erase existing page numbers from headers/footers. `(/tools/pdf/remove-pdf-page-numbering.html)`
 * **Resize PDF** — Adjust dimensions to A4, Letter, or custom scales. `(/tools/pdf/resize-pdf-page-size.html)`
 * **Rotate PDF** — Permanent orientation correction for PDF pages. `(/tools/pdf/rotate-pdf.html)`
@@ -108,16 +108,16 @@ MyToolKitPro/
 │   ├── index.html          # Utility Hub: Global Engine Registry
 │   ├── pdf/
 │   │   ├── add-margin-to-pdf.html
+│   │   ├── add-page-numbers-to-pdf.html
 │   │   ├── add-watermark-to-pdf.html
 │   │   ├── compress-pdf.html
 │   │   ├── delete-blank-pages-from-pdf.html
-│   │   ├── remove-pages-from-pdf.html
 │   │   ├── duplicate-pdf-pages.html
 │   │   ├── merge-pdf.html
 │   │   ├── organize-pdf.html
-│   │   ├── add-page-numbers-to-pdf.html
 │   │   ├── pdf-thumbnail-generator.html
 │   │   ├── pdf-to-jpg.html
+│   │   ├── remove-pages-from-pdf.html
 │   │   ├── remove-pdf-page-numbering.html
 │   │   ├── resize-pdf-page-size.html
 │   │   ├── rotate-pdf.html
@@ -130,6 +130,8 @@ MyToolKitPro/
 │   ├── css/
 │   │   ├── dist/           # Production: Compiled Tailwind Styles (output.css)
 │   │   └── src/            # Development: Tailwind Input & Custom Overrides
+│   ├── data/
+│   │   └── tools.json      # Tool Definitions: Metadata for all utility modules
 │   ├── img/
 │   │   ├── apple-touch-icon.png    # iOS Home Screen Asset
 │   │   ├── favicon-16.png          # Browser Tab (Small)

@@ -1,5 +1,5 @@
 /**
- * MyToolKitPro - Delete PDF Pages Logic
+ * MyToolKitPro - Remove PDF Pages Logic
  * Dependencies: pdf-lib, pdf.js
  */
 

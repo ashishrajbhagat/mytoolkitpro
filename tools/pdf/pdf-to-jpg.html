@@ -132,7 +132,7 @@
         </script>
     </head>
     <body class="bg-bgsoft text-darktext">
-        <header class="w-full bg-white border-b border-gray-100 relative">
+        <header class="w-full bg-white border-b border-gray-100 relative z-90">
             <div class="max-w-7xl mx-auto h-16 md:h-20 flex items-center justify-between px-4 md:px-8">
                 <a href="../../index.html" class="flex items-center gap-2 shrink-0">
                     <img src="../../assets/img/favicon.svg" alt="MyToolKitPro" class="w-8 h-8 md:w-9 md:h-9" />
@@ -146,8 +146,9 @@
                     <a href="../../articles/index.html" class="px-4 py-2 text-base font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-50 rounded-full transition-all">Articles</a>
                 </nav>
                 <div class="flex items-center gap-1 md:gap-2">
-                    <button class="flex items-center gap-2 px-3 py-2 md:pl-4 md:pr-3 bg-gray-50 border border-gray-200 rounded-full text-gray-400 hover:border-primary/40 hover:bg-white hover:text-primary transition-all group">
+                    <button id="open-search-btn" class="flex items-center gap-2 px-3 py-2 md:pl-4 md:pr-3 bg-gray-50 border border-gray-200 rounded-full text-gray-400 hover:border-primary/40 hover:bg-white hover:text-primary transition-all group">
                         <span class="hidden md:block text-sm font-medium">Search tools...</span>
+                        <span id="search-shortcut" class="hidden lg:block text-[10px] font-bold py-0.5 px-1.5 border rounded bg-white group-hover:text-primary ml-1 uppercase">Ctrl + K</span>
                         <svg class="w-4 h-4 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                         </svg>
@@ -632,17 +633,35 @@
                 </div>
             </div>
         </footer>
+        <div id="command-palette" class="hidden fixed inset-0 z-100 flex items-start justify-center pt-[10vh] sm:pt-[15vh] p-4">
+            <div id="modal-backdrop" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity"></div>
+            <div class="relative w-full max-w-2xl bg-white rounded-2xl shadow-2xl overflow-hidden ring-1 ring-black/5 modal-entrance">
+                <div class="relative border-b border-gray-100 p-4">
+                    <svg class="absolute left-6 top-6 w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                    <input type="text" id="search-input" class="w-full pl-10 pr-4 py-2 text-lg outline-none placeholder:text-gray-400" placeholder="Search tools (e.g. compress, image...)" autocomplete="off">
+                </div>
+                <div class="flex gap-2 p-3 border-b border-gray-50 overflow-x-auto bg-gray-50/50">
+                    <button class="filter-chip active px-3 py-1 rounded-full text-sm font-semibold bg-primary text-white cursor-pointer" data-category="all">All</button>
+                    <button class="filter-chip px-3 py-1 rounded-full text-sm font-semibold bg-white border border-gray-200 text-gray-600 hover:bg-gray-100 cursor-pointer" data-category="PDF">PDF</button>
+                    <button class="filter-chip px-3 py-1 rounded-full text-sm font-semibold bg-white border border-gray-200 text-gray-600 hover:bg-gray-100 cursor-pointer" data-category="Image">Image</button>
+                    <button class="filter-chip px-3 py-1 rounded-full text-sm font-semibold bg-white border border-gray-200 text-gray-600 hover:bg-gray-100 cursor-pointer" data-category="Developer">Developer</button>
+                </div>
+                <div id="search-results-list" class="max-h-[50vh] overflow-y-auto p-2 min-h-30"></div>
+                <div class="p-3 bg-gray-50 border-t border-gray-100 flex justify-between items-center text-xs text-gray-400 font-bold uppercase tracking-widest">
+                    <div class="flex gap-3">
+                        <span><kbd class="border px-1 rounded bg-white">↑↓</kbd> Navigate</span>
+                        <span><kbd class="border px-1 rounded bg-white">Enter</kbd> Select</span>
+                    </div>
+                    <span id="result-count">0 tools found</span>
+                </div>
+            </div>
+        </div>
+        <script src="../../assets/js/dist/main.min.js" defer></script>
         <script src="../../assets/js/vendor/pdf.min.js" defer></script>
         <script src="../../assets/js/vendor/jszip.min.js" defer></script>
         <script src="../../assets/js/dist/pdf-to-jpg.min.js" defer></script>
         <script>
             document.addEventListener('DOMContentLoaded', () => {
-                const btn = document.getElementById('mobile-menu-btn');
-                const menu = document.getElementById('mobile-menu');
-                btn.addEventListener('click', () => {
-                    menu.classList.toggle('hidden');
-                });
-
                 document.addEventListener('click', (e) => {
                     const btn = e.target.closest('.faq-toggle');
                     if (!btn) return;
@@ -671,8 +690,6 @@
                     
                     btn.querySelector('svg')?.classList.toggle('rotate-180', newState);
                 });
-
-                document.getElementById('year').textContent = new Date().getFullYear();
             });
         </script>
     </body>
