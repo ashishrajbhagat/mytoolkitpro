@@ -124,41 +124,41 @@
         </script>
     </head>
     <body class="bg-bgsoft text-darktext">
-        <header class="w-full bg-white border-b border-gray-100 relative z-90">
+        <header class="w-full bg-[#0B0F1A] border-b border-white/5 shadow-lg relative z-90">
             <div class="max-w-7xl mx-auto h-16 md:h-20 flex items-center justify-between px-4 md:px-8">
                 <a href="../../index.html" class="flex items-center gap-2 shrink-0">
                     <img src="../../assets/img/favicon.svg" alt="MyToolKitPro" class="w-8 h-8 md:w-9 md:h-9" />
-                    <span class="text-lg md:text-xl font-bold tracking-tight text-gray-900">
+                    <span class="text-lg md:text-xl font-bold tracking-tight text-slate-100">
                         MyToolKit<span class="text-primary">Pro</span>
                     </span>
                 </a>
                 <nav class="hidden md:flex items-center gap-1">
-                    <a href="../../index.html" class="px-4 py-2 text-base font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-50 rounded-full transition-all">Home</a>
-                    <a href="../../tools/index.html" class="px-4 py-2 text-base font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-50 rounded-full transition-all">Tools</a>
-                    <a href="../../articles/index.html" class="px-4 py-2 text-base font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-50 rounded-full transition-all">Articles</a>
+                    <a href="../../index.html" class="px-4 py-2 text-base font-medium text-slate-400 hover:text-white hover:bg-white/5 rounded-full transition-all">Home</a>
+                    <a href="../../tools/index.html" class="px-4 py-2 text-base font-medium text-slate-400 hover:text-white hover:bg-white/5 rounded-full transition-all">Tools</a>
+                    <a href="../../articles/index.html" class="px-4 py-2 text-base font-medium text-slate-400 hover:text-white hover:bg-white/5 rounded-full transition-all">Articles</a>
                 </nav>
                 <div class="flex items-center gap-1 md:gap-2">
-                    <button id="open-search-btn" class="flex items-center gap-2 px-3 py-2 md:pl-4 md:pr-3 bg-gray-50 border border-gray-200 rounded-full text-gray-400 hover:border-primary/40 hover:bg-white hover:text-primary transition-all group">
+                     <button id="open-search-btn" aria-label="Open search" class="flex items-center gap-2 px-3 py-2 md:pl-4 md:pr-3 bg-[#161B26] border border-white/10 rounded-full text-slate-400 hover:border-white/50 hover:bg-[#1C2331] hover:text-slate-200 transition-all group cursor-pointer">
                         <span class="hidden md:block text-sm font-medium">Search tools...</span>
-                        <span id="search-shortcut" class="hidden lg:block text-[10px] font-bold py-0.5 px-1.5 border rounded bg-white group-hover:text-primary ml-1 uppercase">Ctrl + K</span>
+                        <span id="search-shortcut" class="hidden lg:block text-[10px] font-bold py-0.5 px-1.5 border border-white/10 rounded bg-[#0B0F1A] group-hover:text-white group-hover:border-white/40 ml-1 uppercase">Ctrl + K</span>
                         <svg class="w-4 h-4 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                         </svg>
                     </button>
-                    <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-600 active:bg-gray-50 rounded-lg">
+                    <button id="mobile-menu-btn" aria-label="Open mobile menu" class="md:hidden p-2 text-slate-400 active:bg-white/5 rounded-lg">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" d="M4 8h16M8 16h12"></path></svg>
                     </button>
                 </div>
             </div>
-            <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white border-b border-gray-100 shadow-xl z-60 md:hidden">
+            <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-[#0B0F1A] border-b border-white/5 shadow-2xl z-60 md:hidden">
                 <nav class="flex flex-col p-3">
-                    <a href="../../index.html" class="text-sm font-medium text-gray-600 py-3 px-4 hover:bg-gray-50 rounded-lg">Home</a>
-                    <a href="../../tools/index.html" class="text-sm font-medium text-gray-600 py-3 px-4 hover:bg-gray-50 rounded-lg">Tools</a>
-                    <a href="../../articles/index.html" class="text-sm font-medium text-gray-600 py-3 px-4 hover:bg-gray-50 rounded-lg">Articles</a>
+                    <a href="../../index.html" class="text-sm font-medium text-slate-300 py-3 px-4 hover:bg-white/5 rounded-lg">Home</a>
+                    <a href="../../tools/index.html" class="text-sm font-medium text-slate-300 py-3 px-4 hover:bg-white/5 rounded-lg">Tools</a>
+                    <a href="../../articles/index.html" class="text-sm font-medium text-slate-300 py-3 px-4 hover:bg-white/5 rounded-lg">Articles</a>
                 </nav>
             </div>
         </header>
-        <section class="bg-white py-4 px-6 md:px-8 border-b border-gray-50">
+        <section class="bg-white py-4 px-6 md:px-8 border-b border-gray-200">
             <div class="max-w-7xl mx-auto">
                 <nav class="flex items-center whitespace-nowrap overflow-x-auto no-scrollbar gap-2 md:gap-3 text-sm tracking-tight" aria-label="Breadcrumb">
                     <a href="../../index.html" class="flex items-center gap-2 text-gray-400 hover:text-primary transition-colors group shrink-0 py-2">
@@ -170,11 +170,11 @@
                     <svg class="w-3.5 h-3.5 text-gray-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                     </svg>
-                    <a href="../index.html" class="text-gray-400 font-medium hover:text-primary transition-colors shrink-0 py-2">Tools</a>
+                    <a href="../index.html" class="text-gray-500 font-medium hover:text-primary transition-colors shrink-0 py-2">Tools</a>
                     <svg class="w-3.5 h-3.5 text-gray-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                     </svg>
-                    <a href="index.html" class="text-gray-400 font-medium hover:text-primary transition-colors shrink-0 py-2">PDF</a>
+                    <a href="index.html" class="text-gray-500 font-medium hover:text-primary transition-colors shrink-0 py-2">PDF</a>
                     <svg class="w-3.5 h-3.5 text-gray-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                     </svg>
@@ -415,7 +415,7 @@
                             </div>
                             <h3 class="text-xl font-bold text-white mb-2">Merge PDF</h3>
                             <p class="text-sm text-gray-400 leading-relaxed mb-6">Combine your duplicated pages with other PDF files instantly.</p>
-                            <span class="text-xs font-bold uppercase tracking-widest text-primary opacity-50 group-hover:opacity-100 transition-opacity">Launch Tool →</span>
+                            <span class="text-xs font-bold uppercase tracking-widest text-primary opacity-80 group-hover:opacity-100 transition-opacity">Launch Tool →</span>
                         </a>
                         <a href="resize-pdf-page-size.html" target="_blank" class="group p-8 bg-white/5 rounded-3xl border border-white/5 hover:border-purple-500/30 hover:bg-white/[0.07] hover:shadow-2xl hover:shadow-purple-500/10 transition-all duration-300 relative">
                             <div class="w-12 h-12 bg-purple-500/10 text-purple-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-purple-500 group-hover:text-white transition-all duration-500">
@@ -425,7 +425,7 @@
                             </div>
                             <h3 class="text-xl font-bold text-white mb-2">Resize PDF</h3>
                             <p class="text-sm text-gray-400 leading-relaxed mb-6">Standardize page dimensions across all your duplicated content.</p>
-                            <span class="text-xs font-bold uppercase tracking-widest text-purple-500 opacity-50 group-hover:opacity-100 transition-opacity">Launch Tool →</span>
+                            <span class="text-xs font-bold uppercase tracking-widest text-purple-500 opacity-80 group-hover:opacity-100 transition-opacity">Launch Tool →</span>
                         </a>
                         <a href="pdf-to-jpg.html" target="_blank" class="group p-8 bg-white/5 rounded-3xl border border-white/5 hover:border-orange-500/30 hover:bg-white/[0.07] hover:shadow-2xl hover:shadow-orange-500/10 transition-all duration-300 relative">
                             <div class="w-12 h-12 bg-orange-500/10 text-orange-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-orange-500 group-hover:text-white transition-all duration-500">
@@ -435,9 +435,9 @@
                             </div>
                             <h3 class="text-xl font-bold text-white mb-2">PDF to JPG</h3>
                             <p class="text-sm text-gray-400 leading-relaxed mb-6">Convert your new page layouts into high-resolution images.</p>
-                            <span class="text-xs font-bold uppercase tracking-widest text-orange-500 opacity-50 group-hover:opacity-100 transition-opacity">Launch Tool →</span>
+                            <span class="text-xs font-bold uppercase tracking-widest text-orange-500 opacity-80 group-hover:opacity-100 transition-opacity">Launch Tool →</span>
                         </a>
-                        <a href="add-margin-to-pdf.html" target="_blank" class="group p-8 bg-white/5 rounded-3xl border border-white/5 hover:border-blue-500/30 hover:bg-white/[0.07] hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-300 relative">
+                        <a href="add-margin.html" target="_blank" class="group p-8 bg-white/5 rounded-3xl border border-white/5 hover:border-blue-500/30 hover:bg-white/[0.07] hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-300 relative">
                             <div class="w-12 h-12 bg-blue-500/10 text-blue-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-blue-500 group-hover:text-white transition-all duration-500">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"></path>
@@ -445,7 +445,7 @@
                             </div>
                             <h3 class="text-xl font-bold text-white mb-2">Add Margin</h3>
                             <p class="text-sm text-gray-400 leading-relaxed mb-6">Expand page borders to make space for printing and binding.</p>
-                            <span class="text-xs font-bold uppercase tracking-widest text-blue-500 opacity-50 group-hover:opacity-100 transition-opacity">Launch Tool →</span>
+                            <span class="text-xs font-bold uppercase tracking-widest text-blue-500 opacity-80 group-hover:opacity-100 transition-opacity">Launch Tool →</span>
                         </a>
                     </div>
                 </div>
@@ -457,7 +457,7 @@
                         <p class="text-gray-500 text-lg">Everything you need to know about our local page duplication engine.</p>
                     </div>
                     <div class="space-y-4">
-                        <div class="group border border-gray-100 rounded-2xl bg-white hover:border-primary/20 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
+                        <div class="group border border-gray-300 rounded-2xl bg-white hover:border-primary/40 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
                             <button class="faq-toggle w-full flex items-center justify-between p-6 cursor-pointer text-left group" aria-expanded="false" aria-controls="duplicate-faq-1">
                                 <span class="text-lg font-medium text-gray-800 group-hover:text-primary transition-colors">Is this tool free to use?</span>
                                 <div class="faq-icon-wrapper w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
@@ -470,7 +470,7 @@
                                 Yes, duplicating pages in your PDF is 100% free on MyToolKitPro. There are no limits on the number of files you can process, no registration required, and no watermarks added to your output.
                             </div>
                         </div>
-                        <div class="group border border-gray-100 rounded-2xl bg-white hover:border-primary/20 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
+                        <div class="group border border-gray-300 rounded-2xl bg-white hover:border-primary/40 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
                             <button class="faq-toggle w-full flex items-center justify-between p-6 cursor-pointer text-left group" aria-expanded="false" aria-controls="duplicate-faq-2">
                                 <span class="text-lg font-medium text-gray-800 group-hover:text-primary transition-colors">Are my files secure?</span>
                                 <div class="faq-icon-wrapper w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
@@ -483,7 +483,7 @@
                                 Absolutely. Your files are processed <strong>locally in your browser</strong>. This means your data never leaves your device and is never uploaded to a server, ensuring total privacy for sensitive documents.
                             </div>
                         </div>
-                        <div class="group border border-gray-100 rounded-2xl bg-white hover:border-primary/20 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
+                        <div class="group border border-gray-300 rounded-2xl bg-white hover:border-primary/40 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
                             <button class="faq-toggle w-full flex items-center justify-between p-6 cursor-pointer text-left group" aria-expanded="false" aria-controls="duplicate-faq-3">
                                 <span class="text-lg font-medium text-gray-800 group-hover:text-primary transition-colors">How many times can I copy a single page?</span>
                                 <div class="faq-icon-wrapper w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
@@ -496,7 +496,7 @@
                                 You can create as many copies as you need. Simply use the '+' button on the page thumbnail to increase the count for that specific page. The only practical limit is your browser's available memory.
                             </div>
                         </div>
-                        <div class="group border border-gray-100 rounded-2xl bg-white hover:border-primary/20 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
+                        <div class="group border border-gray-300 rounded-2xl bg-white hover:border-primary/40 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
                             <button class="faq-toggle w-full flex items-center justify-between p-6 cursor-pointer text-left group" aria-expanded="false" aria-controls="duplicate-faq-4">
                                 <span class="text-lg font-medium text-gray-800 group-hover:text-primary transition-colors">Can I reorder the pages after duplicating them?</span>
                                 <div class="faq-icon-wrapper w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
@@ -581,11 +581,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="border-t border-gray-800/80 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+                <div class="border-t border-gray-800/80 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm font-semibold">
                     <p class="text-gray-500">
                         &copy; <span id="year"></span> MyToolKitPro. All rights reserved.
                     </p>
-                    <p class="text-gray-600">Built with 💙 for the web.</p>
+                    <p class="text-gray-500">Built with 💙 for the web.</p>
                 </div>
             </div>
         </footer>
@@ -615,7 +615,7 @@
         <script src="../../assets/js/dist/main.min.js" defer></script>
         <script src="../../assets/js/vendor/pdf.min.js" defer></script>
         <script src="../../assets/js/vendor/pdf-lib.min.js" defer></script>
-        <script src="../../assets/js/dist/duplicate-pdf-pages.min.js" defer></script>
+        <script src="../../assets/js/dist/tools/pdf/duplicate-pdf-pages.min.js" defer></script>
         <script>
             document.addEventListener('DOMContentLoaded', () => {
                 document.addEventListener('click', (e) => {

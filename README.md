@@ -48,8 +48,8 @@ Built on reliable libraries such as PDF.js, pdf-lib, and jsPDF, the toolkit aims
 An ecosystem of high-performance, browser-native engines. Select a module to initialize processing.
 
 ### 📄 PDF Engines
-* **Add Margin** — Add custom white space for binding or annotations. `(/tools/pdf/add-margin-to-pdf.html)`
-* **Add Page Numbering** — Insert custom headers/footers with dynamic page counts. `(/tools/pdf/add-page-numbers-to-pdf.html)`
+* **Add Margin** — Add custom white space for binding or annotations. `(/tools/pdf/add-margin.html)`
+* **Add Page Numbering** — Insert custom headers/footers with dynamic page counts. `(/tools/pdf/add-page-numbers.html)`
 * **Add Watermark** — Stamp text or branding over PDF pages. `(/tools/pdf/add-watermark-to-pdf.html)`
 * **Compress PDF** — Reduce file size while maintaining document integrity. `(/tools/pdf/compress-pdf.html)`
 * **Delete Blank Pages** — Automatically purge empty pages from documents. `(/tools/pdf/delete-blank-pages-from-pdf.html)`
@@ -107,8 +107,8 @@ MyToolKitPro/
 ├── tools/
 │   ├── index.html          # Utility Hub: Global Engine Registry
 │   ├── pdf/
-│   │   ├── add-margin-to-pdf.html
-│   │   ├── add-page-numbers-to-pdf.html
+│   │   ├── add-margin.html
+│   │   ├── add-page-numbers.html
 │   │   ├── add-watermark-to-pdf.html
 │   │   ├── compress-pdf.html
 │   │   ├── delete-blank-pages-from-pdf.html
@@ -146,7 +146,7 @@ MyToolKitPro/
 │   └── js/
 │       ├── dist/           # Production: Minified Logic Engines (*.min.js)
 │       ├── src/            # Development: Raw Source Logic (*.js)
-│       └── vendor/         # Core: PDF.js, pdf-lib, jsPDF, JSZip
+│       └── vendor/         # Core: pdf, pdf-lib, pdf.worker jspdf.umd, jszip, sortable
 ```
 
 ## 🚀 Getting Started

@@ -184,54 +184,54 @@
         </script>
     </head>
     <body class="bg-bgsoft text-darktext">
-        <header class="w-full bg-white border-b border-gray-100 relative z-90">
+        <header class="w-full bg-[#0B0F1A] border-b border-white/5 shadow-2xl relative z-90">
             <div class="max-w-7xl mx-auto h-16 md:h-20 flex items-center justify-between px-4 md:px-8">
                 <a href="index.html" class="flex items-center gap-2 shrink-0">
                     <img src="assets/img/favicon.svg" alt="MyToolKitPro" class="w-8 h-8 md:w-9 md:h-9" />
-                    <span class="text-lg md:text-xl font-bold tracking-tight text-gray-900">
+                    <span class="text-lg md:text-xl font-bold tracking-tight text-slate-100">
                         MyToolKit<span class="text-primary">Pro</span>
                     </span>
                 </a>
                 <nav class="hidden md:flex items-center gap-1">
-                    <a href="index.html" class="px-4 py-2 text-base font-semibold text-primary bg-primary/5 rounded-full">Home</a>
-                    <a href="tools/index.html" class="px-4 py-2 text-base font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-50 rounded-full transition-all">Tools</a>
-                    <a href="articles/index.html" class="px-4 py-2 text-base font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-50 rounded-full transition-all">Articles</a>
+                    <a href="index.html" class="px-4 py-2 text-base font-semibold text-white bg-white/5 rounded-full">Home</a>
+                    <a href="tools/index.html" class="px-4 py-2 text-base font-medium text-slate-400 hover:text-white hover:bg-white/5 rounded-full transition-all">Tools</a>
+                    <a href="articles/index.html" class="px-4 py-2 text-base font-medium text-slate-400 hover:text-white hover:bg-white/5 rounded-full transition-all">Articles</a>
                 </nav>
                 <div class="flex items-center gap-1 md:gap-2">
-                    <button id="open-search-btn" class="flex items-center gap-2 px-3 py-2 md:pl-4 md:pr-3 bg-gray-100 border border-gray-300 rounded-full text-gray-400 hover:border-primary/40 hover:bg-white hover:text-primary transition-all group cursor-pointer">
+                     <button id="open-search-btn" aria-label="Open search" class="flex items-center gap-2 px-3 py-2 md:pl-4 md:pr-3 bg-[#161B26] border border-white/10 rounded-full text-slate-400 hover:border-white/50 hover:bg-[#1C2331] hover:text-slate-200 transition-all group cursor-pointer">
                         <span class="hidden md:block text-sm font-medium">Search tools...</span>
-                        <span id="search-shortcut" class="hidden lg:block text-[10px] font-bold py-0.5 px-1.5 border rounded bg-white group-hover:text-primary ml-1 uppercase">Ctrl + K</span>
+                        <span id="search-shortcut" class="hidden lg:block text-[10px] font-bold py-0.5 px-1.5 border border-white/10 rounded bg-[#0B0F1A] group-hover:text-white group-hover:border-white/40 ml-1 uppercase">Ctrl + K</span>
                         <svg class="w-4 h-4 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                         </svg>
                     </button>
-                    <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-600 active:bg-gray-50 rounded-lg">
+                    <button id="mobile-menu-btn" aria-label="Open mobile menu" class="md:hidden p-2 text-slate-400 active:bg-white/5 rounded-lg">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" d="M4 8h16M8 16h12"></path></svg>
                     </button>
                 </div>
             </div>
-            <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white border-b border-gray-100 shadow-xl z-60 md:hidden">
+            <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-[#0B0F1A] border-b border-white/5 shadow-2xl z-60 md:hidden">
                 <nav class="flex flex-col p-3">
                     <a href="index.html" class="text-sm font-semibold text-primary py-3 px-4 bg-primary/5 rounded-lg">Home</a>
-                    <a href="tools/index.html" class="text-sm font-medium text-gray-600 py-3 px-4 hover:bg-gray-50 rounded-lg">Tools</a>
-                    <a href="articles/index.html" class="text-sm font-medium text-gray-600 py-3 px-4 hover:bg-gray-50 rounded-lg">Articles</a>
+                    <a href="tools/index.html" class="text-sm font-medium text-slate-300 py-3 px-4 hover:bg-white/5 rounded-lg">Tools</a>
+                    <a href="articles/index.html" class="text-sm font-medium text-slate-300 py-3 px-4 hover:bg-white/5 rounded-lg">Articles</a>
                 </nav>
             </div>
         </header>
         <main>
-            <section class="relative bg-[#0B0F1A] pt-16 pb-16 md:pt-20 md:pb-20 px-6 md:px-20 overflow-hidden border-b border-white/5">
+            <section class="relative bg-[#0B0F1A] pt-20 pb-20 md:pt-32 md:pb-32 px-6 md:px-20 overflow-hidden border-b border-white/5">
                 <div class="absolute top-0 left-1/2 -translate-x-1/2 w-250 h-150 bg-primary/5 rounded-full blur-[160px] -mt-48 opacity-50"></div>
                 <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-200 h-100 bg-indigo-500/5 rounded-full blur-[120px] -mb-32 opacity-30"></div>
                 <div class="max-w-7xl mx-auto relative z-10">
                     <div class="flex flex-col items-center text-center">                        
-                        <h1 class="text-4xl md:text-6xl lg:text-[5rem] font-black text-white mb-10 tracking-tightest uppercase leading-[1.1] max-w-5xl">
+                        <h1 class="text-4xl md:text-6xl lg:text-[5.5rem] font-black text-white mb-10 tracking-tightest uppercase leading-[0.95] max-w-5xl">
                             MyToolKit<span class="text-primary font-medium tracking-tight">Pro:</span> <br class="hidden md:block"> 
                             <span class="text-white/90">Your Free Suite of</span> <br class="hidden md:block"> 
-                            <span class="text-primary italic font-medium lowercase tracking-tight">Digital Utility Tools.</span>
+                            <span class="text-primary italic font-medium lowercase tracking-tight lg:text-[6rem]">Digital Utility Tools.</span>
                         </h1>
-                        <p class="text-gray-400 text-lg md:text-xl leading-relaxed max-w-2xl mb-14 font-light">
+                        <p class="text-gray-400 text-lg md:text-xl lg:text-2xl leading-relaxed max-w-3xl font-light tracking-wide">
                             The professional standard for <span class="text-white font-medium italic">high-performance workflows</span>. 
-                            Experience <strong>MyToolKitPro</strong> - a comprehensive suite of powerful online utilities built for speed, absolute privacy, and seamless execution.
+                            Experience <span class="text-white font-bold">MyToolKitPro</span> — a comprehensive suite of powerful online utilities built for speed, absolute privacy, and seamless execution.
                         </p>
                     </div>
                 </div>
@@ -377,7 +377,7 @@
                         <p class="text-gray-500 text-lg">Everything you need to know about the MyToolKitPro ecosystem.</p>
                     </div>
                     <div class="space-y-4">
-                        <div class="group border border-gray-100 rounded-2xl bg-white hover:border-primary/20 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
+                        <div class="group border border-gray-300 rounded-2xl bg-white hover:border-primary/40 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
                             <button class="faq-toggle w-full flex items-center justify-between p-6 cursor-pointer text-left group" aria-expanded="false" aria-controls="gen-faq-1">
                                 <span class="text-lg font-medium text-gray-800 group-hover:text-primary transition-colors">Are MyToolKitPro tools free to use?</span>
                                 <div class="faq-icon-wrapper w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
@@ -390,7 +390,7 @@
                                 Yes. All PDF and image tools on MyToolKitPro are 100% free. We do not have hidden subscriptions, credit systems, or watermarks on your output files.
                             </div>
                         </div>
-                        <div class="group border border-gray-100 rounded-2xl bg-white hover:border-primary/20 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
+                        <div class="group border border-gray-300 rounded-2xl bg-white hover:border-primary/40 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
                             <button class="faq-toggle w-full flex items-center justify-between p-6 cursor-pointer text-left group" aria-expanded="false" aria-controls="gen-faq-2">
                                 <span class="text-lg font-medium text-gray-800 group-hover:text-primary transition-colors">Are my files safe and private?</span>
                                 <div class="faq-icon-wrapper w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
@@ -403,7 +403,7 @@
                                 Absolutely. We use <strong>Client-Side Processing</strong>. This means your files are processed locally in your browser and never touch our servers. Your privacy is guaranteed by architecture.
                             </div>
                         </div>
-                        <div class="group border border-gray-100 rounded-2xl bg-white hover:border-primary/20 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
+                        <div class="group border border-gray-300 rounded-2xl bg-white hover:border-primary/40 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
                             <button class="faq-toggle w-full flex items-center justify-between p-6 cursor-pointer text-left group" aria-expanded="false" aria-controls="gen-faq-3">
                                 <span class="text-lg font-medium text-gray-800 group-hover:text-primary transition-colors">Do I need to create an account?</span>
                                 <div class="faq-icon-wrapper w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
@@ -416,7 +416,7 @@
                                 No account, login, or email is required. We believe in providing instant utility without the friction of a sign-up process.
                             </div>
                         </div>
-                        <div class="group border border-gray-100 rounded-2xl bg-white hover:border-primary/20 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
+                        <div class="group border border-gray-300 rounded-2xl bg-white hover:border-primary/40 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
                             <button class="faq-toggle w-full flex items-center justify-between p-6 cursor-pointer text-left group" aria-expanded="false" aria-controls="gen-faq-4">
                                 <span class="text-lg font-medium text-gray-800 group-hover:text-primary transition-colors">What file formats are supported?</span>
                                 <div class="faq-icon-wrapper w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
@@ -429,7 +429,7 @@
                                 Currently, we support all major image formats (JPG, PNG, WebP, BMP) and PDF files. We are constantly expanding our toolkit to include more document and media types.
                             </div>
                         </div>
-                        <div class="group border border-gray-100 rounded-2xl bg-white hover:border-primary/20 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
+                        <div class="group border border-gray-300 rounded-2xl bg-white hover:border-primary/40 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
                             <button class="faq-toggle w-full flex items-center justify-between p-6 cursor-pointer text-left group" aria-expanded="false" aria-controls="gen-faq-5">
                                 <span class="text-lg font-medium text-gray-800 group-hover:text-primary transition-colors">Does this work on all browsers?</span>
                                 <div class="faq-icon-wrapper w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
@@ -530,11 +530,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="border-t border-gray-800/80 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+                <div class="border-t border-gray-800/80 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm font-semibold">
                     <p class="text-gray-500">
                         &copy; <span id="year"></span> MyToolKitPro. All rights reserved.
                     </p>
-                    <p class="text-gray-600">Built with 💙 for the web.</p>
+                    <p class="text-gray-500">Built with 💙 for the web.</p>
                 </div>
             </div>
         </footer>

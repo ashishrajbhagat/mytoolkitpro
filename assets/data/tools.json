@@ -2,7 +2,7 @@
   {
     "name": "Add Margin to PDF",
     "category": "PDF",
-    "url": "tools/pdf/add-margin-to-pdf.html",
+    "url": "tools/pdf/add-margin.html",
     "desc": "Add white space or borders to PDF pages",
     "keywords": ["border", "padding", "white space", "layout", "trim"],
     "icon": "📄"
@@ -10,7 +10,7 @@
   {
     "name": "Add Page Numbers",
     "category": "PDF",
-    "url": "tools/pdf/add-page-numbers-to-pdf.html",
+    "url": "tools/pdf/add-page-numbers.html",
     "desc": "Insert page numbering at the top or bottom",
     "keywords": ["pagination", "footer", "header", "index", "numbers"],
     "icon": "🔢"

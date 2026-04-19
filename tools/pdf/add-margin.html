@@ -1,0 +1,897 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="referrer" content="strict-origin-when-cross-origin" />
+        <meta name="theme-color" content="#B11226" />
+        <meta name="msapplication-TileColor" content="#B11226" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+        <title>Add Margin to PDF - Precise Gutter & Print Layout Engine | MyToolKitPro</title>
+        <meta name="application-name" content="MyToolKitPro">
+        <meta name="apple-mobile-web-app-title" content="MyToolKitPro">
+        <meta name="description" content="Add precise custom margins to PDF pages for free. Features mirrored gutter margins for book binding, scale-to-fit options, and batch page processing. 100% private, browser-native execution." />
+        <meta name="keywords" content="add margin to pdf, pdf gutter margin, mirrored margins pdf, print ready pdf, secure pdf layout, MyToolKitPro" />
+        <meta name="author" content="MyToolKitPro" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://mytoolkitpro.com/tools/pdf/add-margin.html" />
+
+        <link rel="icon" href="../../assets/img/favicon.ico" sizes="any">
+        <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon-32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/favicon-16.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="../../assets/img/favicon-192.png">
+        <link rel="apple-touch-icon" href="../../assets/img/apple-touch-icon.png" />
+        <link rel="manifest" href="../../assets/manifest.json" />
+
+        <link rel="preload" href="../../assets/css/dist/output.css" as="style">
+        <link rel="preconnect" href="https://www.googletagmanager.com">
+
+        <link rel="stylesheet" href="../../assets/css/dist/output.css" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Add Margin to PDF - Professional Layout & Gutter Controls" />
+        <meta property="og:description" content="Adjust PDF margins locally in your browser. Perfect for binding, printing, and annotations with zero quality loss." />
+        <meta property="og:url" content="https://mytoolkitpro.com/tools/pdf/add-margin.html" />
+        <meta property="og:site_name" content="MyToolKitPro" />
+        <meta property="og:image" content="https://mytoolkitpro.com/assets/img/og-image.png" />
+        <meta property="og:image:alt" content="MyToolKitPro PDF Margin Tool" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@mytoolkitpro">
+        <meta name="twitter:title" content="Add Margin to PDF | MyToolKitPro" />
+        <meta name="twitter:description" content="Precise, browser-native PDF margin adjustments for print and binding." />
+        <meta name="twitter:image" content="https://mytoolkitpro.com/assets/img/og-image.png" />
+
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "SoftwareApplication",
+                    "@id": "https://mytoolkitpro.com/tools/pdf/add-margin.html#software",
+                    "name": "Add Margin to PDF Engine",
+                    "description": "A precision browser-native utility to adjust PDF margins, add gutters for binding, and scale content for print-ready documents.",
+                    "url": "https://mytoolkitpro.com/tools/pdf/add-margin.html",
+                    "applicationCategory": "UtilityApplication",
+                    "operatingSystem": "Any",
+                    "offers": {
+                        "@type": "Offer",
+                        "price": "0",
+                        "priceCurrency": "USD"
+                    },
+                    "publisher": { "@id": "https://mytoolkitpro.com/#organization" },
+                    "featureList": [
+                        "0.01mm Precision Controls",
+                        "Mirrored Gutter Margins",
+                        "Standard Print Presets (Kindle, Lulu)",
+                        "Selective Page Application",
+                        "Zero Server Upload Privacy"
+                    ]
+                },
+                {
+                    "@type": "BreadcrumbList",
+                    "@id": "https://mytoolkitpro.com/tools/pdf/add-margin.html#breadcrumb",
+                    "itemListElement": [
+                        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mytoolkitpro.com/" },
+                        { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://mytoolkitpro.com/tools/" },
+                        { "@type": "ListItem", "position": 3, "name": "PDF Tools", "item": "https://mytoolkitpro.com/tools/pdf/" },
+                        { "@type": "ListItem", "position": 4, "name": "Add Margin", "item": "https://mytoolkitpro.com/tools/pdf/add-margin.html" }
+                    ]
+                },
+                {
+                    "@type": "FAQPage",
+                    "@id": "https://mytoolkitpro.com/tools/pdf/add-margin.html#faq",
+                    "mainEntity": [
+                        {
+                            "@type": "Question",
+                            "name": "Is this tool free to use?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Yes, our Add Margin to PDF tool is 100% free. There are no watermarks, usage limits, or hidden fees."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Are my documents safe?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Absolutely. All processing happens locally in your browser. Your files are never uploaded to a server, which guarantees 100% privacy and security for your sensitive documents."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "What are 'mirrored margins' or a 'gutter'?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Mirrored margins (also called a gutter) are for double-sided printing, like books. The inside margin is wider to prevent content from being cut or hidden in the binding."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Can I apply margins to specific pages only?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Yes. Apply margins to all pages, only odd/even pages, or just the first page. Batch adjustments let you set different margins for multiple pages in one click."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Will this change the quality of my PDF?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "No. The original content of your PDF is preserved at its original resolution. The tool simply places the existing page content onto a new, larger page canvas, so there is no degradation of text or images."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Can I scale or resize my content?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Yes. You can scale down content or expand the page size without distorting text, images, or layout—perfect for professional printing."
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+        </script>
+    </head>
+    <body class="bg-bgsoft text-darktext">
+        <header class="w-full bg-[#0B0F1A] border-b border-white/5 shadow-lg relative z-90">
+            <div class="max-w-7xl mx-auto h-16 md:h-20 flex items-center justify-between px-4 md:px-8">
+                <a href="../../index.html" class="flex items-center gap-2 shrink-0">
+                    <img src="../../assets/img/favicon.svg" alt="MyToolKitPro" class="w-8 h-8 md:w-9 md:h-9" />
+                    <span class="text-lg md:text-xl font-bold tracking-tight text-slate-100">
+                        MyToolKit<span class="text-primary">Pro</span>
+                    </span>
+                </a>
+                <nav class="hidden md:flex items-center gap-1">
+                    <a href="../../index.html" class="px-4 py-2 text-base font-medium text-slate-400 hover:text-white hover:bg-white/5 rounded-full transition-all">Home</a>
+                    <a href="../../tools/index.html" class="px-4 py-2 text-base font-medium text-slate-400 hover:text-white hover:bg-white/5 rounded-full transition-all">Tools</a>
+                    <a href="../../articles/index.html" class="px-4 py-2 text-base font-medium text-slate-400 hover:text-white hover:bg-white/5 rounded-full transition-all">Articles</a>
+                </nav>
+                <div class="flex items-center gap-1 md:gap-2">
+                     <button id="open-search-btn" aria-label="Open search" class="flex items-center gap-2 px-3 py-2 md:pl-4 md:pr-3 bg-[#161B26] border border-white/10 rounded-full text-slate-400 hover:border-white/50 hover:bg-[#1C2331] hover:text-slate-200 transition-all group cursor-pointer">
+                        <span class="hidden md:block text-sm font-medium">Search tools...</span>
+                        <span id="search-shortcut" class="hidden lg:block text-[10px] font-bold py-0.5 px-1.5 border border-white/10 rounded bg-[#0B0F1A] group-hover:text-white group-hover:border-white/40 ml-1 uppercase">Ctrl + K</span>
+                        <svg class="w-4 h-4 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </button>
+                    <button id="mobile-menu-btn" aria-label="Open mobile menu" class="md:hidden p-2 text-slate-400 active:bg-white/5 rounded-lg">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" d="M4 8h16M8 16h12"></path></svg>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-[#0B0F1A] border-b border-white/5 shadow-2xl z-60 md:hidden">
+                <nav class="flex flex-col p-3">
+                    <a href="../../index.html" class="text-sm font-medium text-slate-300 py-3 px-4 hover:bg-white/5 rounded-lg">Home</a>
+                    <a href="../../tools/index.html" class="text-sm font-medium text-slate-300 py-3 px-4 hover:bg-white/5 rounded-lg">Tools</a>
+                    <a href="../../articles/index.html" class="text-sm font-medium text-slate-300 py-3 px-4 hover:bg-white/5 rounded-lg">Articles</a>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section class="bg-[#F8FAFC] py-4 md:py-6 px-0 md:px-8 font-sans text-[#0B0F1A]">
+                <div class="w-full max-w-7xl mx-auto">
+                    <div class="text-center mb-6">
+                        <h1 class="text-4xl md:text-6xl font-black text-[#0B0F1A] mb-4 uppercase tracking-tighter leading-none">
+                            Add <span class="text-primary italic font-medium lowercase tracking-tight">margin</span> to PDF
+                        </h1>
+                        <p class="text-slate-700 text-lg max-w-2xl mx-auto">
+                            Expand your document borders. Your files stay local and secure.
+                        </p>
+                    </div>
+                    <div class="bg-white rounded-3xl border border-slate-300 shadow-xl overflow-hidden">
+                        <div class="p-4 md:p-8">                             
+                            <div id="upload-area" class="border-2 border-dashed border-slate-400 bg-slate-500/10 rounded-3xl p-6 md:p-12 hover:border-primary/80 hover:bg-primary/10 transition-all duration-500 cursor-pointer group text-center" onclick="document.getElementById('pdfFile').click()">
+                                <div class="w-16 h-16 md:w-24 md:h-24 bg-primary/10 text-primary rounded-3xl flex items-center justify-center mx-auto mb-8 group-hover:rotate-6 transition-transform duration-500">
+                                    <svg class="w-8 h-8 md:w-12 md:h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                    </svg>
+                                </div>
+                                <h2 class="text-2xl font-bold text-slate-900 mb-3 tracking-tight">Drop PDF here</h2>
+                                <p class="text-slate-700 mb-8 max-w-xs mx-auto">Upload a PDF file to add custom margins and adjust page sizing.</p>
+                                <input type="file" id="pdfFile" accept="application/pdf" class="hidden" />
+                                <button class="bg-primary text-white px-10 py-4 rounded-xl font-bold uppercase tracking-widest text-sm hover:scale-105 transition-all shadow-xl shadow-primary/20 cursor-pointer">
+                                    Select PDF
+                                </button>
+                                <p id="upload-error-message" class="hidden mt-6 text-red-500 font-medium bg-red-100 p-3 rounded-lg border border-red-400"></p>
+                            </div>
+                            <div id="file-preview-area" class="hidden animate-in fade-in slide-in-from-bottom-4 duration-500">
+                                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                                    <div class="lg:col-span-5 xl:col-span-4 order-2 lg:order-1 space-y-4 overflow-y-auto pr-2 custom-scrollbar">
+                                        <div class="bg-slate-50 rounded-2xl p-6 border border-slate-300 border-l-4 border-l-primary shadow-sm">
+                                            <h4 class="text-primary font-bold uppercase tracking-[0.2em] text-sm mb-4">File Details</h4>
+                                            <div class="flex justify-between items-center gap-4">
+                                                <div class="min-w-0">
+                                                    <p id="filename-display" class="text-slate-600 text-sm font-semibold truncate max-w-50">--</p>
+                                                </div>
+                                                <div class="shrink-0 text-right">
+                                                    <p id="filesize-display" class="text-slate-600 text-sm font-semibold uppercase tracking-tighter">0 MB</p>
+                                                </div>
+                                            </div>
+                                            <p id="warning-message" class="hidden text-sm font-bold text-amber-700 bg-amber-100 p-2.5 mt-3 rounded-xl border border-amber-400"></p>
+                                        </div>
+                                        <div class="accordion-item bg-slate-50 rounded-2xl border border-slate-300 border-l-4 border-l-primary shadow-sm overflow-hidden">
+                                            <button class="accordion-header w-full flex justify-between items-center p-6 text-primary/90 hover:text-primary transition-colors outline-none cursor-pointer group" aria-expanded="false" aria-controls="page-layout-content" id="page-layout-header">
+                                                <h4 class="font-bold uppercase tracking-[0.2em] text-sm">Page Layout</h4>
+                                                <svg class="w-4 h-4 text-primary/90 group-hover:text-primary transition-all duration-300 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
+                                                </svg>
+                                            </button>
+                                            <div class="accordion-content p-6 pt-0 flex flex-col gap-6">
+                                                <div class="flex flex-col gap-2">
+                                                    <label class="block text-slate-700 text-xs font-bold uppercase tracking-widest">Measurement Unit</label>
+                                                    <select id="unit-select" class="w-full bg-slate-100 border border-slate-300 rounded-xl p-3 pr-10 text-slate-900 text-sm font-medium outline-none focus:border-primary transition-all cursor-pointer appearance-none bg-[url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%2364748b%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22m6%209%206%206%206-6%22%2F%3E%3C%2Fsvg%3E')] bg-[length:1.25rem] bg-[right_0.75rem_center] bg-no-repeat">
+                                                        <option value="mm">Millimeters (mm)</option>
+                                                        <option value="in">Inches (in)</option>
+                                                        <option value="px">Pixels (px)</option>
+                                                        <option value="cm">Centimeters (cm)</option>
+                                                    </select>
+                                                </div>
+                                                <div class="flex flex-col gap-4">
+                                                    <div class="flex justify-between items-center gap-2">
+                                                        <label class="block text-slate-700 text-xs font-bold uppercase tracking-widest">Margin Size</label>
+                                                        <label class="flex items-center gap-2 cursor-pointer group">
+                                                            <input type="checkbox" id="sync-margins" checked class="w-4 h-4 rounded border-slate-300 text-primary focus:ring-primary accent-primary cursor-pointer">
+                                                            <span class="text-xs text-slate-500 group-hover:text-slate-900 uppercase font-bold transition-colors">Same for all sides?</span>
+                                                        </label>
+                                                    </div>
+                                                    <div id="all-sides-container" class="animate-in fade-in duration-300">
+                                                        <div class="flex flex-col gap-1.5">
+                                                            <span class="text-xs text-slate-500 uppercase font-bold tracking-tighter">All Sides</span>
+                                                            <input type="number" id="margin-all" value="10" min="0" max="100" step="1" oninput="this.value = Math.max(0, Math.min(100, this.value))" class="w-full bg-slate-100 border border-slate-300 rounded-lg p-2.5 text-slate-700 text-sm font-medium outline-none focus:border-primary/50" />
+                                                        </div>
+                                                    </div>
+                                                    <div id="individual-margins-container" class="hidden flex flex-col gap-4 slide-in-from-top-2 duration-300">
+                                                        <div class="grid grid-cols-2 gap-4 animate-in">
+                                                            <div class="flex flex-col gap-1.5">
+                                                                <span class="text-xs text-slate-500 uppercase font-bold tracking-tighter">Top</span>
+                                                                <input type="number" id="margin-top" value="10" min="0" max="100" step="1" oninput="this.value = Math.max(0, Math.min(100, this.value))" class="w-full bg-slate-100 border border-slate-300 rounded-lg p-2.5 text-slate-900 text-sm font-medium outline-none focus:border-primary/50" />
+                                                            </div>
+                                                            <div class="flex flex-col gap-1.5">
+                                                                <span class="text-xs text-slate-500 uppercase font-bold tracking-tighter">Bottom</span>
+                                                                <input type="number" id="margin-bottom" value="10" min="0" max="100" step="1" oninput="this.value = Math.max(0, Math.min(100, this.value))" class="w-full bg-slate-100 border border-slate-300 rounded-lg p-2.5 text-slate-900 text-sm font-medium outline-none focus:border-primary/50" />
+                                                            </div>
+                                                            <div class="flex flex-col gap-1.5">
+                                                                <span class="text-xs text-slate-500 uppercase font-bold tracking-tighter">Left</span>
+                                                                <input type="number" id="margin-left" value="10" min="0" max="100" step="1" oninput="this.value = Math.max(0, Math.min(100, this.value))" class="w-full bg-slate-100 border border-slate-300 rounded-lg p-2.5 text-slate-900 text-sm font-medium outline-none focus:border-primary/50" />
+                                                            </div>
+                                                            <div class="flex flex-col gap-1.5">
+                                                                <span class="text-xs text-slate-500 uppercase font-bold tracking-tighter">Right</span>
+                                                                <input type="number" id="margin-right" value="10" min="0" max="100" step="1" oninput="this.value = Math.max(0, Math.min(100, this.value))" class="w-full bg-slate-100 border border-slate-300 rounded-lg p-2.5 text-slate-900 text-sm font-medium outline-none focus:border-primary/50" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="flex items-center gap-2">
+                                                            <label class="flex items-center gap-2 cursor-pointer group">
+                                                                <input type="checkbox" id="different-odd-even" class="w-3.5 h-3.5 accent-primary cursor-pointer">
+                                                                <span class="text-xs text-slate-500 group-hover:text-slate-900 uppercase font-bold transition-colors tracking-tight">Different Odd/Even Margins?</span>
+                                                            </label>
+                                                            <div class="group relative cursor-help flex items-center">
+                                                                <svg class="w-3 h-3 text-gray-600 hover:text-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                                                <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:block w-48 p-2.5 bg-[#1A1F2E] border border-white/10 rounded-xl text-xs text-gray-300 leading-relaxed shadow-2xl z-50 animate-in fade-in zoom-in-95 duration-200">
+                                                                    Useful for book printing. Automatically swaps left/right margins for odd/even pages.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="pt-6 border-t border-slate-300 flex flex-col gap-3">
+                                                    <div class="flex items-center gap-2">
+                                                        <label class="block text-slate-500 text-xs font-bold uppercase tracking-widest">Apply To</label>
+                                                        <div class="group relative cursor-help flex items-center">
+                                                            <svg class="w-3.5 h-3.5 text-gray-600 hover:text-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                                            <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:block w-44 p-2.5 bg-[#1A1F2E] border border-white/10 rounded-xl text-xs text-gray-300 shadow-2xl z-50 animate-in fade-in zoom-in-95 duration-200">
+                                                                <div class="font-bold text-white mb-1">How it works</div>
+                                                                <ul>
+                                                                    <li>Leave empty = <strong>all pages</strong></li>
+                                                                    <li>Single or range: <strong>1</strong>, <strong>3-5</strong></li>
+                                                                    <li>Use keywords: <strong>odd</strong>, <strong>even</strong></li>
+                                                                    <li>Use "end": <strong>5-end</strong></li>
+                                                                    <li>Combine: <strong>1,3-5,odd,10-end</strong></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <input type="text" id="custom-range" placeholder="e.g. 1, 3, 5-10 (Optional)" class="w-full bg-slate-100 border border-slate-300 rounded-lg p-2.5 text-slate-900 text-sm font-medium outline-none focus:border-primary/50 transition-all" />
+                                                    <p id="custom-range-error" class="hidden text-xs text-red-500 font-medium">Invalid format. Check allowed patterns.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item bg-slate-50 rounded-2xl border border-slate-300 border-l-4 border-l-primary shadow-sm overflow-hidden">
+                                            <button class="accordion-header w-full flex justify-between items-center p-6 text-primary/90 hover:text-primary transition-colors outline-none cursor-pointer group" aria-expanded="false" aria-controls="page-style-content" id="page-style-header">
+                                                <h4 class="font-bold uppercase tracking-[0.2em] text-sm">Page Style</h4>
+                                                <svg class="w-4 h-4 text-slate-400 group-hover:text-primary transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
+                                                </svg>
+                                            </button>
+                                            <div class="accordion-content p-6 pt-0 hidden flex flex-col gap-6">
+                                                <div class="flex flex-col gap-2">
+                                                    <label class="block text-slate-700 text-xs font-bold uppercase tracking-widest">Background Color</label>
+                                                    <div class="relative flex items-center gap-3 bg-slate-100 border border-slate-300 rounded-xl p-2 transition-all focus:border-primary cursor-pointer overflow-hidden">
+                                                        <input type="color" id="bg-color" value="#ffffff" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10" />
+                                                        <div id="color-preview-circle" class="w-8 h-8 rounded-lg border border-slate-300 shrink-0" style="background-color: #ffffff;"></div>
+                                                        <span id="bg-hex" class="text-slate-900 text-sm font-mono font-bold uppercase select-none relative z-0">#FFFFFF</span>
+                                                        <svg class="w-4 h-4 ml-auto text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div class="flex flex-col gap-2">
+                                                    <label class="block text-slate-700 text-xs font-bold uppercase tracking-widest">Page Size Mode</label>
+                                                    <select id="page-size" class="w-full bg-slate-100 border border-slate-300 rounded-lg p-2.5 pr-10 text-slate-900 text-sm font-medium outline-none focus:border-primary cursor-pointer">
+                                                        <option value="original">Original + Margins</option>
+                                                        <option value="a4">Force A4</option>
+                                                        <option value="letter">Force US Letter</option>
+                                                        <option value="legal">Force US Legal</option>
+                                                    </select>
+                                                </div>
+                                                <div class="flex flex-col gap-2">
+                                                    <label class="block text-slate-700 text-xs font-bold uppercase tracking-widest">Orientation</label>
+                                                    <div id="orientation-container" class="grid grid-cols-2 gap-3">
+                                                        <button type="button" data-value="p" class="orientation-btn py-3 bg-primary text-white rounded-xl text-xs font-bold border border-primary cursor-pointer transition-all uppercase tracking-widest">Portrait</button>
+                                                        <button type="button" data-value="l" class="orientation-btn py-3 bg-slate-100 text-slate-500 rounded-xl text-xs font-bold border border-slate-300 cursor-pointer transition-all uppercase tracking-widest">Landscape</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="pt-6 space-y-4">
+                                            <button id="process-pdf-btn" class="w-full group bg-primary text-white py-5 rounded-2xl font-bold uppercase tracking-[0.15em] text-sm transition-all duration-200 cursor-pointer hover:brightness-110 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] shadow-lg shadow-primary/20">                                                
+                                                <span class="flex items-center justify-center gap-2">
+                                                    Apply & Generate
+                                                    <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                            <button id="remove-file-btn" class="w-full py-4 rounded-2xl font-bold uppercase tracking-widest text-sm text-slate-500 border border-transparent hover:text-primary hover:bg-primary/10 transition-all duration-200 cursor-pointer text-center">
+                                                Remove File
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="lg:col-span-7 xl:col-span-8 order-1 lg:order-2">
+                                        <div class="bg-slate-100 rounded-3xl border border-slate-300 p-6 pt-16 relative flex flex-col items-center h-auto min-h-87.5 md:min-h-162.5">
+                                            <div class="absolute top-6 left-6 z-10 flex items-center gap-2">
+                                                <span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+                                                <span class="text-primary font-bold uppercase tracking-[0.2em] text-xs">Document Preview</span>
+                                            </div>
+                                            <div id="preview-loader" class="absolute inset-0 flex flex-col items-center justify-center bg-slate-900/80 z-30 rounded-3xl hidden">
+                                                <div class="w-12 h-12 border-4 border-primary/30 border-t-primary rounded-full animate-spin mb-4"></div>
+                                                <p class="text-xs text-white/90 uppercase font-bold tracking-widest">Generating preview...</p>
+                                            </div>
+                                            <div id="pdf-viewer" class="w-full h-full max-h-[55vh] md:max-h-[75vh] overflow-y-auto flex flex-col items-center scroll-smooth pr-0 [&::-webkit-scrollbar]:hidden [scrollbar-width:none] [-ms-overflow-style:none]"></div>
+                                            <div class="absolute inset-x-4 md:inset-x-8 top-1/2 -translate-y-1/2 flex justify-between pointer-events-none z-20">
+                                                <div class="w-12 h-12 md:w-14 md:h-14 flex items-center justify-start">
+                                                    <button id="prev-page-btn" class="p-3 md:p-4 rounded-2xl bg-white backdrop-blur-md text-primary border border-slate-300 transition-all duration-300 hover:bg-primary hover:text-white hover:scale-110 hover:border-primary shadow-lg shadow-slate-200/50 pointer-events-auto hidden cursor-pointer">
+                                                        <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <div class="w-12 h-12 md:w-14 md:h-14 flex items-center justify-end">
+                                                    <button id="next-page-btn" class="p-3 md:p-4 rounded-2xl bg-white backdrop-blur-md text-primary border border-slate-300 transition-all duration-300 hover:bg-primary hover:text-white hover:scale-110 hover:border-primary shadow-lg shadow-slate-200/50 pointer-events-auto hidden cursor-pointer">
+                                                        <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="mt-auto pt-6">
+                                                <div class="px-6 py-2 bg-white backdrop-blur-md rounded-2xl border border-slate-300 shadow-sm shadow-slate-200/50 text-slate-500 text-xs font-bold uppercase tracking-[0.2em] transition-all">
+                                                    Page <span id="current-page-num" class="text-slate-900 font-black mx-0.5">1</span> of <span id="preview-total-pages" class="text-slate-900 font-black mx-0.5">--</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="processing-state" class="hidden py-20 text-center">
+                                <div class="w-20 h-20 border-4 border-primary/20 border-t-primary rounded-full animate-spin mx-auto mb-8"></div>
+                                <p id="progress-text" class="text-lg font-bold text-slate-900 uppercase tracking-[0.15em]"></p>
+                                <p class="text-slate-400 text-xs mt-2 uppercase tracking-widest font-medium">Please do not close this tab</p>
+                            </div>
+                            <div id="results-area" class="hidden text-center py-10">
+                                <div class="w-24 h-24 bg-green-100 text-green-500 rounded-full flex items-center justify-center mx-auto mb-8 border border-green-200 shadow-sm">
+                                    <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                                </div>
+                                <h3 class="text-4xl font-bold text-slate-900 mb-2 uppercase tracking-tighter">Ready!</h3>
+                                <p class="text-slate-500 mb-10">Margins successfully applied. Your file is ready for download.</p>
+                                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                                    <button id="download-btn" class="group flex items-center justify-center gap-3 px-10 py-4 bg-primary text-white rounded-2xl font-bold uppercase tracking-[0.15em] text-sm transition-all duration-300 cursor-pointer hover:shadow-lg hover:shadow-primary/30 hover:-translate-y-0.5 active:translate-y-0 active:scale-95">
+                                        <svg class="w-4 h-4 group-hover:animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                                        Download PDF
+                                    </button>
+                                    <button id="reset-btn" class="px-10 py-4 rounded-2xl font-bold uppercase tracking-[0.15em] text-sm text-slate-500 bg-white border border-slate-300 transition-all duration-200 cursor-pointer hover:bg-slate-100 hover:text-slate-800 hover:border-slate-400 active:scale-95">
+                                        Start Over
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="py-20 px-6 bg-[#0B0F1A] text-zinc-200 font-sans overflow-hidden">
+                <div class="max-w-7xl mx-auto">                    
+                    <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6 border-b border-white/5 pb-12">
+                        <div class="max-w-2xl">
+                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-500/10 border border-violet-500/20 mb-6">
+                                <span class="relative flex h-2 w-2">
+                                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-fuchsia-400 opacity-75"></span>
+                                    <span class="relative inline-flex rounded-full h-2 w-2 bg-fuchsia-400"></span>
+                                </span>
+                                <span class="text-[10px] font-bold tracking-[0.2em] text-violet-300 uppercase">Secure Client-Side Session</span>
+                            </div>
+                            <h2 class="text-5xl md:text-6xl font-black tracking-tight mb-4 uppercase text-white">
+                                Perfect Spacing. <br/>
+                                <span class="text-transparent bg-clip-text bg-linear-to-r from-violet-500 via-fuchsia-400 to-zinc-400">Document Geometry.</span>
+                            </h2>
+                        </div>
+                        <p class="text-slate-400 text-lg max-w-sm leading-relaxed mb-2 font-medium">
+                            Professional PDF margin orchestration. Expand borders, adjust gutters, and re-style page backgrounds locally.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                        <div class="lg:col-span-8 space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="p-6 md:p-8 rounded-3xl bg-linear-to-b from-white/3 to-transparent border border-white/10 hover:border-violet-500/40 transition-all duration-500 group">
+                                    <div class="w-10 h-10 flex items-center justify-center rounded-xl bg-violet-500/20 text-violet-400 mb-16 group-hover:scale-110 transition-transform">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"></path></svg>
+                                    </div>
+                                    <h4 class="text-xl font-bold mb-3 uppercase tracking-widest text-white">Surgical Precision</h4>
+                                    <p class="text-base text-slate-400 leading-relaxed mb-6">Define margins with sub-pixel accuracy. Use synced offsets for uniform borders or individual side control.</p>
+                                    <div class="h-1 w-12 bg-violet-500"></div>
+                                </div>
+                                <div class="p-6 md:p-8 rounded-3xl bg-linear-to-b from-white/3 to-transparent border border-white/10 hover:border-fuchsia-400/40 transition-all duration-500 group">
+                                    <div class="w-10 h-10 flex items-center justify-center rounded-xl bg-fuchsia-400/20 text-fuchsia-400 mb-16 group-hover:scale-110 transition-transform">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
+                                    </div>
+                                    <h4 class="text-xl font-bold mb-3 uppercase tracking-widest text-white">Canvas Styling</h4>
+                                    <p class="text-base text-slate-400 leading-relaxed mb-6">Modify the aesthetic of your expanded borders. Apply custom background hex-colors to match your branding.</p>
+                                    <div class="h-1 w-12 bg-fuchsia-400"></div>
+                                </div>
+                            </div>
+                            <div class="p-6 md:p-8 rounded-3xl bg-white/2 border border-white/5">
+                                <div class="grid md:grid-cols-3 gap-8">
+                                    <div>
+                                        <h5 class="text-base font-bold uppercase tracking-widest text-slate-300 mb-6">Units & Standards</h5>
+                                        <ul class="space-y-4 text-base text-slate-400 font-medium">
+                                            <li class="flex items-center gap-3">
+                                                <svg class="w-4 h-4 text-violet-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 14v-4h18v4M7 10v2M11 10v3M15 10v2M19 10v3M3 10a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4z"></path></svg>
+                                                mm, inches, px, cm
+                                            </li>
+                                            <li class="flex items-center gap-3">
+                                                <svg class="w-4 h-4 text-violet-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2"></path></svg>
+                                                A4 & US Letter Ready
+                                            </li>
+                                            <li class="flex items-center gap-3">
+                                                <svg class="w-4 h-4 text-violet-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v14a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM9 4v16M15 4v16M4 9h16M4 15h16"></path></svg>
+                                                MediaBox Preservation
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h5 class="text-base font-bold uppercase tracking-widest text-slate-300 mb-6">Orchestration</h5>
+                                        <ul class="space-y-4 text-base text-slate-400 font-medium">
+                                            <li class="flex items-center gap-3">
+                                                <svg class="w-4 h-4 text-fuchsia-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                                                Custom Page Ranges
+                                            </li>
+                                            <li class="flex items-center gap-3">
+                                                <svg class="w-4 h-4 text-fuchsia-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9h6m-6 4h3"></path></svg>
+                                                Odd/Even Symmetry
+                                            </li>
+                                            <li class="flex items-center gap-3">
+                                                <svg class="w-4 h-4 text-fuchsia-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                                                Auto-Orientation Lock
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h5 class="text-base font-bold uppercase tracking-widest text-slate-300 mb-6">Core Security</h5>
+                                        <ul class="space-y-4 text-base text-slate-400 font-medium">
+                                            <li class="flex items-center gap-3">
+                                                <svg class="w-4 h-4 text-zinc-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
+                                                Isolated RAM Work
+                                            </li>
+                                            <li class="flex items-center gap-3">
+                                                <svg class="w-4 h-4 text-zinc-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l6 6m0-6l-6 6"></path></svg>
+                                                Zero Cloud Storage
+                                            </li>
+                                            <li class="flex items-center gap-3">
+                                                <svg class="w-4 h-4 text-zinc-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                                                HW Acceleration
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-4 p-6 md:p-8 rounded-4xl bg-slate-900/40 border border-white/5 flex flex-col justify-between relative overflow-hidden">
+                            <div class="absolute -top-12 -right-12 w-32 h-32 bg-violet-600/10 blur-[50px] rounded-full"></div>
+                            <div class="relative z-10">
+                                <h4 class="text-xl font-bold mb-8 uppercase tracking-tighter text-white">System Diagnostic</h4>
+                                <div class="space-y-6">
+                                    <div class="flex items-center justify-between gap-2 p-4 bg-white/5 rounded-2xl border border-white/5">
+                                        <span class="text-sm font-bold uppercase tracking-widest text-slate-300">Precision</span>
+                                        <span class="text-xs font-bold text-white px-2 py-1 bg-violet-500/20 rounded uppercase">Sub-Pixel Sync</span>
+                                    </div>
+                                    <div class="flex items-center justify-between gap-2 p-4 bg-white/5 rounded-2xl border border-white/5">
+                                        <span class="text-sm font-bold uppercase tracking-widest text-slate-300">Processing</span>
+                                        <span class="text-xs font-bold text-white px-2 py-1 bg-fuchsia-400/20 rounded uppercase">Offline Canvas</span>
+                                    </div>
+                                    <div class="flex items-center justify-between gap-2 p-4 bg-white/5 rounded-2xl border border-white/5">
+                                        <span class="text-sm font-bold uppercase tracking-widest text-slate-300">Integrity</span>
+                                        <span class="text-xs font-bold text-white px-2 py-1 bg-white/10 rounded uppercase">Original DPI</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-12 pt-8 border-t border-white/10 relative z-10">
+                                <div class="flex items-center gap-4 mb-4">
+                                    <div class="w-12 h-12 rounded-full bg-linear-to-tr from-violet-500 to-fuchsia-400 p-px">
+                                        <div class="w-full h-full rounded-full bg-[#0B0F1A] flex items-center justify-center">
+                                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm font-bold uppercase tracking-widest">Trust Integrity</p>
+                                        <p class="text-xs text-slate-400 font-medium leading-none">End-to-End Local Execution</p>
+                                    </div>
+                                </div>
+                                <p class="text-xs text-slate-400 leading-relaxed italic">
+                                    *No data leaves your machine. Logic is executed natively within the Chromium sandbox for maximum security.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-px bg-white/5 rounded-3xl overflow-hidden border border-white/10">
+                        <div class="bg-[#0B0F1A] p-8 flex flex-col items-center justify-center group transition-colors hover:bg-white/2">
+                            <span class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-1 group-hover:text-violet-500 transition-colors">Privacy</span>
+                            <span class="text-sm font-bold uppercase tracking-wider text-slate-200">No File Tracking</span>
+                        </div>
+                        <div class="bg-[#0B0F1A] p-8 flex flex-col items-center justify-center group transition-colors hover:bg-white/2">
+                            <span class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-1 group-hover:text-fuchsia-400 transition-colors">Accuracy</span>
+                            <span class="text-sm font-bold uppercase tracking-wider text-slate-200">Exact Offsets</span>
+                        </div>
+                        <div class="bg-[#0B0F1A] p-8 flex flex-col items-center justify-center group transition-colors hover:bg-white/2">
+                            <span class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-1 group-hover:text-violet-500 transition-colors">Speed</span>
+                            <span class="text-sm font-bold uppercase tracking-wider text-slate-200">Instant Export</span>
+                        </div>
+                        <div class="bg-[#0B0F1A] p-8 flex flex-col items-center justify-center group transition-colors hover:bg-white/2">
+                            <span class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-1 group-hover:text-fuchsia-400 transition-colors">Security</span>
+                            <span class="text-sm font-bold uppercase tracking-wider text-slate-200">100% Offline</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="bg-white border-t border-borderclr py-24 px-6">
+                <div class="max-w-6xl mx-auto text-center">
+                    <div class="text-center mb-20">
+                        <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6 tracking-tight">Add Margins in <span class="text-primary italic font-medium lowercase tracking-normal">3 easy steps.</span></h2>
+                        <p class="text-gray-500 text-lg max-w-2xl mx-auto leading-relaxed">Give your documents some breathing room. Adjust page margins locally in your browser for perfect printing or binding.</p>
+                    </div>
+                    <div class="relative grid md:grid-cols-3 gap-12 lg:gap-16">
+                        <div class="hidden md:block absolute top-1/4 left-0 w-full h-0.5 bg-gray-100 -z-10"></div>
+                        <div class="text-center group">
+                            <div class="w-20 h-20 mx-auto mb-8 flex items-center justify-center rounded-3xl bg-white border-2 border-gray-100 text-primary shadow-sm group-hover:border-primary group-hover:shadow-xl group-hover:shadow-primary/10 transition-all duration-500 transform group-hover:-translate-y-2">
+                                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4">1. Select PDF</h3>
+                            <p class="text-gray-500 leading-relaxed">Drag and drop your file. Since processing happens on your device, your data never leaves your computer.</p>
+                        </div>
+                        <div class="text-center group">
+                            <div class="w-20 h-20 mx-auto mb-8 flex items-center justify-center rounded-3xl bg-white border-2 border-gray-100 text-primary shadow-sm group-hover:border-primary group-hover:shadow-xl group-hover:shadow-primary/10 transition-all duration-500 transform group-hover:-translate-y-2">
+                                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4">2. Adjust Settings</h3>
+                            <p class="text-gray-500 leading-relaxed">Set your desired margin size in inches or millimeters. Preview the changes in real-time before applying.</p>
+                        </div>
+                        <div class="text-center group">
+                            <div class="w-20 h-20 mx-auto mb-8 flex items-center justify-center rounded-3xl bg-white border-2 border-gray-100 text-primary shadow-sm group-hover:border-primary group-hover:shadow-xl group-hover:shadow-primary/10 transition-all duration-500 transform group-hover:-translate-y-2">
+                                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4">3. Save PDF</h3>
+                            <p class="text-gray-500 leading-relaxed">Click 'Apply' and download your newly formatted PDF. High quality, no watermarks, completely free.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="bg-[#0B0F1A] py-24 px-6 border-t border-white/5">
+                <div class="max-w-7xl mx-auto">
+                    <div class="flex flex-col md:flex-row items-end justify-between mb-16 gap-6">
+                        <div class="max-w-xl">
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="w-8 h-0.5 bg-primary"></span>
+                                <span class="text-primary font-bold tracking-widest uppercase text-sm">Toolkit Ecosystem</span>
+                            </div>
+                            <h2 class="text-4xl md:text-5xl font-black text-white mb-4 tracking-tight">Need something else?</h2>
+                            <p class="text-gray-400 text-lg">High-performance, browser-based PDF utilities. <br class="hidden md:block" /> No uploads, no limits, 100% private.</p>
+                        </div>
+                        <a href="index.html" class="group flex items-center gap-3 text-sm font-bold uppercase tracking-widest text-white/70 hover:text-primary transition-all">
+                            View All Tools
+                            <div class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:border-primary/50 group-hover:bg-primary/10 transition-all">
+                                <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <a href="compress-pdf.html" target="_blank" class="group p-8 bg-white/5 rounded-3xl border border-white/5 hover:border-emerald-500/30 hover:bg-white/[0.07] hover:shadow-2xl hover:shadow-emerald-500/10 transition-all duration-300 relative">
+                            <div class="w-12 h-12 bg-emerald-500/10 text-emerald-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-emerald-500 group-hover:text-white transition-all duration-500">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">Compress PDF</h3>
+                            <p class="text-sm text-gray-400 leading-relaxed mb-6">Reduce file size dramatically while maintaining visual quality.</p>
+                            <span class="text-xs font-bold uppercase tracking-widest text-emerald-500 opacity-80 group-hover:opacity-100 transition-opacity">Launch Tool →</span>
+                        </a>
+                        <a href="rotate-pdf.html" target="_blank" class="group p-8 bg-white/5 rounded-3xl border border-white/5 hover:border-amber-500/30 hover:bg-white/[0.07] hover:shadow-2xl hover:shadow-amber-500/10 transition-all duration-300 relative">
+                            <div class="w-12 h-12 bg-amber-500/10 text-amber-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-amber-500 group-hover:text-white transition-all duration-500">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">Rotate PDF</h3>
+                            <p class="text-sm text-gray-400 leading-relaxed mb-6">Fix orientation issues by rotating pages permanently.</p>
+                            <span class="text-xs font-bold uppercase tracking-widest text-amber-500 opacity-80 group-hover:opacity-100 transition-opacity">Launch Tool →</span>
+                        </a>
+                        <a href="unlock-pdf.html" target="_blank" class="group p-8 bg-white/5 rounded-3xl border border-white/5 hover:border-rose-500/30 hover:bg-white/[0.07] hover:shadow-2xl hover:shadow-rose-500/10 transition-all duration-300 relative">
+                            <div class="w-12 h-12 bg-rose-500/10 text-rose-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-rose-500 group-hover:text-white transition-all duration-500">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 11V7a4 4 0 118 0m-4 8v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">Unlock PDF</h3>
+                            <p class="text-sm text-gray-400 leading-relaxed mb-6">Remove passwords and restrictions from secured files.</p>
+                            <span class="text-xs font-bold uppercase tracking-widest text-rose-500 opacity-80 group-hover:opacity-100 transition-opacity">Launch Tool →</span>
+                        </a>
+                        <a href="organize-pdf.html" target="_blank" class="group p-8 bg-white/5 rounded-3xl border border-white/5 hover:border-cyan-500/30 hover:bg-white/[0.07] hover:shadow-2xl hover:shadow-cyan-500/10 transition-all duration-300 relative">
+                            <div class="w-12 h-12 bg-cyan-500/10 text-cyan-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-cyan-500 group-hover:text-white transition-all duration-500">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">Organize PDF</h3>
+                            <p class="text-sm text-gray-400 leading-relaxed mb-6">Reorder, delete, or add pages to your document easily.</p>
+                            <span class="text-xs font-bold uppercase tracking-widest text-cyan-500 opacity-80 group-hover:opacity-100 transition-opacity">Launch Tool →</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section class="py-24 px-6 bg-white">
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-4 tracking-tight">Frequently Asked <span class="text-primary italic font-medium lowercase tracking-normal">Questions.</span></h2>
+                        <p class="text-gray-500 text-lg">Everything you need to know about our local margin adjustment tool.</p>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="group border border-gray-300 rounded-2xl bg-white hover:border-primary/40 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
+                            <button class="faq-toggle w-full flex items-center justify-between p-6 cursor-pointer text-left group" aria-expanded="false" aria-controls="add-margin-faq-1">
+                                <span class="text-lg font-medium text-gray-800 group-hover:text-primary transition-colors">Is this tool free to use?</span>
+                                <div class="faq-icon-wrapper w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+                                    <svg class="w-4 h-4 text-gray-400 group-hover:text-primary transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </div>
+                            </button>
+                            <div class="faq-content hidden px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-50 pt-4" id="add-margin-faq-1">
+                                Yes, our Add Margin to PDF tool is 100% free. There are no watermarks, usage limits, or hidden fees. You get professional-grade layout control without spending a dime.
+                            </div>
+                        </div>
+                        <div class="group border border-gray-300 rounded-2xl bg-white hover:border-primary/40 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
+                            <button class="faq-toggle w-full flex items-center justify-between p-6 cursor-pointer text-left group" aria-expanded="false" aria-controls="add-margin-faq-2">
+                                <span class="text-lg font-medium text-gray-800 group-hover:text-primary transition-colors">Are my documents safe?</span>
+                                <div class="faq-icon-wrapper w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+                                    <svg class="w-4 h-4 text-gray-400 group-hover:text-primary transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </div>
+                            </button>
+                            <div class="faq-content hidden px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-50 pt-4" id="add-margin-faq-2">
+                                Absolutely. All processing happens locally in your browser. Your files are never uploaded to a server, which guarantees 100% privacy and security for your sensitive documents.
+                            </div>
+                        </div>
+                        <div class="group border border-gray-300 rounded-2xl bg-white hover:border-primary/40 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
+                            <button class="faq-toggle w-full flex items-center justify-between p-6 cursor-pointer text-left group" aria-expanded="false" aria-controls="add-margin-faq-3">
+                                <span class="text-lg font-medium text-gray-800 group-hover:text-primary transition-colors">What are 'mirrored margins' or a 'gutter'?</span>
+                                <div class="faq-icon-wrapper w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+                                    <svg class="w-4 h-4 text-gray-400 group-hover:text-primary transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </div>
+                            </button>
+                            <div class="faq-content hidden px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-50 pt-4" id="add-margin-faq-3">
+                                Mirrored margins (also called a gutter) are for double-sided printing, like books. The inside margin is wider to prevent content from being cut or hidden in the binding.
+                            </div>
+                        </div>
+                        <div class="group border border-gray-300 rounded-2xl bg-white hover:border-primary/40 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
+                            <button class="faq-toggle w-full flex items-center justify-between p-6 cursor-pointer text-left group" aria-expanded="false" aria-controls="add-margin-faq-4">
+                                <span class="text-lg font-medium text-gray-800 group-hover:text-primary transition-colors">Can I apply margins to specific pages only?</span>
+                                <div class="faq-icon-wrapper w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+                                    <svg class="w-4 h-4 text-gray-400 group-hover:text-primary transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </div>
+                            </button>
+                            <div class="faq-content hidden px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-50 pt-4" id="add-margin-faq-4">
+                                Yes. Apply margins to all pages, only odd/even pages, or just the first page. Batch adjustments let you set different margins for multiple pages in one click.
+                            </div>
+                        </div>
+                        <div class="group border border-gray-300 rounded-2xl bg-white hover:border-primary/40 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
+                            <button class="faq-toggle w-full flex items-center justify-between p-6 cursor-pointer text-left group" aria-expanded="false" aria-controls="add-margin-faq-5">
+                                <span class="text-lg font-medium text-gray-800 group-hover:text-primary transition-colors">Will this change the quality of my PDF?</span>
+                                <div class="faq-icon-wrapper w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+                                    <svg class="w-4 h-4 text-gray-400 group-hover:text-primary transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </div>
+                            </button>
+                            <div class="faq-content hidden px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-50 pt-4" id="add-margin-faq-5">
+                                No. The original content of your PDF is preserved at its original resolution. The tool simply places the existing page content onto a new, larger page canvas, so there is no degradation of text or images.
+                            </div>
+                        </div>
+                        <div class="group border border-gray-300 rounded-2xl bg-white hover:border-primary/40 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
+                            <button class="faq-toggle w-full flex items-center justify-between p-6 cursor-pointer text-left group" aria-expanded="false" aria-controls="add-margin-faq-5">
+                                <span class="text-lg font-medium text-gray-800 group-hover:text-primary transition-colors">Can I scale or resize my content?</span>
+                                <div class="faq-icon-wrapper w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+                                    <svg class="w-4 h-4 text-gray-400 group-hover:text-primary transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </div>
+                            </button>
+                            <div class="faq-content hidden px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-50 pt-4" id="add-margin-faq-5">
+                                Yes. You can scale down content or expand the page size without distorting text, images, or layout—perfect for professional printing.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="bg-[#0b0f1a] text-gray-400 pt-20 pb-10 px-6 border-t border-gray-800/50">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+                    <div class="md:col-span-4">
+                        <a href="../../index.html" class="flex items-center gap-2 mb-6 group">
+                            <img src="../../assets/img/favicon.svg" alt="MyToolKitPro" width="32" height="32" class="opacity-90 transition-transform duration-300 group-hover:scale-110" />
+                            <h3 class="text-white text-2xl font-bold tracking-tight">MyToolKit<span class="text-primary">Pro</span></h3>
+                        </a>
+                        <p class="text-base leading-relaxed mb-6">A comprehensive suite of powerful online tools designed to simplify your digital workflow. Fast, secure, and accessible from any device.</p>
+                        <a href="mailto:mytoolkitpro@gmail.com" class="flex items-center gap-2 text-sm text-gray-500 hover:text-primary transition-colors group">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            mytoolkitpro@gmail.com
+                        </a>
+                    </div>
+                    <div class="md:col-span-3">
+                        <h4 class="text-white font-bold mb-6 uppercase text-xs tracking-[0.2em]">Tool Categories</h4>
+                        <ul class="space-y-4 text-sm">
+                            <li>
+                                <a href="../pdf/index.html" class="hover:text-primary transition-colors flex justify-between items-center group">
+                                    PDF Tools <span class="text-[10px] bg-gray-800 px-1.5 py-0.5 rounded text-gray-500 group-hover:bg-primary/20 group-hover:text-primary transition-colors">16</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../image/index.html" class="hover:text-primary transition-colors flex justify-between items-center group">
+                                    Image Tools <span class="text-[10px] bg-gray-800 px-1.5 py-0.5 rounded text-gray-500 group-hover:bg-primary/20 group-hover:text-primary transition-colors">1</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../developer/index.html" class="hover:text-primary transition-colors flex justify-between items-center group">
+                                    Developer Tools <span class="text-[10px] bg-gray-800 px-1.5 py-0.5 rounded text-gray-500 group-hover:bg-primary/20 group-hover:text-primary transition-colors">0</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../index.html" class="text-primary font-semibold hover:underline mt-2 inline-block">
+                                    View All 15+ Tools →
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="md:col-span-2">
+                        <h4 class="text-white font-bold mb-6 uppercase text-xs tracking-[0.2em]">Resources</h4>
+                        <ul class="space-y-4 text-sm">
+                            <li><a href="../../about.html" class="hover:text-primary transition-colors">About Us</a></li>
+                            <li><a href="../../contact.html" class="hover:text-primary transition-colors">Contact</a></li>
+                            <li><a href="../../privacy.html" class="hover:text-primary transition-colors">Privacy</a></li>
+                            <li><a href="../../terms.html" class="hover:text-primary transition-colors">Terms</a></li>
+                        </ul>
+                    </div>
+                    <div class="md:col-span-3">
+                        <h4 class="text-white font-bold mb-6 uppercase text-xs tracking-[0.2em]">Stay Connected</h4>
+                        <div class="grid grid-cols-4 sm:grid-cols-2 gap-3 max-w-fit">                            
+                            <a href="https://x.com/mytoolkitpro" class="w-12 h-12 rounded-2xl bg-gray-800/40 flex items-center justify-center hover:bg-white hover:text-black transition-all duration-500 border border-white/5" title="Follow on X">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+                            </a>
+                            <a href="#" class="w-12 h-12 rounded-2xl bg-gray-800/40 flex items-center justify-center hover:bg-[#0077b5] hover:text-white transition-all duration-500 border border-white/5" title="Connect on LinkedIn">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z"/></svg>
+                            </a>
+                            <a href="#" class="w-12 h-12 rounded-2xl bg-gray-800/40 flex items-center justify-center hover:bg-[#1877F2] hover:text-white transition-all duration-500 border border-white/5" title="Like us on Facebook">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                            </a>
+                            <a href="#" class="w-12 h-12 rounded-2xl bg-gray-800/40 flex items-center justify-center hover:bg-linear-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] hover:text-white transition-all duration-500 border border-white/5" title="Follow on Instagram">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.332 3.608 1.308.975.975 1.245 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.332 2.633-1.308 3.608-.975.975-2.242 1.245-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.332-3.608-1.308-.975-.975-1.245-2.242-1.308-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.332-2.633 1.308-3.608.975-.975 2.242-1.245 3.608-1.308 1.266-.058 1.646-.07 4.85-.07M12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.355 2.618 6.778 6.98 6.978 1.28.058 1.688.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.668-.072-4.948-.197-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-t border-gray-800/80 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm font-semibold">
+                    <p class="text-gray-500">
+                        &copy; <span id="year"></span> MyToolKitPro. All rights reserved.
+                    </p>
+                    <p class="text-gray-500">Built with 💙 for the web.</p>
+                </div>
+            </div>
+        </footer>
+        <div id="command-palette" class="hidden fixed inset-0 z-100 flex items-start justify-center pt-[10vh] sm:pt-[15vh] p-4">
+            <div id="modal-backdrop" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity"></div>
+            <div class="relative w-full max-w-2xl bg-white rounded-2xl shadow-2xl overflow-hidden ring-1 ring-black/5 modal-entrance">
+                <div class="relative border-b border-gray-100 p-4">
+                    <svg class="absolute left-6 top-6 w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                    <input type="text" id="search-input" class="w-full pl-10 pr-4 py-2 text-lg outline-none placeholder:text-gray-400" placeholder="Search tools (e.g. compress, image...)" autocomplete="off">
+                </div>
+                <div class="flex gap-2 p-3 border-b border-gray-50 overflow-x-auto bg-gray-50/50">
+                    <button class="filter-chip active px-3 py-1 rounded-full text-sm font-semibold bg-primary text-white cursor-pointer" data-category="all">All</button>
+                    <button class="filter-chip px-3 py-1 rounded-full text-sm font-semibold bg-white border border-gray-200 text-gray-600 hover:bg-gray-100 cursor-pointer" data-category="PDF">PDF</button>
+                    <button class="filter-chip px-3 py-1 rounded-full text-sm font-semibold bg-white border border-gray-200 text-gray-600 hover:bg-gray-100 cursor-pointer" data-category="Image">Image</button>
+                    <button class="filter-chip px-3 py-1 rounded-full text-sm font-semibold bg-white border border-gray-200 text-gray-600 hover:bg-gray-100 cursor-pointer" data-category="Developer">Developer</button>
+                </div>
+                <div id="search-results-list" class="max-h-[50vh] overflow-y-auto p-2 min-h-30"></div>
+                <div class="p-3 bg-gray-50 border-t border-gray-100 flex justify-between items-center text-xs text-gray-400 font-bold uppercase tracking-widest">
+                    <div class="flex gap-3">
+                        <span><kbd class="border px-1 rounded bg-white">↑↓</kbd> Navigate</span>
+                        <span><kbd class="border px-1 rounded bg-white">Enter</kbd> Select</span>
+                    </div>
+                    <span id="result-count">0 tools found</span>
+                </div>
+            </div>
+        </div>
+        <script src="../../assets/js/dist/main.min.js" defer></script>
+        <script src="../../assets/js/vendor/pdf.min.js" defer></script>
+        <script src="../../assets/js/vendor/pdf-lib.min.js" defer></script>
+        <script type="module" src="../../assets/js/dist/tools/pdf/add-margin.min.js" defer></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                document.addEventListener('click', (e) => {
+                    const btn = e.target.closest('.faq-toggle');
+                    if (!btn) return;
+
+                    e.preventDefault();
+
+                    const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+                    const allBtns = document.querySelectorAll('.faq-toggle');
+
+                    allBtns.forEach(other => {
+                        if (other !== btn) {
+                            other.setAttribute('aria-expanded', 'false');
+                            const targetId = other.getAttribute('aria-controls');
+                            document.getElementById(targetId)?.classList.add('hidden');
+                            other.querySelector('svg')?.classList.remove('rotate-180');
+                        }
+                    });
+
+                    const newState = !isExpanded;
+                    btn.setAttribute('aria-expanded', newState);
+                    const currentTargetId = btn.getAttribute('aria-controls');
+                    const content = document.getElementById(currentTargetId);
+                    if (content) {
+                        content.classList.toggle('hidden', !newState);
+                    }
+                    
+                    btn.querySelector('svg')?.classList.toggle('rotate-180', newState);
+                });
+            });
+        </script>
+    </body>
+</html>

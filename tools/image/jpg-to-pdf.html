@@ -88,34 +88,34 @@
                     "mainEntity": [
                         {
                             "@type": "Question",
-                            "name": "Are my images secure during JPG to PDF conversion?",
+                            "name": "Is it safe to convert my private photos to PDF here?",
                             "acceptedAnswer": {
                                 "@type": "Answer",
-                                "text": "Absolutely. MyToolKitPro uses a browser-native engine, meaning all conversions happen locally on your device. Your JPG or PNG files are never uploaded to a server, ensuring 100% data privacy."
+                                "text": "Absolutely. Unlike other tools, MyToolKitPro processes everything locally in your browser. Your images are never uploaded to a server. Your data stays on your hardware, ensuring 100% privacy for sensitive documents or personal photos."
                             }
                         },
                         {
                             "@type": "Question",
-                            "name": "Will image quality drop after converting to PDF?",
+                            "name": "Will my images lose quality after the conversion?",
                             "acceptedAnswer": {
                                 "@type": "Answer",
-                                "text": "No. Our engine uses a 'Zero-Loss' wrapping technique. Instead of re-compressing your images, it encapsulates the original pixel data directly into the PDF container, preserving the full resolution and clarity of your JPGs."
+                                "text": "No. Our engine uses a Native Encapsulation method. Instead of re-compressing your JPGs, we wrap the original pixel data into a PDF container, preserving the full resolution and clarity of your originals."
                             }
                         },
                         {
                             "@type": "Question",
-                            "name": "Can I combine multiple JPG images into a single PDF?",
+                            "name": "Can I change the order of images before creating the PDF?",
                             "acceptedAnswer": {
                                 "@type": "Answer",
-                                "text": "Yes, you can upload multiple image assets simultaneously. Our tool features a visual stitching engine that allows you to drag and drop images to set their order before generating a single, unified PDF document."
+                                "text": "Yes. Once you select your images, our Visual Organizer allows you to drag and drop them to set the perfect sequence. You can also adjust individual page sizes and margins before generating the file."
                             }
                         },
                         {
                             "@type": "Question",
-                            "name": "Does this tool remove EXIF metadata from my photos?",
+                            "name": "Does the PDF include my camera's GPS or device info?",
                             "acceptedAnswer": {
                                 "@type": "Answer",
-                                "text": "Yes. As part of our privacy-first approach, the converter automatically cleans sensitive EXIF metadata (like GPS location or device info) from your images during the PDF creation process."
+                                "text": "By default, our tool performs an EXIF Cleanup. This automatically strips sensitive metadata like GPS coordinates, camera models, and timestamps from the images during the PDF creation process."
                             }
                         }
                     ]
@@ -125,279 +125,495 @@
         </script>
     </head>
     <body class="bg-bgsoft text-darktext">
-        <header class="w-full bg-white border-b border-gray-100 relative z-90">
+        <header class="w-full bg-[#0B0F1A] border-b border-white/5 shadow-lg relative z-90">
             <div class="max-w-7xl mx-auto h-16 md:h-20 flex items-center justify-between px-4 md:px-8">
                 <a href="../../index.html" class="flex items-center gap-2 shrink-0">
                     <img src="../../assets/img/favicon.svg" alt="MyToolKitPro" class="w-8 h-8 md:w-9 md:h-9" />
-                    <span class="text-lg md:text-xl font-bold tracking-tight text-gray-900">
+                    <span class="text-lg md:text-xl font-bold tracking-tight text-slate-100">
                         MyToolKit<span class="text-primary">Pro</span>
                     </span>
                 </a>
                 <nav class="hidden md:flex items-center gap-1">
-                    <a href="../../index.html" class="px-4 py-2 text-base font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-50 rounded-full transition-all">Home</a>
-                    <a href="../../tools/index.html" class="px-4 py-2 text-base font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-50 rounded-full transition-all">Tools</a>
-                    <a href="../../articles/index.html" class="px-4 py-2 text-base font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-50 rounded-full transition-all">Articles</a>
+                    <a href="../../index.html" class="px-4 py-2 text-base font-medium text-slate-400 hover:text-white hover:bg-white/5 rounded-full transition-all">Home</a>
+                    <a href="../../tools/index.html" class="px-4 py-2 text-base font-medium text-slate-400 hover:text-white hover:bg-white/5 rounded-full transition-all">Tools</a>
+                    <a href="../../articles/index.html" class="px-4 py-2 text-base font-medium text-slate-400 hover:text-white hover:bg-white/5 rounded-full transition-all">Articles</a>
                 </nav>
                 <div class="flex items-center gap-1 md:gap-2">
-                    <button id="open-search-btn" class="flex items-center gap-2 px-3 py-2 md:pl-4 md:pr-3 bg-gray-50 border border-gray-200 rounded-full text-gray-400 hover:border-primary/40 hover:bg-white hover:text-primary transition-all group">
+                     <button id="open-search-btn" aria-label="Open search" class="flex items-center gap-2 px-3 py-2 md:pl-4 md:pr-3 bg-[#161B26] border border-white/10 rounded-full text-slate-400 hover:border-white/50 hover:bg-[#1C2331] hover:text-slate-200 transition-all group cursor-pointer">
                         <span class="hidden md:block text-sm font-medium">Search tools...</span>
-                        <span id="search-shortcut" class="hidden lg:block text-[10px] font-bold py-0.5 px-1.5 border rounded bg-white group-hover:text-primary ml-1 uppercase">Ctrl + K</span>
+                        <span id="search-shortcut" class="hidden lg:block text-[10px] font-bold py-0.5 px-1.5 border border-white/10 rounded bg-[#0B0F1A] group-hover:text-white group-hover:border-white/40 ml-1 uppercase">Ctrl + K</span>
                         <svg class="w-4 h-4 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                         </svg>
                     </button>
-                    <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-600 active:bg-gray-50 rounded-lg">
+                    <button id="mobile-menu-btn" aria-label="Open mobile menu" class="md:hidden p-2 text-slate-400 active:bg-white/5 rounded-lg">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" d="M4 8h16M8 16h12"></path></svg>
                     </button>
                 </div>
             </div>
-            <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white border-b border-gray-100 shadow-xl z-60 md:hidden">
+            <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-[#0B0F1A] border-b border-white/5 shadow-2xl z-60 md:hidden">
                 <nav class="flex flex-col p-3">
-                    <a href="../../index.html" class="text-sm font-medium text-gray-600 py-3 px-4 hover:bg-gray-50 rounded-lg">Home</a>
-                    <a href="../../tools/index.html" class="text-sm font-medium text-gray-600 py-3 px-4 hover:bg-gray-50 rounded-lg">Tools</a>
-                    <a href="../../articles/index.html" class="text-sm font-medium text-gray-600 py-3 px-4 hover:bg-gray-50 rounded-lg">Articles</a>
+                    <a href="../../index.html" class="text-sm font-medium text-slate-300 py-3 px-4 hover:bg-white/5 rounded-lg">Home</a>
+                    <a href="../../tools/index.html" class="text-sm font-medium text-slate-300 py-3 px-4 hover:bg-white/5 rounded-lg">Tools</a>
+                    <a href="../../articles/index.html" class="text-sm font-medium text-slate-300 py-3 px-4 hover:bg-white/5 rounded-lg">Articles</a>
                 </nav>
             </div>
         </header>
-        <section class="bg-white py-4 px-6 md:px-8 border-b border-gray-50">
-            <div class="max-w-7xl mx-auto">
-                <nav class="flex items-center whitespace-nowrap overflow-x-auto no-scrollbar gap-2 md:gap-3 text-sm tracking-tight" aria-label="Breadcrumb">
-                    <a href="../../index.html" class="flex items-center gap-2 text-gray-400 hover:text-primary transition-colors group shrink-0 py-2">
-                        <svg class="w-4 h-4 text-primary/70 group-hover:text-primary group-hover:scale-110 transition-all duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
-                        </svg>
-                        <span class="font-medium hidden md:block">Home</span>
-                    </a>
-                    <svg class="w-3.5 h-3.5 text-gray-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                    </svg>
-                    <a href="../index.html" class="text-gray-400 font-medium hover:text-primary transition-colors shrink-0 py-2">Tools</a>
-                    <svg class="w-3.5 h-3.5 text-gray-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                    </svg>
-                    <a href="index.html" class="text-gray-400 font-medium hover:text-primary transition-colors shrink-0 py-2">Image</a>
-                    <svg class="w-3.5 h-3.5 text-gray-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                    </svg>
-                    <span class="text-gray-900 font-semibold tracking-tight truncate max-w-30 md:max-w-none" aria-current="page">JPG to PDF</span>
-                </nav>
-            </div>
-        </section>
         <main>
-            <section class="bg-gray-100 py-6 px-4">
-                <div class="max-w-4xl mx-auto">
-                    <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
-                        <div class="bg-gray-50 border-b border-gray-100 py-4 px-6 text-center">
-                            <h1 class="text-2xl font-bold text-gray-800 mb-1">JPG to PDF Converter</h1>
-                            <p class="text-gray-500 text-m">Convert images to professional PDF documents instantly.</p>
-                        </div>
-                        <div class="p-6 md:p-8 text-center">
-                            <div id="upload-area" class="border-3 border-dashed border-gray-200 rounded-2xl p-10 hover:border-primary/50 hover:bg-red-50/30 transition-all duration-300 cursor-pointer group" onclick="document.getElementById('imageFiles').click()" role="button" tabindex="0">
-                                <div class="w-20 h-20 bg-red-100 text-primary rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
-                                    <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+            <section class="bg-[#F8FAFC] py-4 md:py-6 px-0 md:px-8 font-sans text-[#0B0F1A]">
+                <div class="w-full max-w-7xl mx-auto">
+                    <div class="text-center mb-6">
+                        <h1 class="text-4xl md:text-6xl font-black text-[#0B0F1A] mb-4 uppercase tracking-tighter leading-none">
+                            Convert <span class="text-primary italic font-medium lowercase tracking-tight">JPG</span> to PDF
+                        </h1>
+                        <p class="text-slate-700 text-lg max-w-2xl mx-auto">
+                            Combine images into a single PDF. Adjust layout, margins, and page size - all in your browser.
+                        </p>
+                    </div>
+                    <div class="bg-white rounded-3xl border border-slate-300 shadow-xl overflow-hidden">
+                        <div class="p-4 md:p-8">
+                            <div id="upload-area" class="border-2 border-dashed border-slate-400 bg-slate-500/10 rounded-3xl p-6 md:p-12 hover:border-primary/80 hover:bg-primary/10 transition-all duration-500 cursor-pointer group text-center" onclick="document.getElementById('imageFiles').click()">
+                                <div class="w-16 h-16 md:w-24 md:h-24 bg-primary/10 rounded-3xl flex items-center justify-center mx-auto mb-8 group-hover:rotate-6 transition-transform duration-500">
+                                    <span class="text-2xl md:text-4xl leading-none">🖼️</span>
                                 </div>
-                                <h3 class="text-xl font-semibold text-gray-700 mb-2">Upload Images</h3>
-                                <p class="text-gray-500 mb-6">Drag & drop JPG/PNG files here or click to browse</p>
-                                <input type="file" id="imageFiles" accept="image/jpeg, image/png" multiple class="hidden" aria-label="Image file input" />
-                                <div class="inline-block bg-primary text-white px-8 py-3 rounded-xl font-semibold hover:bg-red-700 transition shadow-lg shadow-red-200 pointer-events-none">Select Images</div>
-                                <p id="upload-error-message" class="hidden mt-6 text-red-600 font-medium bg-red-50 p-3 rounded-lg"></p>
+                                <h2 class="text-2xl font-bold text-slate-900 mb-3">Drop Images here</h2>
+                                <p class="text-slate-700 mb-8 max-w-xs mx-auto">Upload JPG/PNG images and convert them into a PDF.</p>
+                                <input type="file" id="imageFiles" accept="image/*" multiple class="hidden" />
+                                <button class="bg-primary text-white px-10 py-4 rounded-xl font-bold uppercase tracking-widest text-sm hover:scale-105 transition-all shadow-xl shadow-primary/20">
+                                    Select Images
+                                </button>
+                                <p id="upload-error-message" class="hidden mt-6 text-red-500 font-medium bg-red-100 p-3 rounded-lg border border-red-400"></p>
                             </div>
-                            <div id="file-preview-area" class="hidden">
-                                <div class="max-w-3xl mx-auto bg-gray-50 rounded-2xl border border-gray-200 p-6">
-                                    <div class="flex flex-col md:flex-row items-center gap-8">
-                                        <div class="w-full md:w-1/2">
-                                            <div class="relative shadow-md rounded-lg overflow-hidden bg-white mx-auto group" style="min-height: 200px; display: flex; align-items: center; justify-content: center;">
-                                                <img id="image-preview" class="max-w-full h-auto object-contain" style="max-height: 300px;" alt="Image Preview" />
-                                                <button id="prev-image-btn" class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition hidden z-10 cursor-pointer" aria-label="Previous Image">
-                                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-                                                </button>
-                                                <button id="next-image-btn" class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition hidden z-10 cursor-pointer" aria-label="Next Image">
-                                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                                                </button>
-                                                <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 bg-black/60 text-white text-xs px-3 py-1 rounded-full z-10 pointer-events-none">
-                                                    Image <span id="preview-image-num">1</span> of <span id="preview-total-images">--</span>
+                            <div id="file-preview-area" class="hidden animate-in fade-in slide-in-from-bottom-4 duration-500">
+                                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">                                    
+                                    <div class="lg:col-span-5 xl:col-span-4 order-2 lg:order-1 space-y-4 overflow-y-auto pr-2 custom-scrollbar">                                
+                                        <div class="bg-slate-50 rounded-2xl p-6 border border-slate-300 border-l-4 border-l-primary shadow-sm">
+                                            <h4 class="text-primary font-bold uppercase tracking-[0.2em] text-sm mb-4">Batch Details</h4>
+                                            <div class="flex justify-between items-center gap-4">
+                                                <div class="min-w-0">
+                                                    <p id="file-count-display" class="text-slate-600 text-sm font-semibold truncate">-- Images Selected</p>
+                                                </div>
+                                                <div class="shrink-0 text-right">
+                                                    <p id="total-size-display" class="text-slate-600 text-sm font-semibold uppercase tracking-tighter">0 MB</p>
+                                                </div>
+                                            </div>
+                                            <p id="warning-message" class="hidden text-sm font-bold text-amber-700 bg-amber-100 p-2.5 mt-3 rounded-xl border border-amber-400"></p>
+                                        </div>
+                                        <div class="accordion-item bg-slate-50 rounded-2xl border border-slate-300 border-l-4 border-l-primary shadow-sm overflow-hidden">
+                                            <button class="accordion-header w-full flex justify-between items-center p-6 text-primary outline-none cursor-pointer group">
+                                                <h4 class="font-bold uppercase tracking-[0.2em] text-sm">Page & Layout</h4>
+                                                <svg class="w-4 h-4 text-primary transition-all duration-300 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+                                            </button>
+                                            <div class="accordion-content p-6 pt-0 flex flex-col gap-6">
+                                                <div class="grid grid-cols-2 gap-3">
+                                                    <div class="flex flex-col gap-2">
+                                                        <label class="text-slate-700 text-xs font-bold uppercase tracking-widest">Page Size</label>
+                                                        <select id="page-size" class="w-full bg-slate-100 border border-slate-300 rounded-xl p-3 text-sm font-medium focus:border-primary outline-none cursor-pointer">
+                                                            <option value="fit">Fit to Image</option>
+                                                            <option value="a4">A4 Standard</option>
+                                                            <option value="letter">US Letter</option>
+                                                            <option value="legal">US Legal</option> </select>
+                                                    </div>
+                                                    <div class="flex flex-col gap-2">
+                                                        <label class="text-slate-700 text-xs font-bold uppercase tracking-widest">Orientation</label>
+                                                        <select id="orientation" class="w-full bg-slate-100 border border-slate-300 rounded-xl p-3 text-sm font-medium focus:border-primary outline-none cursor-pointer">
+                                                            <option value="auto">Auto-Detect</option>
+                                                            <option value="portrait">Portrait</option>
+                                                            <option value="landscape">Landscape</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="grid grid-cols-2 gap-3">
+                                                    <div class="flex flex-col gap-2">
+                                                        <label class="text-slate-700 text-xs font-bold uppercase tracking-widest">Scaling</label>
+                                                        <select id="image-scaling" class="bg-slate-100 border border-slate-300 rounded-xl p-3 text-sm font-medium focus:border-primary outline-none cursor-pointer">
+                                                            <option value="fit">Fit (Contain)</option>
+                                                            <option value="fill">Fill (Crop)</option>
+                                                            <option value="none">Original Size</option> </select>
+                                                    </div>
+                                                    <div class="flex flex-col gap-2">
+                                                        <label class="text-slate-700 text-xs font-bold uppercase tracking-widest">Alignment</label>
+                                                        <select id="image-align" class="bg-slate-100 border border-slate-300 rounded-xl p-3 text-sm font-medium focus:border-primary outline-none cursor-pointer">
+                                                            <option value="center">Center</option>
+                                                            <option value="top">Top</option>
+                                                            <option value="bottom">Bottom</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="flex flex-col gap-3">
+                                                    <div class="flex justify-between items-center">
+                                                        <label class="text-slate-700 text-xs font-bold uppercase tracking-widest">Margins (px)</label>
+                                                        <span id="margin-value-display" class="text-xs font-bold text-slate-500">0px</span>
+                                                    </div>
+                                                    <div class="grid grid-cols-4 gap-2">
+                                                        <button data-margin="0" class="margin-btn active py-2 rounded-lg border border-slate-300 text-xs font-bold [&.active]:bg-primary [&.active]:text-white focus:border-primary outline-none cursor-pointer transition-all">NONE</button>
+                                                        <button data-margin="20" class="margin-btn py-2 rounded-lg border border-slate-300 text-xs font-bold [&.active]:bg-primary [&.active]:text-white focus:border-primary outline-none cursor-pointer transition-all">SMALL</button>
+                                                        <button data-margin="50" class="margin-btn py-2 rounded-lg border border-slate-300 text-xs font-bold [&.active]:bg-primary [&.active]:text-white focus:border-primary outline-none cursor-pointer transition-all">BIG</button>
+                                                        <button id="custom-margin-trigger" class="margin-btn py-2 rounded-lg border border-slate-300 text-xs font-bold  [&.active]:bg-primary [&.active]:text-white focus:border-primary outline-none cursor-pointer transition-all">CUSTOM</button>
+                                                    </div>
+                                                    <div id="custom-margin-wrapper" class="hidden animate-in fade-in slide-in-from-top-2 duration-200">
+                                                    <div class="relative flex items-center">
+                                                        <input type="number" id="custom-margin-input" value="30" min="0" max="100" step="1" oninput="this.value = Math.max(0, Math.min(100, parseInt(this.value) || 0))" class="w-full bg-white border border-slate-300 rounded-xl p-3 text-sm font-semibold outline-none focus:border-primary shadow-inner" />
+                                                        <span class="absolute right-8 text-[10px] font-bold text-slate-400 uppercase">Pixels</span>
+                                                    </div>
+                                                </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="w-full md:w-1/2 text-center md:text-left">
-                                            <h3 id="filename-display" class="font-semibold text-gray-800 text-lg mb-1 truncate">filename.jpg</h3>
-                                            <div class="text-gray-500 text-sm mb-6 space-y-1">
-                                                <p id="filesize-display">0 MB</p>
-                                                <p id="count-display">Total Images: <span id="total-images-info" class="font-medium text-gray-700">--</span></p>
+                                        <div class="accordion-item bg-slate-50 rounded-2xl border border-slate-300 border-l-4 border-l-primary shadow-sm overflow-hidden">
+                                            <button class="accordion-header w-full flex justify-between items-center p-6 text-primary outline-none cursor-pointer group">
+                                                <h4 class="font-bold uppercase tracking-[0.2em] text-sm">Advanced Features</h4>
+                                                <svg class="w-4 h-4 text-slate-400 group-hover:text-primary transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+                                            </button>
+                                            <div class="accordion-content p-6 pt-0 hidden flex flex-col gap-6">
+                                                <div class="flex flex-col gap-4">
+                                                    <div class="flex items-center justify-between">
+                                                        <label class="text-slate-700 text-xs font-bold uppercase tracking-widest">Page Numbering</label>
+                                                        <input type="checkbox" id="enable-numbers" class="w-5 h-5 accent-primary cursor-pointer">
+                                                    </div>
+                                                    <div id="numbering-settings" class="hidden animate-in fade-in slide-in-from-top-2 duration-300">
+                                                        <div class="space-y-4">
+                                                            <div class="grid grid-cols-2 gap-4">
+                                                                <div class="flex flex-col gap-2">
+                                                                    <label class="text-slate-500 text-xs font-bold uppercase px-1">Position</label>
+                                                                    <select id="number-pos" class="w-full bg-slate-50 border border-slate-200 rounded-xl p-2.5 text-sm font-medium outline-none focus:border-primary cursor-pointer transition-colors">
+                                                                        <option value="top-left">Top Left</option>
+                                                                        <option value="top-center">Top Center</option>
+                                                                        <option value="top-right">Top Right</option>                                                                        
+                                                                        <option value="bottom-left">Bottom Left</option>
+                                                                        <option value="bottom-center" selected>Bottom Center</option>
+                                                                        <option value="bottom-right">Bottom Right</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="flex flex-col gap-2">
+                                                                    <label class="text-slate-500 text-xs font-bold uppercase px-1">Format Type</label>
+                                                                    <select id="number-format-select" class="w-full bg-slate-50 border border-slate-200 rounded-xl p-2.5 text-sm font-medium outline-none focus:border-primary cursor-pointer transition-colors">
+                                                                        <option value="{n}">{n}</option>
+                                                                        <option value="Page {n} of {total}">Page {n} of {total}</option>
+                                                                        <option value="custom">Custom Format</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div id="custom-format-wrapper" class="hidden animate-in fade-in zoom-in-95 duration-200">
+                                                                <div class="flex flex-col gap-2 pt-2 border-t border-slate-100">
+                                                                    <label class="text-slate-500 text-xs font-bold uppercase px-1">Custom Pattern</label>
+                                                                    <div class="relative">
+                                                                        <input type="text" id="number-format-custom" placeholder="e.g. Doc {n} | {total}" class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-sm font-medium outline-none focus:border-primary shadow-inner transition-all">
+                                                                        <span class="text-[10px] text-slate-400 font-semibold uppercase tracking-tight italic mt-1.5 ">Use {n} for number & {total} for total</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="flex flex-col gap-3">
+                                                    <label class="text-slate-700 text-xs font-bold uppercase tracking-widest">PDF Quality Profile</label>
+                                                    <div class="grid grid-cols-2 gap-2">
+                                                        <button data-qual="high" class="qual-btn active py-2.5 rounded-xl border border-slate-300 text-xs font-bold [&.active]:bg-primary [&.active]:text-white outline-none focus:border-primary cursor-pointer transition-all">Best Quality</button>
+                                                        <button data-qual="low" class="qual-btn py-2.5 rounded-xl border border-slate-300 text-xs font-bold [&.active]:bg-primary [&.active]:text-white outline-none focus:border-primary cursor-pointer transition-all">Small File</button>
+                                                    </div>
+                                                </div>
+                                                <div class="space-y-3 border-t border-slate-200 pt-4">
+                                                    <label class="flex items-center gap-2 group cursor-pointer">
+                                                        <div class="flex items-center gap-2">
+                                                            <input type="checkbox" id="auto-rotate" checked class="w-4 h-4 accent-primary cursor-pointer">
+                                                            <span class="text-sm font-medium text-slate-600 group-hover:text-primary transition-colors">Auto-fix orientation</span>
+                                                        </div>
+                                                        <div class="group/tooltip relative flex items-center">
+                                                            <svg class="w-4 h-4 text-slate-400 hover:text-primary transition-colors cursor-help" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                                            </svg>
+                                                            <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover/tooltip:block w-48 p-2.5 bg-slate-900 border border-white/10 rounded-xl text-xs text-slate-300 leading-relaxed shadow-2xl z-50 animate-in fade-in zoom-in-95 duration-200">
+                                                                Uses <strong>EXIF metadata</strong> to automatically rotate photos that were taken sideways on mobile devices.
+                                                                <div class="absolute top-full left-1/2 -translate-x-1/2 border-8 border-transparent border-t-slate-900"></div>
+                                                            </div>
+                                                        </div>
+                                                    </label>
+                                                    <label class="flex items-center gap-2 group cursor-pointer">
+                                                        <div class="flex items-center gap-2">
+                                                            <input type="checkbox" id="grayscale" class="w-4 h-4 accent-primary cursor-pointer">
+                                                            <span class="text-sm font-medium text-slate-600 group-hover:text-primary transition-colors">Convert to Grayscale</span>
+                                                        </div>
+                                                        <div class="group/tooltip relative flex items-center">
+                                                            <svg class="w-4 h-4 text-slate-400 hover:text-primary transition-colors cursor-help" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                                            </svg>
+                                                            <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover/tooltip:block w-48 p-2.5 bg-slate-900 border border-white/10 rounded-xl text-xs text-slate-300 leading-relaxed shadow-2xl z-50 animate-in fade-in zoom-in-95 duration-200">
+                                                                Removes all color from images. Perfect for <strong>saving printer ink</strong> or creating professional B&W documents.
+                                                                <div class="absolute top-full left-1/2 -translate-x-1/2 border-8 border-transparent border-t-slate-900"></div>
+                                                            </div>
+                                                        </div>
+                                                    </label>
+                                                    <label class="flex items-center gap-2 group cursor-pointer">
+                                                        <div class="flex items-center gap-2">
+                                                            <input type="checkbox" id="one-per-page" checked class="w-4 h-4 accent-primary cursor-pointer">
+                                                            <span class="text-sm font-medium text-slate-600 group-hover:text-primary transition-colors">One image per page</span>
+                                                        </div>
+                                                        <div class="group/tooltip relative flex items-center">
+                                                            <svg class="w-4 h-4 text-slate-400 hover:text-primary transition-colors cursor-help" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                                            </svg>
+                                                            <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover/tooltip:block w-48 p-2.5 bg-slate-900 border border-white/10 rounded-xl text-xs text-slate-300 leading-relaxed shadow-2xl z-50 animate-in fade-in zoom-in-95 duration-200">
+                                                                When unchecked, the tool will try to <strong>batch multiple small images</strong> onto a single PDF page to save space.
+                                                                <div class="absolute top-full left-1/2 -translate-x-1/2 border-8 border-transparent border-t-slate-900"></div>
+                                                            </div>
+                                                        </div>
+                                                    </label>
+                                                </div>
                                             </div>
-                                            <div class="flex flex-col gap-3">
-                                                <p id="warning-message" class="hidden text-center font-medium mb-4 text-amber-700"></p>
-                                                <button id="convert-action-btn" class="w-full bg-primary text-white px-6 py-3 rounded-xl font-bold hover:bg-red-700 transition shadow-lg cursor-pointer">Convert to PDF</button>
-                                                <button id="remove-file-btn" class="w-full text-gray-500 font-medium hover:text-red-600 transition text-m cursor-pointer">Remove & Upload Different Files</button>
+                                        </div>
+                                        <div class="pt-6 space-y-4">
+                                            <button id="process-pdf-btn" class="w-full group bg-primary text-white py-5 rounded-2xl font-bold uppercase tracking-[0.15em] text-sm transition-all duration-200 cursor-pointer hover:brightness-110 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5 shadow-lg shadow-primary/20">
+                                                <span class="flex items-center justify-center gap-2">
+                                                    Create PDF Document
+                                                    <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
+                                                </span>
+                                            </button>
+                                            <div class="grid grid-cols-2 gap-4">
+                                                <button id="add-more-btn" class="py-4 rounded-2xl font-bold uppercase tracking-widest text-xs text-primary border border-primary/20 hover:bg-primary/10 transition-all cursor-pointer">Add More</button>
+                                                <button id="clear-all-btn" class="py-4 rounded-2xl font-bold uppercase tracking-widest text-xs text-primary border border-primary/20 hover:bg-primary/10 transition-all cursor-pointer">Reset Batch</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="lg:col-span-7 xl:col-span-8 order-1 lg:order-2">
+                                        <div class="bg-slate-100 rounded-3xl border border-slate-300 p-6 pt-16 relative flex flex-col items-center h-auto min-h-87.5 md:min-h-162.5">
+                                            <div class="absolute top-6 left-6 z-10 flex items-center gap-2">
+                                                <span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+                                                <span class="text-primary font-bold uppercase tracking-[0.2em] text-xs">Organizer <span class="text-slate-500 font-medium ml-1">(Drag to Reorder)</span></span>
+                                            </div>                                            
+                                            <div id="image-grid-container" class="w-full h-full overflow-y-auto p-2">
+                                                <div id="sortable-preview-area" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-5"></div>
+                                            </div>
+                                            <div id="preview-loader" class="absolute inset-0 flex flex-col items-center justify-center bg-slate-900/80 z-30 rounded-3xl hidden backdrop-blur-sm">
+                                                <div class="w-12 h-12 border-4 border-primary/30 border-t-primary rounded-full animate-spin mb-4"></div>
+                                                <div class="text-center">
+                                                    <p class="text-xs text-white uppercase font-bold tracking-widest">Generating PDF...</p>
+                                                    <p id="progress-text" class="text-[10px] text-primary font-bold mt-1">0%</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div id="processing-state" class="hidden py-10">
-                                <p id="progress-text" class="text-lg font-semibold text-slate-900 animate-pulse"></p>
-                                <div class="w-full max-w-xs bg-gray-200 rounded-full h-2.5 mx-auto mt-4">
-                                    <div id="progress-bar" class="bg-primary h-2.5 rounded-full transition-all duration-300" style="width: 0%"></div>
+                            <div id="processing-state" class="hidden py-20 text-center animate-in fade-in duration-500">
+                                <div class="relative w-20 h-20 mx-auto mb-8">
+                                    <div class="absolute inset-0 border-4 border-primary/20 rounded-full"></div>
+                                    <div class="absolute inset-0 border-4 border-t-primary rounded-full animate-spin"></div>
+                                </div>
+                                <p id="progress-text" class="text-lg font-bold text-slate-700 uppercase tracking-[0.15em] animate-pulse"></p>
+                                <p class="text-slate-400 text-xs mt-2 uppercase tracking-widest font-medium">Please do not close this tab</p>
+                                <div class="mt-10">
+                                    <button id="cancel-btn" class="px-8 py-3 rounded-xl border border-primary text-primary font-bold uppercase text-xs hover:bg-primary/10 transition-all cursor-pointer">
+                                        Cancel Processing
+                                    </button>
                                 </div>
                             </div>
-                            <div id="results-area" class="hidden">
-                                <div class="mb-8">
-                                    <div class="inline-flex items-center justify-center w-16 h-16 bg-green-100 text-green-600 rounded-full mb-4">
-                                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
-                                    </div>
-                                    <h3 class="text-2xl font-bold text-gray-800">Conversion Complete!</h3>
-                                    <p class="text-gray-500 mt-2">Your PDF document is ready to download.</p>
+                            <div id="results-area" class="hidden text-center py-12 animate-in zoom-in-95 duration-500">
+                                <div class="w-24 h-24 bg-green-100 text-green-500 rounded-full flex items-center justify-center mx-auto mb-8 border border-green-200 shadow-sm transition-transform hover:scale-110">
+                                    <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+                                    </svg>
                                 </div>
-                                <div class="flex flex-col sm:flex-row justify-center gap-4 mb-10">
-                                    <button id="download-pdf-btn" class="w-full sm:w-auto bg-gray-900 text-white px-8 py-3 rounded-xl font-semibold hover:bg-black transition shadow-lg flex items-center justify-center gap-2 cursor-pointer">
-                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                                <h3 class="text-4xl font-black text-slate-900 mb-2 uppercase tracking-tighter">PDF Ready!</h3>
+                                <p class="text-slate-500 mb-10">Your images have been successfully converted into a single optimized PDF file.</p>
+                                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                                    <button id="download-btn" class="group flex items-center justify-center gap-3 px-10 py-4 bg-primary text-white rounded-2xl font-bold uppercase tracking-[0.15em] text-sm transition-all duration-300 cursor-pointer hover:shadow-lg hover:shadow-primary/30 hover:-translate-y-0.5 active:translate-y-0 active:scale-95">
+                                        <svg class="w-4 h-4 group-hover:animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
                                         Download PDF
                                     </button>
-                                    <button id="reset-btn" class="w-full sm:w-auto bg-white border border-gray-300 text-gray-700 px-8 py-3 rounded-xl font-semibold hover:bg-gray-50 transition cursor-pointer">Convert Another</button>
+                                    <button id="reset-btn" class="px-10 py-4 rounded-2xl font-bold uppercase tracking-[0.15em] text-sm text-slate-500 bg-white border border-slate-300 transition-all duration-200 cursor-pointer hover:bg-slate-100 hover:text-slate-800 hover:border-slate-400 active:scale-95">
+                                        Start Over
+                                    </button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="py-24 px-6 bg-[#0B0F1A] text-white overflow-hidden">
-                <div class="max-w-7xl mx-auto">
-                    <div class="flex flex-col lg:flex-row items-end justify-between mb-20 gap-8">
-                        <div class="max-w-2xl px-4 md:px-0"> 
-                            <div class="flex items-center gap-2 mb-4">
-                                <span class="w-8 h-0.5 bg-primary"></span>
-                                <span class="text-primary font-bold tracking-widest uppercase text-sm">Image Conversion Suite</span>
+            <section class="py-20 px-6 bg-[#0B0F1A] text-white font-sans overflow-hidden">
+                <div class="max-w-7xl mx-auto">                    
+                    <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6 border-b border-white/5 pb-12">
+                        <div class="max-w-2xl">
+                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/20 border border-primary/40 mb-6">
+                                <span class="relative flex h-2 w-2">
+                                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+                                    <span class="relative inline-flex rounded-full h-2 w-2 bg-cyan-400"></span>
+                                </span>
+                                <span class="text-[10px] font-bold tracking-[0.2em] text-slate-300 uppercase">Secure Client-Side Session</span>
                             </div>
-                            <h2 class="text-4xl md:text-6xl font-black mb-6 tracking-tight"> Pixel Perfect. <br/>
-                                <span class="text-transparent bg-clip-text bg-linear-to-r from-primary to-cyan-400">PDF Professional.</span>
+                            <h2 class="text-5xl md:text-6xl font-black tracking-tight mb-4 uppercase">
+                                The Smart Way to <br/>
+                                <span class="text-transparent bg-clip-text bg-linear-to-r from-primary via-white to-cyan-400">Handle Your Pixels.</span>
                             </h2>
-                            <p class="text-gray-400 text-lg leading-relaxed">Turn your images into polished PDF documents without losing a single pixel of quality. Whether it's a single photo or a hundred scans, our local engine handles the layout and conversion entirely in your browser.</p>
                         </div>
-                        <div class="hidden lg:block">
-                            <div class="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-sm">
-                                <div class="flex items-center gap-6">
-                                    <div class="text-center">
-                                        <div class="text-3xl font-bold text-white">4K</div>
-                                        <div class="text-xs text-gray-500 uppercase">Res Ready</div>
-                                    </div>
-                                    <div class="w-px h-10 bg-white/10"></div>
-                                    <div class="text-center">
-                                        <div class="text-3xl font-bold text-white">Local</div>
-                                        <div class="text-xs text-gray-500 uppercase">Processing</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="grid lg:grid-cols-12 gap-8">
-                        <div class="lg:col-span-5 space-y-8">
-                            <div class="bg-linear-to-br from-white/5 to-transparent p-8 rounded-3xl border border-white/10 relative group">
-                                <h3 class="text-xl font-bold mb-6 flex items-center gap-2">
-                                    <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                                    Imaging Features
-                                </h3>
-                                <ul class="space-y-6">
-                                    <li class="flex items-start gap-4">
-                                        <div class="w-6 h-6 rounded-full bg-cyan-500/20 text-cyan-400 shrink-0 flex items-center justify-center text-xs">✔</div>
-                                        <div>
-                                            <h4 class="font-bold text-gray-200">Zero Compression Loss</h4>
-                                            <p class="text-sm text-gray-500">We wrap your JPGs in a PDF container without re-encoding them, ensuring the original image quality remains 100% intact.</p>
-                                        </div>
-                                    </li>
-                                    <li class="flex items-start gap-4">
-                                        <div class="w-6 h-6 rounded-full bg-cyan-500/20 text-cyan-400 shrink-0 flex items-center justify-center text-xs">✔</div>
-                                        <div>
-                                            <h4 class="font-bold text-gray-200">Smart Auto-Margin</h4>
-                                            <p class="text-sm text-gray-500">Automatically fit images to standard page sizes (A4, Letter) or create a custom canvas based on the image dimensions.</p>
-                                        </div>
-                                    </li>
-                                    <li class="flex items-start gap-4">
-                                        <div class="w-6 h-6 rounded-full bg-cyan-500/20 text-cyan-400 shrink-0 flex items-center justify-center text-xs">✔</div>
-                                        <div>
-                                            <h4 class="font-bold text-gray-200">Multi-Image Stitching</h4>
-                                            <p class="text-sm text-gray-500">Combine hundreds of JPGs into a single, organized PDF file with drag-and-drop reordering.</p>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div class="bg-white/5 p-8 rounded-3xl border border-white/5 hover:border-primary/50 transition-colors">
-                                <div class="w-12 h-12 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mb-6">
-                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
-                                </div>
-                                <h4 class="text-lg font-bold mb-2 text-white">OCR Ready Output</h4>
-                                <p class="text-sm text-gray-500 leading-relaxed">Generated PDFs are structured to be compatible with standard OCR readers for future text extraction.</p>
-                            </div>
-                            <div class="bg-white/5 p-8 rounded-3xl border border-white/5 hover:border-cyan-400/50 transition-colors">
-                                <div class="w-12 h-12 bg-cyan-400/10 text-cyan-400 rounded-2xl flex items-center justify-center mb-6">
-                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                                </div>
-                                <h4 class="text-lg font-bold mb-2 text-white">EXIF Cleanup</h4>
-                                <p class="text-sm text-gray-500 leading-relaxed">Optionally strip sensitive camera metadata (GPS, device info) from your images during conversion.</p>
-                            </div>
-                            <div class="md:col-span-2 bg-linear-to-r from-primary to-cyan-600 p-8 rounded-3xl flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl shadow-primary/20">
-                                <div class="text-center md:text-left">
-                                    <h4 class="text-2xl font-black text-white mb-1">Privacy Conversion</h4>
-                                    <p class="text-white/80 text-sm">Select JPGs → Local Canvas → PDF Wrap → Save Directly</p>
-                                </div>
-                                <div class="px-6 py-3 bg-black/20 rounded-xl backdrop-blur-md border border-white/20 text-white font-bold text-sm uppercase tracking-widest">Offline Guaranteed</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mt-20 pt-10 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-8">
-                        <div class="flex flex-col md:flex-row items-center gap-4 md:gap-6">
-                            <div class="flex items-center gap-2">
-                                <div class="w-2 h-2 rounded-full bg-cyan-500 animate-pulse"></div>
-                                <span class="text-xs font-bold uppercase tracking-widest text-gray-400">Image Engine Ready</span>
-                            </div>
-                            <div class="hidden md:block w-px h-4 bg-white/10"></div>
-                            <span class="text-sm text-gray-500">Supports PNG, WEBP, JPG</span>
-                            <div class="hidden md:block w-px h-4 bg-white/10"></div>
-                            <span class="text-sm text-gray-500">Hardware Accelerated</span>
-                        </div>
-                        <p class="text-sm text-gray-600 font-medium text-center md:text-right border-t border-white/5 pt-6 md:border-none md:pt-0 w-full md:w-auto">
-                            Convert with clarity. <span class="text-gray-500">Protected by local logic.</span>
+                        <p class="text-slate-400 text-lg max-w-sm leading-relaxed mb-2 font-medium">
+                            Professional image-to-PDF orchestration. Zero uploads. Total privacy. Infinite possibilities.
                         </p>
                     </div>
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                        <div class="lg:col-span-8 space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="p-6 md:p-8 rounded-3xl bg-linear-to-b from-white/3 to-transparent border border-white/10 hover:border-primary/40 transition-all duration-500 group">
+                                    <div class="w-10 h-10 flex items-center justify-center rounded-xl bg-primary/20 text-primary mb-16 group-hover:scale-110 transition-transform">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                                    </div>
+                                    <h4 class="text-xl font-bold mb-3 uppercase tracking-widest">Native Containerization</h4>
+                                    <p class="text-base text-slate-400 leading-relaxed mb-6">We wrap images in a high-fidelity PDF container. No re-sampling or artifacting—just your original resolution preserved 100%.</p>
+                                    <div class="h-1 w-12 bg-primary"></div>
+                                </div>
+                                <div class="p-6 md:p-8 rounded-3xl bg-linear-to-b from-white/3 to-transparent border border-white/10 hover:border-cyan-400/40 transition-all duration-500 group">
+                                    <div class="w-10 h-10 flex items-center justify-center rounded-xl bg-cyan-400/20 text-cyan-400 mb-16 group-hover:scale-110 transition-transform">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                                    </div>
+                                    <h4 class="text-xl font-bold mb-3 uppercase tracking-widest">Visual Sequencing</h4>
+                                    <p class="text-base text-slate-400 leading-relaxed mb-6">Take control with a drag-and-drop grid. Reorder pages instantly, adjust margins, and preview layouts in real-time.</p>
+                                    <div class="h-1 w-12 bg-cyan-400"></div>
+                                </div>
+                            </div>
+                            <div class="p-6 md:p-8 rounded-3xl bg-white/2 border border-white/10">
+                                <div class="grid md:grid-cols-3 gap-8">
+                                    <div>
+                                        <h5 class="text-base font-bold uppercase tracking-widest text-slate-300 mb-6">Output Specs</h5>
+                                        <ul class="space-y-4 text-base text-slate-400 font-medium">
+                                            <li class="flex items-center gap-3">
+                                                <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                                                A4 & Letter Presets
+                                            </li>
+                                            <li class="flex items-center gap-3">
+                                                <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"></path></svg>
+                                                Custom Pixel Margins
+                                            </li>
+                                            <li class="flex items-center gap-3">
+                                                <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+                                                Landscape Auto-Detect
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h5 class="text-base font-bold uppercase tracking-widest text-slate-300 mb-6">Visual Filters</h5>
+                                        <ul class="space-y-4 text-base text-slate-400 font-medium">
+                                            <li class="flex items-center gap-3">
+                                                <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
+                                                Grayscale Export
+                                            </li>
+                                            <li class="flex items-center gap-3">
+                                                <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.856 6.646l1.414-1.414m0 0L18.1 8.06m-2.83-2.828L15.867 4.64a2 2 0 012.827 0l2.666 2.667a2 2 0 010 2.827l-1.413 1.414m-7.072 7.072L9.44 19.04a2 2 0 01-2.827 0l-2.667-2.667a2 2 0 010-2.827l1.414-1.414m7.072 7.072l1.414-1.414m-1.414 1.414l7.072-7.072M7.324 7.324l7.072 7.072"></path></svg>
+                                                EXIF Data Stripping
+                                            </li>
+                                            <li class="flex items-center gap-3">
+                                                <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14"></path></svg>
+                                                Page Number Overlay
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h5 class="text-base font-bold uppercase tracking-widest text-slate-300 mb-6">Core Engine</h5>
+                                        <ul class="space-y-4 text-base text-slate-400 font-medium">
+                                            <li class="flex items-center gap-3">
+                                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
+                                                Browser-Side RAM
+                                            </li>
+                                            <li class="flex items-center gap-3">
+                                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                                Offline Capability
+                                            </li>
+                                            <li class="flex items-center gap-3">
+                                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                                                HW Acceleration
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-4 p-6 md:p-8 rounded-4xl bg-slate-900/50 border border-white/10 flex flex-col justify-between">
+                            <div>
+                                <h4 class="text-xl font-bold mb-8 uppercase tracking-widest">Engine Compatibility</h4>
+                                <div class="space-y-6">
+                                    <div class="flex items-center justify-between gap-2 p-4 bg-white/5 rounded-2xl border border-white/5">
+                                        <span class="text-sm font-bold uppercase tracking-widest text-slate-300">Format Support</span>
+                                        <span class="text-xs font-bold text-white px-2 py-1 bg-primary/20 rounded uppercase">JPG/PNG/WEBP</span>
+                                    </div>
+                                    <div class="flex items-center justify-between gap-2 p-4 bg-white/5 rounded-2xl border border-white/5">
+                                        <span class="text-sm font-bold uppercase tracking-widest text-slate-300">Max Resolution</span>
+                                        <span class="text-xs font-bold text-white px-2 py-1 bg-cyan-400/20 rounded uppercase">4K+ Ultra HD</span>
+                                    </div>
+                                    <div class="flex items-center justify-between gap-2 p-4 bg-white/5 rounded-2xl border border-white/5">
+                                        <span class="text-sm font-bold uppercase tracking-widest text-slate-300">Encryption</span>
+                                        <span class="text-xs font-bold text-white px-2 py-1 bg-white/10 rounded uppercase">Local-Only</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-12 pt-8 border-t border-white/10">
+                                <div class="flex items-center gap-4 mb-4">
+                                    <div class="w-12 h-12 rounded-full bg-linear-to-tr from-primary to-cyan-400 p-px">
+                                        <div class="w-full h-full rounded-full bg-[#0B0F1A] flex items-center justify-center font-bold text-sm">99%</div>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm font-bold uppercase tracking-widest">Efficiency Score</p>
+                                        <p class="text-xs text-slate-400 font-medium leading-none">Optimized for Chromium Engines</p>
+                                    </div>
+                                </div>
+                                <p class="text-xs text-slate-400 leading-relaxed italic">
+                                    *Processing speed depends on local system RAM and image file size. All data remains in-browser.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-px bg-white/5 rounded-3xl overflow-hidden border border-white/10">
+                        <div class="bg-[#0B0F1A] p-8 flex flex-col items-center justify-center group transition-colors hover:bg-white/2">
+                            <span class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-1 group-hover:text-primary transition-colors">Security</span>
+                            <span class="text-sm font-bold uppercase tracking-wider text-slate-200">Metadata Scrub</span>
+                        </div>
+                        <div class="bg-[#0B0F1A] p-8 flex flex-col items-center justify-center group transition-colors hover:bg-white/2">
+                            <span class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-1 group-hover:text-cyan-400 transition-colors">Compliance</span>
+                            <span class="text-sm font-bold uppercase tracking-wider text-slate-200">PDF/A Standard</span>
+                        </div>
+                        <div class="bg-[#0B0F1A] p-8 flex flex-col items-center justify-center group transition-colors hover:bg-white/2">
+                            <span class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-1 group-hover:text-primary transition-colors">Performance</span>
+                            <span class="text-sm font-bold uppercase tracking-wider text-slate-200">Instant Render</span>
+                        </div>
+                        <div class="bg-[#0B0F1A] p-8 flex flex-col items-center justify-center group transition-colors hover:bg-white/2">
+                            <span class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-1 group-hover:text-cyan-400 transition-colors">Availability</span>
+                            <span class="text-sm font-bold uppercase tracking-wider text-slate-200">Offline Logic</span>
+                        </div>
+                    </div>
                 </div>
             </section>
-            <section class="bg-white border-t border-borderclr py-24 px-6">
+            <section class="bg-white border-t border-borderclr py-24 px-6 font-sans">
                 <div class="max-w-6xl mx-auto text-center">
                     <div class="text-center mb-20">
-                        <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6 tracking-tight">
-                            Convert Images in <span class="text-primary">3 Simple Steps</span>
-                        </h2>
-                        <p class="text-gray-500 text-lg max-w-2xl mx-auto leading-relaxed">Turn your JPG, PNG, or TIFF images into a high-quality PDF. Fast, secure, and no software installation required.</p>
+                        <h2 class="text-4xl md:text-5xl font-black text-[#0B0F1A] mb-6 tracking-tight">Convert Images in <span class="text-primary italic font-medium lowercase tracking-normal">3 easy steps.</span></h2>
+                        <p class="text-slate-500 text-lg max-w-2xl mx-auto leading-relaxed">Turn your JPG, PNG, or WEBP images into a professional PDF document. 100% private, browser-based conversion with no file limits.</p>
                     </div>                    
                     <div class="relative grid md:grid-cols-3 gap-12 lg:gap-16">
-                        <div class="hidden md:block absolute top-1/4 left-0 w-full h-0.5 bg-gray-100 -z-10"></div>
+                        <div class="hidden md:block absolute top-1/4 left-0 w-full h-0.5 bg-slate-100 -z-10"></div>
                         <div class="text-center group">
-                            <div class="w-20 h-20 mx-auto mb-8 flex items-center justify-center rounded-3xl bg-white border-2 border-gray-100 text-primary shadow-sm group-hover:border-primary group-hover:shadow-xl group-hover:shadow-primary/10 transition-all duration-500 transform group-hover:-translate-y-2">
+                            <div class="w-20 h-20 mx-auto mb-8 flex items-center justify-center rounded-3xl bg-white border-2 border-slate-100 text-primary shadow-sm group-hover:border-primary group-hover:shadow-xl group-hover:shadow-primary/10 transition-all duration-500 transform group-hover:-translate-y-2">
                                 <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
                                 </svg>
                             </div>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-4">1. Upload Images</h3>
-                            <p class="text-gray-500 leading-relaxed">Drag and drop your JPG files into the browser. You can upload multiple images at once to combine them.</p>
+                            <h3 class="text-2xl font-bold text-[#0B0F1A] mb-4">1. Import Images</h3>
+                            <p class="text-slate-500 leading-relaxed">Drag and drop your images into the secure upload area. Add as many files as you need—they stay 100% offline in your browser.</p>
                         </div>
                         <div class="text-center group">
-                            <div class="w-20 h-20 mx-auto mb-8 flex items-center justify-center rounded-3xl bg-white border-2 border-gray-100 text-primary shadow-sm group-hover:border-primary group-hover:shadow-xl group-hover:shadow-primary/10 transition-all duration-500 transform group-hover:-translate-y-2">
+                            <div class="w-20 h-20 mx-auto mb-8 flex items-center justify-center rounded-3xl bg-white border-2 border-slate-100 text-primary shadow-sm group-hover:border-primary group-hover:shadow-xl group-hover:shadow-primary/10 transition-all duration-500 transform group-hover:-translate-y-2">
                                 <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                                 </svg>
                             </div>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-4">2. Adjust Layout</h3>
-                            <p class="text-gray-500 leading-relaxed">Drag images to reorder them. Choose page orientation, margins, and paper size for your final PDF.</p>
+                            <h3 class="text-2xl font-bold text-[#0B0F1A] mb-4">2. Arrange & Configure</h3>
+                            <p class="text-slate-500 leading-relaxed">Use the <strong>Organizer</strong> to drag images into the right order. Adjust page size, margins, and orientation or apply grayscale filters.</p>
                         </div>
                         <div class="text-center group">
-                            <div class="w-20 h-20 mx-auto mb-8 flex items-center justify-center rounded-3xl bg-white border-2 border-gray-100 text-primary shadow-sm group-hover:border-primary group-hover:shadow-xl group-hover:shadow-primary/10 transition-all duration-500 transform group-hover:-translate-y-2">
+                            <div class="w-20 h-20 mx-auto mb-8 flex items-center justify-center rounded-3xl bg-white border-2 border-slate-100 text-primary shadow-sm group-hover:border-primary group-hover:shadow-xl group-hover:shadow-primary/10 transition-all duration-500 transform group-hover:-translate-y-2">
                                 <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                 </svg>
                             </div>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-4">3. Get Your PDF</h3>
-                            <p class="text-gray-500 leading-relaxed">Click 'Convert' and your images are merged into a single PDF instantly. High resolution, no watermarks.</p>
+                            <h3 class="text-2xl font-bold text-[#0B0F1A] mb-4">3. Generate & Save</h3>
+                            <p class="text-slate-500 leading-relaxed">Click <strong>'Create PDF'</strong>. Our local engine merges your images instantly into a high-quality, watermark-free PDF document.</p>
                         </div>
                     </div>
                 </div>
@@ -423,15 +639,15 @@
                         </a>
                     </div>
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                        <a href="merge-pdf.html" target="_blank" class="group p-8 bg-white/5 rounded-3xl border border-white/5 hover:border-primary/30 hover:bg-white/[0.07] hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300 relative">
-                            <div class="w-12 h-12 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-primary group-hover:text-white transition-all duration-500">
+                        <a href="merge-pdf.html" target="_blank" class="group p-8 bg-white/5 rounded-3xl border border-white/5 hover:border-rose-500/30 hover:bg-white/[0.07] hover:shadow-2xl hover:shadow-rose-500/10 transition-all duration-300 relative">
+                            <div class="w-12 h-12 bg-rose-500/10 text-rose-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-rose-500 group-hover:text-white transition-all duration-500">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16a2 2 0 012-2h4a2 2 0 012 2v2m-6-12h4a2 2 0 012 2v2a2 2 0 01-2 2h-4a2 2 0 01-2-2V6a2 2 0 012-2z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 9l5 5 5-5M7 5l5 5 5-5M5 19h14a2 2 0 002-2v-5H3v5a2 2 0 002 2z"></path>
                                 </svg>
                             </div>
                             <h3 class="text-xl font-bold text-white mb-2">Merge PDF</h3>
                             <p class="text-sm text-gray-400 leading-relaxed mb-6">Combine your newly converted PDF images into a single document.</p>
-                            <span class="text-xs font-bold uppercase tracking-widest text-primary opacity-50 group-hover:opacity-100 transition-opacity">Launch Tool →</span>
+                            <span class="text-xs font-bold uppercase tracking-widest text-rose-500 opacity-80 group-hover:opacity-100 transition-opacity">Launch Tool →</span>
                         </a>
                         <a href="compress-pdf.html" target="_blank" class="group p-8 bg-white/5 rounded-3xl border border-white/5 hover:border-emerald-500/30 hover:bg-white/[0.07] hover:shadow-2xl hover:shadow-emerald-500/10 transition-all duration-300 relative">
                             <div class="w-12 h-12 bg-emerald-500/10 text-emerald-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-emerald-500 group-hover:text-white transition-all duration-500">
@@ -441,7 +657,7 @@
                             </div>
                             <h3 class="text-xl font-bold text-white mb-2">Compress PDF</h3>
                             <p class="text-sm text-gray-400 leading-relaxed mb-6">Optimize image-heavy PDFs to make them easier to send via email.</p>
-                            <span class="text-xs font-bold uppercase tracking-widest text-emerald-500 opacity-50 group-hover:opacity-100 transition-opacity">Launch Tool →</span>
+                            <span class="text-xs font-bold uppercase tracking-widest text-emerald-500 opacity-80 group-hover:opacity-100 transition-opacity">Launch Tool →</span>
                         </a>
                         <a href="pdf-thumbnail-generator.html" target="_blank" class="group p-8 bg-white/5 rounded-3xl border border-white/5 hover:border-amber-500/30 hover:bg-white/[0.07] hover:shadow-2xl hover:shadow-amber-500/10 transition-all duration-300 relative">
                             <div class="w-12 h-12 bg-amber-500/10 text-amber-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-amber-500 group-hover:text-white transition-all duration-500">
@@ -451,7 +667,7 @@
                             </div>
                             <h3 class="text-xl font-bold text-white mb-2">Thumbnails</h3>
                             <p class="text-sm text-gray-400 leading-relaxed mb-6">Generate high-quality image previews of your PDF documents.</p>
-                            <span class="text-xs font-bold uppercase tracking-widest text-amber-500 opacity-50 group-hover:opacity-100 transition-opacity">Launch Tool →</span>
+                            <span class="text-xs font-bold uppercase tracking-widest text-amber-500 opacity-80 group-hover:opacity-100 transition-opacity">Launch Tool →</span>
                         </a>
                         <a href="pdf-to-jpg.html" target="_blank" class="group p-8 bg-white/5 rounded-3xl border border-white/5 hover:border-orange-500/30 hover:bg-white/[0.07] hover:shadow-2xl hover:shadow-orange-500/10 transition-all duration-300 relative">
                             <div class="w-12 h-12 bg-orange-500/10 text-orange-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-orange-500 group-hover:text-white transition-all duration-500">
@@ -461,68 +677,70 @@
                             </div>
                             <h3 class="text-xl font-bold text-white mb-2">PDF to JPG</h3>
                             <p class="text-sm text-gray-400 leading-relaxed mb-6">The reverse: convert existing PDF pages back into high-quality images.</p>
-                            <span class="text-xs font-bold uppercase tracking-widest text-orange-500 opacity-50 group-hover:opacity-100 transition-opacity">Launch Tool →</span>
+                            <span class="text-xs font-bold uppercase tracking-widest text-orange-500 opacity-80 group-hover:opacity-100 transition-opacity">Launch Tool →</span>
                         </a>
                     </div>
                 </div>
             </section>
-            <section class="py-24 px-6 bg-white">
+            <section class="py-24 px-6 bg-white font-sans">
                 <div class="max-w-4xl mx-auto">
                     <div class="text-center mb-16">
-                        <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-4 tracking-tight">Frequently Asked <span class="text-primary italic font-medium lowercase tracking-normal">Questions.</span></h2>
-                        <p class="text-gray-500 text-lg">Everything you need to know about our local JPG to PDF conversion engine.</p>
+                        <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-4 tracking-tight uppercase">
+                            Frequently Asked <span class="text-primary italic font-medium lowercase tracking-normal">Questions.</span>
+                        </h2>
+                        <p class="text-slate-500 text-lg">Everything you need to know about our local JPG to PDF conversion engine.</p>
                     </div>
                     <div class="space-y-4">
-                        <div class="group border border-gray-100 rounded-2xl bg-white hover:border-primary/20 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
+                        <div class="group border border-gray-300 rounded-2xl bg-white hover:border-primary/40 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
                             <button class="faq-toggle w-full flex items-center justify-between p-6 cursor-pointer text-left group" aria-expanded="false" aria-controls="jpg-pdf-faq-1">
-                                <span class="text-lg font-medium text-gray-800 group-hover:text-primary transition-colors">Are my images secure during JPG to PDF conversion?</span>
+                                <span class="text-lg font-medium text-gray-800 group-hover:text-primary transition-colors">Is it safe to convert my private photos to PDF here?</span>
                                 <div class="faq-icon-wrapper w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
                                     <svg class="w-4 h-4 text-gray-400 group-hover:text-primary transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path>
                                     </svg>
                                 </div>
                             </button>
-                            <div class="faq-content hidden px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-50 pt-4" id="jpg-pdf-faq-1">
-                                Absolutely. MyToolKitPro uses a browser-native engine, meaning all conversions happen locally on your device. Your JPG or PNG files are never uploaded to a server, ensuring 100% data privacy.
+                            <div class="faq-content hidden px-6 pb-6 text-slate-600 leading-relaxed border-t border-gray-50 pt-4" id="jpg-pdf-faq-1">
+                                Absolutely. Unlike other tools, MyToolKitPro processes everything **locally in your browser**. Your images are never uploaded to a server. Your data stays on your hardware, ensuring 100% privacy for sensitive documents or personal photos.
                             </div>
                         </div>
-                        <div class="group border border-gray-100 rounded-2xl bg-white hover:border-primary/20 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
+                        <div class="group border border-gray-300 rounded-2xl bg-white hover:border-primary/40 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
                             <button class="faq-toggle w-full flex items-center justify-between p-6 cursor-pointer text-left group" aria-expanded="false" aria-controls="jpg-pdf-faq-2">
-                                <span class="text-lg font-medium text-gray-800 group-hover:text-primary transition-colors">Will image quality drop after converting to PDF?</span>
+                                <span class="text-lg font-medium text-gray-800 group-hover:text-primary transition-colors">Will my images lose quality after the conversion?</span>
                                 <div class="faq-icon-wrapper w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
                                     <svg class="w-4 h-4 text-gray-400 group-hover:text-primary transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path>
                                     </svg>
                                 </div>
                             </button>
-                            <div class="faq-content hidden px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-50 pt-4" id="jpg-pdf-faq-2">
-                                No. Our engine uses a 'Zero-Loss' wrapping technique. Instead of re-compressing your images, it encapsulates the original pixel data directly into the PDF container, preserving the full resolution and clarity of your JPGs.
+                            <div class="faq-content hidden px-6 pb-6 text-slate-600 leading-relaxed border-t border-gray-50 pt-4" id="jpg-pdf-faq-2">
+                                No. Our engine uses a **Native Encapsulation** method. Instead of re-compressing your JPGs (which causes blurriness), we wrap the original pixel data into a PDF container. Your high-resolution images remain exactly as sharp as the originals.
                             </div>
                         </div>
-                        <div class="group border border-gray-100 rounded-2xl bg-white hover:border-primary/20 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
+                        <div class="group border border-gray-300 rounded-2xl bg-white hover:border-primary/40 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
                             <button class="faq-toggle w-full flex items-center justify-between p-6 cursor-pointer text-left group" aria-expanded="false" aria-controls="jpg-pdf-faq-3">
-                                <span class="text-lg font-medium text-gray-800 group-hover:text-primary transition-colors">Can I combine multiple JPG images into a single PDF?</span>
+                                <span class="text-lg font-medium text-gray-800 group-hover:text-primary transition-colors">Can I change the order of images before creating the PDF?</span>
                                 <div class="faq-icon-wrapper w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
                                     <svg class="w-4 h-4 text-gray-400 group-hover:text-primary transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path>
                                     </svg>
                                 </div>
                             </button>
-                            <div class="faq-content hidden px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-50 pt-4" id="jpg-pdf-faq-3">
-                                Yes, you can upload multiple image assets simultaneously. Our tool features a visual stitching engine that allows you to drag and drop images to set their order before generating a single, unified PDF document.
+                            <div class="faq-content hidden px-6 pb-6 text-slate-600 leading-relaxed border-t border-gray-50 pt-4" id="jpg-pdf-faq-3">
+                                Yes. Once you select your images, our **Visual Organizer** allows you to drag and drop them to set the perfect sequence. You can also adjust individual page sizes and margins for each image before clicking the generate button.
                             </div>
                         </div>
-                        <div class="group border border-gray-100 rounded-2xl bg-white hover:border-primary/20 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
+                        <div class="group border border-gray-300 rounded-2xl bg-white hover:border-primary/40 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
                             <button class="faq-toggle w-full flex items-center justify-between p-6 cursor-pointer text-left group" aria-expanded="false" aria-controls="jpg-pdf-faq-4">
-                                <span class="text-lg font-medium text-gray-800 group-hover:text-primary transition-colors">Does this tool remove EXIF metadata from my photos?</span>
+                                <span class="text-lg font-medium text-gray-800 group-hover:text-primary transition-colors">Does the PDF include my camera's GPS or device info?</span>
                                 <div class="faq-icon-wrapper w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
                                     <svg class="w-4 h-4 text-gray-400 group-hover:text-primary transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path>
                                     </svg>
                                 </div>
                             </button>
-                            <div class="faq-content hidden px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-50 pt-4" id="jpg-pdf-faq-4">
-                                Yes. As part of our privacy-first approach, the converter automatically cleans sensitive EXIF metadata (like GPS location or device info) from your images during the PDF creation process.
+                            <div class="faq-content hidden px-6 pb-6 text-slate-600 leading-relaxed border-t border-gray-50 pt-4" id="jpg-pdf-faq-4">
+                                By default, our tool performs an **EXIF Cleanup**. This automatically strips sensitive metadata like GPS coordinates, camera models, and timestamps from the images during the PDF creation process to protect your identity.
                             </div>
                         </div>
                     </div>
@@ -597,11 +815,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="border-t border-gray-800/80 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+                <div class="border-t border-gray-800/80 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm font-semibold">
                     <p class="text-gray-500">
                         &copy; <span id="year"></span> MyToolKitPro. All rights reserved.
                     </p>
-                    <p class="text-gray-600">Built with 💙 for the web.</p>
+                    <p class="text-gray-500">Built with 💙 for the web.</p>
                 </div>
             </div>
         </footer>
@@ -630,7 +848,8 @@
         </div>
         <script src="../../assets/js/dist/main.min.js" defer></script>
         <script src="../../assets/js/vendor/jspdf.umd.min.js" defer></script>
-        <script src="../../assets/js/dist/jpg-to-pdf.min.js" defer></script>
+        <script src="../../assets/js/vendor/sortable.min.js"></script>
+        <script type="module" src="../../assets/js/dist/tools/image/jpg-to-pdf.min.js" defer></script>
         <script>
             document.addEventListener('DOMContentLoaded', () => {
                 document.addEventListener('click', (e) => {

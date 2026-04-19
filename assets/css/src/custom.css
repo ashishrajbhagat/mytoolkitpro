@@ -1,15 +1,4 @@
-/* --- Branded Spinner Animation --- */
-#spinner {
-    animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-/* --- Custom Scrollbar (Branded for PDF Grids) --- */
-/* Use this class on your #pages-grid to make it look professional */
+/* --- Custom Scrollbar --- */
 .custom-scrollbar::-webkit-scrollbar {
     width: 6px;
     height: 6px;
@@ -21,28 +10,6 @@
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
     @apply bg-primary/50 rounded-full hover:bg-primary transition-colors;
-}
-
-/* --- Accessibility: Screen Reader Only --- */
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
-}
-
-/* --- PDF Page Thumbnails Hover Effect --- */
-.page-container {
-    @apply transition-all duration-300 ease-out;
-}
-
-.page-container:hover canvas {
-    @apply ring-4 ring-primary/20 border-primary;
 }
 
 /* --- Global Refinements --- */
