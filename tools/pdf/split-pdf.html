@@ -644,37 +644,5 @@
         <script src="../../assets/js/dist/main.min.js" defer></script>
         <script src="../../assets/js/vendor/pdf-lib.min.js" defer></script>
         <script src="../../assets/js/dist/tools/pdf/split-pdf.min.js" defer></script>
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                document.addEventListener('click', (e) => {
-                    const btn = e.target.closest('.faq-toggle');
-                    if (!btn) return;
-
-                    e.preventDefault();
-
-                    const isExpanded = btn.getAttribute('aria-expanded') === 'true';
-                    const allBtns = document.querySelectorAll('.faq-toggle');
-
-                    allBtns.forEach(other => {
-                        if (other !== btn) {
-                            other.setAttribute('aria-expanded', 'false');
-                            const targetId = other.getAttribute('aria-controls');
-                            document.getElementById(targetId)?.classList.add('hidden');
-                            other.querySelector('svg')?.classList.remove('rotate-180');
-                        }
-                    });
-
-                    const newState = !isExpanded;
-                    btn.setAttribute('aria-expanded', newState);
-                    const currentTargetId = btn.getAttribute('aria-controls');
-                    const content = document.getElementById(currentTargetId);
-                    if (content) {
-                        content.classList.toggle('hidden', !newState);
-                    }
-                    
-                    btn.querySelector('svg')?.classList.toggle('rotate-180', newState);
-                });
-            });
-        </script>
     </body>
 </html>
