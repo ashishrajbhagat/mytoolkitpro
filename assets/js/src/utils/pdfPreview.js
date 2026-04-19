@@ -1,5 +1,5 @@
 /**
- * MyToolKitPro - Shared PDF Preview Renderer
+ * YantraStack - Shared PDF Preview Renderer
  * --------------------------------------------------
  * Purpose:
  * Centralized utility to render PDF previews across all tools

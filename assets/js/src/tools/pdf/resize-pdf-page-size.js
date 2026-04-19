@@ -1,5 +1,5 @@
 /**
- * MyToolKitPro - Resize PDF Page Size Logic
+ * YantraStack - Resize PDF Page Size Logic
  * Features: Smart Scaling, Auto-Centering, Orientation Toggle, and Range Support
  */
 
@@ -178,7 +178,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const url = URL.createObjectURL(processedPdfBlob);
         const link = document.createElement("a");
         link.href = url;
-        link.download = `${pdfFile.name.replace(".pdf", "")}-resized-mytoolkitpro.pdf`;
+        link.download = `${pdfFile.name.replace(".pdf", "")}-resized-yantrastack.pdf`;
         link.click();
         setTimeout(() => URL.revokeObjectURL(url), 100);
     });

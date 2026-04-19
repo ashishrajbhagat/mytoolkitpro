@@ -1,5 +1,5 @@
 /**
- * MyToolKitPro - Compress PDF Logic
+ * YantraStack - Compress PDF Logic
  * Dependencies: pdf.js, jspdf
  */
 
@@ -263,7 +263,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const link = document.createElement("a");
         link.href = URL.createObjectURL(compressedPdfBlob);
         const fileName = pdfFile ? pdfFile.name.replace(/\.[^/.]+$/, "") : "compressed";
-        link.download = `${fileName}-compressed-mytoolkitpro.pdf`;
+        link.download = `${fileName}-compressed-yantrastack.pdf`;
         link.click();
     });
 });

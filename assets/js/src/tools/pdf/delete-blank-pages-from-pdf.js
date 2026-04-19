@@ -1,5 +1,5 @@
 /**
- * MyToolKitPro - Delete Blank Pages Logic
+ * YantraStack - Delete Blank Pages Logic
  * Dependencies: pdf-lib (for editing), pdf.js (for visual analysis)
  */
 
@@ -246,7 +246,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const link = document.createElement("a");
         link.href = downloadUrl;
         const baseName = pdfFile ? pdfFile.name.replace(/\.[^/.]+$/, "") : "document";
-        link.download = `${baseName}-cleaned-mytoolkitpro.pdf`;
+        link.download = `${baseName}-cleaned-yantrastack.pdf`;
         
         document.body.appendChild(link);
         link.click();

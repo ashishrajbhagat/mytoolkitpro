@@ -1,5 +1,5 @@
 /**
- * MyToolKitPro - Duplicate PDF Pages Logic
+ * YantraStack - Duplicate PDF Pages Logic
  * Dependencies: pdf-lib, pdf.js
  */
 
@@ -241,7 +241,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const link = document.createElement("a");
         link.href = url;
         const name = pdfFile ? pdfFile.name.replace(".pdf", "") : "document";
-        link.download = `${name}-duplicated-mytoolkitpro.pdf`;
+        link.download = `${name}-duplicated-yantrastack.pdf`;
         link.click();
         URL.revokeObjectURL(url);
     });

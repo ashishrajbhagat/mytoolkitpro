@@ -1,12 +1,12 @@
 /**
- * @fileoverview MyToolKitPro - Add Page Numbers to PDF Logic
+ * @fileoverview YantraStack - Add Page Numbers to PDF Logic
  * @description Provides comprehensive PDF pagination features including 
  * positioning, offset mirroring, rotation, custom text formatting, 
  * and specific page range targeting.
  * @architecture tools/pdf/add-page-numbers.html
  * @dependencies pdf-lib, pdf.js, utils (fileHandler, dragDrop, pageRange, pdfPreview, helpers)
  * @version 1.1.0
- * @author MyToolKitPro
+ * @author YantraStack
  */
 
 const { PDFDocument, rgb, degrees, StandardFonts } = PDFLib;
@@ -456,7 +456,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if(!processedPdfBlob) return;
         const link = document.createElement("a");
         link.href = URL.createObjectURL(processedPdfBlob);
-        link.download = `mytoolkitpro-${originalPdfFile.name}`;
+        link.download = `yantrastack-${originalPdfFile.name}`;
         link.click();
         URL.revokeObjectURL(link.href);
     });

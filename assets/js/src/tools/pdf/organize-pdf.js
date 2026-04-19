@@ -1,5 +1,5 @@
 /**
- * MyToolKitPro - Organize PDF Pages Logic
+ * YantraStack - Organize PDF Pages Logic
  * Dependencies: pdf-lib, pdf.js
  */
 
@@ -260,7 +260,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const link = document.createElement("a");
         link.href = url;
         const name = pdfFile ? pdfFile.name.replace(".pdf", "") : "document";
-        link.download = `${name}-organized-mytoolkitpro.pdf`;
+        link.download = `${name}-organized-yantrastack.pdf`;
         link.click();
         URL.revokeObjectURL(url);
     });

@@ -1,5 +1,5 @@
 /**
- * MyToolKitPro - Add Watermark to PDF Logic
+ * YantraStack - Add Watermark to PDF Logic
  * Dependencies: pdf-lib
  */
 
@@ -230,7 +230,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const link = document.createElement("a");
         link.href = downloadUrl;
         const baseName = pdfFile.name.replace(/\.[^/.]+$/, "");
-        link.download = `${baseName}-watermarked-mytoolkitpro.pdf`;
+        link.download = `${baseName}-watermarked-yantrastack.pdf`;
         
         document.body.appendChild(link);
         link.click();

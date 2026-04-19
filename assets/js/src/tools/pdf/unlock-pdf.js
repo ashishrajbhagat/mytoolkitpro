@@ -1,5 +1,5 @@
 /**
- * MyToolKitPro - Unlock PDF Logic
+ * YantraStack - Unlock PDF Logic
  * Dependencies: pdf-lib, pdf.js
  */
 
@@ -273,7 +273,7 @@ document.addEventListener("DOMContentLoaded", () => {
         link.href = url;
         
         const fileName = pdfFile ? pdfFile.name.replace(/\.[^/.]+$/, "") : "unlocked";
-        link.download = `${fileName}-unlocked-mytoolkitpro.pdf`;
+        link.download = `${fileName}-unlocked-yantrastack.pdf`;
         
         document.body.appendChild(link);
         link.click();

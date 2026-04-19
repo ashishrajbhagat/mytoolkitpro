@@ -1,5 +1,5 @@
 /**
- * MyToolKitPro - Remove PDF Pages Logic
+ * YantraStack - Remove PDF Pages Logic
  * Dependencies: pdf-lib, pdf.js
  */
 
@@ -290,7 +290,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const link = document.createElement("a");
         link.href = url;
         const name = pdfFile ? pdfFile.name.replace(".pdf", "") : "document";
-        link.download = `${name}-edited-mytoolkitpro.pdf`;
+        link.download = `${name}-edited-yantrastack.pdf`;
         link.click();
         URL.revokeObjectURL(url);
     });

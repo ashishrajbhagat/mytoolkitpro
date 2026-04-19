@@ -1,5 +1,5 @@
 /**
- * MyToolKitPro - Main Application Script
+ * YantraStack - Main Application Script
  * * Includes:
  * 1. UI Components (Mobile Menu, Dynamic Footer)
  * 2. FAQ Accordion Logic

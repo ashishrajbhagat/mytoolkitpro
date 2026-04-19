@@ -1,9 +1,9 @@
 /**
- * @fileoverview MyToolKitPro Page Range Utility
+ * @fileoverview YantraStack Page Range Utility
  * @description Logic for parsing, validating, and filtering page selections.
  * Supports complex strings, keywords (odd, even, end), and exclusions.
  * @version 1.0.0
- * @author MyToolKitPro
+ * @author YantraStack
  */
 
 /**

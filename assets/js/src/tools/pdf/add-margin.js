@@ -1,12 +1,12 @@
 /**
- * @fileoverview MyToolKitPro - Add Margin to PDF Logic
+ * @fileoverview YantraStack - Add Margin to PDF Logic
  * @description Provides advanced PDF page resizing and margin adjustments. 
  * Supports unified or individual side margins, unit conversion (mm, cm, in, px), 
  * background color filling, and odd/even page mirroring for book binding.
  * @architecture tools/pdf/add-margin.html
  * @dependencies pdf-lib, pdf.js, utils (fileHandler, dragDrop, pageRange, pdfPreview, helpers)
  * @version 1.1.0
- * @author MyToolKitPro
+ * @author YantraStack
  */
 
 import { handlePdfFile } from "../../utils/fileHandler.min.js";
@@ -324,7 +324,7 @@ document.addEventListener("DOMContentLoaded", () => {
     downloadPdfBtn?.addEventListener("click", () => {
         const link = document.createElement("a");
         link.href = URL.createObjectURL(processedPdfBlob);
-        link.download = `mytoolkitpro-${originalPdfFile.name}`;
+        link.download = `yantrastack-${originalPdfFile.name}`;
         link.click();
         URL.revokeObjectURL(link.href);
     });

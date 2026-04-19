@@ -1,4 +1,4 @@
-name: Deploy MyToolKitPro to GitHub Pages
+name: Deploy YantraStack to GitHub Pages
 
 on:
   push:

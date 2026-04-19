@@ -1,5 +1,5 @@
 /**
- * MyToolKitPro - Merge PDF Logic
+ * YantraStack - Merge PDF Logic
  * Dependencies: pdf-lib
  */
 
@@ -328,7 +328,7 @@ document.addEventListener("DOMContentLoaded", () => {
         
         // Use name of first file for the merged filename
         const fileName = selectedFiles[0].name.replace(/\.[^/.]+$/, "");
-        link.download = `${fileName}-merged-mytoolkitpro.pdf`;
+        link.download = `${fileName}-merged-yantrastack.pdf`;
         link.click();
     });
 

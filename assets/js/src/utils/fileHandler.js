@@ -1,9 +1,9 @@
 /**
- * @fileoverview MyToolKitPro File Handler Utility
+ * @fileoverview YantraStack File Handler Utility
  * @description Centralized logic for file validation, size constraints, 
  * and asynchronous reading of PDF and Image assets.
  * @version 1.0.0
- * @author MyToolKitPro
+ * @author YantraStack
  */
 
 /**

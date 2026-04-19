@@ -1,9 +1,9 @@
 /**
- * @fileoverview MyToolKitPro Global UI Helpers
+ * @fileoverview YantraStack Global UI Helpers
  * @description Provides reusable UI component logic such as Accordions,
  * ensuring consistent behavior across all tool modules.
  * @version 1.0.0
- * @author MyToolKitPro
+ * @author YantraStack
  */
 
 /**

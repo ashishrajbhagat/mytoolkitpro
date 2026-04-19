@@ -16,6 +16,6 @@
   <line x1="27" y1="49" x2="40" y2="49" stroke="#1F2937" stroke-width="1" stroke-linecap="round"/>
   
   <!-- Text label -->
-  <text x="90" y="35" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#B11226">MyToolKitPro</text>
+  <text x="90" y="35" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#B11226">YantraStack</text>
   <text x="90" y="55" font-family="Arial, sans-serif" font-size="12" fill="#1F2937" letter-spacing="1">PDF TOOLKIT</text>
 </svg>

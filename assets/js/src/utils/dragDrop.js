@@ -1,9 +1,9 @@
 /**
- * @fileoverview MyToolKitPro Drag & Drop Utility
+ * @fileoverview YantraStack Drag & Drop Utility
  * @description Provides a centralized, reusable handler for file drag-and-drop 
  * interactions, managing visual states and event propagation.
  * @version 1.0.0
- * @author MyToolKitPro
+ * @author YantraStack
  */
 
 /**

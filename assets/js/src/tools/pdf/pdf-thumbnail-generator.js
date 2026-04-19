@@ -1,5 +1,5 @@
 /**
- * MyToolKitPro - PDF Thumbnail Generator Logic
+ * YantraStack - PDF Thumbnail Generator Logic
  * Dependencies: pdf.js (for rendering), jszip (for downloading all)
  */
 

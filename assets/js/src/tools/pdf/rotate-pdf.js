@@ -1,5 +1,5 @@
 /**
- * MyToolKitPro - Rotate PDF Pages Logic
+ * YantraStack - Rotate PDF Pages Logic
  * Dependencies: pdf-lib, pdf.js
  */
 
@@ -233,7 +233,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const url = URL.createObjectURL(processedPdfBlob);
         const link = document.createElement("a");
         link.href = url;
-        link.download = `${pdfFile?.name.replace(".pdf", "") || "document"}-rotated-mytoolkitpro.pdf`;
+        link.download = `${pdfFile?.name.replace(".pdf", "") || "document"}-rotated-yantrastack.pdf`;
         link.click();
         setTimeout(() => URL.revokeObjectURL(url), 100);
     };

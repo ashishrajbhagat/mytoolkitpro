@@ -1,7 +1,7 @@
 {
-  "name": "MyToolKitPro",
+  "name": "YantraStack",
   "version": "1.0.0",
-  "description": "MyToolKitPro is a set of free, fast, and secure online tools to convert PDFs and images directly in your browser. No installation, no sign-up, and no watermark.",
+  "description": "YantraStack is a set of free, fast, and secure online tools to convert PDFs and images directly in your browser. No installation, no sign-up, and no watermark.",
   "main": "index.js",
   "scripts": {
     "build:css": "npx @tailwindcss/cli -i assets/css/src/input.css -o assets/css/dist/output.css --minify",
@@ -13,7 +13,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "MyToolKitPro <mytoolkitpro@gmail.com>",
+  "author": "YantraStack <yantrastack@gmail.com>",
   "private": true,
   "license": "UNLICENSED",
   "devDependencies": {

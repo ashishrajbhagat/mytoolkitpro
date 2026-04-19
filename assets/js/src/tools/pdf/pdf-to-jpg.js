@@ -1,5 +1,5 @@
 /**
- * MyToolKitPro - PDF to JPG Conversion Logic
+ * YantraStack - PDF to JPG Conversion Logic
  * Dependencies: pdf.js, jszip
  */
 
@@ -365,7 +365,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const link = document.createElement("a");
         link.href = images[0];
         const fileName = pdfFile ? pdfFile.name.replace(/\.[^/.]+$/, "") : "converted";
-        link.download = `${fileName}-mytoolkitpro.jpg`;
+        link.download = `${fileName}-yantrastack.jpg`;
         link.click();
     });
 
@@ -393,7 +393,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const link = document.createElement("a");
         link.href = URL.createObjectURL(content);
         const fileName = pdfFile ? pdfFile.name.replace(/\.[^/.]+$/, "") : "converted";
-        link.download = `${fileName}-mytoolkitpro.zip`;
+        link.download = `${fileName}-yantrastack.zip`;
         link.click();
     });
 

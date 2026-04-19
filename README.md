@@ -1,19 +1,19 @@
-# MyToolKitPro - Digital Sovereignty
+# YantraStack - Digital Sovereignty
 
 ![License](https://img.shields.io/badge/license-ISC-green)
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
 ![PWA Ready](https://img.shields.io/badge/PWA-enabled-purple)
 ![Privacy](https://img.shields.io/badge/privacy-100%25_local-success)
 
-A high-performance ecosystem of **browser-native** utility engines. MyToolKitPro provides professional-grade PDF and image manipulation without the cloud. No uploads, no latency, just pure client-side logic.
+A high-performance ecosystem of **browser-native** utility engines. YantraStack provides professional-grade PDF and image manipulation without the cloud. No uploads, no latency, just pure client-side logic.
 
 ## 🎬 Live Preview
 
 Experience the toolkit instantly:
 
-**👉 https://mytoolkitpro.com**
+**👉 https://yantrastack.com**
 
-[**Initialize Toolkit**](https://mytoolkitpro.com/tools/) | [**Read the Logic**](https://mytoolkitpro.com/articles/)
+[**Initialize Toolkit**](https://yantrastack.com/tools/) | [**Read the Logic**](https://yantrastack.com/articles/)
 
 No signup. No upload. Fully local.
 
@@ -84,7 +84,7 @@ Deep dives into document architecture and visual optimization frameworks.
 A strictly modular directory structure designed for scalability and "Pretty URL" routing.
 
 ```text
-MyToolKitPro/
+YantraStack/
 ├── index.html              # Home: The Ecosystem Gateway
 ├── about.html              # Brand Narrative: Purpose & Vision
 ├── contact.html            # Direct Logic Channel: Support & Inquiries
@@ -151,7 +151,7 @@ MyToolKitPro/
 
 ## 🚀 Getting Started
 
-MyToolKitPro is engineered for local execution and browser-native performance. To maintain the integrity of the **Client-Side Engines**, follow these deployment and development protocols.
+YantraStack is engineered for local execution and browser-native performance. To maintain the integrity of the **Client-Side Engines**, follow these deployment and development protocols.
 
 ### Prerequisites
 
@@ -163,7 +163,7 @@ MyToolKitPro is engineered for local execution and browser-native performance. T
 1. **Clone or download the repository:**
    ```bash
    git clone <repository-url>
-   cd MyToolKitPro
+   cd YantraStack
    ```
 
 2. **Install development dependencies:**
@@ -348,7 +348,7 @@ There are no artificial limits imposed by the platform. However, processing capa
 ### 5. Do I need to create an account?
 No. All tools are accessible instantly without registration or login.
 
-### 6. Is MyToolKitPro really free?
+### 6. Is YantraStack really free?
 Yes. All core features are available without subscriptions, hidden charges, or watermarks.
 
 ### 7. Why is processing faster compared to other tools?
@@ -385,19 +385,19 @@ No. We do not access, store, or analyze any files. Analytics (GA4) is used only 
 
 For technical inquiries, feature requests, or logic refinements, use the following channels:
 
-* **X (Twitter):** [@mytoolkitpro](https://x.com/mytoolkitpro) — Direct updates and community logic.
-* **Direct Channel:** [mytoolkitpro@gmail.com](mailto:mytoolkitpro@gmail.com) — Architectural inquiries and support.
+* **X (Twitter):** [@yantrastack](https://x.com/yantrastack) — Direct updates and community logic.
+* **Direct Channel:** [yantrastack@gmail.com](mailto:yantrastack@gmail.com) — Architectural inquiries and support.
 * **GitHub Issues:** Open a ticket for bug reports or engine optimization proposals.
 
 ## 📜 License & Intellectual Property
-Copyright (c) 2026 MyToolKitPro. All rights reserved.
+Copyright (c) 2026 YantraStack. All rights reserved.
 
 This repository and its source code are proprietary. Unauthorized copying, 
 distribution, or modification of any part of this project via any medium 
 is strictly prohibited. The tools provided are for end-user utility only.
 
 ## 👨‍💻 Author
-**MyToolKitPro** - Engineered by the Architect.
+**YantraStack** - Engineered by the Architect.
 
 Dedicated to digital sovereignty, privacy-first utility, and high-performance web logic.
 

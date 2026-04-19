@@ -1,5 +1,5 @@
 /**
- * MyToolKitPro - Remove PDF Page Numbering
+ * YantraStack - Remove PDF Page Numbering
  * Features: Adaptive Masking, Page Range Support, and Memory Optimization
  */
 
@@ -223,7 +223,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const link = document.createElement("a");
         link.href = url;
         const name = pdfFile ? pdfFile.name.replace(".pdf", "") : "document";
-        link.download = `${name}-cleaned-mytoolkitpro.pdf`;
+        link.download = `${name}-cleaned-yantrastack.pdf`;
         link.click();
         URL.revokeObjectURL(url); // Memory cleanup
     });

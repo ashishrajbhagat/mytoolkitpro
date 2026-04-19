@@ -1,6 +1,6 @@
-# MyToolKitPro - Server Configuration & Deployment Guide
+# YantraStack - Server Configuration & Deployment Guide
 
-This guide covers deployment instructions and server configuration for MyToolKitPro on various platforms.
+This guide covers deployment instructions and server configuration for YantraStack on various platforms.
 
 ## Table of Contents
 
@@ -42,7 +42,7 @@ This guide covers deployment instructions and server configuration for MyToolKit
 
 Before deploying to production, verify:
 
-- [ ] Domain name: `mytoolkitpro.com` configured in DNS
+- [ ] Domain name: `yantrastack.com` configured in DNS
 - [ ] SSL certificate obtained (Let's Encrypt recommended)
 - [ ] All environment-specific URLs updated
 - [ ] `.gitignore` properly configured
@@ -63,13 +63,13 @@ Before deploying to production, verify:
 
 ### Basic Server Block
 
-Create a new server configuration at `/etc/nginx/sites-available/mytoolkitpro.com`:
+Create a new server configuration at `/etc/nginx/sites-available/yantrastack.com`:
 
 ```nginx
 server {
     listen 80;
     listen [::]:80;
-    server_name mytoolkitpro.com www.mytoolkitpro.com;
+    server_name yantrastack.com www.yantrastack.com;
 
     # Redirect HTTP to HTTPS
     return 301 https://$server_name$request_uri;
@@ -78,11 +78,11 @@ server {
 server {
     listen 443 ssl http2;
     listen [::]:443 ssl http2;
-    server_name mytoolkitpro.com www.mytoolkitpro.com;
+    server_name yantrastack.com www.yantrastack.com;
 
     # SSL Certificate Configuration
-    ssl_certificate /etc/letsencrypt/live/mytoolkitpro.com/fullchain.pem;
-    ssl_certificate_key /etc/letsencrypt/live/mytoolkitpro.com/privkey.pem;
+    ssl_certificate /etc/letsencrypt/live/yantrastack.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/yantrastack.com/privkey.pem;
 
 ### PWA manifest & icons
 
@@ -115,7 +115,7 @@ After placing icons, add this to your HTML `<head>`:
     ssl_session_timeout 10m;
 
     # Root Directory
-    root /var/www/mytoolkitpro;
+    root /var/www/yantrastack;
     index index.html;
 
     # GZIP Compression
@@ -178,8 +178,8 @@ After placing icons, add this to your HTML `<head>`:
     }
 
     # Logging
-    access_log /var/log/nginx/mytoolkitpro.access.log;
-    error_log /var/log/nginx/mytoolkitpro.error.log warn;
+    access_log /var/log/nginx/yantrastack.access.log;
+    error_log /var/log/nginx/yantrastack.error.log warn;
 }
 ```
 
@@ -187,7 +187,7 @@ After placing icons, add this to your HTML `<head>`:
 
 ```bash
 # Create symbolic link
-sudo ln -s /etc/nginx/sites-available/mytoolkitpro.com /etc/nginx/sites-enabled/
+sudo ln -s /etc/nginx/sites-available/yantrastack.com /etc/nginx/sites-enabled/
 
 # Test Nginx configuration
 sudo nginx -t
@@ -202,29 +202,29 @@ sudo systemctl reload nginx
 
 ### Basic Virtual Host Configuration
 
-Create a new configuration file at `/etc/apache2/sites-available/mytoolkitpro.com.conf`:
+Create a new configuration file at `/etc/apache2/sites-available/yantrastack.com.conf`:
 
 ```apache
 # Redirect HTTP to HTTPS
 <VirtualHost *:80>
-    ServerName mytoolkitpro.com
-    ServerAlias www.mytoolkitpro.com
-    RedirectMatch ^/(.*)$ https://mytoolkitpro.com/$1
+    ServerName yantrastack.com
+    ServerAlias www.yantrastack.com
+    RedirectMatch ^/(.*)$ https://yantrastack.com/$1
 </VirtualHost>
 
 # HTTPS Virtual Host
 <VirtualHost *:443>
-    ServerName mytoolkitpro.com
-    ServerAlias www.mytoolkitpro.com
+    ServerName yantrastack.com
+    ServerAlias www.yantrastack.com
     
     # Document Root
-    DocumentRoot /var/www/mytoolkitpro
+    DocumentRoot /var/www/yantrastack
     
     # SSL Configuration
     SSLEngine on
-    SSLCertificateFile /etc/letsencrypt/live/mytoolkitpro.com/fullchain.pem
-    SSLCertificateKeyFile /etc/letsencrypt/live/mytoolkitpro.com/privkey.pem
-    SSLCertificateChainFile /etc/letsencrypt/live/mytoolkitpro.com/chain.pem
+    SSLCertificateFile /etc/letsencrypt/live/yantrastack.com/fullchain.pem
+    SSLCertificateKeyFile /etc/letsencrypt/live/yantrastack.com/privkey.pem
+    SSLCertificateChainFile /etc/letsencrypt/live/yantrastack.com/chain.pem
     
     # SSL Security
     SSLProtocol -all +TLSv1.2 +TLSv1.3
@@ -279,8 +279,8 @@ Create a new configuration file at `/etc/apache2/sites-available/mytoolkitpro.co
     </FilesMatch>
     
     # Logging
-    ErrorLog ${APACHE_LOG_DIR}/mytoolkitpro.error.log
-    CustomLog ${APACHE_LOG_DIR}/mytoolkitpro.access.log combined
+    ErrorLog ${APACHE_LOG_DIR}/yantrastack.error.log
+    CustomLog ${APACHE_LOG_DIR}/yantrastack.access.log combined
 </VirtualHost>
 ```
 
@@ -294,7 +294,7 @@ sudo a2enmod headers
 sudo a2enmod deflate
 
 # Enable site
-sudo a2ensite mytoolkitpro.com
+sudo a2ensite yantrastack.com
 
 # Test Apache configuration
 sudo apache2ctl configtest
@@ -376,7 +376,7 @@ app.use((err, req, res, next) => {
 
 // Start Server
 app.listen(PORT, () => {
-    console.log(`MyToolKitPro server running on port ${PORT}`);
+    console.log(`YantraStack server running on port ${PORT}`);
 });
 ```
 
@@ -466,7 +466,7 @@ Create `ecosystem.config.js`:
 ```javascript
 module.exports = {
   apps: [{
-    name: 'mytoolkitpro',
+    name: 'yantrastack',
     script: './server.js',
     instances: 'max',
     exec_mode: 'cluster',
@@ -514,13 +514,13 @@ sudo apt-get install certbot python3-certbot-nginx  # For Nginx
 sudo apt-get install certbot python3-certbot-apache  # For Apache
 
 # Obtain Certificate
-sudo certbot certonly --standalone -d mytoolkitpro.com -d www.mytoolkitpro.com
+sudo certbot certonly --standalone -d yantrastack.com -d www.yantrastack.com
 
 # For Nginx
-sudo certbot --nginx -d mytoolkitpro.com -d www.mytoolkitpro.com
+sudo certbot --nginx -d yantrastack.com -d www.yantrastack.com
 
 # For Apache
-sudo certbot --apache -d mytoolkitpro.com -d www.mytoolkitpro.com
+sudo certbot --apache -d yantrastack.com -d www.yantrastack.com
 ```
 
 #### Auto-Renewal
@@ -543,7 +543,7 @@ sudo systemctl start certbot.timer
 All configurations above include gzip compression. Verify it's working:
 
 ```bash
-curl -I -H 'Accept-Encoding: gzip' https://mytoolkitpro.com | grep Content-Encoding
+curl -I -H 'Accept-Encoding: gzip' https://yantrastack.com | grep Content-Encoding
 ```
 
 ### 2. Add Browser Caching Headers
@@ -627,23 +627,23 @@ Cache-Control: public, max-age=300
 
 ```bash
 # Real-time access logs
-tail -f /var/log/nginx/mytoolkitpro.access.log
+tail -f /var/log/nginx/yantrastack.access.log
 
 # Real-time error logs
-tail -f /var/log/nginx/mytoolkitpro.error.log
+tail -f /var/log/nginx/yantrastack.error.log
 
 # View and analyze logs
-grep "ERROR" /var/log/nginx/mytoolkitpro.error.log
+grep "ERROR" /var/log/nginx/yantrastack.error.log
 ```
 
 ### Apache Logs
 
 ```bash
 # Real-time access logs
-tail -f /var/log/apache2/mytoolkitpro.access.log
+tail -f /var/log/apache2/yantrastack.access.log
 
 # Real-time error logs
-tail -f /var/log/apache2/mytoolkitpro.error.log
+tail -f /var/log/apache2/yantrastack.error.log
 ```
 
 ### Monitor with Systemd
@@ -675,14 +675,14 @@ Recommended tools for uptime monitoring:
 
 ```bash
 # 1. Upload files to server
-scp -r ./ user@server:/var/www/mytoolkitpro/
+scp -r ./ user@server:/var/www/yantrastack/
 
 # 2. Set permissions
-sudo chown -R www-data:www-data /var/www/mytoolkitpro
-sudo chmod -R 755 /var/www/mytoolkitpro
+sudo chown -R www-data:www-data /var/www/yantrastack
+sudo chmod -R 755 /var/www/yantrastack
 
 # 3. Install and configure SSL
-sudo certbot certonly --standalone -d mytoolkitpro.com
+sudo certbot certonly --standalone -d yantrastack.com
 
 # 4. Deploy Nginx config (see Nginx Configuration section)
 
@@ -691,21 +691,21 @@ sudo nginx -t
 sudo systemctl reload nginx
 
 # 6. Verify site is live
-curl https://mytoolkitpro.com
+curl https://yantrastack.com
 ```
 
 ### For Apache
 
 ```bash
 # 1. Upload files to server
-scp -r ./ user@server:/var/www/mytoolkitpro/
+scp -r ./ user@server:/var/www/yantrastack/
 
 # 2. Set permissions
-sudo chown -R www-data:www-data /var/www/mytoolkitpro
-sudo chmod -R 755 /var/www/mytoolkitpro
+sudo chown -R www-data:www-data /var/www/yantrastack
+sudo chmod -R 755 /var/www/yantrastack
 
 # 3. Install and configure SSL
-sudo certbot certonly --standalone -d mytoolkitpro.com
+sudo certbot certonly --standalone -d yantrastack.com
 
 # 4. Deploy Apache config (see Apache Configuration section)
 
@@ -714,7 +714,7 @@ sudo apache2ctl configtest
 sudo systemctl reload apache2
 
 # 6. Verify site is live
-curl https://mytoolkitpro.com
+curl https://yantrastack.com
 ```
 
 ### For Node.js
@@ -725,12 +725,12 @@ curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
 sudo apt-get install nodejs
 
 # 2. Upload files and install dependencies
-scp -r ./ user@server:/app/mytoolkitpro/
-cd /app/mytoolkitpro
+scp -r ./ user@server:/app/yantrastack/
+cd /app/yantrastack
 npm install --production
 
 # 3. Install and configure SSL
-sudo certbot certonly --standalone -d mytoolkitpro.com
+sudo certbot certonly --standalone -d yantrastack.com
 
 # 4. Install PM2 globally
 sudo npm install -g pm2
@@ -741,7 +741,7 @@ pm2 save
 pm2 startup
 
 # 6. Verify site is live
-curl https://mytoolkitpro.com
+curl https://yantrastack.com
 ```
 
 ---
@@ -758,7 +758,7 @@ sudo certbot certificates
 sudo certbot renew --force-renewal
 
 # Check expiration date
-openssl s_client -connect mytoolkitpro.com:443 | grep -A2 "Validity"
+openssl s_client -connect yantrastack.com:443 | grep -A2 "Validity"
 ```
 
 ### 404 Errors on SPA Routes

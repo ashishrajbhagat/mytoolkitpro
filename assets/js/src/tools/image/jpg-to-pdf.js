@@ -1,11 +1,11 @@
 /**
- * @fileoverview MyToolKitPro - JPG to PDF Logic
+ * @fileoverview YantraStack - JPG to PDF Logic
  * @description Provides high-performance image-to-PDF conversion with support for 
  * custom page sizes, stacking (ID Cards), auto-rotation, and pagination.
  * @architecture tools/image/jpg-to-pdf.html
  * @dependencies jspdf (with px_scaling hotfix), SortableJS, utils (dragDrop, fileHandler, helpers)
  * @version 1.1.0
- * @author MyToolKitPro
+ * @author YantraStack
  */
 
 import { setupDragDrop } from "../../utils/dragDrop.min.js";
@@ -407,7 +407,7 @@ document.addEventListener("DOMContentLoaded", () => {
         
         const link = document.createElement('a');
         link.href = currentBlobUrl;
-        link.download = `mytoolkitpro-converted.pdf`;
+        link.download = `yantrastack-converted.pdf`;
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
